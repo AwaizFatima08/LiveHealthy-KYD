@@ -22,6 +22,25 @@ class ContentFormatException extends FormatException {
 
 Never _fail(String message) => throw ContentFormatException(message);
 
+/// Topic, group and reference ids become file names on the phone, so only
+/// plain lowercase ids are accepted — never paths like "../x".
+final RegExp _idPattern = RegExp(r'^[a-z0-9][a-z0-9_-]{0,63}$');
+
+/// Graphics are looked up by file name inside assets/graphics/.
+final RegExp _assetPattern = RegExp(r'^[a-z0-9_]{1,64}\.svg$');
+
+String _id(Object? v, String where) {
+  final s = _string(v, where);
+  if (!_idPattern.hasMatch(s)) _fail('$where: invalid id "$s"');
+  return s;
+}
+
+String _asset(Object? v, String where) {
+  final s = _string(v, where);
+  if (!_assetPattern.hasMatch(s)) _fail('$where: invalid graphic name "$s"');
+  return s;
+}
+
 Map<String, dynamic> _map(Object? v, String where) {
   if (v is Map) return v.cast<String, dynamic>();
   _fail('$where: expected an object');
@@ -97,7 +116,7 @@ sealed class ContentBlock {
         );
       case 'image':
         return ImageBlock(
-          assetKey: _string(m['assetKey'], '$where.assetKey'),
+          assetKey: _asset(m['assetKey'], '$where.assetKey'),
           caption: LocalizedText.fromJson(m['caption'], '$where.caption'),
           refs: _refIds(m['refs'], '$where.refs'),
         );
@@ -245,7 +264,7 @@ class Reference {
     final uri = Uri.tryParse(url);
     if (uri == null || uri.scheme != 'https' || uri.host.isEmpty) _fail('$where.url: must be an https link');
     return Reference(
-      id: _string(m['id'], '$where.id'),
+      id: _id(m['id'], '$where.id'),
       org: _string(m['org'], '$where.org'),
       title: _string(m['title'], '$where.title'),
       year: _int(m['year'], '$where.year'),
@@ -316,7 +335,7 @@ class Disease {
   /// bad download is rejected and the previous copy stays in use (§7 step 4).
   factory Disease.fromJson(Object? json) {
     final m = _map(json, 'disease');
-    final id = _string(m['id'], 'disease.id');
+    final id = _id(m['id'], 'disease.id');
     final w = 'disease[$id]';
     if (m['status'] != 'published') _fail('$w.status: not published');
 
@@ -370,10 +389,10 @@ class Disease {
       id: id,
       version: _int(m['version'], '$w.version'),
       order: _int(m['order'], '$w.order'),
-      group: group == null ? null : _string(group, '$w.group'),
+      group: group == null ? null : _id(group, '$w.group'),
       title: LocalizedText.fromJson(m['title'], '$w.title'),
       summary: LocalizedText.fromJson(m['summary'], '$w.summary'),
-      headerAsset: _string(m['headerAsset'], '$w.headerAsset'),
+      headerAsset: _asset(m['headerAsset'], '$w.headerAsset'),
       reviewedBy: LocalizedText.fromJson(m['reviewedBy'], '$w.reviewedBy'),
       reviewedOn: _string(m['reviewedOn'], '$w.reviewedOn'),
       nextReviewDue: _string(m['nextReviewDue'], '$w.nextReviewDue'),
@@ -416,15 +435,16 @@ class TopicGroup {
 
   factory TopicGroup.fromJson(String id, Object? json) {
     final w = 'groups[$id]';
+    _id(id, w);
     final m = _map(json, w);
     return TopicGroup(
       id: id,
       order: _int(m['order'], '$w.order'),
       title: LocalizedText.fromJson(m['title'], '$w.title'),
       summary: LocalizedText.fromJson(m['summary'], '$w.summary'),
-      headerAsset: _string(m['headerAsset'], '$w.headerAsset'),
+      headerAsset: _asset(m['headerAsset'], '$w.headerAsset'),
       note: LocalizedText.optional(m['note'], '$w.note'),
-      members: [for (final (i, x) in _list(m['members'], '$w.members').indexed) _string(x, '$w.members[$i]')],
+      members: [for (final (i, x) in _list(m['members'], '$w.members').indexed) _id(x, '$w.members[$i]')],
     );
   }
 }
@@ -463,7 +483,8 @@ class ContentManifest {
   factory ContentManifest.fromJson(Object? json) {
     final m = _map(json, 'manifest');
     final diseases = <String, int>{
-      for (final e in _map(m['diseases'], 'manifest.diseases').entries) e.key: _int(e.value, 'manifest.diseases.${e.key}'),
+      for (final e in _map(m['diseases'], 'manifest.diseases').entries)
+        _id(e.key, 'manifest.diseases'): _int(e.value, 'manifest.diseases.${e.key}'),
     };
     final groups = <String, TopicGroup>{
       for (final e in (m['groups'] == null ? const <String, dynamic>{} : _map(m['groups'], 'manifest.groups')).entries)

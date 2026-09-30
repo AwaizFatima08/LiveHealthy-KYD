@@ -72,11 +72,12 @@ class ContentRepository extends ChangeNotifier {
         }
       }
       final downloaded = dir == null ? null : _tryParse(File('${dir.path}/$id.json'), Disease.fromJson);
-      final best = [bundled, downloaded].whereType<Disease>().fold<Disease?>(
+      // A file can only ever stand in for its own topic.
+      final best = [bundled, downloaded].whereType<Disease>().where((d) => d.id == id).fold<Disease?>(
             null,
             (a, b) => a == null || b.version > a.version ? b : a,
           );
-      if (best != null && best.id == id) diseases[id] = best;
+      if (best != null) diseases[id] = best;
     }
 
     _manifest = manifest;

@@ -82,49 +82,56 @@ class TopicCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    // At large text sizes the text needs the full width, so the graphic
+    // moves above it instead of beside it.
+    final stacked = MediaQuery.textScalerOf(context).scale(1) >= 1.3 || MediaQuery.sizeOf(context).width < 340;
+    final thumb = Container(
+      width: stacked ? double.infinity : 72,
+      height: stacked ? 64 : 72,
+      decoration: BoxDecoration(
+        color: AppTheme.primary.withValues(alpha: 0.07),
+        borderRadius: BorderRadius.circular(14),
+      ),
+      padding: const EdgeInsets.all(6),
+      child: ContentGraphic(assetKey: graphic),
+    );
+    final text = Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(title, style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700)),
+        const SizedBox(height: 2),
+        Text(summary, style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
+        if (badge != null) ...[
+          const SizedBox(height: 4),
+          Text(badge!, style: theme.textTheme.labelLarge?.copyWith(color: theme.colorScheme.primary)),
+        ],
+      ],
+    );
+    final chevron = Icon(Icons.chevron_right, color: theme.colorScheme.primary);
     return Card(
       clipBehavior: Clip.antiAlias,
       child: InkWell(
         onTap: onTap,
         child: Padding(
           padding: const EdgeInsets.all(14),
-          child: Row(
-            children: [
-              Container(
-                width: 72,
-                height: 72,
-                decoration: BoxDecoration(
-                  color: AppTheme.primary.withValues(alpha: 0.07),
-                  borderRadius: BorderRadius.circular(14),
-                ),
-                padding: const EdgeInsets.all(6),
-                child: ContentGraphic(assetKey: graphic),
-              ),
-              const SizedBox(width: 14),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+          child: stacked
+              ? Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Text(title, style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700)),
-                    const SizedBox(height: 2),
-                    Text(
-                      summary,
-                      style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurfaceVariant),
-                    ),
-                    if (badge != null) ...[
-                      const SizedBox(height: 4),
-                      Text(
-                        badge!,
-                        style: theme.textTheme.labelLarge?.copyWith(color: theme.colorScheme.primary),
-                      ),
-                    ],
+                    thumb,
+                    const SizedBox(height: 10),
+                    Row(children: [Expanded(child: text), chevron]),
+                  ],
+                )
+              : Row(
+                  children: [
+                    thumb,
+                    const SizedBox(width: 14),
+                    Expanded(child: text),
+                    const SizedBox(width: 6),
+                    chevron,
                   ],
                 ),
-              ),
-              const SizedBox(width: 6),
-              Icon(Icons.chevron_right, color: theme.colorScheme.primary, textDirection: Directionality.of(context)),
-            ],
-          ),
         ),
       ),
     );

@@ -194,7 +194,10 @@ class _KeyNumber extends StatelessWidget {
         children: [
           Text(
             block.label.tr(context),
-            style: theme.textTheme.titleSmall?.copyWith(color: color, fontWeight: FontWeight.w700),
+            style: theme.textTheme.titleSmall?.copyWith(
+              color: AppTheme.keyLevelTextColor(block.level),
+              fontWeight: FontWeight.w700,
+            ),
           ),
           const SizedBox(height: 2),
           Text(
@@ -239,7 +242,7 @@ class _Alert extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
-            color: color,
+            color: AppTheme.alertTextColor(block.level),
             padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
             child: Row(
               children: [

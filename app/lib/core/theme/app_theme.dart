@@ -19,6 +19,11 @@ class AppTheme {
   static const Color flagCaution = Color(0xFFB26A00);
   static const Color flagAlert = Color(0xFFC62828);
 
+  /// #B26A00 is 4.2:1 against white — fine for borders, tints and large
+  /// type, too light for small text. Amber *text* (and white text on an
+  /// amber band) uses this darker shade, which is 6.3:1.
+  static const Color flagCautionText = Color(0xFF8A5300);
+
   static const String urduFont = 'NotoNastaliqUrdu';
 
   static Color keyLevelColor(KeyLevel level) => switch (level) {
@@ -32,6 +37,11 @@ class AppTheme {
     AlertLevel.urgent => flagAlert,
     AlertLevel.soon => flagCaution,
   };
+
+  /// Readable text colour for a level: amber text is darkened (see above).
+  static Color keyLevelTextColor(KeyLevel level) => level == KeyLevel.caution ? flagCautionText : keyLevelColor(level);
+
+  static Color alertTextColor(AlertLevel level) => level == AlertLevel.soon ? flagCautionText : flagAlert;
 
   static ThemeData light({String languageCode = 'en'}) {
     final urdu = languageCode == 'ur';

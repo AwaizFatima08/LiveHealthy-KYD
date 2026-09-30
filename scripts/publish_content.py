@@ -47,6 +47,9 @@ BLOCK_TYPES = {'paragraph', 'bullets', 'image', 'keyNumber', 'alert', 'refMarker
 TOOLS = {'vitals', 'medicineReminder'}
 TOOL_STATUS = {'live', 'comingSoon', 'hidden'}
 NON_DISEASE_FILES = {'references.json', 'manifest_source.json'}
+# Must match the app (models.dart): ids become file names on the phone.
+ID_RE = re.compile(r'^[a-z0-9][a-z0-9_-]{0,63}$')
+ASSET_RE = re.compile(r'^[a-z0-9_]{1,64}\.svg$')
 
 
 class Report:
@@ -132,6 +135,8 @@ def validate_disease(d: dict, library: dict, groups: dict, bands: dict | None, r
                      today: dt.date, strict: bool):
     did = d.get('id', '?')
     w = f'[{did}]'
+    if not ID_RE.match(str(did)):
+        rep.error(f'{w} id must be lowercase letters, digits, _ or -')
     for key in ('id', 'version', 'order', 'status', 'headerAsset', 'reviewedOn', 'nextReviewDue'):
         if key not in d:
             rep.error(f'{w} missing "{key}"')
@@ -202,6 +207,8 @@ def validate_disease(d: dict, library: dict, groups: dict, bands: dict | None, r
 def asset(name, where, rep: Report):
     if not isinstance(name, str) or not name:
         rep.error(f'{where}: missing')
+    elif not ASSET_RE.match(name):
+        rep.error(f'{where}: "{name}" must be lowercase letters, digits and _ ending in .svg')
     elif not (GRAPHICS / name).is_file():
         rep.error(f'{where}: app/assets/graphics/{name} does not exist')
 
@@ -269,6 +276,8 @@ def validate_manifest_source(m: dict, rep: Report):
             rep.error(f'manifest_source.toolLinks: bad entry {tool}: {status}')
     for gid, g in (m.get('groups') or {}).items():
         gw = f'manifest_source.groups.{gid}'
+        if not ID_RE.match(gid):
+            rep.error(f'{gw}: invalid id')
         for key in ('title', 'summary'):
             check_localized(g.get(key), f'{gw}.{key}', rep)
         check_localized(g.get('note'), f'{gw}.note', rep, required=False)
@@ -281,6 +290,8 @@ def validate_manifest_source(m: dict, rep: Report):
 
 def validate_library(library: dict, rep: Report):
     for rid, r in library.items():
+        if not ID_RE.match(rid):
+            rep.error(f'references.{rid}: invalid id')
         for key in ('org', 'title', 'year', 'url', 'checkedOn'):
             if not r.get(key):
                 rep.error(f'references.{rid}.{key}: missing')

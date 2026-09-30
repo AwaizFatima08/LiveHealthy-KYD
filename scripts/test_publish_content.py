@@ -85,6 +85,11 @@ class ValidatorTest(unittest.TestCase):
         self.block(d, 'keyNumber', check={'metric': 'bp', 'band': 'normal'}).pop('check')
         self.assertTrue(any('keyNumber needs "check"' in e for e in self.check(d).errors))
 
+    def test_rejects_path_like_ids(self):
+        d = self.htn()
+        d['id'] = '../evil'
+        self.assertTrue(any('id must be' in e for e in self.check(d).errors))
+
     def test_missing_graphic(self):
         d = self.htn()
         self.block(d, 'image', assetKey='bp_organs.svg')['assetKey'] = 'nope.svg'

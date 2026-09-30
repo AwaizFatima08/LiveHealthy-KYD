@@ -8,8 +8,9 @@ import '../l10n/generated/app_localizations.dart';
 
 /// Number runs (with range dashes, slashes, comparison signs and units)
 /// such as "130–139", "≥ 140/90" or "126 mg/dL".
+const String _number = r'(?:[<>≥≤]\s?)?\d[\d.,]*%?';
 final RegExp _numberRun = RegExp(
-  r'(?:[<>≥≤]\s?)?\d[\d.,]*(?:\s?[–\-/]\s?(?:[<>≥≤]\s?)?\d[\d.,]*)*(?:\s?(?:mg/dL|mmol/L|mmHg|kg/m²|%))?',
+  '$_number(?:\\s?[–\\-/]\\s?$_number)*(?:\\s?(?:mg/dL|mmol/L|mmHg|kg/m²))?',
 );
 
 /// In right-to-left text, the bidi algorithm reverses "130–139" into
