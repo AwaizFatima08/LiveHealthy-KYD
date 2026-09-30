@@ -1,0 +1,31 @@
+{
+  "_comment": "Hand-edited. publish_content.py builds kyd_manifest/current from this plus the disease versions.",
+  "minAppVersion": 1,
+  "toolLinks": {
+    "vitals": "comingSoon",
+    "medicineReminder": "comingSoon"
+  },
+  "groups": {
+    "diabetes": {
+      "order": 2,
+      "title": {
+        "en": "Diabetes",
+        "ur": "ذیابیطس"
+      },
+      "summary": {
+        "en": "Prediabetes, type 2 diabetes and diabetes in pregnancy.",
+        "ur": "پری ذیابیطس، ٹائپ 2 ذیابیطس اور حمل کی ذیابیطس۔"
+      },
+      "headerAsset": "diabetes_group_header.svg",
+      "note": {
+        "en": "Type 1 diabetes and other rare types (such as MODY and LADA) are not covered here. Please discuss them with your doctor.",
+        "ur": "ٹائپ 1 ذیابیطس اور دوسری نایاب اقسام (جیسے MODY اور LADA) یہاں شامل نہیں۔ ان کے بارے میں اپنے ڈاکٹر سے بات کریں۔"
+      },
+      "members": [
+        "prediabetes",
+        "type2_diabetes",
+        "gestational_diabetes"
+      ]
+    }
+  }
+}

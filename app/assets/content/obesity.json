@@ -1,0 +1,606 @@
+{
+ "id": "obesity",
+ "version": 1,
+ "order": 3,
+ "group": null,
+ "status": "published",
+ "title": {
+  "en": "Obesity",
+  "ur": "موٹاپا"
+ },
+ "summary": {
+  "en": "Healthy weight, BMI and waist size, why extra body fat matters, and what helps.",
+  "ur": "صحت مند وزن، BMI اور کمر کا ناپ، اضافی چربی کیوں اہم ہے، اور کیا چیز مدد دیتی ہے۔"
+ },
+ "headerAsset": "obesity_header.svg",
+ "reviewedBy": {
+  "en": "Dr. Humayun Shahzad, MBBS",
+  "ur": "ڈاکٹر ہمایوں شہزاد، ایم بی بی ایس"
+ },
+ "reviewedOn": "2026-09-30",
+ "nextReviewDue": "2027-09-30",
+ "relatedTools": [
+  {
+   "tool": "vitals",
+   "label": {
+    "en": "Track your weight and BMI",
+    "ur": "اپنے وزن اور BMI کا ریکارڈ رکھیں"
+   }
+  }
+ ],
+ "sections": [
+  {
+   "id": "whatIs",
+   "title": {
+    "en": "What it is",
+    "ur": "یہ کیا ہے"
+   },
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "Obesity means having so much body fat that it harms health. The World Health Organization classes it as a long-term disease that can come back. It comes from a mix of genes, eating habits, activity, access to healthy food and the world around us, not simply a lack of willpower.",
+      "ur": "موٹاپے کا مطلب ہے جسم میں اتنی زیادہ چربی ہونا کہ وہ صحت کو نقصان پہنچائے۔ عالمی ادارۂ صحت اسے ایک طویل مدتی بیماری قرار دیتا ہے جو دوبارہ لوٹ سکتی ہے۔ یہ موروثی عوامل، کھانے کی عادات، جسمانی سرگرمی، صحت مند غذا تک رسائی اور ماحول کے ملنے سے ہوتا ہے، صرف قوتِ ارادی کی کمی سے نہیں۔"
+     },
+     "refs": [
+      "who-obesity"
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "Body mass index (BMI) compares your weight with your height: BMI = weight in kg ÷ (height in metres × height in metres). For example, 70 kg and 1.65 m gives a BMI of about 25.7.",
+      "ur": "باڈی ماس انڈیکس (BMI) آپ کے وزن کا آپ کے قد سے موازنہ کرتا ہے: BMI = وزن کلوگرام میں ÷ (قد میٹر میں × قد میٹر میں)۔ مثال کے طور پر 70 کلو وزن اور 1.65 میٹر قد پر BMI تقریباً 25.7 بنتا ہے۔"
+     },
+     "refs": [
+      "who-obesity"
+     ]
+    },
+    {
+     "type": "image",
+     "assetKey": "bmi_scale.svg",
+     "caption": {
+      "en": "BMI bands for adults (kg/m²). The dashed lines at 23 and 27.5 are the lower action points for Asian people.",
+      "ur": "بالغ افراد کے لیے BMI کے درجے (kg/m²)۔ 23 اور 27.5 پر نقطے دار لکیریں ایشیائی لوگوں کے لیے کم حدیں ہیں۔"
+     },
+     "refs": [
+      "who-obesity",
+      "who-asian-bmi"
+     ]
+    },
+    {
+     "type": "keyNumber",
+     "label": {
+      "en": "Underweight",
+      "ur": "کم وزن"
+     },
+     "value": {
+      "en": "BMI below 18.5",
+      "ur": "BMI 18.5 سے کم"
+     },
+     "level": "caution",
+     "refs": [
+      "who-obesity"
+     ]
+    },
+    {
+     "type": "keyNumber",
+     "label": {
+      "en": "Healthy weight",
+      "ur": "صحت مند وزن"
+     },
+     "value": {
+      "en": "BMI 18.5–24.9",
+      "ur": "BMI 18.5–24.9"
+     },
+     "level": "normal",
+     "refs": [
+      "who-obesity"
+     ]
+    },
+    {
+     "type": "keyNumber",
+     "label": {
+      "en": "Overweight",
+      "ur": "زیادہ وزن"
+     },
+     "value": {
+      "en": "BMI 25–29.9",
+      "ur": "BMI 25–29.9"
+     },
+     "level": "caution",
+     "refs": [
+      "who-obesity"
+     ]
+    },
+    {
+     "type": "keyNumber",
+     "label": {
+      "en": "Obesity",
+      "ur": "موٹاپا"
+     },
+     "value": {
+      "en": "BMI 30 or higher",
+      "ur": "BMI 30 یا زیادہ"
+     },
+     "level": "alert",
+     "refs": [
+      "who-obesity"
+     ]
+    },
+    {
+     "type": "keyNumber",
+     "label": {
+      "en": "Note for South Asian people (Pakistan, India, Bangladesh)",
+      "ur": "جنوبی ایشیائی لوگوں کے لیے نوٹ (پاکستان، بھارت، بنگلہ دیش)"
+     },
+     "value": {
+      "en": "Health risks start at a lower BMI: overweight from 23, obesity from 27.5",
+      "ur": "صحت کے خطرات کم BMI پر شروع ہوتے ہیں: 23 سے زیادہ وزن، 27.5 سے موٹاپا"
+     },
+     "note": {
+      "en": "These are the WHO action points for Asian populations, also used by NICE. LiveHealthy: Vitals currently flags BMI on the standard bands above.",
+      "ur": "یہ ایشیائی آبادی کے لیے عالمی ادارۂ صحت کی حدیں ہیں، جنہیں NICE بھی استعمال کرتا ہے۔ لِو ہیلدی: وائٹلز فی الحال اوپر دیے گئے عام درجوں کے مطابق BMI دکھاتی ہے۔"
+     },
+     "level": "caution",
+     "refs": [
+      "who-asian-bmi",
+      "nice-ng246"
+     ]
+    },
+    {
+     "type": "image",
+     "assetKey": "waist_measure.svg",
+     "caption": {
+      "en": "Waist size matters too. Measure around your waist, just above the belly button, after breathing out normally. Keep your waist to less than half your height.",
+      "ur": "کمر کا ناپ بھی اہم ہے۔ عام طریقے سے سانس باہر نکالنے کے بعد ناف سے ذرا اوپر کمر کا ناپ لیں۔ کمر کو اپنے قد کے آدھے سے کم رکھیں۔"
+     },
+     "refs": [
+      "nice-ng246"
+     ]
+    },
+    {
+     "type": "keyNumber",
+     "label": {
+      "en": "Waist-to-height ratio",
+      "ur": "کمر اور قد کا تناسب"
+     },
+     "value": {
+      "en": "0.4 to 0.49 is healthy",
+      "ur": "0.4 سے 0.49 صحت مند ہے"
+     },
+     "note": {
+      "en": "0.5 to 0.59 means increased health risks, and 0.6 or more means higher risks still. Example: a 96 cm waist ÷ 170 cm height = 0.56.",
+      "ur": "0.5 سے 0.59 کا مطلب صحت کے بڑھے ہوئے خطرات، اور 0.6 یا زیادہ کا مطلب اس سے بھی زیادہ خطرات۔ مثال: 96 سینٹی میٹر کمر ÷ 170 سینٹی میٹر قد = 0.56۔"
+     },
+     "level": "normal",
+     "refs": [
+      "nice-ng246"
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "Obesity is common and rising. In 2022, 43% of adults worldwide were overweight, and 16% (about 1 in 8 people) were living with obesity.",
+      "ur": "موٹاپا عام ہے اور بڑھ رہا ہے۔ 2022 میں دنیا کے 43% بالغ افراد کا وزن زیادہ تھا، اور 16% (تقریباً ہر 8 میں سے 1) موٹاپے کا شکار تھے۔"
+     },
+     "refs": [
+      "who-obesity"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "causes",
+   "title": {
+    "en": "Causes & risk factors",
+    "ur": "وجوہات اور خطرے کے عوامل"
+   },
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "Weight goes up when the body takes in more energy (calories) than it uses over a long time. Many things push in that direction, often several together.",
+      "ur": "جب جسم لمبے عرصے تک استعمال سے زیادہ توانائی (کیلوریز) لیتا رہے تو وزن بڑھتا ہے۔ کئی چیزیں اس سمت میں دھکیلتی ہیں، اکثر کئی ایک ساتھ۔"
+     },
+     "refs": [
+      "mayo-obesity"
+     ]
+    },
+    {
+     "type": "bullets",
+     "title": {
+      "en": "Risk factors you can change",
+      "ur": "خطرے کے وہ عوامل جو آپ بدل سکتے ہیں"
+     },
+     "items": [
+      {
+       "en": "Food high in calories: fried food, sweets, fast food and large portions",
+       "ur": "زیادہ کیلوریز والی غذا: تلی ہوئی چیزیں، مٹھائیاں، فاسٹ فوڈ اور بڑی مقدار"
+      },
+      {
+       "en": "Sugary drinks, which add calories without making you feel full",
+       "ur": "میٹھے مشروبات، جو پیٹ بھرے بغیر کیلوریز بڑھاتے ہیں"
+      },
+      {
+       "en": "Too few vegetables and fruit",
+       "ur": "سبزیاں اور پھل بہت کم کھانا"
+      },
+      {
+       "en": "Not being active, including long hours in front of screens",
+       "ur": "سرگرم نہ رہنا، بشمول سکرین کے سامنے لمبے گھنٹے گزارنا"
+      },
+      {
+       "en": "Too little sleep, and stress",
+       "ur": "نیند کی کمی، اور ذہنی دباؤ"
+      }
+     ],
+     "refs": [
+      "mayo-obesity"
+     ]
+    },
+    {
+     "type": "bullets",
+     "title": {
+      "en": "Risk factors you can't change",
+      "ur": "خطرے کے وہ عوامل جو آپ نہیں بدل سکتے"
+     },
+     "items": [
+      {
+       "en": "Genes and family: obesity tends to run in families",
+       "ur": "موروثی عوامل اور خاندان: موٹاپا اکثر خاندانوں میں چلتا ہے"
+      },
+      {
+       "en": "Getting older",
+       "ur": "بڑھتی عمر"
+      },
+      {
+       "en": "Some medical conditions, such as an underactive thyroid (hypothyroidism)",
+       "ur": "بعض بیماریاں، جیسے تھائیرائیڈ کا کم کام کرنا (ہائپوتھائیرائیڈزم)"
+      }
+     ],
+     "refs": [
+      "mayo-obesity"
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "Some medicines can cause weight gain, including steroids, some antidepressants, some diabetes medicines and certain blood pressure tablets. Don't stop a medicine on your own; ask your doctor about alternatives.",
+      "ur": "بعض دوائیں وزن بڑھا سکتی ہیں، جیسے سٹیرائیڈز، کچھ ڈپریشن کی دوائیں، کچھ ذیابیطس کی دوائیں اور بلڈ پریشر کی بعض گولیاں۔ کوئی دوا خود سے بند نہ کریں؛ متبادل کے بارے میں ڈاکٹر سے پوچھیں۔"
+     },
+     "refs": [
+      "mayo-obesity"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "complications",
+   "title": {
+    "en": "Complications of poor control",
+    "ur": "کنٹرول نہ ہونے کی پیچیدگیاں"
+   },
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "Extra body fat, especially around the belly, raises the risk of many serious conditions. In 2021, a higher-than-healthy BMI caused an estimated 3.7 million deaths worldwide.",
+      "ur": "جسم کی اضافی چربی، خاص طور پر پیٹ کے گرد، کئی سنگین بیماریوں کا خطرہ بڑھاتی ہے۔ 2021 میں صحت مند حد سے زیادہ BMI دنیا بھر میں اندازاً 37 لاکھ اموات کا سبب بنا۔"
+     },
+     "refs": [
+      "who-obesity"
+     ]
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "Type 2 diabetes",
+       "ur": "ٹائپ 2 ذیابیطس"
+      },
+      {
+       "en": "High blood pressure, unhealthy cholesterol, heart disease and stroke",
+       "ur": "ہائی بلڈ پریشر، غیر صحت مند کولیسٹرول، دل کی بیماری اور فالج"
+      },
+      {
+       "en": "Fatty liver disease, which can lead to serious liver damage",
+       "ur": "جگر پر چربی، جو جگر کو سنگین نقصان تک لے جا سکتی ہے"
+      },
+      {
+       "en": "Sleep apnoea: breathing repeatedly stops and starts during sleep",
+       "ur": "سلیپ ایپنیا: نیند میں بار بار سانس رکنا اور چلنا"
+      },
+      {
+       "en": "Painful, worn joints (osteoarthritis), especially knees and hips",
+       "ur": "جوڑوں کا گھسنا اور درد (اوسٹیوآرتھرائٹس)، خاص طور پر گھٹنے اور کولہے"
+      },
+      {
+       "en": "Heartburn and gallbladder disease",
+       "ur": "سینے کی جلن اور پتّے کی بیماری"
+      },
+      {
+       "en": "Some cancers, including breast, womb, bowel, liver and kidney cancer",
+       "ur": "بعض کینسر، جیسے چھاتی، بچہ دانی، آنتوں، جگر اور گردے کا کینسر"
+      }
+     ],
+     "refs": [
+      "mayo-obesity",
+      "who-obesity"
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "The good news: losing even 5% to 10% of your weight can significantly lower these health risks.",
+      "ur": "اچھی خبر یہ ہے کہ اپنے وزن کا صرف 5% سے 10% کم کرنے سے بھی صحت کے یہ خطرات نمایاں طور پر کم ہو جاتے ہیں۔"
+     },
+     "refs": [
+      "cc-obesity"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lifestyle",
+   "title": {
+    "en": "Lifestyle changes",
+    "ur": "طرزِ زندگی میں تبدیلیاں"
+   },
+   "blocks": [
+    {
+     "type": "keyNumber",
+     "label": {
+      "en": "A realistic first goal",
+      "ur": "ایک حقیقت پسندانہ پہلا ہدف"
+     },
+     "value": {
+      "en": "Lose 5% to 10% of your weight",
+      "ur": "اپنے وزن کا 5% سے 10% کم کریں"
+     },
+     "note": {
+      "en": "For someone weighing 90 kg, that is about 4.5 to 9 kg. Slow and steady is easier to keep off.",
+      "ur": "90 کلو وزن والے شخص کے لیے یہ تقریباً 4.5 سے 9 کلو بنتا ہے۔ آہستہ اور مسلسل کمی کو برقرار رکھنا آسان ہوتا ہے۔"
+     },
+     "level": "neutral",
+     "refs": [
+      "cc-obesity"
+     ]
+    },
+    {
+     "type": "image",
+     "assetKey": "healthy_plate.svg",
+     "caption": {
+      "en": "Fill half your plate with vegetables, and choose water instead of sugary drinks.",
+      "ur": "اپنی پلیٹ آدھی سبزیوں سے بھریں، اور میٹھے مشروبات کی بجائے پانی پئیں۔"
+     },
+     "refs": [
+      "who-diet",
+      "ada-plate"
+     ]
+    },
+    {
+     "type": "bullets",
+     "title": {
+      "en": "Eat",
+      "ur": "کھانا"
+     },
+     "items": [
+      {
+       "en": "Eat plenty of vegetables, fruit, pulses and whole grains.",
+       "ur": "سبزیاں، پھل، دالیں اور ثابت اناج خوب کھائیں۔"
+      },
+      {
+       "en": "Cut down on sugar, sweets, sugary drinks, fried food and fast food.",
+       "ur": "چینی، مٹھائی، میٹھے مشروبات، تلی ہوئی چیزیں اور فاسٹ فوڈ کم کریں۔"
+      },
+      {
+       "en": "Watch portion sizes, especially of rice, roti and cooking oil or ghee.",
+       "ur": "مقدار کا خیال رکھیں، خاص طور پر چاول، روٹی اور تیل یا گھی کی۔"
+      }
+     ],
+     "refs": [
+      "who-diet",
+      "mayo-obesity"
+     ]
+    },
+    {
+     "type": "image",
+     "assetKey": "activity_week.svg",
+     "caption": {
+      "en": "Adults: at least 150 to 300 minutes of moderate activity a week, such as brisk walking, and muscle-strengthening on 2 or more days. More activity helps with weight.",
+      "ur": "بالغ افراد: ہفتے میں کم از کم 150 سے 300 منٹ درمیانی سرگرمی، جیسے تیز چہل قدمی، اور ہفتے میں 2 یا زیادہ دن پٹھے مضبوط کرنے والی ورزش۔ زیادہ سرگرمی وزن میں مدد دیتی ہے۔"
+     },
+     "refs": [
+      "who-activity"
+     ]
+    },
+    {
+     "type": "bullets",
+     "title": {
+      "en": "Live",
+      "ur": "روزمرہ زندگی"
+     },
+     "items": [
+      {
+       "en": "Cut down on screen time and long periods of sitting.",
+       "ur": "سکرین کا وقت اور دیر تک بیٹھے رہنا کم کریں۔"
+      },
+      {
+       "en": "Get enough sleep.",
+       "ur": "پوری نیند لیں۔"
+      },
+      {
+       "en": "Weigh yourself regularly, for example once a week, and keep a record.",
+       "ur": "باقاعدگی سے، مثلاً ہفتے میں ایک بار، وزن کریں اور ریکارڈ رکھیں۔"
+      }
+     ],
+     "refs": [
+      "mayo-obesity"
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "If lifestyle changes aren't enough, doctors can offer more help, including weight-loss medicines and, for some people, surgery. Talk to your doctor about what is right for you.",
+      "ur": "اگر طرزِ زندگی کی تبدیلیاں کافی نہ ہوں تو ڈاکٹر مزید مدد دے سکتے ہیں، جیسے وزن کم کرنے کی دوائیں اور بعض لوگوں کے لیے آپریشن۔ اپنے ڈاکٹر سے بات کریں کہ آپ کے لیے کیا بہتر ہے۔"
+     },
+     "refs": [
+      "nice-ng246"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "whenToSeeDoctor",
+   "title": {
+    "en": "When to see a doctor",
+    "ur": "ڈاکٹر کو کب دکھائیں"
+   },
+   "blocks": [
+    {
+     "type": "alert",
+     "level": "urgent",
+     "title": {
+      "en": "Signs of a heart attack or stroke:",
+      "ur": "ہارٹ اٹیک یا فالج کی علامات:"
+     },
+     "items": [
+      {
+       "en": "Chest pain",
+       "ur": "سینے میں درد"
+      },
+      {
+       "en": "Shortness of breath",
+       "ur": "سانس پھولنا"
+      },
+      {
+       "en": "Sudden numbness or weakness",
+       "ur": "اچانک سُن پن یا کمزوری"
+      },
+      {
+       "en": "Sudden change in vision, or difficulty speaking",
+       "ur": "نظر میں اچانک تبدیلی، یا بولنے میں دشواری"
+      }
+     ],
+     "text": {
+      "en": "Heart attack and stroke are more common with obesity. Call an ambulance (Rescue 1122 in Pakistan) or go to the nearest emergency department now.",
+      "ur": "موٹاپے میں ہارٹ اٹیک اور فالج زیادہ ہوتے ہیں۔ ابھی ایمبولینس بلائیں (پاکستان میں ریسکیو 1122) یا قریبی ایمرجنسی میں جائیں۔"
+     },
+     "refs": [
+      "aha-911",
+      "mayo-obesity"
+     ]
+    },
+    {
+     "type": "alert",
+     "level": "soon",
+     "title": {
+      "en": "See your doctor soon if:",
+      "ur": "جلد ڈاکٹر کو دکھائیں اگر:"
+     },
+     "items": [
+      {
+       "en": "Your BMI is 30 or more, or 27.5 or more if you are South Asian",
+       "ur": "آپ کا BMI 30 یا زیادہ ہے، یا جنوبی ایشیائی ہونے کی صورت میں 27.5 یا زیادہ"
+      },
+      {
+       "en": "Your waist is half your height or more",
+       "ur": "آپ کی کمر آپ کے قد کے آدھے یا اس سے زیادہ ہے"
+      },
+      {
+       "en": "You snore loudly, stop breathing in your sleep, or feel very sleepy in the day",
+       "ur": "آپ زور سے خراٹے لیتے ہیں، نیند میں سانس رک جاتا ہے، یا دن میں بہت نیند آتی ہے"
+      },
+      {
+       "en": "You gain weight quickly without a clear reason, or after starting a new medicine",
+       "ur": "بغیر کسی واضح وجہ کے، یا کوئی نئی دوا شروع کرنے کے بعد وزن تیزی سے بڑھے"
+      }
+     ],
+     "text": {
+      "en": "Your doctor can check your blood pressure, blood sugar and cholesterol, and plan weight management with you.",
+      "ur": "آپ کا ڈاکٹر آپ کا بلڈ پریشر، شوگر اور کولیسٹرول چیک کر سکتا ہے، اور آپ کے ساتھ مل کر وزن کم کرنے کا منصوبہ بنا سکتا ہے۔"
+     },
+     "refs": [
+      "nice-ng246",
+      "mayo-obesity"
+     ]
+    }
+   ]
+  }
+ ],
+ "references": [
+  {
+   "id": "who-obesity",
+   "org": "World Health Organization (WHO)",
+   "title": "Obesity and overweight (fact sheet)",
+   "year": 2025,
+   "url": "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight",
+   "checkedOn": "2026-09-30"
+  },
+  {
+   "id": "who-asian-bmi",
+   "org": "WHO Expert Consultation (The Lancet)",
+   "title": "Appropriate body-mass index for Asian populations and its implications for policy and intervention strategies",
+   "year": 2004,
+   "url": "https://pubmed.ncbi.nlm.nih.gov/14726171/",
+   "checkedOn": "2026-09-30"
+  },
+  {
+   "id": "nice-ng246",
+   "org": "NICE (UK)",
+   "title": "Overweight and obesity management (NG246)",
+   "year": 2025,
+   "url": "https://www.nice.org.uk/guidance/ng246",
+   "checkedOn": "2026-09-30"
+  },
+  {
+   "id": "mayo-obesity",
+   "org": "Mayo Clinic",
+   "title": "Obesity: Symptoms and causes",
+   "year": 2025,
+   "url": "https://www.mayoclinic.org/diseases-conditions/obesity/symptoms-causes/syc-20375742",
+   "checkedOn": "2026-09-30"
+  },
+  {
+   "id": "cc-obesity",
+   "org": "Cleveland Clinic",
+   "title": "Obesity",
+   "year": 2025,
+   "url": "https://my.clevelandclinic.org/health/diseases/11209-weight-control-and-obesity",
+   "checkedOn": "2026-09-30"
+  },
+  {
+   "id": "who-diet",
+   "org": "World Health Organization (WHO)",
+   "title": "Healthy diet (fact sheet)",
+   "year": 2026,
+   "url": "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+   "checkedOn": "2026-09-30"
+  },
+  {
+   "id": "ada-plate",
+   "org": "American Diabetes Association (ADA)",
+   "title": "Simple Diabetes Meal Plan: The Diabetes Plate",
+   "year": 2025,
+   "url": "https://diabetes.org/food-nutrition/meal-planning",
+   "checkedOn": "2026-09-30"
+  },
+  {
+   "id": "who-activity",
+   "org": "World Health Organization (WHO)",
+   "title": "Physical activity (fact sheet)",
+   "year": 2024,
+   "url": "https://www.who.int/news-room/fact-sheets/detail/physical-activity",
+   "checkedOn": "2026-09-30"
+  },
+  {
+   "id": "aha-911",
+   "org": "American Heart Association (AHA)",
+   "title": "When To Call 911 About High Blood Pressure",
+   "year": 2025,
+   "url": "https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings/when-to-call-911-for-high-blood-pressure",
+   "checkedOn": "2026-09-30"
+  }
+ ]
+}

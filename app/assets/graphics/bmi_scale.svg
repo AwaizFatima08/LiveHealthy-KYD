@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 150" width="340" height="150">
+<rect x="13" y="37" width="314" height="50" rx="10" fill="#E2E8E5"/>
+<rect x="16.0" y="40" width="55.4" height="44" fill="#B26A00"/>
+<rect x="71.4" y="40" width="104.7" height="44" fill="#1B7F3B"/>
+<rect x="176.2" y="40" width="73.9" height="44" fill="#B26A00"/>
+<rect x="250.1" y="40" width="73.9" height="44" fill="#C62828"/>
+<line x1="71.4" y1="32" x2="71.4" y2="92" stroke="#1D2B26" stroke-width="2"/>
+<text x="71.4" y="112" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#1D2B26" text-anchor="middle">18.5</text>
+<line x1="176.2" y1="32" x2="176.2" y2="92" stroke="#1D2B26" stroke-width="2"/>
+<text x="176.2" y="112" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#1D2B26" text-anchor="middle">25</text>
+<line x1="250.1" y1="32" x2="250.1" y2="92" stroke="#1D2B26" stroke-width="2"/>
+<text x="250.1" y="112" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#1D2B26" text-anchor="middle">30</text>
+<line x1="143.9" y1="30" x2="143.9" y2="94" stroke="#1D2B26" stroke-width="2" stroke-dasharray="4 4"/>
+<text x="143.9" y="24" font-family="Roboto, sans-serif" font-size="13" font-weight="600" fill="#1D2B26" text-anchor="middle">23</text>
+<line x1="213.1" y1="30" x2="213.1" y2="94" stroke="#1D2B26" stroke-width="2" stroke-dasharray="4 4"/>
+<text x="213.1" y="24" font-family="Roboto, sans-serif" font-size="13" font-weight="600" fill="#1D2B26" text-anchor="middle">27.5</text>
+<text x="16" y="140" font-family="Roboto, sans-serif" font-size="13" font-weight="600" fill="#8A9A93" text-anchor="start">kg/m²</text>
+</svg>

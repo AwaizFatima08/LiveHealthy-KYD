@@ -1,0 +1,583 @@
+{
+  "id": "hypertension",
+  "version": 1,
+  "order": 1,
+  "group": null,
+  "status": "published",
+  "title": {
+    "en": "High Blood Pressure",
+    "ur": "ہائی بلڈ پریشر"
+  },
+  "summary": {
+    "en": "What high blood pressure is, why it matters, and how to bring it down.",
+    "ur": "ہائی بلڈ پریشر کیا ہے، یہ کیوں اہم ہے، اور اسے کیسے کم کیا جائے۔"
+  },
+  "headerAsset": "hypertension_header.svg",
+  "reviewedBy": {
+    "en": "Dr. Humayun Shahzad, MBBS",
+    "ur": "ڈاکٹر ہمایوں شہزاد، ایم بی بی ایس"
+  },
+  "reviewedOn": "2026-09-30",
+  "nextReviewDue": "2027-09-30",
+  "relatedTools": [
+    {
+      "tool": "vitals",
+      "label": {
+        "en": "Log your blood pressure readings",
+        "ur": "اپنے بلڈ پریشر کی ریڈنگز محفوظ کریں"
+      }
+    },
+    {
+      "tool": "medicineReminder",
+      "label": {
+        "en": "Never miss a blood pressure tablet",
+        "ur": "بلڈ پریشر کی کوئی گولی نہ بھولیں"
+      }
+    }
+  ],
+  "sections": [
+    {
+      "id": "whatIs",
+      "title": {
+        "en": "What it is",
+        "ur": "یہ کیا ہے"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Blood pressure is the force of blood pushing against the walls of your arteries. High blood pressure (hypertension) means this force stays too high over time. It makes the heart work harder and slowly damages blood vessels.",
+            "ur": "بلڈ پریشر وہ دباؤ ہے جو خون شریانوں کی دیواروں پر ڈالتا ہے۔ ہائی بلڈ پریشر کا مطلب ہے کہ یہ دباؤ لمبے عرصے تک زیادہ رہے۔ اس سے دل کو زیادہ محنت کرنی پڑتی ہے اور خون کی نالیاں آہستہ آہستہ خراب ہوتی ہیں۔"
+          },
+          "refs": [
+            "who-htn",
+            "aha-threats"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "A reading has two numbers, for example 120/80 mmHg. The top number (systolic) is the pressure when the heart beats. The bottom number (diastolic) is the pressure when the heart rests between beats.",
+            "ur": "ہر ریڈنگ میں دو نمبر ہوتے ہیں، مثلاً 120/80 mmHg۔ اوپر والا نمبر (سسٹولک) وہ دباؤ ہے جب دل دھڑکتا ہے۔ نیچے والا نمبر (ڈائسٹولک) وہ دباؤ ہے جب دل دو دھڑکنوں کے درمیان آرام کرتا ہے۔"
+          },
+          "refs": [
+            "aha-readings"
+          ]
+        },
+        {
+          "type": "image",
+          "assetKey": "bp_categories.svg",
+          "caption": {
+            "en": "Blood pressure categories for adults. Whichever of your two numbers is in the higher category decides your category.",
+            "ur": "بالغ افراد کے لیے بلڈ پریشر کے درجے۔ آپ کے دونوں نمبروں میں سے جو زیادہ اونچے درجے میں ہو، وہی آپ کا درجہ ہے۔"
+          },
+          "refs": [
+            "aha-readings"
+          ]
+        },
+        {
+          "type": "keyNumber",
+          "label": {
+            "en": "Normal",
+            "ur": "نارمل"
+          },
+          "value": {
+            "en": "Below 120/80 mmHg",
+            "ur": "120/80 mmHg سے کم"
+          },
+          "level": "normal",
+          "check": {
+            "metric": "bp",
+            "band": "normal"
+          },
+          "refs": [
+            "aha-readings"
+          ]
+        },
+        {
+          "type": "keyNumber",
+          "label": {
+            "en": "Elevated",
+            "ur": "معمول سے زیادہ"
+          },
+          "value": {
+            "en": "Top 120–129, bottom below 80",
+            "ur": "اوپر والا 120–129، نیچے والا 80 سے کم"
+          },
+          "level": "caution",
+          "check": {
+            "metric": "bp",
+            "band": "elevated"
+          },
+          "refs": [
+            "aha-readings"
+          ]
+        },
+        {
+          "type": "keyNumber",
+          "label": {
+            "en": "High blood pressure, stage 1",
+            "ur": "ہائی بلڈ پریشر، پہلا درجہ"
+          },
+          "value": {
+            "en": "Top 130–139 or bottom 80–89",
+            "ur": "اوپر والا 130–139 یا نیچے والا 80–89"
+          },
+          "level": "caution",
+          "check": {
+            "metric": "bp",
+            "band": "stage1"
+          },
+          "refs": [
+            "aha-readings"
+          ]
+        },
+        {
+          "type": "keyNumber",
+          "label": {
+            "en": "High blood pressure, stage 2",
+            "ur": "ہائی بلڈ پریشر، دوسرا درجہ"
+          },
+          "value": {
+            "en": "Top 140 or higher, or bottom 90 or higher",
+            "ur": "اوپر والا 140 یا زیادہ، یا نیچے والا 90 یا زیادہ"
+          },
+          "level": "alert",
+          "check": {
+            "metric": "bp",
+            "band": "stage2"
+          },
+          "refs": [
+            "aha-readings"
+          ]
+        },
+        {
+          "type": "keyNumber",
+          "label": {
+            "en": "Very high: needs urgent attention",
+            "ur": "بہت زیادہ: فوری توجہ ضروری"
+          },
+          "value": {
+            "en": "Top above 180 or bottom above 120",
+            "ur": "اوپر والا 180 سے زیادہ یا نیچے والا 120 سے زیادہ"
+          },
+          "note": {
+            "en": "See \"When to see a doctor\" for what to do.",
+            "ur": "کیا کرنا ہے، یہ \"ڈاکٹر کو کب دکھائیں\" والے حصے میں دیکھیں۔"
+          },
+          "level": "alert",
+          "check": {
+            "metric": "bp",
+            "band": "veryHigh"
+          },
+          "refs": [
+            "aha-readings"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Note: these categories are from the American Heart Association and American College of Cardiology. UK guidance (NICE) diagnoses high blood pressure from 140/90 mmHg measured in the clinic, confirmed with home or 24-hour readings. Your doctor may use either.",
+            "ur": "نوٹ: یہ درجے امریکن ہارٹ ایسوسی ایشن اور امریکن کالج آف کارڈیالوجی کے ہیں۔ برطانیہ کی رہنمائی (NICE) کے مطابق کلینک میں 140/90 mmHg یا اس سے زیادہ ریڈنگ پر ہائی بلڈ پریشر کی تشخیص ہوتی ہے، جس کی تصدیق گھر کی یا 24 گھنٹے کی ریڈنگز سے کی جاتی ہے۔ آپ کا ڈاکٹر ان میں سے کوئی بھی طریقہ اپنا سکتا ہے۔"
+          },
+          "refs": [
+            "nice-ng136"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "High blood pressure is very common. About 1 in 3 adults aged 30 to 79 has it, and nearly half of them don't know, because it usually causes no symptoms. The only way to know is to have it measured.",
+            "ur": "ہائی بلڈ پریشر بہت عام ہے۔ 30 سے 79 سال کی عمر کے ہر 3 میں سے تقریباً 1 بالغ کو یہ مسئلہ ہے، اور ان میں سے تقریباً آدھے لوگوں کو معلوم ہی نہیں، کیونکہ عام طور پر اس کی کوئی علامت نہیں ہوتی۔ جاننے کا واحد طریقہ بلڈ پریشر چیک کروانا ہے۔"
+          },
+          "refs": [
+            "who-htn"
+          ]
+        },
+        {
+          "type": "image",
+          "assetKey": "bp_measure.svg",
+          "caption": {
+            "en": "For an accurate reading: no tea, coffee, smoking or exercise for 30 minutes before; rest quietly for 5 minutes; sit with your arm supported at heart level and the cuff on bare skin. Take two readings one minute apart.",
+            "ur": "درست ریڈنگ کے لیے: 30 منٹ پہلے چائے، کافی، سگریٹ اور ورزش سے پرہیز کریں؛ 5 منٹ خاموشی سے آرام کریں؛ بیٹھ کر بازو کو دل کی اونچائی پر سہارا دیں اور کف ننگی جلد پر باندھیں۔ ایک منٹ کے وقفے سے دو ریڈنگز لیں۔"
+          },
+          "refs": [
+            "aha-home"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "causes",
+      "title": {
+        "en": "Causes & risk factors",
+        "ur": "وجوہات اور خطرے کے عوامل"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Most high blood pressure has no single cause. It builds up over years from a mix of things you can change and things you can't.",
+            "ur": "زیادہ تر ہائی بلڈ پریشر کی کوئی ایک وجہ نہیں ہوتی۔ یہ برسوں میں کئی باتوں کے ملنے سے بنتا ہے، جن میں سے کچھ آپ بدل سکتے ہیں اور کچھ نہیں۔"
+          },
+          "refs": [
+            "mayo-htn"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": {
+            "en": "Risk factors you can change",
+            "ur": "خطرے کے وہ عوامل جو آپ بدل سکتے ہیں"
+          },
+          "items": [
+            {
+              "en": "Eating too much salt",
+              "ur": "بہت زیادہ نمک کھانا"
+            },
+            {
+              "en": "Being overweight",
+              "ur": "وزن کا زیادہ ہونا"
+            },
+            {
+              "en": "Not being physically active",
+              "ur": "جسمانی طور پر متحرک نہ رہنا"
+            },
+            {
+              "en": "Smoking or using tobacco",
+              "ur": "سگریٹ نوشی یا تمباکو کا استعمال"
+            },
+            {
+              "en": "Drinking alcohol",
+              "ur": "شراب نوشی"
+            },
+            {
+              "en": "Long-term stress",
+              "ur": "لمبے عرصے کا ذہنی دباؤ"
+            }
+          ],
+          "refs": [
+            "who-htn",
+            "mayo-htn"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": {
+            "en": "Risk factors you can't change",
+            "ur": "خطرے کے وہ عوامل جو آپ نہیں بدل سکتے"
+          },
+          "items": [
+            {
+              "en": "Getting older: blood pressure tends to rise with age",
+              "ur": "بڑھتی عمر: عمر کے ساتھ بلڈ پریشر بڑھنے کا رجحان ہوتا ہے"
+            },
+            {
+              "en": "Family history: parents, brothers or sisters with high blood pressure",
+              "ur": "خاندانی تاریخ: والدین یا بہن بھائیوں کو ہائی بلڈ پریشر ہونا"
+            }
+          ],
+          "refs": [
+            "who-htn",
+            "mayo-htn"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Sometimes another condition or a medicine raises blood pressure, for example kidney disease, sleep apnoea (breathing stops during sleep), or some painkillers, cold and flu remedies and contraceptive pills. Tell your doctor about every medicine you take.",
+            "ur": "کبھی کبھی کوئی دوسری بیماری یا دوا بلڈ پریشر بڑھا دیتی ہے، مثلاً گردوں کی بیماری، نیند میں سانس رکنا (سلیپ ایپنیا)، یا بعض درد کش دوائیں، نزلہ زکام کی دوائیں اور مانع حمل گولیاں۔ اپنے ڈاکٹر کو اپنی ہر دوا کے بارے میں بتائیں۔"
+          },
+          "refs": [
+            "mayo-htn"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complications",
+      "title": {
+        "en": "Complications of poor control",
+        "ur": "کنٹرول نہ ہونے کی پیچیدگیاں"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Uncontrolled high blood pressure quietly damages the walls of blood vessels. Fat and cholesterol build up in the damaged places and narrow the arteries. Over years this can lead to serious problems.",
+            "ur": "کنٹرول نہ ہونے والا ہائی بلڈ پریشر خاموشی سے خون کی نالیوں کی دیواروں کو نقصان پہنچاتا ہے۔ متاثرہ جگہوں پر چکنائی اور کولیسٹرول جمع ہو کر شریانوں کو تنگ کر دیتے ہیں۔ برسوں میں اس سے سنگین مسائل پیدا ہو سکتے ہیں۔"
+          },
+          "refs": [
+            "aha-threats"
+          ]
+        },
+        {
+          "type": "image",
+          "assetKey": "bp_organs.svg",
+          "caption": {
+            "en": "The organs most at risk: brain, eyes, heart, kidneys and blood vessels.",
+            "ur": "سب سے زیادہ خطرے والے اعضاء: دماغ، آنکھیں، دل، گردے اور خون کی نالیاں۔"
+          },
+          "refs": [
+            "aha-threats"
+          ]
+        },
+        {
+          "type": "bullets",
+          "items": [
+            {
+              "en": "Heart: heart attack, heart failure and chest pain (angina)",
+              "ur": "دل: ہارٹ اٹیک، دل کا کمزور ہونا (ہارٹ فیلیئر) اور سینے کا درد (انجائنا)"
+            },
+            {
+              "en": "Brain: stroke, and a higher risk of dementia",
+              "ur": "دماغ: فالج، اور یادداشت کی کمزوری (ڈیمنشیا) کا زیادہ خطرہ"
+            },
+            {
+              "en": "Kidneys: kidney disease, which can lead to kidney failure",
+              "ur": "گردے: گردوں کی بیماری، جو گردے فیل ہونے تک جا سکتی ہے"
+            },
+            {
+              "en": "Eyes: damaged blood vessels in the eye and loss of vision",
+              "ur": "آنکھیں: آنکھ کی خون کی نالیوں کو نقصان اور بینائی کا کم ہونا"
+            },
+            {
+              "en": "Blood vessels: narrowed, hardened arteries (atherosclerosis)",
+              "ur": "خون کی نالیاں: شریانوں کا تنگ اور سخت ہو جانا (ایتھیروسکلیروسس)"
+            },
+            {
+              "en": "Sexual problems, such as erectile dysfunction",
+              "ur": "جنسی مسائل، جیسے مردانہ کمزوری"
+            }
+          ],
+          "refs": [
+            "aha-threats",
+            "aha-manage"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "The good news: bringing blood pressure down lowers these risks. Keep up treatment even when you feel well, because high blood pressure usually has no symptoms.",
+            "ur": "اچھی خبر یہ ہے کہ بلڈ پریشر کم کرنے سے یہ خطرات بھی کم ہو جاتے ہیں۔ طبیعت ٹھیک محسوس ہو تب بھی علاج جاری رکھیں، کیونکہ ہائی بلڈ پریشر کی عام طور پر کوئی علامت نہیں ہوتی۔"
+          },
+          "refs": [
+            "aha-manage",
+            "who-htn"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lifestyle",
+      "title": {
+        "en": "Lifestyle changes",
+        "ur": "طرزِ زندگی میں تبدیلیاں"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "These changes lower blood pressure and help medicines work better. If you take blood pressure medicine, keep taking it. Never stop a medicine without asking your doctor, even if your readings are good.",
+            "ur": "یہ تبدیلیاں بلڈ پریشر کم کرتی ہیں اور دواؤں کو بہتر اثر کرنے میں مدد دیتی ہیں۔ اگر آپ بلڈ پریشر کی دوا لیتے ہیں تو اسے جاری رکھیں۔ ریڈنگز اچھی ہوں تب بھی ڈاکٹر سے پوچھے بغیر کوئی دوا بند نہ کریں۔"
+          },
+          "refs": [
+            "aha-manage",
+            "aha-home"
+          ]
+        },
+        {
+          "type": "image",
+          "assetKey": "salt_limit.svg",
+          "caption": {
+            "en": "Keep salt to less than 5 g a day for adults: about one level teaspoon, including the salt already in food.",
+            "ur": "بالغ افراد روزانہ 5 گرام سے کم نمک کھائیں: تقریباً ایک ہموار چائے کا چمچ، کھانے میں پہلے سے موجود نمک سمیت۔"
+          },
+          "refs": [
+            "who-salt"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": {
+            "en": "Eat",
+            "ur": "کھانا"
+          },
+          "items": [
+            {
+              "en": "Cut down on salty foods: pickles (achar), papad, salted snacks, instant noodles, sauces and fast food.",
+              "ur": "نمکین چیزیں کم کریں: اچار، پاپڑ، نمکین اسنیکس، انسٹنٹ نوڈلز، ساس اور فاسٹ فوڈ۔"
+            },
+            {
+              "en": "Taste food before adding salt, and cook with less of it. Use lemon, herbs and spices for flavour.",
+              "ur": "نمک ڈالنے سے پہلے کھانا چکھ لیں اور پکاتے وقت نمک کم ڈالیں۔ ذائقے کے لیے لیموں، ہری بوٹیاں اور مصالحے استعمال کریں۔"
+            },
+            {
+              "en": "Eat plenty of vegetables and fruit, plus pulses (daal) and whole grains.",
+              "ur": "سبزیاں اور پھل زیادہ کھائیں، ساتھ ہی دالیں اور ثابت اناج۔"
+            }
+          ],
+          "refs": [
+            "who-salt",
+            "who-diet"
+          ]
+        },
+        {
+          "type": "image",
+          "assetKey": "activity_week.svg",
+          "caption": {
+            "en": "Be active for at least 150 minutes a week, for example a brisk 30-minute walk on 5 days.",
+            "ur": "ہفتے میں کم از کم 150 منٹ جسمانی سرگرمی کریں، مثلاً ہفتے میں 5 دن 30 منٹ تیز چہل قدمی۔"
+          },
+          "refs": [
+            "who-activity"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": {
+            "en": "Live",
+            "ur": "روزمرہ زندگی"
+          },
+          "items": [
+            {
+              "en": "Reach and keep a healthy weight.",
+              "ur": "صحت مند وزن حاصل کریں اور اسے برقرار رکھیں۔"
+            },
+            {
+              "en": "Quit smoking and all tobacco, including naswar, gutka and paan with tobacco.",
+              "ur": "سگریٹ اور ہر قسم کا تمباکو چھوڑ دیں، بشمول نسوار، گٹکا اور تمباکو والا پان۔"
+            },
+            {
+              "en": "Avoid alcohol.",
+              "ur": "شراب سے پرہیز کریں۔"
+            },
+            {
+              "en": "Find ways to manage stress.",
+              "ur": "ذہنی دباؤ سے نمٹنے کے طریقے اپنائیں۔"
+            },
+            {
+              "en": "Take your medicines exactly as prescribed.",
+              "ur": "دوائیں بالکل ویسے ہی لیں جیسے ڈاکٹر نے بتائی ہیں۔"
+            }
+          ],
+          "refs": [
+            "aha-manage",
+            "who-tobacco"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "If you have high blood pressure, check it at home with an automatic upper-arm monitor (wrist and finger monitors are less reliable), and keep a record to show your doctor.",
+            "ur": "اگر آپ کو ہائی بلڈ پریشر ہے تو گھر پر اوپری بازو والی خودکار مشین سے چیک کرتے رہیں (کلائی اور انگلی والی مشینیں کم قابلِ اعتماد ہیں)، اور ریکارڈ رکھ کر اپنے ڈاکٹر کو دکھائیں۔"
+          },
+          "refs": [
+            "aha-home"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "whenToSeeDoctor",
+      "title": {
+        "en": "When to see a doctor",
+        "ur": "ڈاکٹر کو کب دکھائیں"
+      },
+      "blocks": [
+        {
+          "type": "alert",
+          "level": "urgent",
+          "title": {
+            "en": "Blood pressure above 180/120 with any of these:",
+            "ur": "بلڈ پریشر 180/120 سے زیادہ ہو اور ان میں سے کوئی علامت ہو:"
+          },
+          "items": [
+            {
+              "en": "Chest pain",
+              "ur": "سینے میں درد"
+            },
+            {
+              "en": "Shortness of breath",
+              "ur": "سانس پھولنا"
+            },
+            {
+              "en": "Back pain",
+              "ur": "کمر میں درد"
+            },
+            {
+              "en": "Numbness or weakness",
+              "ur": "سُن ہونا یا کمزوری"
+            },
+            {
+              "en": "Change in vision",
+              "ur": "نظر میں تبدیلی"
+            },
+            {
+              "en": "Difficulty speaking",
+              "ur": "بولنے میں دشواری"
+            }
+          ],
+          "text": {
+            "en": "Go to the nearest emergency department or call an ambulance (Rescue 1122 in Pakistan) now. Don't wait to see if it comes down.",
+            "ur": "ابھی قریبی ایمرجنسی میں جائیں یا ایمبولینس بلائیں (پاکستان میں ریسکیو 1122)۔ کم ہونے کا انتظار نہ کریں۔"
+          },
+          "refs": [
+            "aha-911",
+            "aha-readings"
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "soon",
+          "title": {
+            "en": "Contact your doctor soon if:",
+            "ur": "جلد اپنے ڈاکٹر سے رابطہ کریں اگر:"
+          },
+          "items": [
+            {
+              "en": "A reading is above 180/120 but you have none of the symptoms above. Wait 1 minute and measure again. If it is still that high, contact your doctor the same day.",
+              "ur": "ریڈنگ 180/120 سے زیادہ ہو مگر اوپر دی گئی کوئی علامت نہ ہو۔ 1 منٹ رک کر دوبارہ چیک کریں۔ اگر اب بھی اتنا ہی زیادہ ہو تو اسی دن ڈاکٹر سے رابطہ کریں۔"
+            },
+            {
+              "en": "Your home readings are repeatedly 130/80 or higher.",
+              "ur": "گھر کی ریڈنگز بار بار 130/80 یا اس سے زیادہ آئیں۔"
+            },
+            {
+              "en": "You get side effects from a blood pressure medicine, such as dizziness.",
+              "ur": "بلڈ پریشر کی دوا سے کوئی مضر اثر ہو، جیسے چکر آنا۔"
+            }
+          ],
+          "refs": [
+            "aha-readings",
+            "aha-911"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Even if you feel fine, have your blood pressure checked at least every 2 years from age 18, and every year from age 40 or if you are at higher risk.",
+            "ur": "طبیعت ٹھیک ہو تب بھی 18 سال کی عمر سے کم از کم ہر 2 سال بعد بلڈ پریشر چیک کروائیں، اور 40 سال کی عمر کے بعد یا زیادہ خطرہ ہونے کی صورت میں ہر سال۔"
+          },
+          "refs": [
+            "mayo-htn"
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    "who-htn",
+    "aha-readings",
+    "aha-threats",
+    "aha-manage",
+    "aha-home",
+    "aha-911",
+    "nice-ng136",
+    "mayo-htn",
+    "who-salt",
+    "who-diet",
+    "who-activity",
+    "who-tobacco"
+  ]
+}

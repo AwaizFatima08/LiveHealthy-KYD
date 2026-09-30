@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 220" width="340" height="220">
+<circle cx="140" cy="110" r="100" fill="#FFFFFF" stroke="#E2E8E5" stroke-width="4"/>
+<path d="M140 20 A90 90 0 0 0 140 200 Z" fill="#6FB36B"/>
+<path d="M140 110 L140 20 A90 90 0 0 1 230 110 Z" fill="#C9745A"/>
+<path d="M140 110 L230 110 A90 90 0 0 1 140 200 Z" fill="#E1B96A"/>
+<line x1="140" y1="20" x2="140" y2="200" stroke="#FFFFFF" stroke-width="4"/>
+<line x1="140" y1="110" x2="230" y2="110" stroke="#FFFFFF" stroke-width="4"/>
+<ellipse cx="84" cy="70" rx="14" ry="8" fill="#3F8F43" transform="rotate(-30 84 70)"/>
+<ellipse cx="100" cy="110" rx="14" ry="8" fill="#3F8F43" transform="rotate(-30 100 110)"/>
+<ellipse cx="80" cy="145" rx="14" ry="8" fill="#3F8F43" transform="rotate(-30 80 145)"/>
+<ellipse cx="112" cy="160" rx="14" ry="8" fill="#3F8F43" transform="rotate(-30 112 160)"/>
+<ellipse cx="112" cy="60" rx="14" ry="8" fill="#3F8F43" transform="rotate(-30 112 60)"/>
+<circle cx="76" cy="105" r="8" fill="#D9453B"/>
+<circle cx="98" cy="138" r="8" fill="#D9453B"/>
+<ellipse cx="170" cy="60" rx="12" ry="7" fill="#8E4A33"/>
+<ellipse cx="190" cy="82" rx="12" ry="7" fill="#8E4A33"/>
+<ellipse cx="164" cy="88" rx="12" ry="7" fill="#8E4A33"/>
+<ellipse cx="152" cy="124" rx="5" ry="3" fill="#A87A2A"/>
+<ellipse cx="175" cy="141" rx="5" ry="3" fill="#A87A2A"/>
+<ellipse cx="198" cy="158" rx="5" ry="3" fill="#A87A2A"/>
+<ellipse cx="161" cy="125" rx="5" ry="3" fill="#A87A2A"/>
+<ellipse cx="184" cy="142" rx="5" ry="3" fill="#A87A2A"/>
+<ellipse cx="170" cy="126" rx="5" ry="3" fill="#A87A2A"/>
+<ellipse cx="193" cy="143" rx="5" ry="3" fill="#A87A2A"/>
+<ellipse cx="156" cy="160" rx="5" ry="3" fill="#A87A2A"/>
+<ellipse cx="179" cy="127" rx="5" ry="3" fill="#A87A2A"/>
+<ellipse cx="202" cy="144" rx="5" ry="3" fill="#A87A2A"/>
+<ellipse cx="165" cy="161" rx="5" ry="3" fill="#A87A2A"/>
+<ellipse cx="188" cy="128" rx="5" ry="3" fill="#A87A2A"/>
+<ellipse cx="211" cy="145" rx="5" ry="3" fill="#A87A2A"/>
+<path d="M262 60 L302 60 L296 170 L268 170 Z" fill="#DCE8F6" stroke="#2F6DB5" stroke-width="3"/>
+<path d="M266 92 L298 92 L296 168 L268 168 Z" fill="#2F6DB5" opacity="0.35"/>
+</svg>

@@ -1,0 +1,226 @@
+{
+  "ada-diagnosis": {
+    "org": "American Diabetes Association (ADA)",
+    "title": "Diagnosis",
+    "year": 2025,
+    "url": "https://diabetes.org/about-diabetes/diagnosis",
+    "checkedOn": "2026-09-30"
+  },
+  "ada-foot": {
+    "org": "American Diabetes Association (ADA)",
+    "title": "Foot Complications",
+    "year": 2025,
+    "url": "https://diabetes.org/about-diabetes/complications/foot-complications",
+    "checkedOn": "2026-09-30"
+  },
+  "ada-hypo": {
+    "org": "American Diabetes Association (ADA)",
+    "title": "Low Blood Glucose (Hypoglycemia)",
+    "year": 2025,
+    "url": "https://diabetes.org/living-with-diabetes/hypoglycemia-low-blood-glucose",
+    "checkedOn": "2026-09-30"
+  },
+  "ada-plate": {
+    "org": "American Diabetes Association (ADA)",
+    "title": "Simple Diabetes Meal Plan: The Diabetes Plate",
+    "year": 2025,
+    "url": "https://diabetes.org/food-nutrition/meal-planning",
+    "checkedOn": "2026-09-30"
+  },
+  "aha-911": {
+    "org": "American Heart Association (AHA)",
+    "title": "When To Call 911 About High Blood Pressure",
+    "year": 2025,
+    "url": "https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings/when-to-call-911-for-high-blood-pressure",
+    "checkedOn": "2026-09-30"
+  },
+  "aha-home": {
+    "org": "American Heart Association (AHA)",
+    "title": "Home Blood Pressure Monitoring",
+    "year": 2025,
+    "url": "https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings/monitoring-your-blood-pressure-at-home",
+    "checkedOn": "2026-09-30"
+  },
+  "aha-manage": {
+    "org": "American Heart Association (AHA)",
+    "title": "How to Manage High Blood Pressure",
+    "year": 2025,
+    "url": "https://www.heart.org/en/health-topics/high-blood-pressure/changes-you-can-make-to-manage-high-blood-pressure",
+    "checkedOn": "2026-09-30"
+  },
+  "aha-readings": {
+    "org": "American Heart Association (AHA)",
+    "title": "Understanding Blood Pressure Readings",
+    "year": 2025,
+    "url": "https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings",
+    "checkedOn": "2026-09-30"
+  },
+  "aha-threats": {
+    "org": "American Heart Association (AHA)",
+    "title": "Health Threats from High Blood Pressure",
+    "year": 2025,
+    "url": "https://www.heart.org/en/health-topics/high-blood-pressure/health-threats-from-high-blood-pressure",
+    "checkedOn": "2026-09-30"
+  },
+  "cc-hyperglycemia": {
+    "org": "Cleveland Clinic",
+    "title": "Hyperglycemia (High Blood Sugar)",
+    "year": 2025,
+    "url": "https://my.clevelandclinic.org/health/diseases/9815-hyperglycemia-high-blood-sugar",
+    "checkedOn": "2026-09-30"
+  },
+  "cc-hypoglycemia": {
+    "org": "Cleveland Clinic",
+    "title": "Hypoglycemia (Low Blood Sugar)",
+    "year": 2025,
+    "url": "https://my.clevelandclinic.org/health/diseases/11647-hypoglycemia-low-blood-sugar",
+    "checkedOn": "2026-09-30"
+  },
+  "cc-obesity": {
+    "org": "Cleveland Clinic",
+    "title": "Obesity",
+    "year": 2025,
+    "url": "https://my.clevelandclinic.org/health/diseases/11209-weight-control-and-obesity",
+    "checkedOn": "2026-09-30"
+  },
+  "cdc-gdm": {
+    "org": "Centers for Disease Control and Prevention (CDC)",
+    "title": "Gestational Diabetes",
+    "year": 2024,
+    "url": "https://www.cdc.gov/diabetes/about/gestational-diabetes.html",
+    "checkedOn": "2026-09-30"
+  },
+  "cdc-prevent": {
+    "org": "Centers for Disease Control and Prevention (CDC)",
+    "title": "Preventing Type 2 Diabetes",
+    "year": 2024,
+    "url": "https://www.cdc.gov/diabetes/prevention-type-2/index.html",
+    "checkedOn": "2026-09-30"
+  },
+  "mayo-gdm": {
+    "org": "Mayo Clinic",
+    "title": "Gestational diabetes: Symptoms & causes",
+    "year": 2025,
+    "url": "https://www.mayoclinic.org/diseases-conditions/gestational-diabetes/symptoms-causes/syc-20355339",
+    "checkedOn": "2026-09-30"
+  },
+  "mayo-htn": {
+    "org": "Mayo Clinic",
+    "title": "High blood pressure (hypertension): Symptoms & causes",
+    "year": 2025,
+    "url": "https://www.mayoclinic.org/diseases-conditions/high-blood-pressure/symptoms-causes/syc-20373410",
+    "checkedOn": "2026-09-30"
+  },
+  "mayo-obesity": {
+    "org": "Mayo Clinic",
+    "title": "Obesity: Symptoms and causes",
+    "year": 2025,
+    "url": "https://www.mayoclinic.org/diseases-conditions/obesity/symptoms-causes/syc-20375742",
+    "checkedOn": "2026-09-30"
+  },
+  "mayo-prediabetes": {
+    "org": "Mayo Clinic",
+    "title": "Prediabetes: Symptoms and causes",
+    "year": 2026,
+    "url": "https://www.mayoclinic.org/diseases-conditions/prediabetes/symptoms-causes/syc-20355278",
+    "checkedOn": "2026-09-30"
+  },
+  "mayo-t2d": {
+    "org": "Mayo Clinic",
+    "title": "Type 2 diabetes: Symptoms and causes",
+    "year": 2025,
+    "url": "https://www.mayoclinic.org/diseases-conditions/type-2-diabetes/symptoms-causes/syc-20351193",
+    "checkedOn": "2026-09-30"
+  },
+  "nei-retinopathy": {
+    "org": "National Eye Institute (NIH)",
+    "title": "Diabetic Retinopathy",
+    "year": 2025,
+    "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/diabetic-retinopathy",
+    "checkedOn": "2026-09-30"
+  },
+  "nice-ng136": {
+    "org": "NICE (UK)",
+    "title": "Hypertension in adults: diagnosis and management (NG136)",
+    "year": 2023,
+    "url": "https://www.nice.org.uk/guidance/ng136",
+    "checkedOn": "2026-09-30"
+  },
+  "nice-ng246": {
+    "org": "NICE (UK)",
+    "title": "Overweight and obesity management (NG246)",
+    "year": 2025,
+    "url": "https://www.nice.org.uk/guidance/ng246",
+    "checkedOn": "2026-09-30"
+  },
+  "nice-ng3": {
+    "org": "NICE (UK)",
+    "title": "Diabetes in pregnancy: management from preconception to the postnatal period (NG3)",
+    "year": 2020,
+    "url": "https://www.nice.org.uk/guidance/ng3",
+    "checkedOn": "2026-09-30"
+  },
+  "nice-ph38": {
+    "org": "NICE (UK)",
+    "title": "Type 2 diabetes: prevention in people at high risk (PH38)",
+    "year": 2017,
+    "url": "https://www.nice.org.uk/guidance/ph38",
+    "checkedOn": "2026-09-30"
+  },
+  "who-activity": {
+    "org": "World Health Organization (WHO)",
+    "title": "Physical activity (fact sheet)",
+    "year": 2024,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/physical-activity",
+    "checkedOn": "2026-09-30"
+  },
+  "who-asian-bmi": {
+    "org": "WHO Expert Consultation (The Lancet)",
+    "title": "Appropriate body-mass index for Asian populations and its implications for policy and intervention strategies",
+    "year": 2004,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/14726171/",
+    "checkedOn": "2026-09-30"
+  },
+  "who-diabetes": {
+    "org": "World Health Organization (WHO)",
+    "title": "Diabetes (fact sheet)",
+    "year": 2024,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/diabetes",
+    "checkedOn": "2026-09-30"
+  },
+  "who-diet": {
+    "org": "World Health Organization (WHO)",
+    "title": "Healthy diet (fact sheet)",
+    "year": 2026,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+    "checkedOn": "2026-09-30"
+  },
+  "who-htn": {
+    "org": "World Health Organization (WHO)",
+    "title": "Hypertension (fact sheet)",
+    "year": 2025,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/hypertension",
+    "checkedOn": "2026-09-30"
+  },
+  "who-obesity": {
+    "org": "World Health Organization (WHO)",
+    "title": "Obesity and overweight (fact sheet)",
+    "year": 2025,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight",
+    "checkedOn": "2026-09-30"
+  },
+  "who-salt": {
+    "org": "World Health Organization (WHO)",
+    "title": "Sodium reduction (fact sheet)",
+    "year": 2026,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/sodium-reduction",
+    "checkedOn": "2026-09-30"
+  },
+  "who-tobacco": {
+    "org": "World Health Organization (WHO)",
+    "title": "Tobacco and nicotine (fact sheet)",
+    "year": 2026,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/tobacco",
+    "checkedOn": "2026-09-30"
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "id": "gestational_diabetes",
+  "version": 1,
+  "order": 3,
+  "group": "diabetes",
+  "status": "published",
+  "skipVitalsCheck": true,
+  "title": {"en": "Diabetes in Pregnancy (Gestational)", "ur": "حمل کی ذیابیطس"},
+  "summary": {
+    "en": "Diabetes that starts during pregnancy: testing, keeping mother and baby safe, and after the birth.",
+    "ur": "حمل کے دوران شروع ہونے والی ذیابیطس: ٹیسٹ، ماں اور بچے کی حفاظت، اور پیدائش کے بعد۔"
+  },
+  "headerAsset": "gestational_diabetes_header.svg",
+  "reviewedBy": {"en": "Dr. Humayun Shahzad, MBBS", "ur": "ڈاکٹر ہمایوں شہزاد، ایم بی بی ایس"},
+  "reviewedOn": "2026-09-30",
+  "nextReviewDue": "2027-09-30",
+  "relatedTools": [
+    {"tool": "vitals", "label": {"en": "Keep a record of your sugar readings to show your doctor", "ur": "ڈاکٹر کو دکھانے کے لیے شوگر کی ریڈنگز کا ریکارڈ رکھیں"}}
+  ],
+  "sections": [
+    {
+      "id": "whatIs",
+      "title": {"en": "What it is", "ur": "یہ کیا ہے"},
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Gestational diabetes is diabetes that is first found during pregnancy, in a woman who didn't have diabetes before. Pregnancy hormones make the body use insulin less well, and some women can't make enough extra insulin to keep blood sugar normal.",
+            "ur": "حمل کی ذیابیطس وہ ذیابیطس ہے جو حمل کے دوران پہلی بار سامنے آتی ہے، ایسی خاتون میں جسے پہلے ذیابیطس نہیں تھی۔ حمل کے ہارمونز کی وجہ سے جسم انسولین کو کم بہتر طریقے سے استعمال کرتا ہے، اور بعض خواتین شوگر کو نارمل رکھنے کے لیے اضافی انسولین نہیں بنا پاتیں۔"
+          },
+          "refs": ["cdc-gdm", "mayo-gdm"]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "It usually develops around the 24th week of pregnancy and often causes no symptoms, so testing is important. In the United States it affects 5 to 9 in every 100 pregnancies.",
+            "ur": "یہ عموماً حمل کے 24ویں ہفتے کے قریب شروع ہوتی ہے اور اکثر کوئی علامت نہیں دیتی، اس لیے ٹیسٹ کروانا ضروری ہے۔ امریکہ میں یہ ہر 100 میں سے 5 سے 9 حملوں کو متاثر کرتی ہے۔"
+          },
+          "refs": ["cdc-gdm"]
+        },
+        {
+          "type": "image",
+          "assetKey": "gdm_timeline.svg",
+          "caption": {
+            "en": "Most women are tested between weeks 24 and 28 of pregnancy, often with a 2-hour glucose drink test (OGTT). Women at higher risk may be tested earlier.",
+            "ur": "زیادہ تر خواتین کا ٹیسٹ حمل کے 24 سے 28 ہفتوں کے درمیان ہوتا ہے، اکثر 2 گھنٹے کے گلوکوز والے مشروب کے ٹیسٹ (OGTT) سے۔ زیادہ خطرے والی خواتین کا ٹیسٹ پہلے بھی ہو سکتا ہے۔"
+          },
+          "refs": ["cdc-gdm", "nice-ng3"]
+        },
+        {
+          "type": "keyNumber",
+          "label": {"en": "Diagnosed if (UK NICE guidance)", "ur": "تشخیص کب ہوتی ہے (برطانیہ کی NICE رہنمائی)"},
+          "value": {"en": "Fasting 5.6 mmol/L (about 101 mg/dL) or higher", "ur": "نہار منہ 5.6 mmol/L (تقریباً 101 mg/dL) یا زیادہ"},
+          "note": {
+            "en": "or 7.8 mmol/L (about 140 mg/dL) or higher 2 hours after the glucose drink.",
+            "ur": "یا گلوکوز والا مشروب پینے کے 2 گھنٹے بعد 7.8 mmol/L (تقریباً 140 mg/dL) یا زیادہ۔"
+          },
+          "level": "caution",
+          "check": {"metric": "none"},
+          "refs": ["nice-ng3"]
+        },
+        {
+          "type": "keyNumber",
+          "label": {"en": "Usual sugar targets in pregnancy (UK NICE guidance)", "ur": "حمل میں شوگر کے عام اہداف (برطانیہ کی NICE رہنمائی)"},
+          "value": {"en": "Fasting below 5.3 mmol/L (about 95 mg/dL)", "ur": "نہار منہ 5.3 mmol/L (تقریباً 95 mg/dL) سے کم"},
+          "note": {
+            "en": "1 hour after meals below 7.8 mmol/L (about 140 mg/dL), or 2 hours after meals below 6.4 mmol/L (about 115 mg/dL). Your own targets may differ.",
+            "ur": "کھانے کے 1 گھنٹے بعد 7.8 mmol/L (تقریباً 140 mg/dL) سے کم، یا کھانے کے 2 گھنٹے بعد 6.4 mmol/L (تقریباً 115 mg/dL) سے کم۔ آپ کے ذاتی اہداف مختلف ہو سکتے ہیں۔"
+          },
+          "level": "neutral",
+          "check": {"metric": "none"},
+          "refs": ["nice-ng3"]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Important: these pregnancy targets are stricter than the general adult ranges. The colour flags in LiveHealthy: Vitals are for adults who are not pregnant. If you are pregnant, follow the targets your doctor gives you.",
+            "ur": "اہم: حمل کے یہ اہداف عام بالغ افراد کی حدوں سے زیادہ سخت ہیں۔ لِو ہیلدی: وائٹلز میں رنگوں والے نشانات ان بالغ افراد کے لیے ہیں جو حاملہ نہیں۔ اگر آپ حاملہ ہیں تو اپنے ڈاکٹر کے بتائے ہوئے اہداف پر عمل کریں۔"
+          },
+          "refs": ["nice-ng3"]
+        }
+      ]
+    },
+    {
+      "id": "causes",
+      "title": {"en": "Causes & risk factors", "ur": "وجوہات اور خطرے کے عوامل"},
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "All pregnant women become somewhat resistant to insulin late in pregnancy. Some women already have insulin resistance before pregnancy, so they need more insulin from the start and are more likely to develop gestational diabetes.",
+            "ur": "حمل کے آخری حصے میں ہر حاملہ خاتون میں انسولین کا اثر کچھ کم ہو جاتا ہے۔ بعض خواتین میں یہ مسئلہ حمل سے پہلے ہی موجود ہوتا ہے، اس لیے انہیں شروع سے زیادہ انسولین کی ضرورت ہوتی ہے اور ان میں حمل کی ذیابیطس کا امکان زیادہ ہوتا ہے۔"
+          },
+          "refs": ["cdc-gdm"]
+        },
+        {
+          "type": "bullets",
+          "title": {"en": "Risk factors you can change (before pregnancy)", "ur": "خطرے کے وہ عوامل جو آپ بدل سکتی ہیں (حمل سے پہلے)"},
+          "items": [
+            {"en": "Being overweight", "ur": "وزن زیادہ ہونا"},
+            {"en": "Not being physically active", "ur": "جسمانی طور پر متحرک نہ ہونا"}
+          ],
+          "refs": ["mayo-gdm", "cdc-gdm"]
+        },
+        {
+          "type": "bullets",
+          "title": {"en": "Other risk factors", "ur": "خطرے کے دوسرے عوامل"},
+          "items": [
+            {"en": "Gestational diabetes in an earlier pregnancy", "ur": "پچھلے حمل میں حمل کی ذیابیطس"},
+            {"en": "A previous baby weighing more than about 4 kg", "ur": "پچھلا بچہ تقریباً 4 کلو سے زیادہ وزن کا ہونا"},
+            {"en": "Prediabetes", "ur": "پری ذیابیطس"},
+            {"en": "Polycystic ovary syndrome (PCOS)", "ur": "پولی سسٹک اووری سنڈروم (PCOS)"},
+            {"en": "A parent, brother or sister with diabetes", "ur": "والدین یا بہن بھائیوں میں سے کسی کو ذیابیطس ہونا"},
+            {"en": "South Asian family background", "ur": "جنوبی ایشیائی خاندانی پس منظر"}
+          ],
+          "refs": ["mayo-gdm", "cdc-gdm", "nice-ng3"]
+        }
+      ]
+    },
+    {
+      "id": "complications",
+      "title": {"en": "Complications of poor control", "ur": "کنٹرول نہ ہونے کی پیچیدگیاں"},
+      "blocks": [
+        {
+          "type": "bullets",
+          "title": {"en": "For the baby", "ur": "بچے کے لیے"},
+          "items": [
+            {"en": "Growing too large, which can cause a difficult birth, birth injury or the need for a caesarean section", "ur": "بہت بڑا ہو جانا، جس سے پیدائش مشکل ہو سکتی ہے، چوٹ لگ سکتی ہے یا آپریشن (سیزیرین) کی ضرورت پڑ سکتی ہے"},
+            {"en": "Being born early, and breathing problems", "ur": "وقت سے پہلے پیدائش، اور سانس کے مسائل"},
+            {"en": "Low blood sugar soon after birth", "ur": "پیدائش کے فوراً بعد شوگر کم ہو جانا"},
+            {"en": "A higher risk of obesity and type 2 diabetes later in life", "ur": "بعد کی زندگی میں موٹاپے اور ٹائپ 2 ذیابیطس کا زیادہ خطرہ"},
+            {"en": "Untreated, it can lead to the baby's death before or shortly after birth", "ur": "علاج نہ ہو تو پیدائش سے پہلے یا فوراً بعد بچے کی موت بھی ہو سکتی ہے"}
+          ],
+          "refs": ["mayo-gdm"]
+        },
+        {
+          "type": "bullets",
+          "title": {"en": "For the mother", "ur": "ماں کے لیے"},
+          "items": [
+            {"en": "High blood pressure and pre-eclampsia, a serious pregnancy complication", "ur": "ہائی بلڈ پریشر اور پری ایکلیمپسیا، جو حمل کی ایک سنگین پیچیدگی ہے"},
+            {"en": "A higher chance of a caesarean section", "ur": "آپریشن (سیزیرین) کا زیادہ امکان"},
+            {"en": "Gestational diabetes again in a future pregnancy", "ur": "اگلے حمل میں دوبارہ حمل کی ذیابیطس"},
+            {"en": "Type 2 diabetes later: about half of women with gestational diabetes go on to develop it", "ur": "بعد میں ٹائپ 2 ذیابیطس: حمل کی ذیابیطس والی تقریباً آدھی خواتین کو بعد میں یہ ہو جاتی ہے"}
+          ],
+          "refs": ["mayo-gdm", "cdc-gdm"]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Controlling blood sugar helps keep mother and baby healthy and can prevent problems during delivery.",
+            "ur": "شوگر پر قابو رکھنے سے ماں اور بچہ صحت مند رہتے ہیں اور زچگی کے دوران مسائل سے بچا جا سکتا ہے۔"
+          },
+          "refs": ["mayo-gdm"]
+        }
+      ]
+    },
+    {
+      "id": "lifestyle",
+      "title": {"en": "Lifestyle changes", "ur": "طرزِ زندگی میں تبدیلیاں"},
+      "blocks": [
+        {
+          "type": "bullets",
+          "title": {"en": "During pregnancy", "ur": "حمل کے دوران"},
+          "items": [
+            {"en": "Go to all your antenatal appointments and follow your treatment plan.", "ur": "حمل کے ہر معائنے پر جائیں اور اپنے علاج کے منصوبے پر عمل کریں۔"},
+            {"en": "Check your blood sugar as your doctor advises.", "ur": "ڈاکٹر کے مشورے کے مطابق شوگر چیک کریں۔"},
+            {"en": "Eat healthy food in the right amounts at regular times.", "ur": "صحت مند غذا صحیح مقدار میں اور مقررہ وقت پر کھائیں۔"},
+            {"en": "Stay active if your doctor agrees, for example a daily walk. Activity lowers blood sugar.", "ur": "اگر ڈاکٹر اجازت دے تو متحرک رہیں، مثلاً روزانہ چہل قدمی۔ جسمانی سرگرمی شوگر کم کرتی ہے۔"},
+            {"en": "Don't try to lose weight while pregnant. Ask your doctor how much weight to gain.", "ur": "حمل کے دوران وزن کم کرنے کی کوشش نہ کریں۔ ڈاکٹر سے پوچھیں کہ کتنا وزن بڑھنا چاہیے۔"},
+            {"en": "If diet and activity aren't enough, your doctor may prescribe insulin or metformin. This is common and safe when prescribed.", "ur": "اگر خوراک اور سرگرمی کافی نہ ہوں تو ڈاکٹر انسولین یا میٹفارمن تجویز کر سکتا ہے۔ یہ عام بات ہے اور ڈاکٹر کی تجویز پر محفوظ ہے۔"}
+          ],
+          "refs": ["cdc-gdm", "mayo-gdm"]
+        },
+        {
+          "type": "image",
+          "assetKey": "healthy_plate.svg",
+          "caption": {
+            "en": "A balanced plate: half vegetables, a quarter protein, a quarter good-quality carbohydrates. Your doctor or a dietitian can plan meals for your pregnancy.",
+            "ur": "متوازن پلیٹ: آدھی سبزیاں، ایک چوتھائی پروٹین، ایک چوتھائی اچھے کاربوہائیڈریٹس۔ آپ کا ڈاکٹر یا ماہرِ غذائیت حمل کے لیے کھانوں کا منصوبہ بنا سکتا ہے۔"
+          },
+          "refs": ["ada-plate"]
+        },
+        {
+          "type": "bullets",
+          "title": {"en": "After the birth", "ur": "پیدائش کے بعد"},
+          "items": [
+            {"en": "Blood sugar usually returns to normal soon after the baby is born.", "ur": "بچے کی پیدائش کے بعد شوگر عموماً جلد نارمل ہو جاتی ہے۔"},
+            {"en": "Have a fasting blood sugar test 6 to 13 weeks after the birth to check for diabetes.", "ur": "پیدائش کے 6 سے 13 ہفتوں کے اندر نہار منہ شوگر کا ٹیسٹ کروائیں تاکہ ذیابیطس کی جانچ ہو سکے۔"},
+            {"en": "Keep having regular checks for type 2 diabetes after that, as your doctor advises.", "ur": "اس کے بعد بھی ڈاکٹر کے مشورے کے مطابق ٹائپ 2 ذیابیطس کی باقاعدہ جانچ کرواتی رہیں۔"},
+            {"en": "A healthy weight, healthy food and regular activity lower your risk of diabetes in the future, and in your next pregnancy.", "ur": "صحت مند وزن، صحت مند غذا اور باقاعدہ سرگرمی مستقبل میں اور اگلے حمل میں ذیابیطس کا خطرہ کم کرتی ہیں۔"}
+          ],
+          "refs": ["nice-ng3", "mayo-gdm", "cdc-gdm"]
+        }
+      ]
+    },
+    {
+      "id": "whenToSeeDoctor",
+      "title": {"en": "When to see a doctor", "ur": "ڈاکٹر کو کب دکھائیں"},
+      "blocks": [
+        {
+          "type": "alert",
+          "level": "urgent",
+          "title": {"en": "If you take insulin: very low sugar with any of these:", "ur": "اگر آپ انسولین لیتی ہیں: شوگر بہت کم ہو اور ان میں سے کوئی علامت ہو:"},
+          "items": [
+            {"en": "Confusion, or slurred speech", "ur": "ذہنی الجھن، یا زبان لڑکھڑانا"},
+            {"en": "A seizure (fit)", "ur": "دورہ (جھٹکے) پڑنا"},
+            {"en": "Passing out", "ur": "بے ہوش ہو جانا"}
+          ],
+          "text": {
+            "en": "This is an emergency. Call an ambulance (Rescue 1122 in Pakistan).",
+            "ur": "یہ ایمرجنسی ہے۔ ایمبولینس بلائیں (پاکستان میں ریسکیو 1122)۔"
+          },
+          "refs": ["cc-hypoglycemia"]
+        },
+        {
+          "type": "alert",
+          "level": "urgent",
+          "title": {"en": "High sugar with any of these:", "ur": "شوگر زیادہ ہو اور ان میں سے کوئی علامت ہو:"},
+          "items": [
+            {"en": "Vomiting that won't stop, or stomach pain", "ur": "مسلسل قے، یا پیٹ میں درد"},
+            {"en": "Deep, fast or laboured breathing", "ur": "گہرا، تیز یا مشکل سے سانس لینا"},
+            {"en": "Confusion or unusual drowsiness", "ur": "ذہنی الجھن یا غیر معمولی غنودگی"}
+          ],
+          "text": {"en": "Go to the nearest emergency department now.", "ur": "ابھی قریبی ایمرجنسی میں جائیں۔"},
+          "refs": ["cc-hyperglycemia"]
+        },
+        {
+          "type": "alert",
+          "level": "soon",
+          "title": {"en": "Contact your doctor soon if:", "ur": "جلد اپنے ڈاکٹر سے رابطہ کریں اگر:"},
+          "items": [
+            {"en": "Your readings are often above the targets your doctor gave you", "ur": "آپ کی ریڈنگز اکثر ڈاکٹر کے دیے ہوئے اہداف سے اوپر آئیں"},
+            {"en": "You take insulin and your sugar goes below 4 mmol/L (about 72 mg/dL)", "ur": "آپ انسولین لیتی ہیں اور شوگر 4 mmol/L (تقریباً 72 mg/dL) سے نیچے چلی جائے"},
+            {"en": "You are much more thirsty than usual, or passing urine much more often", "ur": "آپ کو معمول سے بہت زیادہ پیاس لگے، یا پیشاب بہت زیادہ آئے"},
+            {"en": "You are planning another pregnancy: see your doctor before you start trying", "ur": "آپ اگلے حمل کا سوچ رہی ہیں: کوشش شروع کرنے سے پہلے ڈاکٹر سے ملیں"}
+          ],
+          "refs": ["nice-ng3", "mayo-gdm"]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "If you have any of the risk factors, tell your doctor early in pregnancy. You may be tested sooner than 24 weeks.",
+            "ur": "اگر آپ میں خطرے کا کوئی بھی عامل موجود ہے تو حمل کے شروع میں ہی ڈاکٹر کو بتائیں۔ ہو سکتا ہے آپ کا ٹیسٹ 24 ہفتوں سے پہلے کیا جائے۔"
+          },
+          "refs": ["cdc-gdm"]
+        }
+      ]
+    }
+  ],
+  "references": ["cdc-gdm", "mayo-gdm", "nice-ng3", "ada-plate", "cc-hypoglycemia", "cc-hyperglycemia"]
+}

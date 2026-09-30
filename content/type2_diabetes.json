@@ -1,0 +1,288 @@
+{
+  "id": "type2_diabetes",
+  "version": 1,
+  "order": 2,
+  "group": "diabetes",
+  "status": "published",
+  "title": {"en": "Type 2 Diabetes", "ur": "ٹائپ 2 ذیابیطس"},
+  "summary": {
+    "en": "The most common kind of diabetes: what it does, and how to keep it under control.",
+    "ur": "ذیابیطس کی سب سے عام قسم: یہ کیا کرتی ہے، اور اسے قابو میں کیسے رکھا جائے۔"
+  },
+  "headerAsset": "type2_diabetes_header.svg",
+  "reviewedBy": {"en": "Dr. Humayun Shahzad, MBBS", "ur": "ڈاکٹر ہمایوں شہزاد، ایم بی بی ایس"},
+  "reviewedOn": "2026-09-30",
+  "nextReviewDue": "2027-09-30",
+  "relatedTools": [
+    {"tool": "vitals", "label": {"en": "Log your blood sugar readings", "ur": "اپنی شوگر کی ریڈنگز محفوظ کریں"}},
+    {"tool": "medicineReminder", "label": {"en": "Take diabetes medicines on time", "ur": "ذیابیطس کی دوائیں وقت پر لیں"}}
+  ],
+  "sections": [
+    {
+      "id": "whatIs",
+      "title": {"en": "What it is", "ur": "یہ کیا ہے"},
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Type 2 diabetes is a long-term condition in which blood sugar (glucose) stays too high. The body's cells don't respond to insulin as they should, and the pancreas can't make enough insulin to keep sugar in a healthy range.",
+            "ur": "ٹائپ 2 ذیابیطس ایک طویل مدتی بیماری ہے جس میں خون میں شوگر (گلوکوز) مسلسل زیادہ رہتی ہے۔ جسم کے خلیے انسولین پر ٹھیک طرح ردِعمل نہیں دیتے، اور لبلبہ اتنی انسولین نہیں بنا پاتا کہ شوگر صحت مند حد میں رہے۔"
+          },
+          "refs": ["mayo-t2d", "who-diabetes"]
+        },
+        {
+          "type": "image",
+          "assetKey": "insulin_key.svg",
+          "caption": {
+            "en": "Insulin works like a key that lets sugar from the blood into the body's cells, where it is used for energy. In type 2 diabetes the key doesn't work well, so sugar stays in the blood.",
+            "ur": "انسولین ایک چابی کی طرح کام کرتی ہے جو خون کی شوگر کو جسم کے خلیوں میں داخل ہونے دیتی ہے، جہاں یہ توانائی کے طور پر استعمال ہوتی ہے۔ ٹائپ 2 ذیابیطس میں یہ چابی ٹھیک کام نہیں کرتی، اس لیے شوگر خون ہی میں رہ جاتی ہے۔"
+          },
+          "refs": ["cdc-gdm", "mayo-t2d"]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Symptoms often come on slowly, and many people live with type 2 diabetes for years without knowing. When there are symptoms, they can include more thirst, passing urine more often, tiredness, blurred vision, slow-healing sores and frequent infections.",
+            "ur": "علامات اکثر آہستہ آہستہ ظاہر ہوتی ہیں، اور بہت سے لوگ برسوں ٹائپ 2 ذیابیطس کے ساتھ رہتے ہیں اور انہیں پتا نہیں چلتا۔ علامات ہوں تو ان میں زیادہ پیاس، بار بار پیشاب آنا، تھکاوٹ، دھندلا نظر آنا، دیر سے بھرنے والے زخم اور بار بار انفیکشن شامل ہو سکتے ہیں۔"
+          },
+          "refs": ["mayo-t2d"]
+        },
+        {
+          "type": "keyNumber",
+          "label": {"en": "Fasting blood sugar: diabetes range", "ur": "نہار منہ شوگر: ذیابیطس کی حد"},
+          "value": {"en": "126 mg/dL or higher", "ur": "126 mg/dL یا زیادہ"},
+          "level": "alert",
+          "check": {"metric": "glucose", "band": "fasting.diabetes"},
+          "refs": ["ada-diagnosis"]
+        },
+        {
+          "type": "keyNumber",
+          "label": {"en": "2-hour glucose test or random sugar: diabetes range", "ur": "2 گھنٹے کا گلوکوز ٹیسٹ یا کسی بھی وقت کی شوگر: ذیابیطس کی حد"},
+          "value": {"en": "200 mg/dL or higher", "ur": "200 mg/dL یا زیادہ"},
+          "note": {"en": "A random reading counts when there are also symptoms of diabetes.", "ur": "کسی بھی وقت کی ریڈنگ تب شمار ہوتی ہے جب ساتھ ذیابیطس کی علامات بھی ہوں۔"},
+          "level": "alert",
+          "check": {"metric": "glucose", "band": "afterMeal.diabetes"},
+          "refs": ["ada-diagnosis"]
+        },
+        {
+          "type": "keyNumber",
+          "label": {"en": "HbA1c (average sugar over about 3 months): diabetes range", "ur": "HbA1c (تقریباً 3 ماہ کی اوسط شوگر): ذیابیطس کی حد"},
+          "value": {"en": "6.5% or higher", "ur": "6.5% یا زیادہ"},
+          "level": "alert",
+          "check": {"metric": "none"},
+          "refs": ["ada-diagnosis"]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Only a doctor can diagnose diabetes, usually with a repeat test. Once you have diabetes, your doctor will set your personal sugar targets.",
+            "ur": "ذیابیطس کی تشخیص صرف ڈاکٹر کر سکتا ہے، عام طور پر ٹیسٹ دوبارہ کروا کر۔ ذیابیطس ہو جائے تو آپ کا ڈاکٹر آپ کے لیے شوگر کے ذاتی اہداف مقرر کرے گا۔"
+          },
+          "refs": ["ada-diagnosis"]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Diabetes is very common: in 2022 about 1 in 7 adults worldwide was living with it, and more than half of them were not taking medicine for it.",
+            "ur": "ذیابیطس بہت عام ہے: 2022 میں دنیا بھر میں تقریباً ہر 7 میں سے 1 بالغ ذیابیطس کے ساتھ جی رہا تھا، اور ان میں سے آدھے سے زیادہ اس کی دوا نہیں لے رہے تھے۔"
+          },
+          "refs": ["who-diabetes"]
+        }
+      ]
+    },
+    {
+      "id": "causes",
+      "title": {"en": "Causes & risk factors", "ur": "وجوہات اور خطرے کے عوامل"},
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Type 2 diabetes is mainly the result of two problems working together: the body's cells resist insulin, and the pancreas can't make enough of it. Being overweight and not moving enough are key factors.",
+            "ur": "ٹائپ 2 ذیابیطس زیادہ تر دو مسائل کے ملنے سے ہوتی ہے: جسم کے خلیے انسولین کا اثر قبول نہیں کرتے، اور لبلبہ کافی انسولین نہیں بنا پاتا۔ وزن کا زیادہ ہونا اور کم چلنا پھرنا اس کے اہم عوامل ہیں۔"
+          },
+          "refs": ["mayo-t2d"]
+        },
+        {
+          "type": "bullets",
+          "title": {"en": "Risk factors you can change", "ur": "خطرے کے وہ عوامل جو آپ بدل سکتے ہیں"},
+          "items": [
+            {"en": "Being overweight, especially fat stored around the belly", "ur": "وزن زیادہ ہونا، خاص طور پر پیٹ کے گرد جمع چربی"},
+            {"en": "Not being active and sitting a lot", "ur": "سرگرم نہ رہنا اور زیادہ دیر بیٹھے رہنا"},
+            {"en": "Unhealthy cholesterol levels (low \"good\" HDL, high triglycerides)", "ur": "کولیسٹرول کا غیر صحت مند ہونا (\"اچھا\" HDL کم، ٹرائی گلیسرائیڈز زیادہ)"},
+            {"en": "Prediabetes that isn't treated", "ur": "پری ذیابیطس کا علاج نہ کرنا"}
+          ],
+          "refs": ["mayo-t2d"]
+        },
+        {
+          "type": "bullets",
+          "title": {"en": "Risk factors you can't change", "ur": "خطرے کے وہ عوامل جو آپ نہیں بدل سکتے"},
+          "items": [
+            {"en": "A parent, brother or sister with type 2 diabetes", "ur": "والدین یا بہن بھائیوں میں سے کسی کو ٹائپ 2 ذیابیطس ہونا"},
+            {"en": "Age: risk rises with age, mainly after 35", "ur": "عمر: عمر کے ساتھ خطرہ بڑھتا ہے، خاص طور پر 35 سال کے بعد"},
+            {"en": "South Asian family background", "ur": "جنوبی ایشیائی خاندانی پس منظر"},
+            {"en": "Diabetes in a past pregnancy, or a baby born weighing more than 4 kg", "ur": "پچھلے حمل میں ذیابیطس، یا 4 کلو سے زیادہ وزن کے بچے کی پیدائش"},
+            {"en": "Polycystic ovary syndrome (PCOS)", "ur": "پولی سسٹک اووری سنڈروم (PCOS)"}
+          ],
+          "refs": ["mayo-t2d", "nice-ph38"]
+        }
+      ]
+    },
+    {
+      "id": "complications",
+      "title": {"en": "Complications of poor control", "ur": "کنٹرول نہ ہونے کی پیچیدگیاں"},
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Over time, high blood sugar damages blood vessels and nerves throughout the body. Diabetes is a major cause of blindness, kidney failure, heart attacks, stroke and lower-limb amputation.",
+            "ur": "وقت کے ساتھ زیادہ شوگر پورے جسم کی خون کی نالیوں اور اعصاب کو نقصان پہنچاتی ہے۔ ذیابیطس اندھے پن، گردے فیل ہونے، ہارٹ اٹیک، فالج اور ٹانگ یا پاؤں کٹنے کی ایک بڑی وجہ ہے۔"
+          },
+          "refs": ["who-diabetes"]
+        },
+        {
+          "type": "image",
+          "assetKey": "diabetes_organs.svg",
+          "caption": {
+            "en": "Parts of the body most at risk: eyes, heart, kidneys, nerves and blood vessels, and feet.",
+            "ur": "جسم کے سب سے زیادہ خطرے والے حصے: آنکھیں، دل، گردے، اعصاب اور خون کی نالیاں، اور پاؤں۔"
+          },
+          "refs": ["mayo-t2d"]
+        },
+        {
+          "type": "bullets",
+          "items": [
+            {"en": "Heart and blood vessels: heart disease, stroke, high blood pressure and narrowed arteries", "ur": "دل اور خون کی نالیاں: دل کی بیماری، فالج، ہائی بلڈ پریشر اور شریانوں کا تنگ ہونا"},
+            {"en": "Nerves: tingling, numbness, burning or pain, usually starting in the toes or fingers", "ur": "اعصاب: جھنجھناہٹ، سُن پن، جلن یا درد، جو عموماً پیروں یا ہاتھوں کی انگلیوں سے شروع ہوتا ہے"},
+            {"en": "Kidneys: kidney disease that can lead to dialysis", "ur": "گردے: گردوں کی بیماری جو ڈائیلاسز تک لے جا سکتی ہے"},
+            {"en": "Eyes: damage to the retina (diabetic retinopathy), cataracts and glaucoma, which can lead to blindness", "ur": "آنکھیں: پردۂ چشم کو نقصان (ڈایابیٹک ریٹینوپیتھی)، موتیا اور کالا موتیا، جو اندھے پن تک لے جا سکتے ہیں"},
+            {"en": "Feet: cuts and blisters that heal poorly and can become serious infections, sometimes needing amputation", "ur": "پاؤں: کٹ اور چھالے جو دیر سے بھرتے ہیں اور سنگین انفیکشن بن سکتے ہیں، کبھی کبھار پاؤں کاٹنا بھی پڑ جاتا ہے"},
+            {"en": "Skin infections, hearing problems and a higher risk of dementia", "ur": "جلد کے انفیکشن، سننے کے مسائل اور ڈیمنشیا کا زیادہ خطرہ"}
+          ],
+          "refs": ["mayo-t2d"]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Keeping blood sugar, blood pressure and cholesterol in your target range lowers these risks, and regular check-ups catch problems early.",
+            "ur": "شوگر، بلڈ پریشر اور کولیسٹرول کو اپنی ہدف والی حد میں رکھنے سے یہ خطرات کم ہو جاتے ہیں، اور باقاعدہ معائنے سے مسائل جلد پکڑے جاتے ہیں۔"
+          },
+          "refs": ["mayo-t2d", "who-diabetes"]
+        }
+      ]
+    },
+    {
+      "id": "lifestyle",
+      "title": {"en": "Lifestyle changes", "ur": "طرزِ زندگی میں تبدیلیاں"},
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Diet, activity and weight control are the foundation of treatment, alongside any medicines your doctor prescribes. Keep taking your medicines even when your sugar is good.",
+            "ur": "خوراک، جسمانی سرگرمی اور وزن پر قابو علاج کی بنیاد ہیں، ساتھ ساتھ وہ دوائیں جو ڈاکٹر تجویز کرے۔ شوگر ٹھیک ہو تب بھی دوائیں لیتے رہیں۔"
+          },
+          "refs": ["who-diabetes"]
+        },
+        {
+          "type": "image",
+          "assetKey": "healthy_plate.svg",
+          "caption": {
+            "en": "The diabetes plate: half non-starchy vegetables, a quarter protein (daal, chicken, fish, eggs), a quarter good-quality carbohydrates (whole-wheat roti, brown rice). Drink water.",
+            "ur": "ذیابیطس کی پلیٹ: آدھی بغیر نشاستے والی سبزیاں، ایک چوتھائی پروٹین (دال، مرغی، مچھلی، انڈے)، ایک چوتھائی اچھے کاربوہائیڈریٹس (آٹے کی روٹی، براؤن چاول)۔ پانی پئیں۔"
+          },
+          "refs": ["ada-plate"]
+        },
+        {
+          "type": "bullets",
+          "title": {"en": "Every day", "ur": "روزانہ"},
+          "items": [
+            {"en": "Eat at regular times and cut down on sugar, sweets, sugary drinks and white flour.", "ur": "مقررہ وقت پر کھائیں اور چینی، مٹھائی، میٹھے مشروبات اور میدہ کم کریں۔"},
+            {"en": "Be active for at least 150 minutes a week, and break up long periods of sitting.", "ur": "ہفتے میں کم از کم 150 منٹ سرگرمی کریں، اور دیر تک بیٹھے رہنے میں وقفے لیں۔"},
+            {"en": "If you are overweight, losing even a few kilograms helps.", "ur": "اگر وزن زیادہ ہے تو چند کلو کم کرنا بھی فائدہ دیتا ہے۔"},
+            {"en": "Don't smoke or use any tobacco.", "ur": "سگریٹ یا کسی بھی قسم کا تمباکو استعمال نہ کریں۔"},
+            {"en": "Check your blood sugar as your doctor advises, and keep a record.", "ur": "ڈاکٹر کے مشورے کے مطابق شوگر چیک کریں اور ریکارڈ رکھیں۔"}
+          ],
+          "refs": ["ada-plate", "mayo-t2d", "who-diabetes"]
+        },
+        {
+          "type": "image",
+          "assetKey": "foot_check.svg",
+          "caption": {
+            "en": "Check your feet every day for cuts, blisters, sores, corns or redness. Tell your doctor about any you find. Don't walk barefoot, and wear shoes that fit well.",
+            "ur": "روزانہ اپنے پاؤں میں کٹ، چھالے، زخم، گٹے یا سرخی دیکھیں۔ کچھ نظر آئے تو ڈاکٹر کو بتائیں۔ ننگے پاؤں نہ چلیں، اور ٹھیک ناپ کے جوتے پہنیں۔"
+          },
+          "refs": ["ada-foot"]
+        },
+        {
+          "type": "bullets",
+          "title": {"en": "Regular check-ups", "ur": "باقاعدہ معائنے"},
+          "items": [
+            {"en": "A dilated eye examination at least once a year, even if your sight seems fine", "ur": "سال میں کم از کم ایک بار آنکھوں کا تفصیلی معائنہ (پتلیاں پھیلا کر)، چاہے نظر ٹھیک لگے"},
+            {"en": "Regular HbA1c, blood pressure, cholesterol and kidney tests, as your doctor advises", "ur": "ڈاکٹر کے مشورے کے مطابق باقاعدگی سے HbA1c، بلڈ پریشر، کولیسٹرول اور گردوں کے ٹیسٹ"}
+          ],
+          "refs": ["nei-retinopathy", "who-diabetes"]
+        }
+      ]
+    },
+    {
+      "id": "whenToSeeDoctor",
+      "title": {"en": "When to see a doctor", "ur": "ڈاکٹر کو کب دکھائیں"},
+      "blocks": [
+        {
+          "type": "alert",
+          "level": "urgent",
+          "title": {"en": "Very low sugar with any of these:", "ur": "شوگر بہت کم ہو اور ان میں سے کوئی علامت ہو:"},
+          "items": [
+            {"en": "Confusion, or slurred speech", "ur": "ذہنی الجھن، یا زبان لڑکھڑانا"},
+            {"en": "Blurred or double vision", "ur": "دھندلا یا دوہرا نظر آنا"},
+            {"en": "A seizure (fit)", "ur": "دورہ (جھٹکے) پڑنا"},
+            {"en": "Passing out", "ur": "بے ہوش ہو جانا"}
+          ],
+          "text": {
+            "en": "This is an emergency. Call an ambulance (Rescue 1122 in Pakistan). Never give food or drink to someone who is unconscious.",
+            "ur": "یہ ایمرجنسی ہے۔ ایمبولینس بلائیں (پاکستان میں ریسکیو 1122)۔ بے ہوش شخص کو کبھی کچھ کھلانے یا پلانے کی کوشش نہ کریں۔"
+          },
+          "refs": ["cc-hypoglycemia", "ada-hypo"]
+        },
+        {
+          "type": "alert",
+          "level": "urgent",
+          "title": {"en": "High sugar with any of these:", "ur": "شوگر زیادہ ہو اور ان میں سے کوئی علامت ہو:"},
+          "items": [
+            {"en": "Vomiting or stomach pain", "ur": "قے یا پیٹ میں درد"},
+            {"en": "Deep, fast or laboured breathing", "ur": "گہرا، تیز یا مشکل سے سانس لینا"},
+            {"en": "Confusion or unusual drowsiness", "ur": "ذہنی الجھن یا غیر معمولی غنودگی"},
+            {"en": "Fruity-smelling breath", "ur": "سانس سے پھلوں جیسی بو آنا"}
+          ],
+          "text": {"en": "Go to the nearest emergency department now.", "ur": "ابھی قریبی ایمرجنسی میں جائیں۔"},
+          "refs": ["cc-hyperglycemia"]
+        },
+        {
+          "type": "keyNumber",
+          "label": {"en": "Low blood sugar (hypoglycaemia)", "ur": "کم شوگر (ہائپوگلائیسیمیا)"},
+          "value": {"en": "Below 70 mg/dL", "ur": "70 mg/dL سے کم"},
+          "note": {
+            "en": "Early signs: shaking, sweating, fast heartbeat, dizziness, hunger, weakness, irritability. If you are awake and able to swallow: take 15 g of fast-acting sugar, such as sugar dissolved in water or fruit juice, check again after 15 minutes, and repeat until you are at 70 or above.",
+            "ur": "ابتدائی علامات: کپکپی، پسینہ، دل کی تیز دھڑکن، چکر، بھوک، کمزوری، چڑچڑاپن۔ اگر آپ ہوش میں ہیں اور نگل سکتے ہیں: 15 گرام جلد اثر کرنے والی شکر لیں، جیسے پانی میں گھلی چینی یا پھلوں کا رس، 15 منٹ بعد دوبارہ چیک کریں، اور 70 یا اس سے اوپر آنے تک دہرائیں۔"
+          },
+          "level": "alert",
+          "check": {"metric": "glucose", "band": "low"},
+          "refs": ["ada-hypo", "cc-hypoglycemia"]
+        },
+        {
+          "type": "alert",
+          "level": "soon",
+          "title": {"en": "See your doctor soon if:", "ur": "جلد ڈاکٹر کو دکھائیں اگر:"},
+          "items": [
+            {"en": "You have had low sugar episodes, even if you treated them yourself", "ur": "آپ کی شوگر کم ہوئی ہو، چاہے آپ نے خود اسے ٹھیک کر لیا ہو"},
+            {"en": "Your readings stay above the targets your doctor set", "ur": "آپ کی ریڈنگز ڈاکٹر کے مقرر کردہ ہدف سے مسلسل اوپر رہیں"},
+            {"en": "You find a cut, blister or sore on your foot, or redness or swelling", "ur": "پاؤں پر کٹ، چھالا یا زخم ملے، یا سرخی یا سوجن ہو"},
+            {"en": "Your eyesight changes", "ur": "آپ کی نظر میں تبدیلی آئے"},
+            {"en": "You have numbness, tingling or burning in your feet or hands", "ur": "پیروں یا ہاتھوں میں سُن پن، جھنجھناہٹ یا جلن ہو"}
+          ],
+          "refs": ["ada-hypo", "ada-foot", "nei-retinopathy", "mayo-t2d"]
+        }
+      ]
+    }
+  ],
+  "references": ["who-diabetes", "ada-diagnosis", "mayo-t2d", "cdc-gdm", "nice-ph38", "ada-plate", "ada-foot", "nei-retinopathy", "ada-hypo", "cc-hypoglycemia", "cc-hyperglycemia"]
+}

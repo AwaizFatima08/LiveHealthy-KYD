@@ -1,0 +1,265 @@
+{
+  "id": "prediabetes",
+  "version": 1,
+  "order": 1,
+  "group": "diabetes",
+  "status": "published",
+  "title": {"en": "Prediabetes", "ur": "پری ذیابیطس"},
+  "summary": {
+    "en": "Blood sugar higher than normal, but not yet diabetes. Often reversible.",
+    "ur": "خون میں شوگر معمول سے زیادہ، مگر ابھی ذیابیطس نہیں۔ اکثر واپس ٹھیک ہو سکتی ہے۔"
+  },
+  "headerAsset": "prediabetes_header.svg",
+  "reviewedBy": {"en": "Dr. Humayun Shahzad, MBBS", "ur": "ڈاکٹر ہمایوں شہزاد، ایم بی بی ایس"},
+  "reviewedOn": "2026-09-30",
+  "nextReviewDue": "2027-09-30",
+  "relatedTools": [
+    {"tool": "vitals", "label": {"en": "Log your blood sugar and weight", "ur": "اپنی شوگر اور وزن کا ریکارڈ رکھیں"}}
+  ],
+  "sections": [
+    {
+      "id": "whatIs",
+      "title": {"en": "What it is", "ur": "یہ کیا ہے"},
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Prediabetes means your blood sugar (glucose) is higher than normal, but not yet high enough to be called diabetes. Almost everyone who develops type 2 diabetes has prediabetes first.",
+            "ur": "پری ذیابیطس کا مطلب ہے کہ آپ کے خون میں شوگر (گلوکوز) معمول سے زیادہ ہے، مگر اتنی زیادہ نہیں کہ اسے ذیابیطس کہا جائے۔ ٹائپ 2 ذیابیطس کے تقریباً ہر مریض کو پہلے پری ذیابیطس ہوتی ہے۔"
+          },
+          "refs": ["ada-diagnosis"]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "It usually has no symptoms, which is why 8 in 10 people who have it don't know. A simple blood test is the only way to find out.",
+            "ur": "عام طور پر اس کی کوئی علامت نہیں ہوتی، اسی لیے جن لوگوں کو یہ ہوتی ہے ان میں سے 10 میں سے 8 کو اس کا علم نہیں ہوتا۔ خون کا ایک سادہ ٹیسٹ ہی اسے جاننے کا واحد طریقہ ہے۔"
+          },
+          "refs": ["cdc-prevent"]
+        },
+        {
+          "type": "image",
+          "assetKey": "glucose_fasting.svg",
+          "caption": {
+            "en": "Fasting blood sugar, measured after at least 8 hours without food, in mg/dL.",
+            "ur": "نہار منہ شوگر، کم از کم 8 گھنٹے کچھ نہ کھانے کے بعد، mg/dL میں۔"
+          },
+          "refs": ["ada-diagnosis"]
+        },
+        {
+          "type": "keyNumber",
+          "label": {"en": "Fasting blood sugar: normal", "ur": "نہار منہ شوگر: نارمل"},
+          "value": {"en": "70–99 mg/dL", "ur": "70–99 mg/dL"},
+          "level": "normal",
+          "check": {"metric": "glucose", "band": "fasting.normal"},
+          "refs": ["ada-diagnosis"]
+        },
+        {
+          "type": "keyNumber",
+          "label": {"en": "Fasting blood sugar: prediabetes", "ur": "نہار منہ شوگر: پری ذیابیطس"},
+          "value": {"en": "100–125 mg/dL", "ur": "100–125 mg/dL"},
+          "level": "caution",
+          "check": {"metric": "glucose", "band": "fasting.prediabetes"},
+          "refs": ["ada-diagnosis"]
+        },
+        {
+          "type": "keyNumber",
+          "label": {"en": "2 hours after a glucose drink (OGTT): prediabetes", "ur": "گلوکوز پینے کے 2 گھنٹے بعد (OGTT): پری ذیابیطس"},
+          "value": {"en": "140–199 mg/dL", "ur": "140–199 mg/dL"},
+          "level": "caution",
+          "check": {"metric": "glucose", "band": "afterMeal.prediabetes"},
+          "refs": ["ada-diagnosis"]
+        },
+        {
+          "type": "keyNumber",
+          "label": {"en": "HbA1c (average sugar over about 3 months): prediabetes", "ur": "HbA1c (تقریباً 3 ماہ کی اوسط شوگر): پری ذیابیطس"},
+          "value": {"en": "5.7%–6.4%", "ur": "5.7%–6.4%"},
+          "level": "caution",
+          "check": {"metric": "none"},
+          "refs": ["ada-diagnosis"]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "The good news: prediabetes can often be reversed. Losing a little weight, eating better and moving more can prevent or delay type 2 diabetes.",
+            "ur": "اچھی خبر یہ ہے کہ پری ذیابیطس اکثر واپس ٹھیک ہو سکتی ہے۔ تھوڑا وزن کم کرنے، بہتر کھانے اور زیادہ چلنے پھرنے سے ٹائپ 2 ذیابیطس کو روکا یا مؤخر کیا جا سکتا ہے۔"
+          },
+          "refs": ["cdc-prevent"]
+        }
+      ]
+    },
+    {
+      "id": "causes",
+      "title": {"en": "Causes & risk factors", "ur": "وجوہات اور خطرے کے عوامل"},
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Insulin is a hormone that lets sugar move from the blood into the body's cells. In prediabetes the body doesn't handle sugar well, so it builds up in the blood. The exact cause isn't known, but family history and genes seem important.",
+            "ur": "انسولین ایک ہارمون ہے جو شوگر کو خون سے جسم کے خلیوں میں داخل ہونے دیتا ہے۔ پری ذیابیطس میں جسم شوگر کو ٹھیک طرح استعمال نہیں کر پاتا، اس لیے یہ خون میں جمع ہونے لگتی ہے۔ اصل وجہ معلوم نہیں، مگر خاندانی تاریخ اور موروثی عوامل اہم لگتے ہیں۔"
+          },
+          "refs": ["mayo-prediabetes"]
+        },
+        {
+          "type": "bullets",
+          "title": {"en": "Risk factors you can change", "ur": "خطرے کے وہ عوامل جو آپ بدل سکتے ہیں"},
+          "items": [
+            {"en": "Being overweight, especially extra fat around the belly", "ur": "وزن زیادہ ہونا، خاص طور پر پیٹ کے گرد اضافی چربی"},
+            {"en": "Not being physically active, and sitting for long periods", "ur": "جسمانی سرگرمی نہ کرنا، اور دیر تک بیٹھے رہنا"},
+            {"en": "High blood pressure", "ur": "ہائی بلڈ پریشر"},
+            {"en": "Smoking", "ur": "سگریٹ نوشی"}
+          ],
+          "refs": ["cdc-prevent", "mayo-t2d", "mayo-prediabetes"]
+        },
+        {
+          "type": "bullets",
+          "title": {"en": "Risk factors you can't change", "ur": "خطرے کے وہ عوامل جو آپ نہیں بدل سکتے"},
+          "items": [
+            {"en": "A parent, brother or sister with type 2 diabetes", "ur": "والدین یا بہن بھائیوں میں سے کسی کو ٹائپ 2 ذیابیطس ہونا"},
+            {"en": "Age over 45", "ur": "45 سال سے زیادہ عمر"},
+            {"en": "Diabetes during a past pregnancy (gestational diabetes)", "ur": "پچھلے حمل کے دوران ذیابیطس ہونا (حمل کی ذیابیطس)"},
+            {"en": "Polycystic ovary syndrome (PCOS)", "ur": "پولی سسٹک اووری سنڈروم (PCOS)"},
+            {"en": "South Asian family background: people from Pakistan, India and Bangladesh have a higher risk, even at a lower weight", "ur": "جنوبی ایشیائی پس منظر: پاکستان، بھارت اور بنگلہ دیش کے لوگوں میں کم وزن پر بھی خطرہ زیادہ ہوتا ہے"}
+          ],
+          "refs": ["cdc-prevent", "mayo-t2d", "nice-ph38"]
+        }
+      ]
+    },
+    {
+      "id": "complications",
+      "title": {"en": "Complications of poor control", "ur": "کنٹرول نہ ہونے کی پیچیدگیاں"},
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "If nothing changes, prediabetes often turns into type 2 diabetes.",
+            "ur": "اگر کچھ نہ بدلا جائے تو پری ذیابیطس اکثر ٹائپ 2 ذیابیطس میں بدل جاتی ہے۔"
+          },
+          "refs": ["mayo-t2d"]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Even before diabetes starts, prediabetes is linked with long-term damage to the heart, blood vessels and kidneys. It is also linked with \"silent\" heart attacks, which cause few or unusual symptoms.",
+            "ur": "ذیابیطس شروع ہونے سے پہلے ہی پری ذیابیطس کا تعلق دل، خون کی نالیوں اور گردوں کو لمبے عرصے کے نقصان سے ہے۔ اس کا تعلق \"خاموش\" ہارٹ اٹیک سے بھی ہے، جس کی علامات بہت کم یا غیر معمولی ہوتی ہیں۔"
+          },
+          "refs": ["mayo-prediabetes"]
+        },
+        {
+          "type": "bullets",
+          "title": {"en": "If it becomes type 2 diabetes, it can lead to:", "ur": "اگر یہ ٹائپ 2 ذیابیطس بن جائے تو اس سے یہ ہو سکتا ہے:"},
+          "items": [
+            {"en": "High blood pressure and high cholesterol", "ur": "ہائی بلڈ پریشر اور ہائی کولیسٹرول"},
+            {"en": "Heart disease and stroke", "ur": "دل کی بیماری اور فالج"},
+            {"en": "Kidney disease", "ur": "گردوں کی بیماری"},
+            {"en": "Nerve damage", "ur": "اعصاب کو نقصان"},
+            {"en": "Eye damage, including loss of vision", "ur": "آنکھوں کو نقصان، بشمول بینائی کا جانا"},
+            {"en": "Fatty liver disease", "ur": "جگر پر چربی (فیٹی لیور)"}
+          ],
+          "refs": ["mayo-prediabetes"]
+        }
+      ]
+    },
+    {
+      "id": "lifestyle",
+      "title": {"en": "Lifestyle changes", "ur": "طرزِ زندگی میں تبدیلیاں"},
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Proven, achievable changes can bring blood sugar back to normal. You don't need to be perfect: small, steady steps add up.",
+            "ur": "آزمودہ اور قابلِ عمل تبدیلیاں شوگر کو واپس نارمل کر سکتی ہیں۔ آپ کو مکمل ہونے کی ضرورت نہیں: چھوٹے مگر مسلسل قدم مل کر بڑا فرق لاتے ہیں۔"
+          },
+          "refs": ["cdc-prevent"]
+        },
+        {
+          "type": "keyNumber",
+          "label": {"en": "Weight loss that lowers the risk", "ur": "وزن میں کمی جو خطرہ کم کرتی ہے"},
+          "value": {"en": "7% to 10% of your body weight", "ur": "اپنے جسمانی وزن کا 7% سے 10%"},
+          "note": {"en": "For someone weighing 80 kg, that is about 6 to 8 kg.", "ur": "80 کلو وزن والے شخص کے لیے یہ تقریباً 6 سے 8 کلو بنتا ہے۔"},
+          "level": "neutral",
+          "check": {"metric": "none"},
+          "refs": ["mayo-t2d"]
+        },
+        {
+          "type": "image",
+          "assetKey": "activity_week.svg",
+          "caption": {
+            "en": "Aim for at least 150 minutes of moderate activity a week, such as brisk walking. Get up and move for a few minutes every 30 minutes when sitting.",
+            "ur": "ہفتے میں کم از کم 150 منٹ درمیانی رفتار کی سرگرمی کریں، جیسے تیز چہل قدمی۔ بیٹھے ہوں تو ہر 30 منٹ بعد اٹھ کر چند منٹ چلیں پھریں۔"
+          },
+          "refs": ["mayo-t2d", "who-activity"]
+        },
+        {
+          "type": "image",
+          "assetKey": "healthy_plate.svg",
+          "caption": {
+            "en": "A healthy plate: half vegetables, a quarter protein (daal, chicken, fish, eggs), a quarter whole grains. Drink water instead of sugary drinks.",
+            "ur": "صحت مند پلیٹ: آدھی سبزیاں، ایک چوتھائی پروٹین (دال، مرغی، مچھلی، انڈے)، ایک چوتھائی ثابت اناج۔ میٹھے مشروبات کی بجائے پانی پئیں۔"
+          },
+          "refs": ["who-diet", "mayo-t2d"]
+        },
+        {
+          "type": "bullets",
+          "items": [
+            {"en": "Cut down on sugar, sweets, sugary drinks and white flour (maida).", "ur": "چینی، مٹھائیاں، میٹھے مشروبات اور میدہ کم کریں۔"},
+            {"en": "Choose foods high in fibre: vegetables, fruit, pulses and whole grains.", "ur": "ریشے والی غذائیں چنیں: سبزیاں، پھل، دالیں اور ثابت اناج۔"},
+            {"en": "Stop smoking.", "ur": "سگریٹ نوشی چھوڑ دیں۔"},
+            {"en": "Keep your blood pressure and cholesterol under control.", "ur": "اپنا بلڈ پریشر اور کولیسٹرول قابو میں رکھیں۔"}
+          ],
+          "refs": ["mayo-prediabetes", "who-diet"]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Some people with prediabetes are also prescribed a medicine such as metformin. Only take it if your doctor advises it.",
+            "ur": "پری ذیابیطس کے بعض مریضوں کو میٹفارمن جیسی دوا بھی دی جاتی ہے۔ یہ صرف ڈاکٹر کے مشورے سے لیں۔"
+          },
+          "refs": ["mayo-t2d"]
+        }
+      ]
+    },
+    {
+      "id": "whenToSeeDoctor",
+      "title": {"en": "When to see a doctor", "ur": "ڈاکٹر کو کب دکھائیں"},
+      "blocks": [
+        {
+          "type": "alert",
+          "level": "urgent",
+          "title": {"en": "High sugar with any of these:", "ur": "شوگر زیادہ ہو اور ان میں سے کوئی علامت ہو:"},
+          "items": [
+            {"en": "Vomiting", "ur": "قے آنا"},
+            {"en": "Deep, fast or laboured breathing", "ur": "گہرا، تیز یا مشکل سے سانس لینا"},
+            {"en": "Confusion or unusual drowsiness", "ur": "ذہنی الجھن یا غیر معمولی غنودگی"},
+            {"en": "Fruity-smelling breath", "ur": "سانس سے پھلوں جیسی بو آنا"}
+          ],
+          "text": {"en": "Go to the nearest emergency department now.", "ur": "ابھی قریبی ایمرجنسی میں جائیں۔"},
+          "refs": ["cc-hyperglycemia"]
+        },
+        {
+          "type": "alert",
+          "level": "soon",
+          "title": {"en": "See your doctor soon if you have:", "ur": "جلد ڈاکٹر کو دکھائیں اگر آپ کو:"},
+          "items": [
+            {"en": "More thirst, or passing urine more often", "ur": "پیاس زیادہ لگتی ہو، یا پیشاب بار بار آتا ہو"},
+            {"en": "Blurred vision, or constant tiredness", "ur": "دھندلا نظر آتا ہو، یا ہر وقت تھکاوٹ رہتی ہو"},
+            {"en": "Weight loss without trying", "ur": "بغیر کوشش کے وزن کم ہو رہا ہو"},
+            {"en": "Sores that heal slowly, or repeated infections", "ur": "زخم دیر سے بھرتے ہوں، یا بار بار انفیکشن ہوتا ہو"},
+            {"en": "Numbness or tingling in the hands or feet", "ur": "ہاتھوں یا پیروں میں سُن پن یا جھنجھناہٹ"}
+          ],
+          "text": {"en": "These can mean prediabetes has moved on to type 2 diabetes.", "ur": "ان کا مطلب ہو سکتا ہے کہ پری ذیابیطس، ٹائپ 2 ذیابیطس میں بدل چکی ہے۔"},
+          "refs": ["mayo-prediabetes"]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Ask your doctor for a blood sugar test if you have any of the risk factors, even if you feel well. If you have prediabetes, have your blood sugar rechecked regularly, as your doctor advises.",
+            "ur": "اگر آپ میں خطرے کا کوئی بھی عامل موجود ہے تو طبیعت ٹھیک ہونے کے باوجود ڈاکٹر سے شوگر ٹیسٹ کا کہیں۔ اگر آپ کو پری ذیابیطس ہے تو ڈاکٹر کے مشورے کے مطابق باقاعدگی سے شوگر چیک کرواتے رہیں۔"
+          },
+          "refs": ["mayo-prediabetes", "cdc-prevent"]
+        }
+      ]
+    }
+  ],
+  "references": ["ada-diagnosis", "cdc-prevent", "mayo-prediabetes", "mayo-t2d", "nice-ph38", "who-activity", "who-diet", "cc-hyperglycemia"]
+}

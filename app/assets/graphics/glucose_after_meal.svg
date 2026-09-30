@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 130" width="340" height="130">
+<rect x="13" y="37" width="314" height="50" rx="10" fill="#E2E8E5"/>
+<rect x="16.0" y="40" width="49.3" height="44" fill="#C62828"/>
+<rect x="65.3" y="40" width="117.0" height="44" fill="#1B7F3B"/>
+<rect x="182.3" y="40" width="80.1" height="44" fill="#B26A00"/>
+<rect x="262.4" y="40" width="61.6" height="44" fill="#C62828"/>
+<line x1="65.3" y1="32" x2="65.3" y2="92" stroke="#1D2B26" stroke-width="2"/>
+<text x="65.3" y="112" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#1D2B26" text-anchor="middle">70</text>
+<line x1="182.3" y1="32" x2="182.3" y2="92" stroke="#1D2B26" stroke-width="2"/>
+<text x="182.3" y="112" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#1D2B26" text-anchor="middle">140</text>
+<line x1="262.4" y1="32" x2="262.4" y2="92" stroke="#1D2B26" stroke-width="2"/>
+<text x="262.4" y="112" font-family="Roboto, sans-serif" font-size="15" font-weight="700" fill="#1D2B26" text-anchor="middle">200</text>
+<text x="16" y="26" font-family="Roboto, sans-serif" font-size="13" font-weight="600" fill="#8A9A93" text-anchor="start">mg/dL</text>
+</svg>
