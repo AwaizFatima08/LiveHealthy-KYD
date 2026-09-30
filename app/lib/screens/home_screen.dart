@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
     final items = context.watch<ContentRepository>().homeItems;
     return Scaffold(
       appBar: AppBar(
-        title: Text(l10n.appTitle),
+        title: Text(l10n.appTitle, maxLines: 1, overflow: TextOverflow.ellipsis),
         actions: [
           IconButton(
             key: const Key('open-settings'),

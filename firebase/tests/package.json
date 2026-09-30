@@ -1,0 +1,12 @@
+{
+  "name": "livehealthy-kyd-rules-tests",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "cd ../.. && firebase emulators:exec --only firestore --project demo-livehealthy-kyd 'node --test firebase/tests/rules.test.js'"
+  },
+  "devDependencies": {
+    "@firebase/rules-unit-testing": "^5.0.2",
+    "firebase": "^12.19.0"
+  }
+}

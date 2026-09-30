@@ -58,15 +58,19 @@ class AppTheme {
       // Nastaliq reads small at the same point size and its letters stack
       // high and low, so it's a little larger with generous line height.
       textTheme = textTheme.apply(fontFamily: urduFont, fontSizeFactor: 1.05);
+      // Even leading keeps the extra space balanced above and below, so
+      // descenders never reach into the next widget.
+      TextStyle? roomy(TextStyle? t, double h) =>
+          t?.copyWith(height: h, leadingDistribution: TextLeadingDistribution.even);
       textTheme = textTheme.copyWith(
-        bodyLarge: textTheme.bodyLarge?.copyWith(height: 2.0),
-        bodyMedium: textTheme.bodyMedium?.copyWith(height: 2.0),
-        bodySmall: textTheme.bodySmall?.copyWith(height: 1.9),
-        titleLarge: textTheme.titleLarge?.copyWith(height: 1.8),
-        titleMedium: textTheme.titleMedium?.copyWith(height: 1.8),
-        titleSmall: textTheme.titleSmall?.copyWith(height: 1.8),
-        headlineSmall: textTheme.headlineSmall?.copyWith(height: 1.7),
-        labelLarge: textTheme.labelLarge?.copyWith(height: 1.6),
+        bodyLarge: roomy(textTheme.bodyLarge, 2.0),
+        bodyMedium: roomy(textTheme.bodyMedium, 2.0),
+        bodySmall: roomy(textTheme.bodySmall, 2.0),
+        titleLarge: roomy(textTheme.titleLarge, 1.9),
+        titleMedium: roomy(textTheme.titleMedium, 1.9),
+        titleSmall: roomy(textTheme.titleSmall, 1.9),
+        headlineSmall: roomy(textTheme.headlineSmall, 1.9),
+        labelLarge: roomy(textTheme.labelLarge, 1.8),
       );
     } else {
       textTheme = textTheme.copyWith(
@@ -83,10 +87,11 @@ class AppTheme {
     );
     return base.copyWith(
       appBarTheme: AppBarTheme(
+        toolbarHeight: urdu ? 68 : 56,
         backgroundColor: background,
         foregroundColor: scheme.onSurface,
         surfaceTintColor: Colors.transparent,
-        titleTextStyle: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w600),
+        titleTextStyle: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w600, fontSize: 20),
       ),
       filledButtonTheme: FilledButtonThemeData(
         style: FilledButton.styleFrom(

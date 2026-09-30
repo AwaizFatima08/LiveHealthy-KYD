@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Same as AppTheme.background, so there's no flash between the
+         launch screen and the first Flutter frame. -->
+    <color name="launch_background">#F7F9F8</color>
+    <!-- Adaptive icon background (flutter_launcher_icons), suite green. -->
     <color name="ic_launcher_background">#0B6E4F</color>
 </resources>

@@ -4,7 +4,7 @@
     python3 scripts/publish_content.py                 # dry run: validate + report
     python3 scripts/publish_content.py --write         # also bump versions, write app/assets/content/
     python3 scripts/publish_content.py --publish       # also upload to Firestore (livehealthy-kyd)
-    FIRESTORE_EMULATOR_HOST=127.0.0.1:8085 python3 scripts/publish_content.py --publish   # to the emulator
+    FIRESTORE_EMULATOR_HOST=127.0.0.1:8086 python3 scripts/publish_content.py --publish   # to the emulator
 
 Source of truth: content/*.json (one file per disease, edited by hand),
 content/references.json (shared reference library) and

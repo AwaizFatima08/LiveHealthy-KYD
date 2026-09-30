@@ -84,10 +84,11 @@ class TopicCard extends StatelessWidget {
     final theme = Theme.of(context);
     // At large text sizes the text needs the full width, so the graphic
     // moves above it instead of beside it.
-    final stacked = MediaQuery.textScalerOf(context).scale(1) >= 1.3 || MediaQuery.sizeOf(context).width < 340;
+    final stacked = MediaQuery.textScalerOf(context).scale(1) >= 1.5 || MediaQuery.sizeOf(context).width < 320;
+    final big = MediaQuery.textScalerOf(context).scale(1) >= 1.2;
     final thumb = Container(
-      width: stacked ? double.infinity : 72,
-      height: stacked ? 64 : 72,
+      width: stacked ? double.infinity : (big ? 60 : 72),
+      height: stacked ? 64 : (big ? 60 : 72),
       decoration: BoxDecoration(
         color: AppTheme.primary.withValues(alpha: 0.07),
         borderRadius: BorderRadius.circular(14),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart' show DateFormat;
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -16,9 +17,14 @@ final RegExp _numberRun = RegExp(
 /// In right-to-left text, the bidi algorithm reverses "130–139" into
 /// "139–130" and moves "≥" to the wrong side. Isolating each number run as
 /// left-to-right (U+2066 … U+2069) keeps it exactly as written.
+///
+/// In both languages a run is also kept on one line (word joiners around
+/// its dashes and slashes), so "120–129" never splits into "120–" / "129".
 String bidiSafe(String text, String languageCode) {
-  if (languageCode != 'ur') return text;
-  return text.replaceAllMapped(_numberRun, (m) => '\u2066${m[0]}\u2069');
+  return text.replaceAllMapped(_numberRun, (m) {
+    final run = m[0]!.replaceAllMapped(RegExp(r'\s?[–/-]\s?'), (d) => '\u2060${d[0]!.trim()}\u2060');
+    return languageCode == 'ur' ? '\u2066$run\u2069' : run;
+  });
 }
 
 extension LocalizedTextX on LocalizedText {
@@ -33,7 +39,7 @@ extension LocalizedTextX on LocalizedText {
 String formatIsoDate(BuildContext context, String iso) {
   final d = DateTime.tryParse(iso);
   if (d == null) return iso;
-  return MaterialLocalizations.of(context).formatMediumDate(d);
+  return DateFormat.yMMMd(Localizations.localeOf(context).languageCode).format(d);
 }
 
 /// Opens an https link in the browser; tells the reader if it can't.
@@ -76,9 +82,8 @@ class RefMarkers extends StatelessWidget {
               borderRadius: BorderRadius.circular(8),
               onTap: () => showReferenceSheet(context, disease, id),
               child: Container(
-                constraints: const BoxConstraints(minWidth: 40, minHeight: 36),
-                alignment: Alignment.center,
-                padding: const EdgeInsets.symmetric(horizontal: 8),
+                constraints: const BoxConstraints(minWidth: 44, minHeight: 36),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                 decoration: BoxDecoration(
                   color: color.withValues(alpha: 0.08),
                   borderRadius: BorderRadius.circular(8),
@@ -86,6 +91,7 @@ class RefMarkers extends StatelessWidget {
                 ),
                 child: Text(
                   '[${disease.refNumber(id)}]',
+                  textAlign: TextAlign.center,
                   textDirection: TextDirection.ltr,
                   style: TextStyle(color: color, fontWeight: FontWeight.w700, fontSize: 15, fontFamily: 'Roboto'),
                 ),

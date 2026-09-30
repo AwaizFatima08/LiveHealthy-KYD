@@ -32,7 +32,7 @@ class DiseaseScreen extends StatelessWidget {
     final tools = disease.relatedTools.where((t) => repo.toolStatus(t.app) != ToolLinkStatus.hidden).toList();
 
     return Scaffold(
-      appBar: AppBar(title: Text(disease.title.tr(context))),
+      appBar: AppBar(title: Text(disease.title.tr(context), maxLines: 1, overflow: TextOverflow.ellipsis)),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
         children: [

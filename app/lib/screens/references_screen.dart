@@ -28,7 +28,7 @@ class ReferencesScreen extends StatelessWidget {
     final total = totalSections(disease);
     return Scaffold(
       appBar: AppBar(
-        title: Text(l10n.references),
+        title: Text(l10n.references, maxLines: 1, overflow: TextOverflow.ellipsis),
         actions: [
           Padding(
             padding: const EdgeInsetsDirectional.only(end: 16),

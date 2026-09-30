@@ -131,11 +131,18 @@ void main() {
 
   group('bidiSafe', () {
     test('isolates number runs in Urdu only', () {
-      expect(bidiSafe('Top 130–139', 'en'), 'Top 130–139');
-      expect(bidiSafe('اوپر والا 130–139 یا', 'ur'), 'اوپر والا \u2066130–139\u2069 یا');
-      expect(bidiSafe('120/80 mmHg سے کم', 'ur'), '\u2066120/80 mmHg\u2069 سے کم');
-      expect(bidiSafe('5.7%–6.4%', 'ur'), '\u20665.7%–6.4%\u2069');
-      expect(bidiSafe('126 mg/dL یا زیادہ', 'ur'), '\u2066126 mg/dL\u2069 یا زیادہ');
+      String plain(String s) => s.replaceAll('\u2060', '');
+      expect(plain(bidiSafe('Top 130–139', 'en')), 'Top 130–139');
+      expect(plain(bidiSafe('اوپر والا 130–139 یا', 'ur')), 'اوپر والا \u2066130–139\u2069 یا');
+      expect(plain(bidiSafe('120/80 mmHg سے کم', 'ur')), '\u2066120/80 mmHg\u2069 سے کم');
+      expect(plain(bidiSafe('5.7%–6.4%', 'ur')), '\u20665.7%–6.4%\u2069');
+      expect(plain(bidiSafe('126 mg/dL یا زیادہ', 'ur')), '\u2066126 mg/dL\u2069 یا زیادہ');
+    });
+
+    test('number runs never break at their dash or slash (seen on the Galaxy A12)', () {
+      expect(bidiSafe('Top 120–129, bottom', 'en'), 'Top 120\u2060–\u2060129, bottom');
+      expect(bidiSafe('Below 120/80 mmHg', 'en'), 'Below 120\u2060/\u206080 mmHg');
+      expect(bidiSafe('7% to 10%', 'en'), '7% to 10%');
     });
 
     test('leaves Urdu text without numbers alone', () {

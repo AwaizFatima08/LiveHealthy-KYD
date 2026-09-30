@@ -66,11 +66,15 @@ Future<FirebaseFirestore?> _initFirebase() async {
     final crashlytics = FirebaseCrashlytics.instance;
     // Crash reports only (D4), and none from debug builds.
     await crashlytics.setCrashlyticsCollectionEnabled(!kDebugMode);
-    FlutterError.onError = crashlytics.recordFlutterFatalError;
-    PlatformDispatcher.instance.onError = (error, stack) {
-      crashlytics.recordError(error, stack, fatal: true);
-      return true;
-    };
+    // Debug builds (and tests) keep Flutter's own error handling, so errors
+    // show up in the console and fail tests instead of vanishing.
+    if (!kDebugMode) {
+      FlutterError.onError = crashlytics.recordFlutterFatalError;
+      PlatformDispatcher.instance.onError = (error, stack) {
+        crashlytics.recordError(error, stack, fatal: true);
+        return true;
+      };
+    }
     final db = FirebaseFirestore.instance;
     // Downloaded content is stored by ContentRepository; Firestore's own
     // cache would only serve stale copies back to the update check.
@@ -88,7 +92,7 @@ Future<FirebaseFirestore?> _initFirebase() async {
 void _useEmulatorIfRequested(FirebaseFirestore db) {
   const host = String.fromEnvironment('FIRESTORE_EMULATOR_HOST');
   if (host.isEmpty || kReleaseMode) return;
-  db.useFirestoreEmulator(host, 8085);
+  db.useFirestoreEmulator(host, 8086);
   debugPrint('Using Firestore emulator at $host');
 }
 

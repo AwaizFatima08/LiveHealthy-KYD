@@ -23,7 +23,7 @@ class GroupScreen extends StatelessWidget {
     }
     final members = repo.membersOf(group);
     return Scaffold(
-      appBar: AppBar(title: Text(group.title.tr(context))),
+      appBar: AppBar(title: Text(group.title.tr(context), maxLines: 1, overflow: TextOverflow.ellipsis)),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),
         children: [

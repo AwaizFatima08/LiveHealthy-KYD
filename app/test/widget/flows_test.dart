@@ -128,7 +128,7 @@ void main() {
     final style = DefaultTextStyle.of(tester.element(find.textContaining('بلڈ پریشر وہ دباؤ ہے'))).style.merge(body.style);
     expect(style.fontFamily, 'NotoNastaliqUrdu');
     // Number ranges are isolated so RTL can't reverse them.
-    final range = find.byWidgetPredicate((w) => w is Text && (w.data ?? '').contains('\u2066130–139\u2069'));
+    final range = find.byWidgetPredicate((w) => w is Text && (w.data ?? '').contains('\u2066130\u2060–\u2060139\u2069'));
     await tester.scrollUntilVisible(range, 200);
     expect(range, findsOneWidget);
   });

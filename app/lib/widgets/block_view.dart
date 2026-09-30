@@ -202,7 +202,10 @@ class _KeyNumber extends StatelessWidget {
           const SizedBox(height: 2),
           Text(
             block.value.tr(context),
-            style: theme.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w700, color: theme.colorScheme.onSurface),
+            style: (Localizations.localeOf(context).languageCode == 'ur'
+                    ? theme.textTheme.titleLarge
+                    : theme.textTheme.headlineSmall)
+                ?.copyWith(fontWeight: FontWeight.w700, color: theme.colorScheme.onSurface),
           ),
           if (block.note != null) ...[
             const SizedBox(height: 4),

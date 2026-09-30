@@ -36,7 +36,7 @@ class SectionScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(section.title.tr(context)),
+        title: Text(section.title.tr(context), maxLines: 1, overflow: TextOverflow.ellipsis),
         actions: [
           Padding(
             padding: const EdgeInsetsDirectional.only(end: 16),
