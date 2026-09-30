@@ -266,13 +266,17 @@ class _Alert extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(block.title.tr(context), style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w700)),
-                if (block.text != null) ...[
-                  const SizedBox(height: 6),
-                  Text(block.text!.tr(context), style: theme.textTheme.bodyLarge),
-                ],
+                // Signs first, then what to do about them.
                 if (block.items.isNotEmpty) ...[
                   const SizedBox(height: 6),
                   _BulletList(items: block.items, dotColor: color),
+                ],
+                if (block.text != null) ...[
+                  const SizedBox(height: 6),
+                  Text(
+                    block.text!.tr(context),
+                    style: theme.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w600),
+                  ),
                 ],
                 if (block.refs.isNotEmpty) RefMarkers(disease: disease, refs: block.refs),
               ],

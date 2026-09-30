@@ -43,13 +43,21 @@ def font(text, size):
 def frame(path, caption):
     img = background()
     d = ImageDraw.Draw(img)
-    f, urdu = font(caption, 58 if not caption.isascii() else 54)
-    kwargs = {'direction': 'rtl', 'language': 'ur'} if urdu else {}
-    box = d.textbbox((0, 0), caption, font=f, **kwargs)
+    size = 58 if not caption.isascii() else 54
+    while True:  # shrink until the caption fits with a margin
+        f, urdu = font(caption, size)
+        kwargs = {'direction': 'rtl', 'language': 'ur'} if urdu else {}
+        box = d.textbbox((0, 0), caption, font=f, **kwargs)
+        if box[2] - box[0] <= W - 120 or size <= 30:
+            break
+        size -= 2
     d.text(((W - (box[2] - box[0])) / 2 - box[0], 120 - box[1] + (0 if not urdu else -10)), caption,
            font=f, fill=(255, 255, 255), **kwargs)
 
     shot = Image.open(path).convert('RGB')
+    # Hide the phone's status bar (clock, personal notification icons).
+    bar = round(shot.height * 0.032)
+    ImageDraw.Draw(shot).rectangle([0, 0, shot.width, bar], fill=(247, 249, 248))
     target_h = H - 330 - 70
     scale = target_h / shot.height
     shot = shot.resize((round(shot.width * scale), target_h), Image.LANCZOS)

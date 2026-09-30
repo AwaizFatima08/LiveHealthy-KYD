@@ -1,6 +1,15 @@
 # LiveHealthy Learn — Design Document (V1 Scope)
 
-**Status:** LOCKED, with one exception: D13 (how the three diabetes topics are shown, §15) still needs your confirmation before build step 2. It does not block build step 1. Any later change is a new decision, discussed and confirmed before code changes.
+> **Build note (2026-09-30):** built as **LiveHealthy: Know Your Disease** (renamed from "Learn" by the
+> owner). Following the rename and the suite's colon naming, `learn` became `kyd` throughout:
+> package `com.homilabs.livehealthy_kyd`, Firebase project `livehealthy-kyd`, collections
+> `kyd_manifest` / `kyd_diseases`, key `livehealthy-kyd-release.jks`, launcher label "Know Your
+> Disease". Per the owner's 2026-09-28 decision, the website uses the shared family policy pages
+> (with a Know Your Disease section) instead of separate `learn-*.html` pages. Everything else is
+> as locked below. See docs/prelaunch_review.md for build-time decisions.
+
+
+**Status:** LOCKED (all decisions D1–D13 recorded in §15). This document is the build reference. Any later change is a new decision, discussed and confirmed before code changes.
 
 **Revision 3:** Decisions D1–D12 recorded (§15). Revision 2 filled in values from the actual code in `live_healthy/` (Medicine Reminder) and `live_healthy_vitals/`.
 
@@ -189,12 +198,14 @@ Medicine Reminder and Vitals share `live-healthy-medreminder` because they share
 learn_manifest/current
     contentVersion: 7
     minAppVersion: 1
-    diseases: { hypertension: 3, diabetes: 2, obesity: 2 }
+    diseases: { hypertension: 3, prediabetes: 1, type2_diabetes: 2, gestational_diabetes: 1, obesity: 2 }
+    groups: { diabetes: { order, title{en,ur}, members: [prediabetes, type2_diabetes, gestational_diabetes] } }
     toolLinks: { vitals: "live" | "comingSoon" | "hidden",
                  medicineReminder: "live" | "comingSoon" | "hidden" }
     updatedAt
 
-learn_diseases/{diseaseId}
+learn_diseases/{diseaseId}      hypertension, obesity, prediabetes, type2_diabetes, gestational_diabetes
+    group: "diabetes" | null        ← topics sharing a Home card
     version, order, status: "published"
     title {en, ur}, summary {en, ur}, iconAsset
     reviewedBy, reviewedOn, nextReviewDue
@@ -278,7 +289,7 @@ Only the publish script (admin key in `secrets/`) can write. Rules tests run on 
 
 ### Screen map
 ```
-First launch ─► S1 Language + Disclaimer ─► S2 Home
+First launch ─► S1 Language + Disclaimer ─► S2 Home ─► (S2b Topic group, for Diabetes)
                                               │
                           ┌───────────────────┼──────────────┐
                           ▼                                  ▼
@@ -319,6 +330,27 @@ First launch ─► S1 Language + Disclaimer ─► S2 Home
 │  More topics coming soon │
 └──────────────────────────┘
 ```
+
+### S2b — Topic group (e.g. Diabetes)
+```
+┌──────────────────────────┐
+│ ←  Diabetes              │
+│──────────────────────────│
+│ ┌──────────────────────┐ │
+│ │ Prediabetes           │ │
+│ └──────────────────────┘ │
+│ ┌──────────────────────┐ │
+│ │ Type 2 Diabetes       │ │
+│ └──────────────────────┘ │
+│ ┌──────────────────────┐ │
+│ │ Diabetes in Pregnancy │ │
+│ │ (Gestational)         │ │
+│ └──────────────────────┘ │
+│ Type 1 and rare types    │
+│ are not covered here.    │
+└──────────────────────────┘
+```
+Each card opens the normal S3 disease page. Home keeps three cards: Hypertension, Diabetes, Obesity.
 
 ### S3 — Disease page
 ```
@@ -376,6 +408,7 @@ The structure supports these. **None of them are built in V1.**
 
 | Future feature | Hook in V1 |
 |---|---|
+| Grouped diseases (arthritis types, cancers, thyroid) | The same `groups` mechanism built for Diabetes; no new screen needed. |
 | More diseases | Diseases are data. New disease = JSON + graphics + release; no screen code changes. |
 | New content types | Unknown block types are skipped safely; `minAppVersion` protects old versions. |
 | Third language | Text stored as `{en, ur}` maps; adding a key adds a language. |
@@ -396,7 +429,7 @@ The structure supports these. **None of them are built in V1.**
 Build one piece, verify, then move on:
 
 1. **Skeleton + one disease, offline.** Project folder, Vitals theme, S1–S4 for Hypertension from bundled JSON, both languages, RTL. *Verify on the Samsung A12 at 1.3× font. That device found layout bugs in Vitals the emulator missed.*
-2. **Content pipeline.** Content JSON rules + Python validator (including the Vitals number check). Add Diabetes and Obesity. *Verify: the validator rejects a section with no reference.*
+2. **Content pipeline + topic groups.** Content JSON rules + Python validator (including the Vitals number check, skipped for gestational content). Add the S2b topic-group screen, the three diabetes topics and Obesity. *Verify: the validator rejects a section with no reference.*
 3. **References + cross-links.** S5, reference panel, "Track it" with installed / Play / coming-soon behaviour.
 4. **Firestore updates.** New `livehealthy-learn` project, rules + rules tests, publish script, in-app update check. *Verify: change a sentence, publish, and see it on the phone without a reinstall. Airplane mode still works.*
 5. **Polish + release prep.** Settings/About, website pages, icons, store listing, release build, `prelaunch_review.md` in the Vitals format.
@@ -429,7 +462,7 @@ Found while reading the code. **These are not changes to Learn.** They're noted 
 | D9 | Build sequence | **LOCKED as the baseline** (§13). Adjustable as needed, but any change is raised and confirmed first, not made silently. |
 | D10 | Urdu font | **LOCKED:** bundle Noto Nastaliq Urdu in Learn; later share with the other apps via the theme package. |
 | D11 | Medicine Reminder name | **LOCKED:** go with the code. Button label "LiveHealthy Medicine Reminder". |
-| D13 | How the three diabetes topics are shown | **PENDING.** Proposed: three separate topics on Home (Prediabetes, Type 2 Diabetes, Gestational Diabetes), each with the standard seven sections. No new code is needed, since each is just another disease document. The trade-off is five Home cards instead of three. |
+| D13 | How the three diabetes topics are shown | **LOCKED:** one Diabetes card on Home, opening a topic-group screen (S2b) with Prediabetes, Type 2 Diabetes and Gestational Diabetes; each uses the standard seven sections. The group mechanism is reusable for future grouped diseases. |
 | D12 | Folder + repo | **LOCKED:** folder `live_healthy_learn/` (already exists, holding `docs/design-v1.md`); Git repo created by you before the build starts. |
 
 ---
