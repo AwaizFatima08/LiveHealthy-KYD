@@ -97,14 +97,20 @@ Settings → Disclaimer, and in the terms.
 ## Data safety form
 - Does the app collect or share user data? **Yes, collected** (crash reports only). Shared: **No.**
 - Encrypted in transit: **Yes.**
-- Can users request deletion? Nothing is linked to a person. Crash reports expire after 90
-  days, and uninstalling removes all on-device data.
+- Account creation: "My app does not allow users to create an account"; login with outside
+  accounts: No.
+- "Do you provide a way for users to request that their data is deleted?": **No** (leave it
+  unanswered or No). Do NOT give deleteaccount.html here; that page is for the shared LiveHealthy
+  account used by Vitals and Medicine Reminder. Nothing here is linked to a person, crash reports
+  expire after 90 days, and uninstalling removes all on-device data.
 
 | Data type | Collected | Shared | Purpose | Optional? |
 |---|---|---|---|---|
-| App info and performance → **Crash logs** | Yes | No | App functionality (fixing crashes) | Required |
-| App info and performance → **Diagnostics** | Yes | No | App functionality | Required |
-| Device or other IDs (Firebase installation ID, used by Crashlytics) | Yes | No | App functionality | Required |
+| App info and performance → **Crash logs** | Yes | No | Analytics (app performance) | Required |
+| App info and performance → **Diagnostics** | Yes | No | Analytics | Required |
+| Device or other IDs (Firebase installation ID, used by Crashlytics) | Yes | No | Analytics | Required |
+
+None of the three is processed ephemerally (kept up to 90 days).
 
 Not collected: personal info, health and fitness, location, contacts, photos, audio, messages,
 financial info, web history, app interactions or in-app search, advertising ID.
