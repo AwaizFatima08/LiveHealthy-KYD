@@ -1,0 +1,21 @@
+rules_version = '2';
+
+// LiveHealthy: Know Your Disease — its own Firebase project (livehealthy-kyd),
+// NOT the shared live-healthy-medreminder project. No login, no user data:
+// the app only reads public health content. Only the publish script
+// (admin SDK, secrets/) writes, and the admin SDK bypasses these rules.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /kyd_manifest/{doc} {
+      allow get: if true;
+      allow list, write: if false;
+    }
+    match /kyd_diseases/{doc} {
+      allow get: if true;
+      allow list, write: if false;
+    }
+    match /{everything=**} {
+      allow read, write: if false;
+    }
+  }
+}
