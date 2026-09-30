@@ -103,6 +103,8 @@ void main() {
     };
     for (final e in topics.entries) {
       final id = e.key, group = e.value;
+      await tester.drag(find.byType(Scrollable).first, const Offset(0, 3000)); // Home to top
+      await settle(tester);
       if (group != null) {
         await tapScrolled(tester, find.byKey(Key('group-$group')));
       }
@@ -130,26 +132,28 @@ void main() {
       await readToEnd(tester);
       await tester.tap(find.byKey(const Key('back-to-topic')));
       await settle(tester);
-      await tester.pageBack();
+      await tester.binding.handlePopRoute(); // system back
       await settle(tester);
       if (group != null) {
-        await tester.pageBack();
+        await tester.binding.handlePopRoute(); // system back
         await settle(tester);
       }
-      await waitFor(tester, find.byKey(const Key('topic-hypertension')));
+      await waitFor(tester, find.byKey(const Key('open-settings')));
     }
 
     // A reference marker opens its citation panel.
+    await tester.drag(find.byType(Scrollable).first, const Offset(0, 3000));
+    await settle(tester);
     await tapScrolled(tester, find.byKey(const Key('topic-obesity')));
     await tapScrolled(tester, find.byKey(const Key('section-whatIs')));
     await tester.tap(find.text('[1]').first);
     await settle(tester);
     expect(find.text('Open source'), findsOneWidget);
-    await tester.tapAt(const Offset(20, 60)); // dismiss the sheet
+    Navigator.of(tester.element(find.text('Open source'))).pop(); // close the sheet
     await settle(tester);
-    await tester.pageBack();
+    await tester.binding.handlePopRoute(); // system back
     await settle(tester);
-    await tester.pageBack();
+    await tester.binding.handlePopRoute(); // system back
     await settle(tester);
 
     // Settings: content update from the emulator, then Urdu.
@@ -162,9 +166,11 @@ void main() {
     await settle(tester);
     await tester.tap(find.byKey(const Key('lang-ur')));
     await settle(tester);
-    await tester.pageBack();
+    await tester.binding.handlePopRoute(); // system back
     await settle(tester);
     expect(find.text('اپنی بیماری کو جانیں'), findsWidgets);
+    await tester.drag(find.byType(Scrollable).first, const Offset(0, 3000)); // Home to top
+    await settle(tester);
     await tapScrolled(tester, find.byKey(const Key('topic-hypertension')));
     await tapScrolled(tester, find.byKey(const Key('section-whatIs')));
     for (var s = 1; s <= 5; s++) {
