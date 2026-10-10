@@ -1,4 +1,42 @@
-# Prelaunch Review — LiveHealthy: Know Your Disease v1.0.0
+# Prelaunch Review — LiveHealthy: Know Your Disease
+
+# Update 1.1.0 (build 2) — 2026-10-10
+
+**New topics:** high cholesterol, migraine and breast cancer (EN + UR, seven-part structure, 12 new
+verified sources: WHO, NHS, NICE CG150, USPSTF 2024, MedlinePlus, NHLBI, Mayo Clinic, Cleveland
+Clinic; 44 sources in total). Home now has six cards. Cholesterol numbers aren't tracked by Vitals, so
+those key numbers are `metric: none` (the Vitals check still runs on BP, glucose and BMI).
+
+**New assets:**
+- 11 language-free SVGs (`scripts/make_graphics.py`), drawn in code like the first 20.
+- 3 Lottie animations, made on homi-nas (`~/lottie/animations/livehealthy-kyd/`), lottie-check +
+  Stage 1 PASS, **approved by Homi on 10 Oct 2026**, integrated with asset-integrate.sh and listed in
+  `app/assets/ASSET-REGISTER.md`: breast self-check (loop), artery plaque (loop), migraine dark
+  room (plays once). No AI model, so no attribution needed. `release-check.sh`: PASS.
+- New `animation` content block (`lottie` package). If the phone asks to remove animations, a still
+  frame is shown. Older app versions skip the block, so `minAppVersion` stays 1.
+
+**Tests:** 56 Dart tests, 15 validator tests, and the on-device journey on the Galaxy A12 (now all
+8 topics × 6 screens) pass. Release AAB/APK built, same signing key, same permissions.
+**Found and fixed during the update:**
+- The ribbon header showed a dark smudge on the phone: flutter_svg draws a stroked path with
+  `opacity` differently from Inkscape. Removed that highlight.
+- Looping animations never "settle", which would hang widget tests. Widget tests now run in
+  reduced-motion mode, and the on-device test waits for route transitions instead of fixed delays
+  (the A12 was slower than the old 0.7 s pause while an animation ran).
+
+**Owner actions for 1.1.0:**
+1. Medical review of the three new topics (the app shows "reviewed 10 Oct 2026").
+2. Urdu second-reader review of the new text.
+3. Upload `live_healthy/website/index.html` and `privacy-policy.html` (topic list updated;
+   committed and pushed) — Hostinger had logged out when I tried.
+4. Test on the Mi 9 (not connected during this session).
+5. Play Console: upload `app/build/app/outputs/bundle/release/app-release.aab` (1.1.0, build 2),
+   with the 1.1.0 release notes, new short description and feature graphic in `store/`.
+
+---
+
+# v1.0.0
 
 Date: 2026-09-30
 

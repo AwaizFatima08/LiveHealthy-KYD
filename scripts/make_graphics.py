@@ -578,7 +578,6 @@ def breast_cancer_header():
         f'<circle cx="120" cy="92" r="70" fill="{PINK_LIGHT}"/>',
         f'<path d="M86 160 L132 82 C150 50 142 28 120 28 C98 28 90 50 108 82 L154 160" fill="none" '
         f'stroke="{PINK}" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>',
-        f'<path d="M108 82 L118 99" stroke="{WHITE}" stroke-width="4" stroke-linecap="round" opacity="0.6"/>',
     ]
     return svg(240, 180, '\n'.join(body))
 

@@ -176,7 +176,7 @@ class _Animation extends StatelessWidget {
             image: true,
             excludeSemantics: true,
             child: AspectRatio(
-              aspectRatio: 1.6,
+              aspectRatio: 1.25,
               child: Directionality(
                 textDirection: TextDirection.ltr,
                 child: Lottie.asset(

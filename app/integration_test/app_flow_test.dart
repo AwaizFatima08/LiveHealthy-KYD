@@ -29,7 +29,22 @@ Future<void> waitFor(WidgetTester tester, Finder finder, {Duration timeout = con
   throw TestFailure('Timed out waiting for $finder');
 }
 
-Future<void> settle(WidgetTester tester) => pumpFor(tester, const Duration(milliseconds: 700));
+/// Pumps until every visible route has finished its transition (looping
+/// animations mean the frame queue never empties, so pumpAndSettle can't be
+/// used), then a little longer for layout.
+Future<void> settle(WidgetTester tester) async {
+  final end = DateTime.now().add(const Duration(seconds: 8));
+  await pumpFor(tester, const Duration(milliseconds: 300));
+  while (DateTime.now().isBefore(end)) {
+    final busy = find.byType(Scaffold).evaluate().any((e) {
+      final anim = ModalRoute.of(e)?.animation;
+      return anim != null && anim.status != AnimationStatus.completed && anim.status != AnimationStatus.dismissed;
+    });
+    if (!busy) break;
+    await tester.pump(const Duration(milliseconds: 100));
+  }
+  await pumpFor(tester, const Duration(milliseconds: 300));
+}
 
 Future<void> scrollTo(WidgetTester tester, Finder finder) async {
   await tester.scrollUntilVisible(finder, 250, scrollable: find.byType(Scrollable).first);
@@ -121,6 +136,7 @@ void main() {
       }
       await tapScrolled(tester, find.byKey(const Key('section-whatIs')));
       for (var s = 1; s <= 5; s++) {
+        debugPrint('E2E reading $id section $s');
         expect(find.text('$s/6'), findsOneWidget);
         await readToEnd(tester);
         if (id == 'hypertension' && s == 5) {
