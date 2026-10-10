@@ -12,6 +12,7 @@ The home-screen label is "Know Your Disease", following the suite convention (Vi
 Plain facts on BP, diabetes, cholesterol, migraine & more, in Urdu and English.
 
 ## Full description
+Enter as PLAIN TEXT in Play Console (Play shows ** literally); paragraphs as written, one line each.
 LiveHealthy: Know Your Disease explains common long-term conditions in plain language, in
 Urdu or English, with a trusted medical source behind every fact.
 
@@ -51,7 +52,7 @@ substitute for a doctor. In an emergency, go to the nearest hospital.
 
 ## Urdu listing (add as a translation: Urdu – ur)
 **App name:** LiveHealthy: Know Your Disease
-**Short description:** بلڈ پریشر، ذیابیطس اور موٹاپے پر آسان معلومات، معتبر حوالوں کے ساتھ۔
+**Short description:** بلڈ پریشر، شوگر، کولیسٹرول، مائیگرین اور مزید پر آسان، مستند معلومات۔
 **Full description:**
 لِو ہیلدی: اپنی بیماری کو جانیں — عام طویل مدتی بیماریوں کے بارے میں آسان زبان میں معلومات، اردو یا انگریزی میں، اور ہر بات کے پیچھے ایک معتبر طبی ماخذ۔
 
