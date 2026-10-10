@@ -100,6 +100,9 @@ void main() {
       'type2_diabetes': 'diabetes',
       'gestational_diabetes': 'diabetes',
       'obesity': null,
+      'high_cholesterol': null,
+      'migraine': null,
+      'breast_cancer': null,
     };
     for (final e in topics.entries) {
       final id = e.key, group = e.value;

@@ -37,19 +37,21 @@ ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / 'content'
 ASSETS_CONTENT = ROOT / 'app/assets/content'
 GRAPHICS = ROOT / 'app/assets/graphics'
+ANIMATIONS = ROOT / 'app/assets/lottie'  # filled by asset-integrate.sh after Homi's approval
 VITALS_RANGES = ROOT.parent / 'live_healthy_vitals/app/lib/core/vitals/reference_ranges.dart'
 SERVICE_ACCOUNT = ROOT / 'secrets/firebase-admin-service-account.json'
 PROJECT_ID = 'livehealthy-kyd'
 
 LANGS = ('en', 'ur')
 SECTION_IDS = ['whatIs', 'causes', 'complications', 'lifestyle', 'whenToSeeDoctor']
-BLOCK_TYPES = {'paragraph', 'bullets', 'image', 'keyNumber', 'alert', 'refMarker'}
+BLOCK_TYPES = {'paragraph', 'bullets', 'image', 'animation', 'keyNumber', 'alert', 'refMarker'}
 TOOLS = {'vitals', 'medicineReminder'}
 TOOL_STATUS = {'live', 'comingSoon', 'hidden'}
 NON_DISEASE_FILES = {'references.json', 'manifest_source.json'}
 # Must match the app (models.dart): ids become file names on the phone.
 ID_RE = re.compile(r'^[a-z0-9][a-z0-9_-]{0,63}$')
 ASSET_RE = re.compile(r'^[a-z0-9_]{1,64}\.svg$')
+ANIMATION_RE = re.compile(r'^[a-z0-9_-]{1,80}\.json$')
 
 
 class Report:
@@ -227,6 +229,16 @@ def validate_block(b: dict, where: str, rep: Report, bands, skip_vitals: bool):
             rep.error(f'{where}.items: empty')
         for k, it in enumerate(items):
             check_localized(it, f'{where}.items[{k}]', rep)
+    elif t == 'animation':
+        # A short Lottie animation (app/assets/lottie/). Apps older than 1.1 skip it.
+        name = b.get('assetKey')
+        if not isinstance(name, str) or not ANIMATION_RE.match(name):
+            rep.error(f'{where}.assetKey: must be lowercase letters, digits, _ or - ending in .json')
+        elif not (ANIMATIONS / name).is_file():
+            rep.error(f'{where}.assetKey: app/assets/lottie/{name} does not exist (approve it with asset-integrate.sh)')
+        if 'loop' in b and not isinstance(b['loop'], bool):
+            rep.error(f'{where}.loop: must be true or false')
+        check_localized(b.get('caption'), f'{where}.caption', rep)
     elif t == 'image':
         asset(b.get('assetKey'), f'{where}.assetKey', rep)
         check_localized(b.get('caption'), f'{where}.caption', rep)

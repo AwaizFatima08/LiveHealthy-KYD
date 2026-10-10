@@ -1,9 +1,12 @@
 {
- "contentVersion": 1,
+ "contentVersion": 2,
  "minAppVersion": 1,
  "diseases": {
+  "breast_cancer": 1,
   "gestational_diabetes": 1,
+  "high_cholesterol": 1,
   "hypertension": 1,
+  "migraine": 1,
   "obesity": 1,
   "prediabetes": 1,
   "type2_diabetes": 1
@@ -35,5 +38,5 @@
   "vitals": "comingSoon",
   "medicineReminder": "comingSoon"
  },
- "updatedAt": "2026-09-30T08:03:59+00:00"
+ "updatedAt": "2026-10-10T07:09:14+00:00"
 }

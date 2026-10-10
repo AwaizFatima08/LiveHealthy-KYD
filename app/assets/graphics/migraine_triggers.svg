@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 150" width="340" height="150">
+<circle cx="38" cy="64" r="30" fill="#F6E7CF"/>
+<circle cx="104" cy="64" r="30" fill="#F6E7CF"/>
+<circle cx="170" cy="64" r="30" fill="#F6E7CF"/>
+<circle cx="236" cy="64" r="30" fill="#F6E7CF"/>
+<circle cx="302" cy="64" r="30" fill="#F6E7CF"/>
+<circle cx="38" cy="64" r="18" fill="#FFFFFF" stroke="#B8862B" stroke-width="3"/>
+<path d="M38 64 L38 52 M38 64 L47 68" stroke="#1D2B26" stroke-width="3" stroke-linecap="round"/>
+<path d="M90 52 L114 52 L112 78 L92 78 Z" fill="#FFFFFF" stroke="#7A5530" stroke-width="3"/>
+<path d="M114 58 C124 58 124 70 113 70" fill="none" stroke="#7A5530" stroke-width="3"/>
+<path d="M96 46 C94 40 100 38 98 32 M106 46 C104 40 110 38 108 32" fill="none" stroke="#8A9A93" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M178 48 A18 18 0 1 0 184 78 A14 14 0 1 1 178 48 Z" fill="#5C6BC0"/>
+<path d="M152 50 L160 58 M160 50 L152 58" stroke="#C62828" stroke-width="3" stroke-linecap="round"/>
+<path d="M218 70 C210 70 210 56 220 56 C222 46 238 44 242 54 C252 52 256 66 248 70 Z" fill="#8A9A93"/>
+<path d="M236 70 L230 82 L238 82 L232 94" fill="none" stroke="#B26A00" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="284" y="46" width="36" height="34" rx="5" fill="#FFFFFF" stroke="#C2185B" stroke-width="3"/>
+<rect x="284" y="46" width="36" height="9" rx="3" fill="#C2185B"/>
+<path d="M302 59.4 C304.1 63.9 308 67.5 308 72 A6 6 0 0 1 296 72 C296 67.5 299.9 63.9 302 59.4 Z" fill="#C62828"/>
+<text x="38" y="124" font-family="Roboto, sans-serif" font-size="14" font-weight="600" fill="#8A9A93" text-anchor="middle">1</text>
+<text x="104" y="124" font-family="Roboto, sans-serif" font-size="14" font-weight="600" fill="#8A9A93" text-anchor="middle">2</text>
+<text x="170" y="124" font-family="Roboto, sans-serif" font-size="14" font-weight="600" fill="#8A9A93" text-anchor="middle">3</text>
+<text x="236" y="124" font-family="Roboto, sans-serif" font-size="14" font-weight="600" fill="#8A9A93" text-anchor="middle">4</text>
+<text x="302" y="124" font-family="Roboto, sans-serif" font-size="14" font-weight="600" fill="#8A9A93" text-anchor="middle">5</text>
+</svg>

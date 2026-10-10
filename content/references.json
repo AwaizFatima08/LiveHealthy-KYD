@@ -62,6 +62,13 @@
     "url": "https://www.heart.org/en/health-topics/high-blood-pressure/health-threats-from-high-blood-pressure",
     "checkedOn": "2026-09-30"
   },
+  "cc-chol": {
+    "org": "Cleveland Clinic",
+    "title": "Hyperlipidemia (High Cholesterol): Symptoms & Treatment",
+    "year": 2025,
+    "url": "https://my.clevelandclinic.org/health/diseases/11918-cholesterol-high-cholesterol-diseases",
+    "checkedOn": "2026-10-10"
+  },
   "cc-hyperglycemia": {
     "org": "Cleveland Clinic",
     "title": "Hyperglycemia (High Blood Sugar)",
@@ -75,6 +82,13 @@
     "year": 2025,
     "url": "https://my.clevelandclinic.org/health/diseases/11647-hypoglycemia-low-blood-sugar",
     "checkedOn": "2026-09-30"
+  },
+  "cc-mig": {
+    "org": "Cleveland Clinic",
+    "title": "Migraine Headaches",
+    "year": 2024,
+    "url": "https://my.clevelandclinic.org/health/diseases/5005-migraine-headaches",
+    "checkedOn": "2026-10-10"
   },
   "cc-obesity": {
     "org": "Cleveland Clinic",
@@ -96,6 +110,20 @@
     "year": 2024,
     "url": "https://www.cdc.gov/diabetes/prevention-type-2/index.html",
     "checkedOn": "2026-09-30"
+  },
+  "mayo-bc": {
+    "org": "Mayo Clinic",
+    "title": "Breast cancer: Symptoms and causes",
+    "year": 2025,
+    "url": "https://www.mayoclinic.org/diseases-conditions/breast-cancer/symptoms-causes/syc-20352470",
+    "checkedOn": "2026-10-10"
+  },
+  "mayo-chol": {
+    "org": "Mayo Clinic",
+    "title": "High cholesterol: Symptoms and causes",
+    "year": 2025,
+    "url": "https://www.mayoclinic.org/diseases-conditions/high-blood-cholesterol/symptoms-causes/syc-20350800",
+    "checkedOn": "2026-10-10"
   },
   "mayo-gdm": {
     "org": "Mayo Clinic",
@@ -132,12 +160,47 @@
     "url": "https://www.mayoclinic.org/diseases-conditions/type-2-diabetes/symptoms-causes/syc-20351193",
     "checkedOn": "2026-09-30"
   },
+  "medline-chol": {
+    "org": "MedlinePlus (US National Library of Medicine)",
+    "title": "Cholesterol levels: what you need to know",
+    "year": 2025,
+    "url": "https://medlineplus.gov/cholesterollevelswhatyouneedtoknow.html",
+    "checkedOn": "2026-10-10"
+  },
   "nei-retinopathy": {
     "org": "National Eye Institute (NIH)",
     "title": "Diabetic Retinopathy",
     "year": 2025,
     "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/diabetic-retinopathy",
     "checkedOn": "2026-09-30"
+  },
+  "nhlbi-chol": {
+    "org": "National Heart, Lung, and Blood Institute (NIH)",
+    "title": "Blood Cholesterol",
+    "year": 2024,
+    "url": "https://www.nhlbi.nih.gov/health/blood-cholesterol",
+    "checkedOn": "2026-10-10"
+  },
+  "nhs-check": {
+    "org": "NHS (UK)",
+    "title": "How to check your breasts or chest",
+    "year": 2024,
+    "url": "https://www.nhs.uk/common-health-questions/womens-health/how-should-i-check-my-breasts/",
+    "checkedOn": "2026-10-10"
+  },
+  "nhs-mig": {
+    "org": "NHS (UK)",
+    "title": "Migraine",
+    "year": 2026,
+    "url": "https://www.nhs.uk/conditions/migraine/",
+    "checkedOn": "2026-10-10"
+  },
+  "nice-cg150": {
+    "org": "NICE (UK)",
+    "title": "Headaches in over 12s: diagnosis and management (CG150)",
+    "year": 2025,
+    "url": "https://www.nice.org.uk/guidance/cg150",
+    "checkedOn": "2026-10-10"
   },
   "nice-ng136": {
     "org": "NICE (UK)",
@@ -167,6 +230,13 @@
     "url": "https://www.nice.org.uk/guidance/ph38",
     "checkedOn": "2026-09-30"
   },
+  "uspstf-bc": {
+    "org": "US Preventive Services Task Force (USPSTF)",
+    "title": "Breast Cancer: Screening (final recommendation)",
+    "year": 2024,
+    "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-screening",
+    "checkedOn": "2026-10-10"
+  },
   "who-activity": {
     "org": "World Health Organization (WHO)",
     "title": "Physical activity (fact sheet)",
@@ -181,6 +251,13 @@
     "url": "https://pubmed.ncbi.nlm.nih.gov/14726171/",
     "checkedOn": "2026-09-30"
   },
+  "who-bc": {
+    "org": "World Health Organization (WHO)",
+    "title": "Breast cancer (fact sheet)",
+    "year": 2026,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/breast-cancer",
+    "checkedOn": "2026-10-10"
+  },
   "who-diabetes": {
     "org": "World Health Organization (WHO)",
     "title": "Diabetes (fact sheet)",
@@ -194,6 +271,13 @@
     "year": 2026,
     "url": "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
     "checkedOn": "2026-09-30"
+  },
+  "who-head": {
+    "org": "World Health Organization (WHO)",
+    "title": "Migraine and other headache disorders (fact sheet)",
+    "year": 2025,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/headache-disorders",
+    "checkedOn": "2026-10-10"
   },
   "who-htn": {
     "org": "World Health Organization (WHO)",

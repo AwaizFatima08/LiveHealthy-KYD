@@ -27,13 +27,30 @@ void main() {
     expect(app.settings.disclaimerAccepted, isTrue);
   });
 
-  testWidgets('Home shows three cards: BP, Diabetes (3 topics), Obesity', (tester) async {
+  testWidgets('Home shows six cards: BP, Diabetes (3 topics), Obesity, Cholesterol, Migraine, Breast cancer',
+      (tester) async {
     await pumpApp(tester);
     expect(find.byKey(const Key('topic-hypertension')), findsOneWidget);
     expect(find.byKey(const Key('group-diabetes')), findsOneWidget);
     expect(find.text('3 topics'), findsOneWidget);
-    expect(find.byKey(const Key('topic-obesity')), findsOneWidget);
+    for (final id in ['obesity', 'high_cholesterol', 'migraine', 'breast_cancer']) {
+      await tester.scrollUntilVisible(find.byKey(Key('topic-$id')), 200);
+      expect(find.byKey(Key('topic-$id')), findsOneWidget);
+    }
+    await tester.scrollUntilVisible(find.text('More topics coming soon'), 200);
     expect(find.text('More topics coming soon'), findsOneWidget);
+  });
+
+  testWidgets('an animation block shows its caption and respects reduced motion', (tester) async {
+    tester.platformDispatcher.accessibilityFeaturesTestValue = const FakeAccessibilityFeatures(disableAnimations: true);
+    addTearDown(tester.platformDispatcher.clearAccessibilityFeaturesTestValue);
+    await pumpApp(tester);
+    await scrollAndTap(tester, find.byKey(const Key('topic-migraine')));
+    await scrollAndTap(tester, find.byKey(const Key('section-lifestyle')));
+    expect(find.textContaining('dark, quiet room'), findsOneWidget);
+    final lottie = find.byKey(const Key('animation-20261010-1205-livehealthy-kyd-lottie-01_lottie.json'));
+    expect(lottie, findsOneWidget);
+    expect(tester.takeException(), isNull);
   });
 
   testWidgets('Diabetes group lists its three topics and the Type 1 note (S2b)', (tester) async {
@@ -167,11 +184,9 @@ void main() {
           expect(r.repo, same(app.repo));
           // Straight to the section via navigation from Home is covered above;
           // here we just prove each section renders without errors.
-          await tester.tap(find.byKey(Key(d.group == null ? 'topic-$id' : 'group-${d.group}')));
-          await tester.pumpAndSettle();
+          await scrollAndTap(tester, find.byKey(Key(d.group == null ? 'topic-$id' : 'group-${d.group}')));
           if (d.group != null) {
-            await tester.tap(find.byKey(Key('topic-$id')));
-            await tester.pumpAndSettle();
+            await scrollAndTap(tester, find.byKey(Key('topic-$id')));
           }
           await scrollAndTap(tester, find.byKey(Key('section-${d.sections[i].id}')));
           expect(tester.takeException(), isNull, reason: '$lang $id ${d.sections[i].id}');

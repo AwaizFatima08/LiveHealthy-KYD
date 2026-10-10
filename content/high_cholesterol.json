@@ -1,0 +1,539 @@
+{
+  "id": "high_cholesterol",
+  "version": 1,
+  "order": 4,
+  "group": null,
+  "status": "published",
+  "title": {
+    "en": "High Cholesterol",
+    "ur": "ہائی کولیسٹرول"
+  },
+  "summary": {
+    "en": "Good and bad cholesterol, healthy numbers, and how to bring LDL down.",
+    "ur": "اچھا اور برا کولیسٹرول، صحت مند نمبر، اور LDL کو کیسے کم کیا جائے۔"
+  },
+  "headerAsset": "high_cholesterol_header.svg",
+  "reviewedBy": {
+    "en": "Dr. Humayun Shahzad, MBBS",
+    "ur": "ڈاکٹر ہمایوں شہزاد، ایم بی بی ایس"
+  },
+  "reviewedOn": "2026-10-10",
+  "nextReviewDue": "2027-10-10",
+  "relatedTools": [
+    {
+      "tool": "medicineReminder",
+      "label": {
+        "en": "Take cholesterol medicine every day",
+        "ur": "کولیسٹرول کی دوا روزانہ لیں"
+      }
+    }
+  ],
+  "sections": [
+    {
+      "id": "whatIs",
+      "title": {
+        "en": "What it is",
+        "ur": "یہ کیا ہے"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Cholesterol is a fatty substance in the blood. Your body needs some, and your liver makes all it needs. The cholesterol in food is extra. High cholesterol (hypercholesterolaemia) means there is too much of it in your blood, which raises the risk of heart attack and stroke.",
+            "ur": "کولیسٹرول خون میں پائی جانے والی ایک چکنائی ہے۔ جسم کو اس کی کچھ مقدار درکار ہوتی ہے، اور جگر ضرورت کے مطابق خود بنا لیتا ہے۔ کھانے سے آنے والا کولیسٹرول اضافی ہوتا ہے۔ ہائی کولیسٹرول کا مطلب ہے کہ خون میں یہ بہت زیادہ ہے، جس سے ہارٹ اٹیک اور فالج کا خطرہ بڑھ جاتا ہے۔"
+          },
+          "refs": [
+            "cc-chol"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": {
+            "en": "What the blood test measures",
+            "ur": "خون کا ٹیسٹ کیا ناپتا ہے"
+          },
+          "items": [
+            {
+              "en": "LDL, the \"bad\" cholesterol: the main cause of fatty build-up and blockage in the arteries",
+              "ur": "LDL، یعنی \"برا\" کولیسٹرول: شریانوں میں چکنائی جمنے اور رکاوٹ کی بڑی وجہ"
+            },
+            {
+              "en": "HDL, the \"good\" cholesterol: helps remove cholesterol from the arteries",
+              "ur": "HDL، یعنی \"اچھا\" کولیسٹرول: شریانوں سے کولیسٹرول نکالنے میں مدد دیتا ہے"
+            },
+            {
+              "en": "Triglycerides: another kind of fat in the blood, measured in the same test",
+              "ur": "ٹرائی گلیسرائیڈز: خون کی ایک اور چکنائی، جو اسی ٹیسٹ میں ناپی جاتی ہے"
+            }
+          ],
+          "refs": [
+            "medline-chol"
+          ]
+        },
+        {
+          "type": "animation",
+          "assetKey": "20261010-1204-livehealthy-kyd-lottie-01_lottie.json",
+          "caption": {
+            "en": "Over the years, too much LDL cholesterol builds up as plaque inside the artery wall. The artery narrows and less blood can get through.",
+            "ur": "برسوں میں زیادہ LDL کولیسٹرول شریان کی دیوار کے اندر چربی کی تہہ (پلاک) کی صورت جمع ہوتا ہے۔ شریان تنگ ہو جاتی ہے اور خون کم گزر پاتا ہے۔"
+          },
+          "refs": [
+            "nhlbi-chol",
+            "cc-chol"
+          ]
+        },
+        {
+          "type": "keyNumber",
+          "label": {
+            "en": "LDL (\"bad\") cholesterol, desirable",
+            "ur": "LDL (\"برا\") کولیسٹرول، مناسب سطح"
+          },
+          "value": {
+            "en": "Below 100 mg/dL",
+            "ur": "100 mg/dL سے کم"
+          },
+          "level": "normal",
+          "check": {
+            "metric": "none"
+          },
+          "refs": [
+            "medline-chol"
+          ]
+        },
+        {
+          "type": "keyNumber",
+          "label": {
+            "en": "Total cholesterol, desirable",
+            "ur": "کُل کولیسٹرول، مناسب سطح"
+          },
+          "value": {
+            "en": "Below 200 mg/dL",
+            "ur": "200 mg/dL سے کم"
+          },
+          "level": "normal",
+          "check": {
+            "metric": "none"
+          },
+          "refs": [
+            "medline-chol"
+          ]
+        },
+        {
+          "type": "keyNumber",
+          "label": {
+            "en": "HDL (\"good\") cholesterol",
+            "ur": "HDL (\"اچھا\") کولیسٹرول"
+          },
+          "value": {
+            "en": "60 mg/dL or more is best",
+            "ur": "60 mg/dL یا زیادہ بہترین ہے"
+          },
+          "note": {
+            "en": "Below 40 mg/dL in men, or below 50 mg/dL in women, is low.",
+            "ur": "مردوں میں 40 mg/dL سے کم، یا خواتین میں 50 mg/dL سے کم، کم سمجھا جاتا ہے۔"
+          },
+          "level": "normal",
+          "check": {
+            "metric": "none"
+          },
+          "refs": [
+            "medline-chol"
+          ]
+        },
+        {
+          "type": "keyNumber",
+          "label": {
+            "en": "Triglycerides",
+            "ur": "ٹرائی گلیسرائیڈز"
+          },
+          "value": {
+            "en": "Normal is below 150 mg/dL",
+            "ur": "150 mg/dL سے کم نارمل ہے"
+          },
+          "note": {
+            "en": "150 to 199 mg/dL is borderline high, and 200 mg/dL or more is high.",
+            "ur": "150 سے 199 mg/dL سرحدی حد تک زیادہ، اور 200 mg/dL یا زیادہ، زیادہ ہے۔"
+          },
+          "level": "neutral",
+          "check": {
+            "metric": "none"
+          },
+          "refs": [
+            "medline-chol"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "These are general levels for adults aged 20 and over. If you have heart disease or a higher risk, your doctor may set a lower LDL goal for you.",
+            "ur": "یہ 20 سال یا زیادہ عمر کے بالغ افراد کے لیے عام سطحیں ہیں۔ اگر آپ کو دل کی بیماری ہے یا خطرہ زیادہ ہے تو ڈاکٹر آپ کے لیے LDL کا اس سے کم ہدف مقرر کر سکتا ہے۔"
+          },
+          "refs": [
+            "medline-chol"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "High cholesterol has no symptoms. A blood test is the only way to find out.",
+            "ur": "ہائی کولیسٹرول کی کوئی علامت نہیں ہوتی۔ خون کا ٹیسٹ ہی اسے جاننے کا واحد طریقہ ہے۔"
+          },
+          "refs": [
+            "mayo-chol"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "causes",
+      "title": {
+        "en": "Causes & risk factors",
+        "ur": "وجوہات اور خطرے کے عوامل"
+      },
+      "blocks": [
+        {
+          "type": "bullets",
+          "title": {
+            "en": "Risk factors you can change",
+            "ur": "خطرے کے وہ عوامل جو آپ بدل سکتے ہیں"
+          },
+          "items": [
+            {
+              "en": "Food high in saturated fat: fatty red meat, full-fat dairy, butter and ghee, deep-fried and processed foods, and many baked goods",
+              "ur": "سیچوریٹڈ چکنائی والی غذا: چربی والا سرخ گوشت، فل کریم دودھ کی اشیاء، مکھن اور گھی، تلی ہوئی اور پراسیسڈ غذائیں، اور بہت سی بیکری اشیاء"
+            },
+            {
+              "en": "Trans fats, found in some fried and packaged foods",
+              "ur": "ٹرانس فیٹس، جو بعض تلی ہوئی اور پیک شدہ غذاؤں میں ہوتے ہیں"
+            },
+            {
+              "en": "Being overweight",
+              "ur": "وزن کا زیادہ ہونا"
+            },
+            {
+              "en": "Not being physically active",
+              "ur": "جسمانی سرگرمی کی کمی"
+            },
+            {
+              "en": "Smoking, which lowers the \"good\" HDL cholesterol",
+              "ur": "سگریٹ نوشی، جو \"اچھے\" HDL کولیسٹرول کو کم کرتی ہے"
+            }
+          ],
+          "refs": [
+            "medline-chol",
+            "cc-chol"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": {
+            "en": "Risk factors you can't change",
+            "ur": "خطرے کے وہ عوامل جو آپ نہیں بدل سکتے"
+          },
+          "items": [
+            {
+              "en": "Getting older: cholesterol tends to rise with age",
+              "ur": "بڑھتی عمر: عمر کے ساتھ کولیسٹرول بڑھنے کا رجحان ہوتا ہے"
+            },
+            {
+              "en": "Family history: high cholesterol can run in families",
+              "ur": "خاندانی تاریخ: ہائی کولیسٹرول خاندانوں میں چل سکتا ہے"
+            },
+            {
+              "en": "Familial hypercholesterolaemia: an inherited condition that causes very high LDL from a young age",
+              "ur": "فیملیل ہائپرکولیسٹرولیمیا: ایک موروثی بیماری جس میں کم عمری سے ہی LDL بہت زیادہ ہوتا ہے"
+            },
+            {
+              "en": "For women, menopause: the risk goes up afterwards",
+              "ur": "خواتین میں سن یاس: اس کے بعد خطرہ بڑھ جاتا ہے"
+            }
+          ],
+          "refs": [
+            "medline-chol",
+            "cc-chol"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Some conditions can also raise cholesterol, such as diabetes, an underactive thyroid, kidney disease and obesity, and so can some medicines.",
+            "ur": "بعض بیماریاں بھی کولیسٹرول بڑھا سکتی ہیں، جیسے ذیابیطس، تھائیرائیڈ کا کم کام کرنا، گردوں کی بیماری اور موٹاپا، اور بعض دوائیں بھی۔"
+          },
+          "refs": [
+            "cc-chol"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complications",
+      "title": {
+        "en": "Complications of poor control",
+        "ur": "کنٹرول نہ ہونے کی پیچیدگیاں"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Without treatment, plaque keeps building up inside the arteries (atherosclerosis). This can slow or stop blood flow to the heart or the brain.",
+            "ur": "علاج نہ ہو تو شریانوں کے اندر پلاک جمع ہوتا رہتا ہے (ایتھیروسکلیروسس)۔ اس سے دل یا دماغ تک خون کا بہاؤ سست یا بند ہو سکتا ہے۔"
+          },
+          "refs": [
+            "cc-chol",
+            "nhlbi-chol"
+          ]
+        },
+        {
+          "type": "image",
+          "assetKey": "cholesterol_risks.svg",
+          "caption": {
+            "en": "Narrowed arteries can affect the heart, the brain and the legs.",
+            "ur": "تنگ شریانیں دل، دماغ اور ٹانگوں کو متاثر کر سکتی ہیں۔"
+          },
+          "refs": [
+            "cc-chol"
+          ]
+        },
+        {
+          "type": "bullets",
+          "items": [
+            {
+              "en": "Heart attack and coronary heart disease, with chest pain on exertion",
+              "ur": "ہارٹ اٹیک اور دل کی شریانوں کی بیماری، جس میں محنت کرنے پر سینے میں درد ہوتا ہے"
+            },
+            {
+              "en": "Stroke, and narrowing of the arteries in the neck",
+              "ur": "فالج، اور گردن کی شریانوں کا تنگ ہونا"
+            },
+            {
+              "en": "Narrowed arteries in the legs (peripheral artery disease)",
+              "ur": "ٹانگوں کی شریانوں کا تنگ ہونا (پیریفرل آرٹری ڈیزیز)"
+            },
+            {
+              "en": "Sudden cardiac arrest",
+              "ur": "اچانک دل کا رک جانا"
+            }
+          ],
+          "refs": [
+            "cc-chol"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Bringing LDL cholesterol down lowers these risks. Managing cholesterol is a long-term effort, so keep up treatment even though you feel well.",
+            "ur": "LDL کولیسٹرول کم کرنے سے یہ خطرات کم ہو جاتے ہیں۔ کولیسٹرول کو قابو میں رکھنا لمبے عرصے کا کام ہے، اس لیے طبیعت ٹھیک ہو تب بھی علاج جاری رکھیں۔"
+          },
+          "refs": [
+            "cc-chol"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lifestyle",
+      "title": {
+        "en": "Lifestyle changes",
+        "ur": "طرزِ زندگی میں تبدیلیاں"
+      },
+      "blocks": [
+        {
+          "type": "image",
+          "assetKey": "fats_swap.svg",
+          "caption": {
+            "en": "Swap saturated fats (ghee, butter, fatty meat, fried food) for healthier fats: fish, nuts, and oils such as olive or canola.",
+            "ur": "سیچوریٹڈ چکنائی (گھی، مکھن، چربی والا گوشت، تلی ہوئی چیزیں) کی جگہ صحت مند چکنائی لیں: مچھلی، خشک میوے، اور زیتون یا کینولا جیسے تیل۔"
+          },
+          "refs": [
+            "mayo-chol",
+            "medline-chol"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": {
+            "en": "Eat",
+            "ur": "کھانا"
+          },
+          "items": [
+            {
+              "en": "Build meals around vegetables, fruit, whole grains and lean protein such as daal, chicken and fish.",
+              "ur": "کھانے کی بنیاد سبزیوں، پھلوں، ثابت اناج اور کم چکنائی والی پروٹین جیسے دال، مرغی اور مچھلی پر رکھیں۔"
+            },
+            {
+              "en": "Cut down on saturated and trans fats, and limit salt and added sugar.",
+              "ur": "سیچوریٹڈ اور ٹرانس فیٹس کم کریں، اور نمک اور اضافی چینی محدود رکھیں۔"
+            }
+          ],
+          "refs": [
+            "mayo-chol"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": {
+            "en": "Live",
+            "ur": "روزمرہ زندگی"
+          },
+          "items": [
+            {
+              "en": "Be active for at least 30 minutes on most days of the week.",
+              "ur": "ہفتے کے زیادہ تر دنوں میں کم از کم 30 منٹ جسمانی سرگرمی کریں۔"
+            },
+            {
+              "en": "Stop smoking.",
+              "ur": "سگریٹ نوشی چھوڑ دیں۔"
+            },
+            {
+              "en": "Avoid alcohol.",
+              "ur": "شراب سے پرہیز کریں۔"
+            }
+          ],
+          "refs": [
+            "mayo-chol"
+          ]
+        },
+        {
+          "type": "keyNumber",
+          "label": {
+            "en": "If you are overweight, aim to lose at least",
+            "ur": "اگر وزن زیادہ ہے تو کم از کم اتنا کم کرنے کا ہدف رکھیں"
+          },
+          "value": {
+            "en": "5% of your body weight",
+            "ur": "اپنے جسمانی وزن کا 5%"
+          },
+          "note": {
+            "en": "For someone weighing 90 kg, that is about 4.5 kg.",
+            "ur": "90 کلو وزن والے شخص کے لیے یہ تقریباً 4.5 کلو بنتا ہے۔"
+          },
+          "level": "neutral",
+          "check": {
+            "metric": "none"
+          },
+          "refs": [
+            "medline-chol"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "If lifestyle changes don't bring your cholesterol down enough, your doctor may add medicine. Take it every day, and don't stop it without asking your doctor.",
+            "ur": "اگر طرزِ زندگی کی تبدیلیوں سے کولیسٹرول کافی کم نہ ہو تو ڈاکٹر دوا تجویز کر سکتا ہے۔ اسے روزانہ لیں، اور ڈاکٹر سے پوچھے بغیر بند نہ کریں۔"
+          },
+          "refs": [
+            "medline-chol"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "whenToSeeDoctor",
+      "title": {
+        "en": "When to see a doctor",
+        "ur": "ڈاکٹر کو کب دکھائیں"
+      },
+      "blocks": [
+        {
+          "type": "alert",
+          "level": "urgent",
+          "title": {
+            "en": "Possible heart attack:",
+            "ur": "ممکنہ ہارٹ اٹیک:"
+          },
+          "items": [
+            {
+              "en": "Severe chest pain",
+              "ur": "سینے میں شدید درد"
+            },
+            {
+              "en": "Difficulty breathing",
+              "ur": "سانس لینے میں دشواری"
+            },
+            {
+              "en": "Nausea, or feeling flushed",
+              "ur": "متلی، یا چہرہ گرم اور سرخ ہونا"
+            }
+          ],
+          "text": {
+            "en": "This is a medical emergency. Call an ambulance (Rescue 1122 in Pakistan) or go to the nearest emergency department now.",
+            "ur": "یہ طبی ایمرجنسی ہے۔ ابھی ایمبولینس بلائیں (پاکستان میں ریسکیو 1122) یا قریبی ایمرجنسی میں جائیں۔"
+          },
+          "refs": [
+            "cc-chol"
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "soon",
+          "title": {
+            "en": "See your doctor soon if:",
+            "ur": "جلد ڈاکٹر کو دکھائیں اگر:"
+          },
+          "items": [
+            {
+              "en": "You get chest pain, jaw pain or shortness of breath when you exert yourself",
+              "ur": "محنت کرنے پر سینے میں درد، جبڑے میں درد یا سانس پھولنا"
+            },
+            {
+              "en": "You notice waxy yellow lumps on the skin, or a pale ring around the coloured part of the eye at a young age",
+              "ur": "جلد پر موم جیسے پیلے ابھار، یا کم عمری میں آنکھ کی رنگین پتلی کے گرد ہلکا سا حلقہ"
+            },
+            {
+              "en": "A close relative has very high cholesterol or had a heart attack at a young age",
+              "ur": "کسی قریبی رشتہ دار کا کولیسٹرول بہت زیادہ ہو یا اسے کم عمری میں ہارٹ اٹیک ہوا ہو"
+            }
+          ],
+          "refs": [
+            "cc-chol",
+            "mayo-chol"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": {
+            "en": "How often to get your cholesterol checked",
+            "ur": "کولیسٹرول کتنی بار چیک کروائیں"
+          },
+          "items": [
+            {
+              "en": "Children: once between ages 9 and 11, and again between 17 and 21",
+              "ur": "بچے: 9 سے 11 سال کے درمیان ایک بار، اور پھر 17 سے 21 سال کے درمیان"
+            },
+            {
+              "en": "Adults 21 to 65: every 5 years",
+              "ur": "21 سے 65 سال کے بالغ: ہر 5 سال بعد"
+            },
+            {
+              "en": "Men 45 to 65 and women 55 to 65: every 1 to 2 years",
+              "ur": "45 سے 65 سال کے مرد اور 55 سے 65 سال کی خواتین: ہر 1 سے 2 سال بعد"
+            },
+            {
+              "en": "Over 65: every year",
+              "ur": "65 سال سے زیادہ: ہر سال"
+            }
+          ],
+          "refs": [
+            "medline-chol"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "You may need checks more often if you have diabetes, high blood pressure, heart disease or a family history of high cholesterol.",
+            "ur": "اگر آپ کو ذیابیطس، ہائی بلڈ پریشر، دل کی بیماری ہے یا خاندان میں ہائی کولیسٹرول ہے تو زیادہ بار چیک کروانے کی ضرورت پڑ سکتی ہے۔"
+          },
+          "refs": [
+            "mayo-chol"
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    "medline-chol",
+    "cc-chol",
+    "mayo-chol",
+    "nhlbi-chol"
+  ]
+}

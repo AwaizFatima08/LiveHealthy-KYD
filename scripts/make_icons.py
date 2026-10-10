@@ -97,7 +97,7 @@ def feature_graphic(path):
     d.text((380 * u, 118 * u), 'LiveHealthy', font=font(56 * u), fill=WHITE)
     d.text((380 * u, 186 * u), 'Know Your', font=font(66 * u), fill=WHITE)
     d.text((380 * u, 262 * u), 'Disease', font=font(66 * u), fill=WHITE)
-    d.text((383 * u, 356 * u), 'Blood pressure · Diabetes · Obesity', font=font(26 * u, bold=False), fill=MINT)
+    d.text((383 * u, 356 * u), 'BP · Diabetes · Cholesterol · Migraine · more', font=font(26 * u, bold=False), fill=MINT)
     ur = ImageFont.truetype(URDU_FONT, 30 * u, layout_engine=ImageFont.Layout.RAQM)
     d.text((383 * u, 392 * u), 'English |', font=font(26 * u, bold=False), fill=MINT)
     d.text((515 * u, 372 * u), 'اردو', font=ur, fill=MINT, direction='rtl', language='ur')

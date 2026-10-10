@@ -1,0 +1,430 @@
+{
+  "id": "breast_cancer",
+  "version": 1,
+  "order": 6,
+  "group": null,
+  "status": "published",
+  "title": {
+    "en": "Breast Cancer",
+    "ur": "چھاتی کا کینسر"
+  },
+  "summary": {
+    "en": "Signs to look for, how to check your breasts, screening, and lowering your risk.",
+    "ur": "کن علامات پر نظر رکھیں، اپنی چھاتی کیسے چیک کریں، اسکریننگ، اور خطرہ کیسے کم کریں۔"
+  },
+  "headerAsset": "breast_cancer_header.svg",
+  "reviewedBy": {
+    "en": "Dr. Humayun Shahzad, MBBS",
+    "ur": "ڈاکٹر ہمایوں شہزاد، ایم بی بی ایس"
+  },
+  "reviewedOn": "2026-10-10",
+  "nextReviewDue": "2027-10-10",
+  "relatedTools": [
+    {
+      "tool": "medicineReminder",
+      "label": {
+        "en": "Take long-term hormone tablets on time",
+        "ur": "لمبے عرصے کی ہارمون والی گولیاں وقت پر لیں"
+      }
+    }
+  ],
+  "sections": [
+    {
+      "id": "whatIs",
+      "title": {
+        "en": "What it is",
+        "ur": "یہ کیا ہے"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Breast cancer is a disease in which abnormal cells in the breast grow out of control and form a tumour. It usually starts in the milk ducts or the milk-making glands. If it isn't treated, it can spread to the lymph nodes under the arm and then to other parts of the body.",
+            "ur": "چھاتی کا کینسر ایسی بیماری ہے جس میں چھاتی کے غیر معمولی خلیے بے قابو ہو کر بڑھتے ہیں اور رسولی بنا لیتے ہیں۔ یہ عموماً دودھ کی نالیوں یا دودھ بنانے والے غدود سے شروع ہوتا ہے۔ علاج نہ ہو تو یہ بغل کی لمفی گلٹیوں اور پھر جسم کے دوسرے حصوں تک پھیل سکتا ہے۔"
+          },
+          "refs": [
+            "who-bc"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "It is the most common cancer in women in most countries of the world. It can happen at any age after puberty, but it becomes more common with age. Men can get it too, but rarely: about 1 in every 100 to 200 cases.",
+            "ur": "دنیا کے زیادہ تر ممالک میں یہ خواتین میں سب سے عام کینسر ہے۔ یہ بلوغت کے بعد کسی بھی عمر میں ہو سکتا ہے، مگر عمر کے ساتھ زیادہ عام ہوتا جاتا ہے۔ مردوں کو بھی ہو سکتا ہے مگر کم: تقریباً ہر 100 سے 200 مریضوں میں سے 1۔"
+          },
+          "refs": [
+            "who-bc"
+          ]
+        },
+        {
+          "type": "keyNumber",
+          "label": {
+            "en": "Found early, it is more likely to be cured",
+            "ur": "جلد پتا چل جائے تو علاج کی کامیابی کا امکان زیادہ"
+          },
+          "value": {
+            "en": "Most breast lumps are not cancer",
+            "ur": "چھاتی کی زیادہ تر گلٹیاں کینسر نہیں ہوتیں"
+          },
+          "note": {
+            "en": "But every new lump should be checked by a doctor. Cancers found while small, before they reach the lymph nodes, are more likely to be treated successfully.",
+            "ur": "مگر ہر نئی گلٹی ڈاکٹر کو دکھانی چاہیے۔ جو کینسر چھوٹا ہونے پر، لمفی گلٹیوں تک پہنچنے سے پہلے پکڑا جائے، اس کے کامیاب علاج کا امکان زیادہ ہوتا ہے۔"
+          },
+          "level": "neutral",
+          "check": {
+            "metric": "none"
+          },
+          "refs": [
+            "who-bc"
+          ]
+        },
+        {
+          "type": "image",
+          "assetKey": "breast_signs.svg",
+          "caption": {
+            "en": "Changes to look for: a lump or thickening, a change in size or shape, dimpled or red skin, a change in the nipple, fluid from the nipple, or a lump in the armpit.",
+            "ur": "ان تبدیلیوں پر نظر رکھیں: گلٹی یا سختی، سائز یا شکل میں تبدیلی، جلد میں گڑھے یا سرخی، نپل میں تبدیلی، نپل سے رطوبت، یا بغل میں گلٹی۔"
+          },
+          "refs": [
+            "who-bc",
+            "nhs-check"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "causes",
+      "title": {
+        "en": "Causes & risk factors",
+        "ur": "وجوہات اور خطرے کے عوامل"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Being a woman and getting older are the strongest risk factors. About 8 in 10 breast cancers happen in women with no other risk factor apart from being female and over 40.",
+            "ur": "خاتون ہونا اور عمر کا بڑھنا سب سے بڑے خطرے کے عوامل ہیں۔ چھاتی کے تقریباً 10 میں سے 8 کینسر ایسی خواتین کو ہوتے ہیں جن میں خاتون ہونے اور 40 سال سے زیادہ عمر کے سوا کوئی اور خطرہ نہیں ہوتا۔"
+          },
+          "refs": [
+            "who-bc"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": {
+            "en": "Risk factors you can change",
+            "ur": "خطرے کے وہ عوامل جو آپ بدل سکتی ہیں"
+          },
+          "items": [
+            {
+              "en": "Being overweight, especially after menopause",
+              "ur": "وزن کا زیادہ ہونا، خاص طور پر سن یاس کے بعد"
+            },
+            {
+              "en": "Not being physically active",
+              "ur": "جسمانی طور پر متحرک نہ ہونا"
+            },
+            {
+              "en": "Drinking alcohol",
+              "ur": "شراب نوشی"
+            },
+            {
+              "en": "Smoking or using tobacco",
+              "ur": "سگریٹ نوشی یا تمباکو کا استعمال"
+            },
+            {
+              "en": "Hormone therapy after menopause (ask your doctor about the benefits and risks)",
+              "ur": "سن یاس کے بعد ہارمون تھراپی (فائدے اور خطرات کے بارے میں ڈاکٹر سے پوچھیں)"
+            }
+          ],
+          "refs": [
+            "who-bc",
+            "mayo-bc"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": {
+            "en": "Risk factors you can't change",
+            "ur": "خطرے کے وہ عوامل جو آپ نہیں بدل سکتیں"
+          },
+          "items": [
+            {
+              "en": "Getting older",
+              "ur": "بڑھتی عمر"
+            },
+            {
+              "en": "A mother, sister or daughter with breast cancer, especially at a young age",
+              "ur": "ماں، بہن یا بیٹی کو چھاتی کا کینسر ہونا، خاص طور پر کم عمری میں"
+            },
+            {
+              "en": "Inherited gene changes such as BRCA1 and BRCA2",
+              "ur": "موروثی جینیاتی تبدیلیاں جیسے BRCA1 اور BRCA2"
+            },
+            {
+              "en": "Periods starting at a young age, or a first pregnancy later in life",
+              "ur": "ماہواری کا کم عمری میں شروع ہونا، یا پہلا حمل زیادہ عمر میں ہونا"
+            },
+            {
+              "en": "Radiation treatment to the chest as a child or young adult",
+              "ur": "بچپن یا جوانی میں سینے پر شعاعوں (ریڈی ایشن) سے علاج"
+            },
+            {
+              "en": "Breast cancer before, or certain breast conditions found on a biopsy",
+              "ur": "پہلے چھاتی کا کینسر ہو چکا ہو، یا بائیوپسی میں چھاتی کی بعض خاص بیماریاں پائی گئی ہوں"
+            }
+          ],
+          "refs": [
+            "who-bc",
+            "mayo-bc"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Most women who get breast cancer have no family history of it. So having no family history does not mean you can't get it.",
+            "ur": "چھاتی کے کینسر میں مبتلا زیادہ تر خواتین کے خاندان میں پہلے کسی کو یہ نہیں ہوا ہوتا۔ اس لیے خاندان میں کسی کو نہ ہونے کا مطلب یہ نہیں کہ آپ کو نہیں ہو سکتا۔"
+          },
+          "refs": [
+            "who-bc"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complications",
+      "title": {
+        "en": "If it is found late",
+        "ur": "اگر دیر سے پتا چلے"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Breast cancer that isn't treated grows into nearby breast tissue and spreads. It usually reaches the lymph nodes under the arm first. Over time it can spread to the lungs, liver, brain and bones, where it can cause new symptoms such as bone pain or headaches.",
+            "ur": "علاج نہ ہونے والا چھاتی کا کینسر قریب کے ٹشو میں بڑھتا اور پھیلتا ہے۔ عموماً یہ پہلے بغل کی لمفی گلٹیوں تک پہنچتا ہے۔ وقت کے ساتھ یہ پھیپھڑوں، جگر، دماغ اور ہڈیوں تک پھیل سکتا ہے، جہاں ہڈیوں میں درد یا سر درد جیسی نئی علامات پیدا ہو سکتی ہیں۔"
+          },
+          "refs": [
+            "who-bc"
+          ]
+        },
+        {
+          "type": "image",
+          "assetKey": "breast_spread.svg",
+          "caption": {
+            "en": "Late breast cancer can spread to the lymph nodes, lungs, liver, bones and brain.",
+            "ur": "دیر سے پکڑا گیا چھاتی کا کینسر لمفی گلٹیوں، پھیپھڑوں، جگر، ہڈیوں اور دماغ تک پھیل سکتا ہے۔"
+          },
+          "refs": [
+            "who-bc"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Advanced cancer can break through the skin and cause open sores that don't heal, often without pain.",
+            "ur": "بڑھا ہوا کینسر جلد کو توڑ کر ایسے کھلے زخم بنا سکتا ہے جو بھرتے نہیں، اکثر درد کے بغیر۔"
+          },
+          "refs": [
+            "who-bc"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Treatment (surgery, radiation and medicines) works better and is easier to bear when it starts early. Completing the full course matters: stopping treatment part-way makes a good result less likely.",
+            "ur": "علاج (آپریشن، شعاعیں اور دوائیں) جلد شروع ہو تو زیادہ مؤثر اور برداشت میں آسان ہوتا ہے۔ پورا علاج مکمل کرنا ضروری ہے: درمیان میں چھوڑ دینے سے اچھے نتیجے کا امکان کم ہو جاتا ہے۔"
+          },
+          "refs": [
+            "who-bc"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lifestyle",
+      "title": {
+        "en": "Lower your risk & check early",
+        "ur": "خطرہ کم کریں اور جلد چیک کریں"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "There's no sure way to prevent breast cancer, but these choices can lower your risk.",
+            "ur": "چھاتی کے کینسر سے بچنے کا کوئی یقینی طریقہ نہیں، مگر یہ عادات خطرہ کم کر سکتی ہیں۔"
+          },
+          "refs": [
+            "mayo-bc"
+          ]
+        },
+        {
+          "type": "bullets",
+          "items": [
+            {
+              "en": "Keep a healthy weight.",
+              "ur": "صحت مند وزن رکھیں۔"
+            },
+            {
+              "en": "Be active for at least 30 minutes on most days.",
+              "ur": "زیادہ تر دنوں میں کم از کم 30 منٹ جسمانی سرگرمی کریں۔"
+            },
+            {
+              "en": "Avoid alcohol and tobacco.",
+              "ur": "شراب اور تمباکو سے پرہیز کریں۔"
+            },
+            {
+              "en": "Breastfeed your babies if you can. The longer you breastfeed, the more it protects.",
+              "ur": "اگر ممکن ہو تو بچوں کو اپنا دودھ پلائیں۔ جتنا زیادہ عرصہ پلائیں گی، اتنا زیادہ تحفظ ملے گا۔"
+            },
+            {
+              "en": "If you have a strong family history, ask your doctor about genetic counselling and ways to lower your risk.",
+              "ur": "اگر خاندان میں یہ بیماری زیادہ ہے تو ڈاکٹر سے جینیاتی مشاورت اور خطرہ کم کرنے کے طریقوں کے بارے میں پوچھیں۔"
+            }
+          ],
+          "refs": [
+            "mayo-bc"
+          ]
+        },
+        {
+          "type": "animation",
+          "assetKey": "20261010-1203-livehealthy-kyd-lottie-01_lottie.json",
+          "caption": {
+            "en": "Check your breasts about once a month. Look in a mirror with your arms down, then raised. Then feel each breast in small circles, all the way up to the collarbone and into the armpit, using light and firmer pressure. Feel around each nipple too.",
+            "ur": "مہینے میں تقریباً ایک بار اپنی چھاتی چیک کریں۔ آئینے میں بازو نیچے رکھ کر، پھر اوپر اٹھا کر دیکھیں۔ پھر ہر چھاتی کو چھوٹے چھوٹے دائروں میں ہلکے اور قدرے زور سے دبا کر محسوس کریں، ہنسلی کی ہڈی تک اور بغل کے اندر تک۔ ہر نپل کے اردگرد بھی محسوس کریں۔"
+          },
+          "refs": [
+            "nhs-check"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Breasts naturally feel different at different times of the month, in pregnancy and after menopause. Regular checks help you learn what is normal for you, so you notice a change early.",
+            "ur": "مہینے کے مختلف دنوں میں، حمل کے دوران اور سن یاس کے بعد چھاتی قدرتی طور پر مختلف محسوس ہوتی ہے۔ باقاعدہ چیک کرنے سے آپ جان لیتی ہیں کہ آپ کے لیے کیا نارمل ہے، تاکہ کوئی تبدیلی جلد محسوس ہو۔"
+          },
+          "refs": [
+            "nhs-check"
+          ]
+        },
+        {
+          "type": "keyNumber",
+          "label": {
+            "en": "Mammogram screening (US guidance)",
+            "ur": "میموگرام اسکریننگ (امریکی رہنمائی)"
+          },
+          "value": {
+            "en": "Every 2 years, from age 40 to 74",
+            "ur": "ہر 2 سال بعد، 40 سے 74 سال کی عمر تک"
+          },
+          "note": {
+            "en": "Screening programmes in many countries invite women aged 50 to 69. Ask your doctor what is right for you, and where a mammogram is available near you. Self-checks and screening don't prevent cancer, but they help find it early.",
+            "ur": "کئی ممالک میں اسکریننگ پروگرام 50 سے 69 سال کی خواتین کے لیے ہوتے ہیں۔ ڈاکٹر سے پوچھیں کہ آپ کے لیے کیا مناسب ہے، اور قریب میں میموگرام کہاں ہوتا ہے۔ خود معائنہ اور اسکریننگ کینسر سے بچاتے نہیں، مگر اسے جلد پکڑنے میں مدد دیتے ہیں۔"
+          },
+          "level": "neutral",
+          "check": {
+            "metric": "none"
+          },
+          "refs": [
+            "uspstf-bc",
+            "who-bc",
+            "mayo-bc"
+          ]
+        },
+        {
+          "type": "image",
+          "assetKey": "mammogram_timeline.svg",
+          "caption": {
+            "en": "A mammogram every 2 years from age 40 to 74.",
+            "ur": "40 سے 74 سال کی عمر تک ہر 2 سال بعد میموگرام۔"
+          },
+          "refs": [
+            "uspstf-bc"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "whenToSeeDoctor",
+      "title": {
+        "en": "When to see a doctor",
+        "ur": "ڈاکٹر کو کب دکھائیں"
+      },
+      "blocks": [
+        {
+          "type": "alert",
+          "level": "soon",
+          "title": {
+            "en": "See a doctor soon if you notice:",
+            "ur": "اگر آپ کو یہ محسوس ہو تو جلد ڈاکٹر کو دکھائیں:"
+          },
+          "items": [
+            {
+              "en": "A lump or swelling in the breast, chest or armpit, even if it doesn't hurt",
+              "ur": "چھاتی، سینے یا بغل میں گلٹی یا سوجن، چاہے درد نہ ہو"
+            },
+            {
+              "en": "A change in the size or shape of a breast that isn't normal for you",
+              "ur": "چھاتی کے سائز یا شکل میں ایسی تبدیلی جو آپ کے لیے نارمل نہ ہو"
+            },
+            {
+              "en": "Dimpled skin that looks like orange peel, or redness",
+              "ur": "جلد میں سنگترے کے چھلکے جیسے گڑھے، یا سرخی"
+            },
+            {
+              "en": "A nipple that turns inwards, or a rash on the nipple",
+              "ur": "نپل کا اندر کی طرف مڑ جانا، یا نپل پر دانے"
+            },
+            {
+              "en": "Fluid from the nipple when you aren't pregnant or breastfeeding, especially if it has blood in it",
+              "ur": "حمل یا دودھ پلانے کے بغیر نپل سے رطوبت آنا، خاص طور پر اگر اس میں خون ہو"
+            },
+            {
+              "en": "A sore or wound on the breast that doesn't heal",
+              "ur": "چھاتی پر ایسا زخم جو بھر نہ رہا ہو"
+            },
+            {
+              "en": "Pain in the breast or armpit that doesn't go away",
+              "ur": "چھاتی یا بغل میں ایسا درد جو ختم نہ ہو"
+            }
+          ],
+          "text": {
+            "en": "Most of these changes are not cancer, but don't wait or feel shy: getting checked early makes treatment easier if it is cancer.",
+            "ur": "ان میں سے زیادہ تر تبدیلیاں کینسر نہیں ہوتیں، مگر انتظار نہ کریں اور نہ ہی جھجکیں: اگر کینسر ہو تو جلد چیک کروانے سے علاج آسان ہو جاتا ہے۔"
+          },
+          "refs": [
+            "nhs-check",
+            "who-bc"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Men should also see a doctor about a lump or any of these changes in the chest.",
+            "ur": "مردوں کو بھی سینے میں گلٹی یا ان میں سے کسی تبدیلی پر ڈاکٹر کو دکھانا چاہیے۔"
+          },
+          "refs": [
+            "who-bc",
+            "nhs-check"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "If you have a close family history of breast cancer, talk to your doctor about your risk and when to start screening, even if you feel well.",
+            "ur": "اگر قریبی خاندان میں چھاتی کا کینسر رہا ہے تو طبیعت ٹھیک ہونے کے باوجود ڈاکٹر سے اپنے خطرے اور اسکریننگ شروع کرنے کے وقت کے بارے میں بات کریں۔"
+          },
+          "refs": [
+            "mayo-bc"
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    "who-bc",
+    "nhs-check",
+    "mayo-bc",
+    "uspstf-bc"
+  ]
+}

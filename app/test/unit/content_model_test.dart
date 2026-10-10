@@ -99,6 +99,30 @@ void main() {
     });
   });
 
+  group('animation blocks (1.1)', () {
+    test('parse with loop flags; migraine plays once, the others loop', () {
+      AnimationBlock anim(String id) => Disease.fromJson(bundledJson(id))
+          .sections
+          .expand((s) => s.blocks)
+          .whereType<AnimationBlock>()
+          .single;
+      expect(anim('breast_cancer').loop, isTrue);
+      expect(anim('high_cholesterol').loop, isTrue);
+      expect(anim('migraine').loop, isFalse);
+      expect(anim('migraine').assetKey, endsWith('_lottie.json'));
+    });
+
+    test('reject path-like animation names', () {
+      final m = copyOf(bundledJson('migraine'));
+      for (final s in m['sections'] as List) {
+        for (final b in s['blocks'] as List) {
+          if ((b as Map)['type'] == 'animation') b['assetKey'] = '../content/manifest.json';
+        }
+      }
+      expect(() => Disease.fromJson(m), throwsA(isA<ContentFormatException>()));
+    });
+  });
+
   group('forward compatibility (§12)', () {
     test('unknown block types are skipped, not fatal', () {
       final m = copyOf(bundledJson('hypertension'));

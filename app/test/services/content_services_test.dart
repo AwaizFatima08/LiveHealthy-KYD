@@ -17,7 +17,7 @@ Map<String, dynamic> bumped(String id, int version, {String? newSummary}) {
   return d;
 }
 
-Map<String, dynamic> manifestWith({int contentVersion = 2, Map<String, int>? versions, int minApp = 1}) {
+Map<String, dynamic> manifestWith({int contentVersion = 50, Map<String, int>? versions, int minApp = 1}) {
   final m = jsonDecode(jsonEncode(bundledJson('manifest'))) as Map<String, dynamic>;
   m['contentVersion'] = contentVersion;
   m['minAppVersion'] = minApp;
@@ -37,15 +37,16 @@ void main() {
       }
     });
 
-    test('Home: three cards in order, diabetes topics grouped (D13)', () async {
+    test('Home: six cards in order, diabetes topics grouped (D13)', () async {
       final repo = await loadedRepository();
       final items = repo.homeItems;
-      expect(items.length, 3);
+      expect(items.length, 6);
       expect((items[0] as DiseaseItem).disease.id, 'hypertension');
       final g = items[1] as GroupItem;
       expect(g.group.id, 'diabetes');
       expect(g.members.map((d) => d.id), ['prediabetes', 'type2_diabetes', 'gestational_diabetes']);
       expect((items[2] as DiseaseItem).disease.id, 'obesity');
+      expect([for (final i in items.skip(3)) (i as DiseaseItem).disease.id], ['high_cholesterol', 'migraine', 'breast_cancer']);
     });
 
     test('uses a newer downloaded copy, and survives a restart', () async {
@@ -58,7 +59,7 @@ void main() {
       expect(repo.disease('hypertension')!.summary.of('en'), 'Corrected summary');
       final restarted = await loadedRepository(cache: cache);
       expect(restarted.disease('hypertension')!.version, 5);
-      expect(restarted.manifest.contentVersion, 2);
+      expect(restarted.manifest.contentVersion, 50);
     });
 
     test('ignores a downloaded copy older than the bundled one (app update wins)', () async {
@@ -78,7 +79,7 @@ void main() {
       File('${cache.path}/content/manifest.json').writeAsStringSync('not json');
       final repo = await loadedRepository(cache: cache);
       expect(repo.disease('hypertension')!.version, lessThan(99));
-      expect(repo.homeItems.length, 3);
+      expect(repo.homeItems.length, 6);
     });
 
     test('a downloaded file can never replace a different topic', () async {
@@ -115,10 +116,10 @@ void main() {
 
     test('downloads only changed topics, then applies them', () async {
       await db.doc('kyd_diseases/hypertension').set(bumped('hypertension', 7, newSummary: 'Fixed a sentence'));
-      await db.doc('kyd_manifest/current').set(manifestWith(contentVersion: 3, versions: {'hypertension': 7}));
+      await db.doc('kyd_manifest/current').set(manifestWith(contentVersion: 53, versions: {'hypertension': 7}));
       expect(await service().checkForUpdates(), UpdateResult.updated);
       expect(repo.disease('hypertension')!.summary.of('en'), 'Fixed a sentence');
-      expect(repo.manifest.contentVersion, 3);
+      expect(repo.manifest.contentVersion, 53);
     });
 
     test('checks at most once a day unless forced', () async {
@@ -142,7 +143,7 @@ void main() {
       final bad = bumped('hypertension', 9);
       ((bad['sections'] as List)[2]['blocks'] as List).clear();
       await db.doc('kyd_diseases/hypertension').set(bad);
-      await db.doc('kyd_manifest/current').set(manifestWith(contentVersion: 2, versions: {'hypertension': 9}));
+      await db.doc('kyd_manifest/current').set(manifestWith(contentVersion: 52, versions: {'hypertension': 9}));
       final before = repo.disease('hypertension')!.version;
       await service().checkForUpdates();
       expect(repo.disease('hypertension')!.version, before);
@@ -150,20 +151,20 @@ void main() {
 
     test('rejects a document whose version or id disagrees with the manifest', () async {
       await db.doc('kyd_diseases/obesity').set(bumped('obesity', 4));
-      await db.doc('kyd_manifest/current').set(manifestWith(contentVersion: 2, versions: {'obesity': 6}));
+      await db.doc('kyd_manifest/current').set(manifestWith(contentVersion: 52, versions: {'obesity': 6}));
       await service().checkForUpdates();
       expect(repo.disease('obesity')!.version, lessThan(4));
     });
 
     test('content that needs a newer app is not applied', () async {
       await db.doc('kyd_diseases/obesity').set(bumped('obesity', 4));
-      await db.doc('kyd_manifest/current').set(manifestWith(contentVersion: 5, versions: {'obesity': 4}, minApp: 2));
+      await db.doc('kyd_manifest/current').set(manifestWith(contentVersion: 55, versions: {'obesity': 4}, minApp: 2));
       expect(await service(appBuild: 1).checkForUpdates(), UpdateResult.needsAppUpdate);
       expect(repo.disease('obesity')!.version, lessThan(4));
     });
 
     test('tool link switch flips without an app update (§9)', () async {
-      final m = manifestWith(contentVersion: 2);
+      final m = manifestWith(contentVersion: 52);
       m['toolLinks'] = {'vitals': 'live', 'medicineReminder': 'hidden'};
       await db.doc('kyd_manifest/current').set(m);
       await service().checkForUpdates();

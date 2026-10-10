@@ -1,0 +1,459 @@
+{
+  "id": "migraine",
+  "version": 1,
+  "order": 5,
+  "group": null,
+  "status": "published",
+  "title": {
+    "en": "Migraine",
+    "ur": "مائیگرین (آدھے سر کا درد)"
+  },
+  "summary": {
+    "en": "What a migraine attack is, common triggers, and the warning signs that need urgent care.",
+    "ur": "مائیگرین کا دورہ کیا ہے، عام محرکات، اور وہ علامات جن پر فوری علاج ضروری ہے۔"
+  },
+  "headerAsset": "migraine_header.svg",
+  "reviewedBy": {
+    "en": "Dr. Humayun Shahzad, MBBS",
+    "ur": "ڈاکٹر ہمایوں شہزاد، ایم بی بی ایس"
+  },
+  "reviewedOn": "2026-10-10",
+  "nextReviewDue": "2027-10-10",
+  "relatedTools": [
+    {
+      "tool": "medicineReminder",
+      "label": {
+        "en": "Remember daily preventive medicine",
+        "ur": "روزانہ کی حفاظتی دوا یاد رکھیں"
+      }
+    }
+  ],
+  "sections": [
+    {
+      "id": "whatIs",
+      "title": {
+        "en": "What it is",
+        "ur": "یہ کیا ہے"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Migraine is a common, often lifelong condition with repeated attacks of headache. An attack usually lasts 4 hours to 3 days.",
+            "ur": "مائیگرین ایک عام اور اکثر عمر بھر رہنے والی بیماری ہے جس میں بار بار سر درد کے دورے پڑتے ہیں۔ ایک دورہ عموماً 4 گھنٹے سے 3 دن تک رہتا ہے۔"
+          },
+          "refs": [
+            "who-head",
+            "nhs-mig"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": {
+            "en": "The main symptoms",
+            "ur": "اہم علامات"
+          },
+          "items": [
+            {
+              "en": "A throbbing headache, which can be severe, often on one side of the head and worse when you move",
+              "ur": "دھڑکتا ہوا سر درد، جو شدید ہو سکتا ہے، اکثر سر کے ایک طرف، اور ہلنے جلنے سے بڑھ جاتا ہے"
+            },
+            {
+              "en": "Feeling sick or being sick",
+              "ur": "متلی یا قے"
+            },
+            {
+              "en": "Being very sensitive to light and sound",
+              "ur": "روشنی اور آواز سے بہت زیادہ تکلیف"
+            }
+          ],
+          "refs": [
+            "nhs-mig"
+          ]
+        },
+        {
+          "type": "image",
+          "assetKey": "migraine_phases.svg",
+          "caption": {
+            "en": "An attack can have stages: early signs (tiredness, yawning, food cravings, mood changes, a stiff neck) up to 2 days before; in some people an aura (zigzag lines, flashing lights, pins and needles) lasting up to an hour; the headache; then recovery.",
+            "ur": "ایک دورے کے مراحل ہو سکتے ہیں: 2 دن پہلے تک ابتدائی علامات (تھکاوٹ، جمائیاں، کسی خاص کھانے کی طلب، مزاج میں تبدیلی، گردن اکڑنا)؛ بعض لوگوں میں ایک گھنٹے تک آورا (ٹیڑھی میڑھی لکیریں، چمکتی روشنیاں، سوئیاں چبھنے کا احساس)؛ پھر سر درد؛ اور پھر بحالی۔"
+          },
+          "refs": [
+            "nhs-mig"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Migraine often starts around puberty and is more common in women. Worldwide it is one of the leading causes of disability, because attacks keep coming back.",
+            "ur": "مائیگرین اکثر بلوغت کے قریب شروع ہوتا ہے اور خواتین میں زیادہ عام ہے۔ دنیا بھر میں یہ معذوری کی بڑی وجوہات میں سے ایک ہے، کیونکہ دورے بار بار پڑتے ہیں۔"
+          },
+          "refs": [
+            "who-head"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "causes",
+      "title": {
+        "en": "Causes & triggers",
+        "ur": "وجوہات اور محرکات"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "The exact cause isn't known. It involves changes in the nerves and blood vessels of the brain. Migraine runs in families: up to 8 in 10 people with migraine have a parent, brother or sister who has it.",
+            "ur": "اس کی اصل وجہ معلوم نہیں۔ اس میں دماغ کے اعصاب اور خون کی نالیوں میں تبدیلیاں شامل ہوتی ہیں۔ مائیگرین خاندانوں میں چلتا ہے: اس کے 10 میں سے 8 تک مریضوں کے والدین یا بہن بھائیوں میں سے کسی کو بھی یہ ہوتا ہے۔"
+          },
+          "refs": [
+            "nhs-mig",
+            "cc-mig"
+          ]
+        },
+        {
+          "type": "image",
+          "assetKey": "migraine_triggers.svg",
+          "caption": {
+            "en": "Common triggers: skipped meals, too much caffeine, too little or broken sleep, stress and tiredness, and periods.",
+            "ur": "عام محرکات: کھانا چھوڑ دینا، زیادہ کیفین، کم یا بار بار ٹوٹنے والی نیند، ذہنی دباؤ اور تھکاوٹ، اور ماہواری۔"
+          },
+          "refs": [
+            "nhs-mig",
+            "who-head"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": {
+            "en": "Triggers you may be able to avoid",
+            "ur": "وہ محرکات جن سے شاید آپ بچ سکیں"
+          },
+          "items": [
+            {
+              "en": "Skipping meals or not eating regularly",
+              "ur": "کھانا چھوڑ دینا یا بے قاعدگی سے کھانا"
+            },
+            {
+              "en": "Too much caffeine (tea, coffee, energy drinks)",
+              "ur": "زیادہ کیفین (چائے، کافی، انرجی ڈرنکس)"
+            },
+            {
+              "en": "Not enough sleep, or broken sleep",
+              "ur": "نیند پوری نہ ہونا یا بار بار ٹوٹنا"
+            },
+            {
+              "en": "Stress and tiredness",
+              "ur": "ذہنی دباؤ اور تھکاوٹ"
+            },
+            {
+              "en": "Alcohol and some foods",
+              "ur": "شراب اور بعض غذائیں"
+            },
+            {
+              "en": "Not getting regular exercise",
+              "ur": "باقاعدہ ورزش نہ کرنا"
+            }
+          ],
+          "refs": [
+            "nhs-mig",
+            "who-head"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": {
+            "en": "Things you can't change",
+            "ur": "وہ باتیں جو آپ نہیں بدل سکتے"
+          },
+          "items": [
+            {
+              "en": "Family history",
+              "ur": "خاندانی تاریخ"
+            },
+            {
+              "en": "Being female; attacks around periods are often longer and more severe",
+              "ur": "خاتون ہونا؛ ماہواری کے قریب دورے اکثر زیادہ لمبے اور شدید ہوتے ہیں"
+            },
+            {
+              "en": "Other conditions, such as anxiety, depression and sleep problems",
+              "ur": "دوسری بیماریاں، جیسے بے چینی، ڈپریشن اور نیند کے مسائل"
+            }
+          ],
+          "refs": [
+            "nhs-mig",
+            "cc-mig"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "A headache diary helps you and your doctor find your triggers. Write down when each headache starts, how long it lasts, what you ate, slept and did, and any medicine you took. Keep it for at least 8 weeks.",
+            "ur": "سر درد کی ڈائری آپ کو اور ڈاکٹر کو محرکات تلاش کرنے میں مدد دیتی ہے۔ لکھیں کہ ہر سر درد کب شروع ہوا، کتنی دیر رہا، آپ نے کیا کھایا، کتنا سوئے، کیا کیا، اور کون سی دوا لی۔ کم از کم 8 ہفتے ڈائری رکھیں۔"
+          },
+          "refs": [
+            "nhs-mig",
+            "nice-cg150"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "complications",
+      "title": {
+        "en": "Complications of poor control",
+        "ur": "کنٹرول نہ ہونے کی پیچیدگیاں"
+      },
+      "blocks": [
+        {
+          "type": "image",
+          "assetKey": "painkiller_limit.svg",
+          "caption": {
+            "en": "Try not to take painkillers on more than 2 days a week. Taking them more often can cause even more headaches.",
+            "ur": "کوشش کریں کہ ہفتے میں 2 دن سے زیادہ درد کش دوا نہ لیں۔ زیادہ بار لینے سے سر درد اور بھی بڑھ سکتا ہے۔"
+          },
+          "refs": [
+            "nhs-mig"
+          ]
+        },
+        {
+          "type": "bullets",
+          "items": [
+            {
+              "en": "Medication overuse headache: taking painkillers or migraine medicines too often makes headaches more frequent and harder to treat",
+              "ur": "دوا کی زیادتی سے سر درد: درد کش یا مائیگرین کی دوائیں بہت زیادہ لینے سے سر درد زیادہ بار ہونے لگتا ہے اور اس کا علاج مشکل ہو جاتا ہے"
+            },
+            {
+              "en": "Chronic migraine: headache on 15 or more days a month for more than 3 months",
+              "ur": "دائمی مائیگرین: 3 ماہ سے زیادہ عرصے تک مہینے میں 15 یا اس سے زیادہ دن سر درد"
+            },
+            {
+              "en": "Damage to work, family and social life, and the fear of the next attack",
+              "ur": "کام، گھریلو اور سماجی زندگی پر برا اثر، اور اگلے دورے کا خوف"
+            },
+            {
+              "en": "Living with frequent attacks for a long time can lead to other problems, such as anxiety",
+              "ur": "لمبے عرصے تک بار بار دوروں کے ساتھ رہنا دوسرے مسائل، جیسے بے چینی، کا سبب بن سکتا ہے"
+            }
+          ],
+          "refs": [
+            "nhs-mig",
+            "nice-cg150",
+            "who-head"
+          ]
+        },
+        {
+          "type": "keyNumber",
+          "label": {
+            "en": "Medication overuse headache can start after",
+            "ur": "دوا کی زیادتی سے سر درد شروع ہو سکتا ہے"
+          },
+          "value": {
+            "en": "10 or more days a month, for 3 months",
+            "ur": "3 ماہ تک، مہینے میں 10 یا زیادہ دن"
+          },
+          "note": {
+            "en": "of taking triptans, opioids or combination painkillers. Talk to your doctor if you need painkillers this often.",
+            "ur": "ٹرپٹانز، اوپیئڈز یا ملی جلی درد کش دوائیں لینے پر۔ اگر اتنی بار درد کش دوا کی ضرورت پڑتی ہے تو ڈاکٹر سے بات کریں۔"
+          },
+          "level": "caution",
+          "check": {
+            "metric": "none"
+          },
+          "refs": [
+            "nice-cg150"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lifestyle",
+      "title": {
+        "en": "Lifestyle changes",
+        "ur": "طرزِ زندگی میں تبدیلیاں"
+      },
+      "blocks": [
+        {
+          "type": "animation",
+          "assetKey": "20261010-1205-livehealthy-kyd-lottie-01_lottie.json",
+          "caption": {
+            "en": "During an attack, try lying down or sleeping in a dark, quiet room. Take your painkiller as soon as the headache starts.",
+            "ur": "دورے کے دوران اندھیرے اور خاموش کمرے میں لیٹنے یا سونے کی کوشش کریں۔ سر درد شروع ہوتے ہی درد کش دوا لیں۔"
+          },
+          "refs": [
+            "nhs-mig"
+          ],
+          "loop": false
+        },
+        {
+          "type": "bullets",
+          "title": {
+            "en": "Every day",
+            "ur": "روزانہ"
+          },
+          "items": [
+            {
+              "en": "Eat meals at regular times.",
+              "ur": "مقررہ وقت پر کھانا کھائیں۔"
+            },
+            {
+              "en": "Drink enough water, and limit caffeine and alcohol.",
+              "ur": "مناسب پانی پئیں، اور کیفین اور شراب محدود کریں۔"
+            },
+            {
+              "en": "Get plenty of sleep, at regular times.",
+              "ur": "باقاعدہ وقت پر پوری نیند لیں۔"
+            },
+            {
+              "en": "Get regular exercise and keep a healthy weight.",
+              "ur": "باقاعدہ ورزش کریں اور صحت مند وزن رکھیں۔"
+            },
+            {
+              "en": "Find ways to manage stress, such as relaxation.",
+              "ur": "ذہنی دباؤ سے نمٹنے کے طریقے اپنائیں، جیسے ریلیکسیشن۔"
+            },
+            {
+              "en": "Avoid the triggers you have found in your diary.",
+              "ur": "ڈائری سے پتا چلنے والے محرکات سے بچیں۔"
+            }
+          ],
+          "refs": [
+            "nhs-mig"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Migraine can't be cured, but treatment helps. A doctor can prescribe medicines for attacks (such as triptans, and anti-sickness medicines), and if attacks are frequent, daily medicines to prevent them. Relaxation techniques, talking therapy (CBT) and acupuncture can also help.",
+            "ur": "مائیگرین کا مکمل علاج نہیں، مگر علاج سے فائدہ ہوتا ہے۔ ڈاکٹر دوروں کے لیے دوائیں (جیسے ٹرپٹانز، اور متلی روکنے کی دوائیں) دے سکتا ہے، اور دورے بار بار ہوں تو انہیں روکنے کے لیے روزانہ کی دوائیں۔ ریلیکسیشن، بات چیت کے ذریعے علاج (CBT) اور ایکوپنکچر بھی مدد دے سکتے ہیں۔"
+          },
+          "refs": [
+            "nhs-mig"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "whenToSeeDoctor",
+      "title": {
+        "en": "When to see a doctor",
+        "ur": "ڈاکٹر کو کب دکھائیں"
+      },
+      "blocks": [
+        {
+          "type": "alert",
+          "level": "urgent",
+          "title": {
+            "en": "A headache with any of these:",
+            "ur": "سر درد کے ساتھ ان میں سے کوئی علامت ہو:"
+          },
+          "items": [
+            {
+              "en": "It came on suddenly and is extremely painful",
+              "ur": "اچانک شروع ہوا اور انتہائی شدید ہے"
+            },
+            {
+              "en": "Weakness or numbness in the arm or leg on one side, or one side of the face",
+              "ur": "ایک طرف کے بازو یا ٹانگ میں، یا چہرے کے ایک طرف کمزوری یا سُن پن"
+            },
+            {
+              "en": "Problems speaking or remembering things",
+              "ur": "بولنے یا یاد رکھنے میں دشواری"
+            },
+            {
+              "en": "Loss of vision, or blurred or double vision",
+              "ur": "بینائی کا جانا، یا دھندلا یا دوہرا نظر آنا"
+            },
+            {
+              "en": "Drowsiness or confusion",
+              "ur": "غنودگی یا ذہنی الجھن"
+            },
+            {
+              "en": "A seizure (fit)",
+              "ur": "دورہ (جھٹکے) پڑنا"
+            },
+            {
+              "en": "A very high temperature, a stiff neck or a rash",
+              "ur": "بہت تیز بخار، گردن اکڑنا یا جسم پر دانے"
+            },
+            {
+              "en": "A recent head injury",
+              "ur": "حال ہی میں سر پر چوٹ"
+            }
+          ],
+          "text": {
+            "en": "Call an ambulance (Rescue 1122 in Pakistan) or go to the nearest emergency department now. Don't drive yourself.",
+            "ur": "ابھی ایمبولینس بلائیں (پاکستان میں ریسکیو 1122) یا قریبی ایمرجنسی میں جائیں۔ خود گاڑی نہ چلائیں۔"
+          },
+          "refs": [
+            "nhs-mig"
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "soon",
+          "title": {
+            "en": "See a doctor the same day if a migraine attack:",
+            "ur": "اگر مائیگرین کا دورہ ایسا ہو تو اسی دن ڈاکٹر کو دکھائیں:"
+          },
+          "items": [
+            {
+              "en": "Has lasted longer than 72 hours",
+              "ur": "72 گھنٹے سے زیادہ رہ چکا ہو"
+            },
+            {
+              "en": "Comes with aura that lasts more than 1 hour",
+              "ur": "ایسے آورا کے ساتھ ہو جو 1 گھنٹے سے زیادہ رہے"
+            },
+            {
+              "en": "Happens while you are pregnant or just after having a baby",
+              "ur": "حمل کے دوران یا بچے کی پیدائش کے فوراً بعد ہو"
+            }
+          ],
+          "refs": [
+            "nhs-mig"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": {
+            "en": "Make an appointment with your doctor if:",
+            "ur": "ڈاکٹر سے وقت لیں اگر:"
+          },
+          "items": [
+            {
+              "en": "Your attacks are severe, getting worse or lasting longer than usual",
+              "ur": "دورے شدید ہوں، بگڑ رہے ہوں یا معمول سے زیادہ دیر تک رہیں"
+            },
+            {
+              "en": "You have attacks more than once a week",
+              "ur": "ہفتے میں ایک بار سے زیادہ دورے پڑیں"
+            },
+            {
+              "en": "You find your migraine hard to control",
+              "ur": "مائیگرین قابو میں نہ آ رہا ہو"
+            },
+            {
+              "en": "You regularly get migraine before or during your period",
+              "ur": "ماہواری سے پہلے یا دوران باقاعدگی سے مائیگرین ہو"
+            },
+            {
+              "en": "You need painkillers on more than 2 days a week",
+              "ur": "ہفتے میں 2 دن سے زیادہ درد کش دوا کی ضرورت پڑے"
+            }
+          ],
+          "refs": [
+            "nhs-mig"
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    "nhs-mig",
+    "who-head",
+    "nice-cg150",
+    "cc-mig"
+  ]
+}

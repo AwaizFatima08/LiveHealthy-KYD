@@ -554,7 +554,278 @@ def glucose_after_meal():
     return svg(w, h, '\n'.join(parts))
 
 
+# ---------------------------------------------------------- v1.1 topics
+
+PINK = '#C2185B'
+PINK_LIGHT = '#F8D7E5'
+FAT = '#E1B96A'
+FAT_DARK = '#B8862B'
+
+
+def tick(x, y, s=1.0, color=OK):
+    return (f'<path d="M{x - 10 * s} {y} L{x - 3 * s} {y + 8 * s} L{x + 11 * s} {y - 9 * s}" fill="none" '
+            f'stroke="{color}" stroke-width="{5 * s}" stroke-linecap="round" stroke-linejoin="round"/>')
+
+
+def cross(x, y, s=1.0, color=RED):
+    return (f'<path d="M{x - 9 * s} {y - 9 * s} L{x + 9 * s} {y + 9 * s} M{x + 9 * s} {y - 9 * s} L{x - 9 * s} {y + 9 * s}" '
+            f'stroke="{color}" stroke-width="{5 * s}" stroke-linecap="round"/>')
+
+
+def breast_cancer_header():
+    """Awareness ribbon."""
+    body = [
+        f'<circle cx="120" cy="92" r="70" fill="{PINK_LIGHT}"/>',
+        f'<path d="M86 160 L132 82 C150 50 142 28 120 28 C98 28 90 50 108 82 L154 160" fill="none" '
+        f'stroke="{PINK}" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>',
+        f'<path d="M108 82 L118 99" stroke="{WHITE}" stroke-width="4" stroke-linecap="round" opacity="0.6"/>',
+    ]
+    return svg(240, 180, '\n'.join(body))
+
+
+def high_cholesterol_header():
+    """Artery cross-section narrowed by plaque, and a fat drop."""
+    body = [
+        f'<circle cx="100" cy="92" r="64" fill="{RED_LIGHT}" stroke="{RED}" stroke-width="6"/>',
+        f'<path d="M48 120 A58 58 0 0 1 64 46 C86 64 92 98 70 132 Z" fill="{FAT}" stroke="{FAT_DARK}" stroke-width="3"/>',
+        f'<ellipse cx="116" cy="92" rx="30" ry="40" fill="{RED}"/>',
+        f'<circle cx="122" cy="84" r="7" fill="{WHITE}" opacity="0.35"/>',
+        f'<path d="{drop_path(196, 120, 22)}" fill="{FAT}" stroke="{FAT_DARK}" stroke-width="3"/>',
+    ]
+    return svg(240, 180, '\n'.join(body))
+
+
+def migraine_header():
+    """Head in profile with a zigzag (aura) and pain bolt."""
+    body = [
+        f'<path d="M70 168 L72 132 C46 118 40 84 52 60 C66 32 100 20 128 30 C154 40 166 62 166 84 '
+        f'L180 106 L166 110 L168 128 C168 140 158 144 146 142 L134 140 L134 168 Z" fill="{GREEN_MID}"/>',
+        f'<path d="M150 50 L170 44 L162 60 L184 56" fill="none" stroke="{AMBER}" stroke-width="6" '
+        f'stroke-linecap="round" stroke-linejoin="round"/>',
+        f'<path d="M96 46 L84 74 L100 74 L88 104" fill="none" stroke="{WHITE}" stroke-width="8" '
+        f'stroke-linecap="round" stroke-linejoin="round"/>',
+        f'<circle cx="196" cy="36" r="5" fill="{AMBER}"/><circle cx="206" cy="66" r="4" fill="{AMBER}"/>',
+    ]
+    return svg(240, 180, '\n'.join(body))
+
+
+def breast_icon(cx, cy, r=28, outline=True):
+    """Front view as used on self-exam charts: a circle with the areola and nipple."""
+    out = f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="{PINK_LIGHT}" stroke="{PINK}" stroke-width="3"/>' if outline else ''
+    return out + (f'<circle cx="{cx}" cy="{cy}" r="{r * 0.28}" fill="#E8A1BE"/>'
+                  f'<circle cx="{cx}" cy="{cy}" r="{r * 0.11}" fill="{PINK}"/>')
+
+
+def breast_signs():
+    """Six changes to look for, one per card (no words; the caption names them)."""
+    w, h = 340, 240
+    cards = [(60, 64), (170, 64), (280, 64), (60, 176), (170, 176), (280, 176)]
+    p = []
+    for x, y in cards:
+        p.append(f'<rect x="{x - 50}" y="{y - 50}" width="100" height="100" rx="16" fill="{WHITE}" stroke="{GREY_LIGHT}" stroke-width="3"/>')
+    # 1 lump
+    p.append(breast_icon(60, 62))
+    p.append(f'<circle cx="44" cy="52" r="7" fill="{RED}"/>')
+    # 2 change in size or shape: a dashed, larger outline
+    p.append(breast_icon(170, 64, 24))
+    p.append(f'<ellipse cx="174" cy="60" rx="36" ry="32" fill="none" stroke="{RED}" stroke-width="3" stroke-dasharray="5 5"/>')
+    # 3 dimpled ("orange peel") or red skin
+    p.append(f'<circle cx="280" cy="62" r="28" fill="#F3B9C9" stroke="{PINK}" stroke-width="3"/>')
+    p.append(breast_icon(280, 62, outline=False))
+    for dx, dy in [(-14, -10), (-4, -16), (10, -12), (-16, 6), (14, 8), (-6, 16), (8, 18)]:
+        p.append(f'<circle cx="{280 + dx}" cy="{62 + dy}" r="2.4" fill="{RED}"/>')
+    # 4 nipple turning inward
+    p.append(breast_icon(60, 174))
+    p.append(f'<path d="M60 140 L60 166 M51 157 L60 167 L69 157" fill="none" stroke="{RED}" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>')
+    # 5 fluid from the nipple
+    p.append(breast_icon(170, 170))
+    p.append(f'<path d="{drop_path(170, 210, 6)}" fill="{RED}"/>')
+    # 6 lump in the armpit: arm raised, dot in the armpit
+    p.append(f'<path d="M250 216 L254 170 C256 150 270 146 282 150 L300 134 L312 142 L292 164 L296 216 Z" fill="{SKIN}" stroke="{SKIN_DARK}" stroke-width="3"/>')
+    p.append(f'<circle cx="276" cy="162" r="7" fill="{RED}"/>')
+    return svg(w, h, '\n'.join(p))
+
+
+def icon_lungs(x, y):
+    return (f'<path d="M{x - 3} {y - 12} C{x - 16} {y - 12} {x - 18} {y + 6} {x - 14} {y + 12} C{x - 8} {y + 14} {x - 4} {y + 10} {x - 3} {y + 4} Z" fill="{RED_LIGHT}" stroke="{RED}" stroke-width="2.5"/>'
+            f'<path d="M{x + 3} {y - 12} C{x + 16} {y - 12} {x + 18} {y + 6} {x + 14} {y + 12} C{x + 8} {y + 14} {x + 4} {y + 10} {x + 3} {y + 4} Z" fill="{RED_LIGHT}" stroke="{RED}" stroke-width="2.5"/>')
+
+
+def icon_liver(x, y):
+    return (f'<path d="M{x - 16} {y - 4} C{x - 14} {y - 14} {x + 14} {y - 14} {x + 16} {y - 8} C{x + 12} {y + 4} {x} {y + 12} {x - 10} {y + 10} '
+            f'C{x - 16} {y + 8} {x - 18} {y + 2} {x - 16} {y - 4} Z" fill="{RED_LIGHT}" stroke="{RED}" stroke-width="2.5"/>')
+
+
+def icon_bone(x, y):
+    return (f'<rect x="{x - 12}" y="{y - 3}" width="24" height="6" fill="{RED_LIGHT}" stroke="{RED}" stroke-width="2"/>'
+            + ''.join(f'<circle cx="{x + dx}" cy="{y + dy}" r="4.5" fill="{RED_LIGHT}" stroke="{RED}" stroke-width="2"/>'
+                      for dx, dy in [(-13, -4), (-13, 4), (13, -4), (13, 4)]))
+
+
+def icon_node(x, y):
+    return ''.join(f'<circle cx="{x + dx}" cy="{y + dy}" r="5" fill="{RED}"/>' for dx, dy in [(-7, -4), (5, -6), (0, 6)])
+
+
+def breast_spread():
+    w, h = 340, 290
+    parts = [body_outline(170, 18)]
+    parts += organ_marks([
+        (165, 28, 60, 40, 1, icon_brain),
+        (148, 96, 280, 50, 2, icon_node),
+        (178, 98, 60, 120, 3, icon_lungs),
+        (182, 132, 280, 140, 4, icon_liver),
+        (150, 215, 60, 220, 5, icon_bone),
+    ])
+    return svg(w, h, '\n'.join(parts))
+
+
+def mammogram_timeline():
+    """A screening dot every 2 years from 40 to 74."""
+    w, h = 340, 130
+    x0, x1 = 24, 316
+
+    def xa(age):
+        return x0 + (x1 - x0) * (age - 40) / 34
+    p = [f'<rect x="{x0 - 8}" y="52" width="{x1 - x0 + 16}" height="16" rx="8" fill="{PINK_LIGHT}"/>']
+    for age in range(40, 75, 2):
+        p.append(f'<circle cx="{xa(age):.1f}" cy="60" r="6" fill="{PINK}"/>')
+    for age in (40, 50, 60, 74):
+        p.append(f'<line x1="{xa(age):.1f}" y1="74" x2="{xa(age):.1f}" y2="84" stroke="{INK}" stroke-width="2"/>')
+        p.append(text(round(xa(age), 1), 104, str(age), 15))
+    # "every 2 years" bracket
+    p.append(f'<path d="M{xa(40):.1f} 40 L{xa(40):.1f} 32 L{xa(42):.1f} 32 L{xa(42):.1f} 40" fill="none" stroke="{GREY}" stroke-width="2"/>')
+    p.append(text(round((xa(40) + xa(42)) / 2, 1), 26, '2', 13, GREY))
+    return svg(w, h, '\n'.join(p))
+
+
+def cholesterol_risks():
+    w, h = 340, 290
+    parts = [body_outline(170, 18)]
+    parts += organ_marks([
+        (165, 28, 60, 40, 1, icon_brain),
+        (172, 58, 280, 40, 2, icon_vessel),
+        (182, 92, 60, 130, 3, icon_heart),
+        (156, 200, 280, 200, 4, icon_vessel),
+    ])
+    return svg(w, h, '\n'.join(parts))
+
+
+def fats_swap():
+    """Ghee / butter / fried food  ->  fish, nuts, oil."""
+    w, h = 340, 180
+    p = [
+        f'<rect x="8" y="16" width="140" height="148" rx="18" fill="{RED_LIGHT}"/>',
+        f'<rect x="192" y="16" width="140" height="148" rx="18" fill="{GREEN_LIGHT}"/>',
+        # ghee tin
+        f'<rect x="26" y="44" width="46" height="54" rx="6" fill="{FAT}" stroke="{FAT_DARK}" stroke-width="3"/>',
+        f'<rect x="22" y="38" width="54" height="10" rx="4" fill="{FAT_DARK}"/>',
+        # butter block
+        f'<path d="M86 88 L126 80 L138 92 L98 100 Z" fill="#F4DC8A" stroke="{FAT_DARK}" stroke-width="3"/>',
+        f'<path d="M86 88 L86 100 L98 112 L98 100 Z M98 100 L138 92 L138 104 L98 112 Z" fill="{FAT}" stroke="{FAT_DARK}" stroke-width="3"/>',
+        # fried item (samosa triangle)
+        f'<path d="M40 150 L66 112 L92 150 Z" fill="#C98A3A" stroke="#8E5A1E" stroke-width="3"/>',
+        cross(124, 136, 1.4),
+        # arrow
+        f'<path d="M154 90 L184 90" stroke="{GREY}" stroke-width="6" stroke-linecap="round"/>',
+        f'<path d="M176 80 L188 90 L176 100 Z" fill="{GREY}"/>',
+        # fish
+        f'<path d="M200 64 C212 50 236 50 246 64 C236 78 212 78 200 64 Z" fill="{BLUE_LIGHT}" stroke="{BLUE}" stroke-width="3"/>',
+        f'<path d="M246 64 L260 54 L260 74 Z" fill="{BLUE_LIGHT}" stroke="{BLUE}" stroke-width="3"/>',
+        f'<circle cx="212" cy="61" r="3" fill="{BLUE}"/>',
+        # oil bottle
+        f'<path d="M294 30 L306 30 L306 46 C318 52 320 60 320 70 L320 112 C320 118 316 120 312 120 L288 120 C284 120 280 118 280 112 L280 70 '
+        f'C280 60 282 52 294 46 Z" fill="#E8E2A0" stroke="#9A9030" stroke-width="3"/>',
+        # nuts
+    ]
+    for x, y in [(214, 126), (232, 134), (250, 124), (226, 116)]:
+        p.append(f'<ellipse cx="{x}" cy="{y}" rx="10" ry="7" fill="#B98955" stroke="#7A5530" stroke-width="2"/>')
+    p.append(tick(292, 146, 1.4))
+    return svg(w, h, '\n'.join(p))
+
+
+def migraine_phases():
+    """Early signs -> aura -> headache -> recovery, as four coloured segments with icons."""
+    w, h = 340, 130
+    segs = [(14, 92, '#9FB8AE'), (106, 60, AMBER), (166, 104, RED), (270, 56, GREEN_MID)]
+    p = []
+    for x, sw, c in segs:
+        p.append(f'<rect x="{x}" y="96" width="{sw}" height="18" fill="{c}"/>')
+    p.append(f'<rect x="12" y="94" width="316" height="22" rx="11" fill="none" stroke="{GREY_LIGHT}" stroke-width="4"/>')
+    # early signs: yawning face
+    p.append(f'<circle cx="60" cy="52" r="26" fill="{WHITE}" stroke="#7E9A8F" stroke-width="4"/>')
+    p.append(f'<path d="M48 44 L56 44 M64 44 L72 44" stroke="#7E9A8F" stroke-width="4" stroke-linecap="round"/>')
+    p.append(f'<ellipse cx="60" cy="62" rx="6" ry="8" fill="#7E9A8F"/>')
+    # aura: zigzag + sparkle
+    p.append(f'<path d="M114 60 L126 40 L136 62 L146 40 L158 62" fill="none" stroke="{AMBER}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>')
+    # headache: head with bolt
+    p.append(f'<circle cx="218" cy="52" r="28" fill="{RED_LIGHT}" stroke="{RED}" stroke-width="4"/>')
+    p.append(f'<path d="M222 30 L210 54 L224 54 L212 76" fill="none" stroke="{RED}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>')
+    # recovery: battery recharging
+    p.append(f'<rect x="282" y="36" width="34" height="34" rx="5" fill="{WHITE}" stroke="{GREEN_MID}" stroke-width="4"/>')
+    p.append(f'<rect x="294" y="30" width="10" height="6" rx="2" fill="{GREEN_MID}"/>')
+    p.append(f'<rect x="288" y="52" width="22" height="13" rx="2" fill="{GREEN_MID}"/>')
+    return svg(w, h, '\n'.join(p))
+
+
+def migraine_triggers():
+    """Skipped meal, caffeine, poor sleep, stress, periods."""
+    w, h = 340, 150
+    p = []
+    xs = [38, 104, 170, 236, 302]
+    for x in xs:
+        p.append(f'<circle cx="{x}" cy="64" r="30" fill="{AMBER_LIGHT}"/>')
+    # 1 empty plate + clock hand
+    p.append(f'<circle cx="38" cy="64" r="18" fill="{WHITE}" stroke="{FAT_DARK}" stroke-width="3"/>')
+    p.append(f'<path d="M38 64 L38 52 M38 64 L47 68" stroke="{INK}" stroke-width="3" stroke-linecap="round"/>')
+    # 2 cup
+    p.append(f'<path d="M90 52 L114 52 L112 78 L92 78 Z" fill="{WHITE}" stroke="#7A5530" stroke-width="3"/>')
+    p.append(f'<path d="M114 58 C124 58 124 70 113 70" fill="none" stroke="#7A5530" stroke-width="3"/>')
+    p.append(f'<path d="M96 46 C94 40 100 38 98 32 M106 46 C104 40 110 38 108 32" fill="none" stroke="{GREY}" stroke-width="2.5" stroke-linecap="round"/>')
+    # 3 moon, broken
+    p.append(f'<path d="M178 48 A18 18 0 1 0 184 78 A14 14 0 1 1 178 48 Z" fill="#5C6BC0"/>')
+    p.append(f'<path d="M152 50 L160 58 M160 50 L152 58" stroke="{RED}" stroke-width="3" stroke-linecap="round"/>')
+    # 4 stress: cloud with bolt
+    p.append(f'<path d="M218 70 C210 70 210 56 220 56 C222 46 238 44 242 54 C252 52 256 66 248 70 Z" fill="{GREY}"/>')
+    p.append(f'<path d="M236 70 L230 82 L238 82 L232 94" fill="none" stroke="{AMBER}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>')
+    # 5 calendar with drop
+    p.append(f'<rect x="284" y="46" width="36" height="34" rx="5" fill="{WHITE}" stroke="{PINK}" stroke-width="3"/>')
+    p.append(f'<rect x="284" y="46" width="36" height="9" rx="3" fill="{PINK}"/>')
+    p.append(f'<path d="{drop_path(302, 72, 6)}" fill="{RED}"/>')
+    for i, x in enumerate(xs):
+        p.append(text(x, 124, str(i + 1), 14, GREY, '600'))
+    return svg(w, h, '\n'.join(p))
+
+
+def painkiller_limit():
+    """A week: painkillers on at most 2 days."""
+    w, h = 340, 150
+    p = []
+    for i in range(7):
+        x = 14 + i * 46
+        used = i in (1, 4)
+        p.append(f'<rect x="{x}" y="24" width="40" height="56" rx="8" fill="{GREEN_LIGHT if used else WHITE}" stroke="{GREEN if used else GREY_LIGHT}" stroke-width="3"/>')
+        p.append(f'<rect x="{x}" y="24" width="40" height="12" rx="6" fill="{GREEN if used else GREY_LIGHT}"/>')
+        if used:
+            # capsule
+            p.append(f'<rect x="{x + 8}" y="50" width="24" height="12" rx="6" fill="{WHITE}" stroke="{GREEN}" stroke-width="2.5"/>')
+            p.append(f'<path d="M{x + 20} 50 L{x + 20} 62" stroke="{GREEN}" stroke-width="2.5"/>')
+            p.append(f'<rect x="{x + 20}" y="51.5" width="10.5" height="9" rx="4" fill="{GREEN}"/>')
+    p.append(text(170, 124, '≤ 2 / 7', 22, GREEN))
+    return svg(w, h, '\n'.join(p))
+
+
 GRAPHICS = {
+    'breast_cancer_header.svg': breast_cancer_header,
+    'high_cholesterol_header.svg': high_cholesterol_header,
+    'migraine_header.svg': migraine_header,
+    'breast_signs.svg': breast_signs,
+    'breast_spread.svg': breast_spread,
+    'mammogram_timeline.svg': mammogram_timeline,
+    'cholesterol_risks.svg': cholesterol_risks,
+    'fats_swap.svg': fats_swap,
+    'migraine_phases.svg': migraine_phases,
+    'migraine_triggers.svg': migraine_triggers,
+    'painkiller_limit.svg': painkiller_limit,
     'hypertension_header.svg': hypertension_header,
     'diabetes_group_header.svg': diabetes_group_header,
     'prediabetes_header.svg': prediabetes_header,

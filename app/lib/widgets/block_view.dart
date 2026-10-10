@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:lottie/lottie.dart';
 
 import '../core/content/models.dart';
 import '../core/theme/app_theme.dart';
@@ -21,6 +22,7 @@ class BlockView extends StatelessWidget {
       ParagraphBlock() => _Paragraph(disease: disease, block: b),
       BulletsBlock() => _Bullets(disease: disease, block: b),
       ImageBlock() => _Image(disease: disease, block: b),
+      AnimationBlock() => _Animation(disease: disease, block: b),
       KeyNumberBlock() => _KeyNumber(disease: disease, block: b),
       AlertBlock() => _Alert(disease: disease, block: b),
       RefMarkerBlock() => RefMarkers(disease: disease, refs: b.refs),
@@ -137,6 +139,63 @@ class _Image extends StatelessWidget {
           block.caption.tr(context),
           style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurfaceVariant),
         ),
+        if (block.refs.isNotEmpty) ...[
+          const SizedBox(height: 4),
+          RefMarkers(disease: disease, refs: block.refs),
+        ],
+      ],
+    );
+  }
+}
+
+/// A short Lottie animation with a caption. When the phone asks for reduced
+/// motion (Settings > Accessibility > Remove animations) it shows a still
+/// frame instead: the last frame for one-shot animations, the first for loops.
+class _Animation extends StatelessWidget {
+  final Disease disease;
+  final AnimationBlock block;
+  const _Animation({required this.disease, required this.block});
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final still = MediaQuery.disableAnimationsOf(context);
+    final caption = block.caption.tr(context);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(color: AppTheme.cardBorder),
+          ),
+          padding: const EdgeInsets.all(12),
+          child: Semantics(
+            label: caption,
+            image: true,
+            excludeSemantics: true,
+            child: AspectRatio(
+              aspectRatio: 1.6,
+              child: Directionality(
+                textDirection: TextDirection.ltr,
+                child: Lottie.asset(
+                  'assets/lottie/${block.assetKey}',
+                  key: Key('animation-${block.assetKey}'),
+                  fit: BoxFit.contain,
+                  repeat: block.loop,
+                  frameRate: FrameRate.composition,
+                  // Reduced motion: a fixed frame instead of playback.
+                  controller: still ? AlwaysStoppedAnimation<double>(block.loop ? 0 : 1) : null,
+                  errorBuilder: (context, error, stack) =>
+                      Icon(Icons.motion_photos_off_outlined, color: Theme.of(context).colorScheme.outline),
+                ),
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(height: 6),
+        Text(caption, style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurfaceVariant)),
         if (block.refs.isNotEmpty) ...[
           const SizedBox(height: 4),
           RefMarkers(disease: disease, refs: block.refs),

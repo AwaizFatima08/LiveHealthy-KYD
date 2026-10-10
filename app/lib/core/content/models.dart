@@ -29,6 +29,9 @@ final RegExp _idPattern = RegExp(r'^[a-z0-9][a-z0-9_-]{0,63}$');
 /// Graphics are looked up by file name inside assets/graphics/.
 final RegExp _assetPattern = RegExp(r'^[a-z0-9_]{1,64}\.svg$');
 
+/// Short Lottie animations are looked up by file name inside assets/lottie/.
+final RegExp _animationPattern = RegExp(r'^[a-z0-9_-]{1,80}\.json$');
+
 String _id(Object? v, String where) {
   final s = _string(v, where);
   if (!_idPattern.hasMatch(s)) _fail('$where: invalid id "$s"');
@@ -38,6 +41,12 @@ String _id(Object? v, String where) {
 String _asset(Object? v, String where) {
   final s = _string(v, where);
   if (!_assetPattern.hasMatch(s)) _fail('$where: invalid graphic name "$s"');
+  return s;
+}
+
+String _animation(Object? v, String where) {
+  final s = _string(v, where);
+  if (!_animationPattern.hasMatch(s)) _fail('$where: invalid animation name "$s"');
   return s;
 }
 
@@ -120,6 +129,14 @@ sealed class ContentBlock {
           caption: LocalizedText.fromJson(m['caption'], '$where.caption'),
           refs: _refIds(m['refs'], '$where.refs'),
         );
+      case 'animation':
+        final loop = m['loop'];
+        return AnimationBlock(
+          assetKey: _animation(m['assetKey'], '$where.assetKey'),
+          caption: LocalizedText.fromJson(m['caption'], '$where.caption'),
+          loop: loop is bool ? loop : true,
+          refs: _refIds(m['refs'], '$where.refs'),
+        );
       case 'keyNumber':
         return KeyNumberBlock(
           label: LocalizedText.fromJson(m['label'], '$where.label'),
@@ -169,6 +186,20 @@ class ImageBlock extends ContentBlock {
   @override
   final List<String> refs;
   const ImageBlock({required this.assetKey, required this.caption, required this.refs});
+}
+
+/// A short, language-free Lottie animation (assets/lottie/, since 1.1),
+/// with a caption in the reader's language. Like graphics, animations ship
+/// inside the app; older app versions skip this block type.
+class AnimationBlock extends ContentBlock {
+  final String assetKey;
+  final LocalizedText caption;
+
+  /// Loops forever when true; otherwise plays once and holds the last frame.
+  final bool loop;
+  @override
+  final List<String> refs;
+  const AnimationBlock({required this.assetKey, required this.caption, required this.loop, required this.refs});
 }
 
 /// Same three levels and colours as the Vitals flags (§8).

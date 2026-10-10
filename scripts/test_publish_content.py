@@ -8,7 +8,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import publish_content as pc  # noqa: E402
 
-TODAY = dt.date(2026, 10, 1)
+TODAY = dt.date(2026, 10, 15)
 
 
 class ValidatorTest(unittest.TestCase):

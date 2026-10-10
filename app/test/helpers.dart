@@ -16,7 +16,16 @@ import 'package:shared_preferences/shared_preferences.dart';
 Map<String, dynamic> bundledJson(String name) =>
     jsonDecode(File('assets/content/$name.json').readAsStringSync()) as Map<String, dynamic>;
 
-const allTopicIds = ['hypertension', 'prediabetes', 'type2_diabetes', 'gestational_diabetes', 'obesity'];
+const allTopicIds = [
+  'hypertension',
+  'prediabetes',
+  'type2_diabetes',
+  'gestational_diabetes',
+  'obesity',
+  'high_cholesterol',
+  'migraine',
+  'breast_cancer',
+];
 
 /// A fresh temp directory standing in for app-private storage.
 Directory tempCacheDir() {
@@ -67,6 +76,10 @@ Future<({AppSettings settings, ContentRepository repo, FakeToolLauncher tools})>
   UpdateService? updates,
   ContentRepository? repo,
 }) async {
+  // Looping animations never "settle"; widget tests run with reduced motion,
+  // where the app shows a still frame (that path is tested too).
+  tester.platformDispatcher.accessibilityFeaturesTestValue = const FakeAccessibilityFeatures(disableAnimations: true);
+  addTearDown(tester.platformDispatcher.clearAccessibilityFeaturesTestValue);
   final s = await settings(language: language, accepted: accepted, size: size);
   final r = repo ?? await tester.runAsync(() => loadedRepository()) as ContentRepository;
   final tools = FakeToolLauncher(installed: installed);

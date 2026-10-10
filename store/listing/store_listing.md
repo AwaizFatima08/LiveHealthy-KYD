@@ -1,6 +1,6 @@
 # Play Store Listing — LiveHealthy: Know Your Disease
 
-Package: `com.homilabs.livehealthy_kyd` · Version 1.0.0 (1)
+Package: `com.homilabs.livehealthy_kyd` · Version 1.1.0 (2)
 
 ## App name (30 chars max)
 LiveHealthy: Know Your Disease   (30 characters)
@@ -9,7 +9,7 @@ The home-screen label is "Know Your Disease", following the suite convention (Vi
 "Vitals", Medicine Reminder's is "Medicine Reminder").
 
 ## Short description (80 chars max)
-Plain facts on BP, diabetes & obesity in Urdu/English, with trusted sources.
+Plain facts on BP, diabetes, cholesterol, migraine & more, in Urdu and English.
 
 ## Full description
 LiveHealthy: Know Your Disease explains common long-term conditions in plain language, in
@@ -19,6 +19,9 @@ Urdu or English, with a trusted medical source behind every fact.
 • High blood pressure
 • Diabetes: prediabetes, type 2 diabetes, and diabetes in pregnancy (gestational)
 • Obesity, including BMI and waist size, and the lower BMI action points for South Asian people
+• High cholesterol: good and bad cholesterol, healthy numbers, and bringing LDL down
+• Migraine: attacks, triggers, painkiller limits and the warning signs that need urgent care
+• Breast cancer: signs to look for, a monthly self-check, screening and lowering your risk
 
 **The same clear structure for every topic**
 1. What it is
@@ -52,7 +55,7 @@ substitute for a doctor. In an emergency, go to the nearest hospital.
 **Full description:**
 لِو ہیلدی: اپنی بیماری کو جانیں — عام طویل مدتی بیماریوں کے بارے میں آسان زبان میں معلومات، اردو یا انگریزی میں، اور ہر بات کے پیچھے ایک معتبر طبی ماخذ۔
 
-موضوعات: ہائی بلڈ پریشر · ذیابیطس (پری ذیابیطس، ٹائپ 2، حمل کی ذیابیطس) · موٹاپا
+موضوعات: ہائی بلڈ پریشر · ذیابیطس (پری ذیابیطس، ٹائپ 2، حمل کی ذیابیطس) · موٹاپا · ہائی کولیسٹرول · مائیگرین · چھاتی کا کینسر
 
 ہر موضوع میں: یہ کیا ہے · وجوہات اور خطرے کے عوامل · پیچیدگیاں · طرزِ زندگی میں تبدیلیاں · ڈاکٹر کو کب دکھائیں · حوالہ جات
 
@@ -132,6 +135,12 @@ No camera, location, contacts, storage, notification or alarm permissions.
 - Phone screenshots 1080×2160 (2:1), upload in order: `store/graphics/phone_screenshots/`
 - Sources: `scripts/make_icons.py` (icon and feature graphic), `scripts/make_screenshots.py`
   (framed screenshots from device captures), `scripts/make_graphics.py` (in-app graphics)
+
+## Release notes (v1.1.0)
+New topics: high cholesterol, migraine and breast cancer, with short animations (monthly breast
+self-check, how plaque narrows an artery, resting in a dark room during a migraine).
+
+نئے موضوعات: ہائی کولیسٹرول، مائیگرین اور چھاتی کا کینسر، مختصر اینیمیشنز کے ساتھ۔
 
 ## Release notes (v1.0.0)
 First release: high blood pressure, diabetes (prediabetes, type 2, gestational) and obesity in
