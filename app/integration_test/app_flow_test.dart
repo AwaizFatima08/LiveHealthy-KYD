@@ -9,7 +9,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
+import 'package:livehealthy_kyd/core/content/models.dart';
 import 'package:livehealthy_kyd/main.dart' as app;
+import 'package:livehealthy_kyd/services/tool_launcher.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -129,8 +131,14 @@ void main() {
       await tapScrolled(tester, find.byKey(Key('topic-$id')));
       if (id == 'hypertension') {
         await scrollTo(tester, find.byKey(const Key('tool-vitals')));
-        // Vitals is installed on the test phone, so Track it offers "Open".
-        await waitFor(tester, find.text('Open LiveHealthy: Vitals'));
+        // Track it offers "Open" when Vitals is installed on this phone,
+        // otherwise the remote switch decides (bundled default: coming soon).
+        final hasVitals = await const ToolLauncher().isInstalled(ToolApp.vitals);
+        debugPrint('E2E Vitals installed on this phone: $hasVitals');
+        await waitFor(
+          tester,
+          find.text(hasVitals ? 'Open LiveHealthy: Vitals' : 'LiveHealthy: Vitals — coming soon'),
+        );
         await tester.drag(find.byType(Scrollable).first, const Offset(0, 3000));
         await settle(tester);
       }
