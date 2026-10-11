@@ -133,7 +133,7 @@ No camera, location, contacts, storage, notification or alarm permissions.
 ## Assets
 - Hi-res icon 512×512: `store/graphics/play_store_icon_512.png`
 - Feature graphic 1024×500: `store/graphics/feature_graphic.png`
-- Phone screenshots 1080×2160 (2:1), upload in order: `store/graphics/phone_screenshots/`
+- Phone screenshots 1080×1920 (9:16), upload in order: `store/graphics/phone_screenshots/`
 - Sources: `scripts/make_icons.py` (icon and feature graphic), `scripts/make_screenshots.py`
   (framed screenshots from device captures), `scripts/make_graphics.py` (in-app graphics)
 

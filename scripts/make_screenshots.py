@@ -1,5 +1,5 @@
 """Frames raw phone captures (store/graphics/screenshots/NN_name.png, any
-size) into Play Store phone screenshots: 1080×2160 (Play's 2:1 limit), suite
+size) into Play Store phone screenshots: 1080×1920 (9:16, which Play's asset library requires), suite
 green background, a one-line caption on top, the capture below with rounded
 corners. Run from the repo root:  python3 scripts/make_screenshots.py
 """
@@ -10,20 +10,21 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 SRC = 'store/graphics/screenshots'
 OUT = 'store/graphics/phone_screenshots'
-W, H = 1080, 2160
+W, H = 1080, 1920
 LIGHT, DARK = (18, 138, 99), (7, 78, 56)
 URDU_FONT = 'app/assets/fonts/NotoNastaliqUrdu-Bold.ttf'
 
-# Caption per capture (file stem without the NN_ prefix).
+# Caption per capture (file stem without the NN_ prefix): English headline,
+# Urdu line under it.
 CAPTIONS = {
-    'home': 'Plain facts about common diseases',
-    'topic': 'The same clear steps for every topic',
-    'section': 'Key numbers, explained simply',
-    'doctor': 'Know when to see a doctor',
-    'reference': 'A trusted source behind every fact',
-    'group': 'Prediabetes, type 2 and pregnancy',
-    'urdu': 'اردو میں بھی',
-    'obesity': 'Healthy weight, BMI and waist size',
+    'home': ('Plain facts about common diseases', 'عام بیماریوں کے بارے میں آسان حقائق'),
+    'newtopics': ('Three new topics added', 'کولیسٹرول، مائیگرین اور چھاتی کا کینسر'),
+    'topic': ('The same clear steps for every topic', 'ہر موضوع کے لیے ایک جیسے واضح مراحل'),
+    'selfcheck': ('Short animations show you how', 'مختصر اینیمیشنز سے سمجھیں'),
+    'section': ('Key numbers, explained simply', 'اہم نمبر، آسان الفاظ میں'),
+    'doctor': ('Know when to see a doctor', 'جانیں کب ڈاکٹر کو دکھانا ہے'),
+    'reference': ('A trusted source behind every fact', 'ہر بات کے پیچھے معتبر ماخذ'),
+    'urdu': ('Read in Urdu or English', 'اردو یا انگریزی میں پڑھیں'),
 }
 
 
@@ -40,19 +41,23 @@ def font(text, size):
     return ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', size), False
 
 
-def frame(path, caption):
-    img = background()
-    d = ImageDraw.Draw(img)
-    size = 58 if not caption.isascii() else 54
-    while True:  # shrink until the caption fits with a margin
-        f, urdu = font(caption, size)
+def line(d, text, size, top, fill):
+    while True:  # shrink until the line fits with a margin
+        f, urdu = font(text, size)
         kwargs = {'direction': 'rtl', 'language': 'ur'} if urdu else {}
-        box = d.textbbox((0, 0), caption, font=f, **kwargs)
+        box = d.textbbox((0, 0), text, font=f, **kwargs)
         if box[2] - box[0] <= W - 120 or size <= 30:
             break
         size -= 2
-    d.text(((W - (box[2] - box[0])) / 2 - box[0], 120 - box[1] + (0 if not urdu else -10)), caption,
-           font=f, fill=(255, 255, 255), **kwargs)
+    d.text(((W - (box[2] - box[0])) / 2 - box[0], top - box[1]), text, font=f, fill=fill, **kwargs)
+
+
+def frame(path, caption):
+    img = background()
+    d = ImageDraw.Draw(img)
+    en, ur = caption
+    line(d, en, 54, 90, (255, 255, 255))
+    line(d, ur, 42, 180, (214, 240, 228))
 
     shot = Image.open(path).convert('RGB')
     # Hide the phone's status bar (clock, personal notification icons).
@@ -79,5 +84,5 @@ if __name__ == '__main__':
     for path in sorted(glob.glob(f'{SRC}/*.png')):
         stem = os.path.splitext(os.path.basename(path))[0]
         key = stem.split('_', 1)[1] if '_' in stem else stem
-        frame(path, CAPTIONS.get(key, '')).save(f'{OUT}/{stem}.png', optimize=True)
+        frame(path, CAPTIONS.get(key, ('', ''))).save(f'{OUT}/{stem}.png', optimize=True)
         print('framed', stem)
