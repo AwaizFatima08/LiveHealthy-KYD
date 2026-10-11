@@ -14,9 +14,9 @@ FIRESTORE_EMULATOR_HOST=127.0.0.1:8086 "$ROOT/scripts/.venv/bin/python" "$ROOT/s
 if [[ "$DEVICE" == emulator-* ]]; then
   HOST=10.0.2.2
 else
-  # Not 127.0.0.1/localhost: FlutterFire rewrites those to 10.0.2.2 on
-  # Android. 127.0.0.2 is still loopback and reaches the adb reverse tunnel.
-  HOST=127.0.0.2
+  # adb reverse listens on the phone's 127.0.0.1 (Android 10 accepts only
+  # that address); main.dart turns off FlutterFire's 10.0.2.2 rewrite.
+  HOST=127.0.0.1
   adb -s "$DEVICE" reverse tcp:8086 tcp:8086
   export E2E_SHOTS_DIR="${E2E_SHOTS_DIR:-../store/graphics/device_run_$DEVICE}"
 fi

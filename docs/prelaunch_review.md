@@ -16,21 +16,25 @@ those key numbers are `metric: none` (the Vitals check still runs on BP, glucose
 - New `animation` content block (`lottie` package). If the phone asks to remove animations, a still
   frame is shown. Older app versions skip the block, so `minAppVersion` stays 1.
 
-**Tests:** 56 Dart tests, 15 validator tests, and the on-device journey on the Galaxy A12 (now all
-8 topics × 6 screens) pass. Release AAB/APK built, same signing key, same permissions.
+**Tests:** 56 Dart tests, 15 validator tests, and the on-device journey (all 8 topics × 6 screens,
+references, Track it, update check, Urdu) pass on **two phones**: Galaxy A12 (Android 12, 1.3× font,
+Vitals installed → "Open") and **Mi 9 Lite** (Android 10 / MIUI 12, 1080×2340, no Vitals → "coming
+soon"). MIUI needs an on-screen tap for every USB install, or "Install via USB" turned on. Release AAB/APK built, same signing key, same permissions.
 **Found and fixed during the update:**
 - The ribbon header showed a dark smudge on the phone: flutter_svg draws a stroked path with
   `opacity` differently from Inkscape. Removed that highlight.
 - Looping animations never "settle", which would hang widget tests. Widget tests now run in
   reduced-motion mode, and the on-device test waits for route transitions instead of fixed delays
   (the A12 was slower than the old 0.7 s pause while an animation ran).
+- Mi 9 (Android 10): `adb reverse` only listens on 127.0.0.1 there, so the debug-only emulator
+  hookup now passes `automaticHostMapping: false` and real phones use 127.0.0.1.
 
 **Owner actions for 1.1.0:**
 1. Medical review of the three new topics (the app shows "reviewed 10 Oct 2026").
 2. Urdu second-reader review of the new text.
 3. Upload `live_healthy/website/index.html` and `privacy-policy.html` (topic list updated;
    committed and pushed) — Hostinger had logged out when I tried.
-4. Test on the Mi 9 (not connected during this session).
+4. ~~Test on the Mi 9~~ done 11 Oct 2026: all pass.
 5. Play Console: upload `app/build/app/outputs/bundle/release/app-release.aab` (1.1.0, build 2),
    with the 1.1.0 release notes, new short description and feature graphic in `store/`.
 

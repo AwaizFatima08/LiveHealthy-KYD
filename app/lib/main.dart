@@ -92,7 +92,9 @@ Future<FirebaseFirestore?> _initFirebase() async {
 void _useEmulatorIfRequested(FirebaseFirestore db) {
   const host = String.fromEnvironment('FIRESTORE_EMULATOR_HOST');
   if (host.isEmpty || kReleaseMode) return;
-  db.useFirestoreEmulator(host, 8086);
+  // No automatic 127.0.0.1 -> 10.0.2.2 rewrite: real phones reach the
+  // emulator through `adb reverse` on their own loopback address.
+  db.useFirestoreEmulator(host, 8086, automaticHostMapping: false);
   debugPrint('Using Firestore emulator at $host');
 }
 
