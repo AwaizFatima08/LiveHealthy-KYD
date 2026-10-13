@@ -29,14 +29,15 @@ soon"). MIUI needs an on-screen tap for every USB install, or "Install via USB" 
 - Mi 9 (Android 10): `adb reverse` only listens on 127.0.0.1 there, so the debug-only emulator
   hookup now passes `automaticHostMapping: false` and real phones use 127.0.0.1.
 
-**Owner actions for 1.1.0:**
-1. Medical review of the three new topics (the app shows "reviewed 10 Oct 2026").
-2. Urdu second-reader review of the new text.
-3. Upload `live_healthy/website/index.html` and `privacy-policy.html` (topic list updated;
-   committed and pushed) — Hostinger had logged out when I tried.
+**Owner actions for 1.1.0 (all done):**
+1. ~~Medical review of the three new topics~~ done (owner confirmed 13 Oct 2026).
+2. ~~Urdu second-reader review of the new text~~ done (owner confirmed 13 Oct 2026).
+3. ~~Website upload~~ done: topic list (11 Oct) and "Available now" badge (13 Oct), live = local.
 4. ~~Test on the Mi 9~~ done 11 Oct 2026: all pass.
-5. Play Console: upload `app/build/app/outputs/bundle/release/app-release.aab` (1.1.0, build 2),
-   with the 1.1.0 release notes, new short description and feature graphic in `store/`.
+5. ~~Play Console~~ done: listing, feature graphic and 8 new 9:16 screenshots; 1.1.0 (build 2)
+   live on Play by 13 Oct 2026.
+6. Naming: the sibling app is called "LiveHealthy: Vitals" everywhere in this app, listing and site
+   (owner's decision, 13 Oct 2026).
 
 ---
 
