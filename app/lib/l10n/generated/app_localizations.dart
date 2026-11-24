@@ -499,6 +499,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'New'**
   String get newBadge;
+
+  /// No description provided for @readAloud.
+  ///
+  /// In en, this message translates to:
+  /// **'Read aloud'**
+  String get readAloud;
+
+  /// No description provided for @stopReading.
+  ///
+  /// In en, this message translates to:
+  /// **'Stop reading'**
+  String get stopReading;
+
+  /// No description provided for @noVoiceUrdu.
+  ///
+  /// In en, this message translates to:
+  /// **'This phone has no Urdu voice for reading aloud. You can add one in the phone\'s settings, under Text-to-speech.'**
+  String get noVoiceUrdu;
+
+  /// No description provided for @noVoiceEnglish.
+  ///
+  /// In en, this message translates to:
+  /// **'This phone has no English voice for reading aloud. You can add one in the phone\'s settings, under Text-to-speech.'**
+  String get noVoiceEnglish;
+
+  /// No description provided for @readAloudUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Reading aloud isn\'t available on this phone.'**
+  String get readAloudUnavailable;
 }
 
 class _AppLocalizationsDelegate

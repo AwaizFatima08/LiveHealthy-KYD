@@ -298,6 +298,15 @@ def validate_block(b: dict, where: str, rep: Report, bands, skip_vitals: bool):
             rep.error(f'{where}.value "{en}": numbers {sorted(got)} do not match Vitals {key} {sorted(bands[key])}')
 
 
+def check_links(topic_ids, rep: Report):
+    """Every topicLink seen by validate_block must point at another existing topic."""
+    for where, target in LINK_TARGETS:
+        if target not in topic_ids:
+            rep.error(f'{where}.target: no topic "{target}"')
+        elif where.startswith(f'[{target}]'):
+            rep.error(f'{where}.target: a topic cannot link to itself')
+
+
 def validate_manifest_source(m: dict, rep: Report):
     if not isinstance(m.get('minAppVersion'), int):
         rep.error('manifest_source.minAppVersion: expected an integer')
@@ -385,11 +394,7 @@ def run(argv=None, today: dt.date | None = None, vitals_path: Path = VITALS_RANG
         if path.stem != did:
             rep.error(f'{path.name}: file name must match id "{did}"')
         validate_disease(d, library, groups, bands, rep, today, args.strict)
-    for where, target in LINK_TARGETS:
-        if target not in diseases:
-            rep.error(f'{where}.target: no topic "{target}"')
-        elif where.startswith(f'[{target}]'):
-            rep.error(f'{where}.target: a topic cannot link to itself')
+    check_links(diseases, rep)
     for gid, g in groups.items():
         for m in g.get('members') or []:
             if m not in diseases:

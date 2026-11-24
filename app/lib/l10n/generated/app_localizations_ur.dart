@@ -250,4 +250,22 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get newBadge => 'نیا';
+
+  @override
+  String get readAloud => 'بلند آواز میں سنیں';
+
+  @override
+  String get stopReading => 'سننا بند کریں';
+
+  @override
+  String get noVoiceUrdu =>
+      'اس فون میں بلند آواز میں پڑھنے کے لیے اردو آواز موجود نہیں۔ آپ فون کی سیٹنگز میں ٹیکسٹ ٹو اسپیچ کے تحت اسے شامل کر سکتے ہیں۔';
+
+  @override
+  String get noVoiceEnglish =>
+      'اس فون میں بلند آواز میں پڑھنے کے لیے انگریزی آواز موجود نہیں۔ آپ فون کی سیٹنگز میں ٹیکسٹ ٹو اسپیچ کے تحت اسے شامل کر سکتے ہیں۔';
+
+  @override
+  String get readAloudUnavailable =>
+      'اس فون پر بلند آواز میں پڑھنے کی سہولت دستیاب نہیں۔';
 }

@@ -249,4 +249,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get newBadge => 'New';
+
+  @override
+  String get readAloud => 'Read aloud';
+
+  @override
+  String get stopReading => 'Stop reading';
+
+  @override
+  String get noVoiceUrdu =>
+      'This phone has no Urdu voice for reading aloud. You can add one in the phone\'s settings, under Text-to-speech.';
+
+  @override
+  String get noVoiceEnglish =>
+      'This phone has no English voice for reading aloud. You can add one in the phone\'s settings, under Text-to-speech.';
+
+  @override
+  String get readAloudUnavailable =>
+      'Reading aloud isn\'t available on this phone.';
 }

@@ -19,6 +19,7 @@ import 'screens/home_screen.dart';
 import 'screens/onboarding_screen.dart';
 import 'services/ads.dart';
 import 'services/content_repository.dart';
+import 'services/read_aloud.dart';
 import 'services/tool_launcher.dart';
 import 'services/update_service.dart';
 
@@ -55,6 +56,7 @@ Future<void> main() async {
       repository: repository,
       updates: updates,
       ads: ads,
+      readAloud: ReadAloud(FlutterTtsEngine()),
       appVersion: '${info.version} (${info.buildNumber})',
     ),
   );
@@ -111,6 +113,7 @@ class KnowYourDiseaseApp extends StatelessWidget {
   final UpdateService? updates;
   final ToolLauncher toolLauncher;
   final AdsController? ads;
+  final ReadAloud? readAloud;
   final String appVersion;
 
   const KnowYourDiseaseApp({
@@ -120,6 +123,7 @@ class KnowYourDiseaseApp extends StatelessWidget {
     this.updates,
     this.toolLauncher = const ToolLauncher(),
     this.ads,
+    this.readAloud,
     this.appVersion = '',
   });
 
@@ -133,6 +137,7 @@ class KnowYourDiseaseApp extends StatelessWidget {
         Provider<ToolLauncher>.value(value: toolLauncher),
         // Tests build the app without the ad SDK.
         ChangeNotifierProvider<AdsController>.value(value: ads ?? AdsController.off()),
+        ChangeNotifierProvider<ReadAloud>.value(value: readAloud ?? ReadAloud.unavailable()),
         Provider<AppVersion>.value(value: AppVersion(appVersion)),
       ],
       child: Consumer<AppSettings>(

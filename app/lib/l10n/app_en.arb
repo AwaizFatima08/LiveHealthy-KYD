@@ -79,5 +79,10 @@
   "close": "Close",
   "contentUnavailable": "This topic couldn't be loaded. Please reinstall or update the app.",
   "readMore": "Read more",
-  "newBadge": "New"
+  "newBadge": "New",
+  "readAloud": "Read aloud",
+  "stopReading": "Stop reading",
+  "noVoiceUrdu": "This phone has no Urdu voice for reading aloud. You can add one in the phone's settings, under Text-to-speech.",
+  "noVoiceEnglish": "This phone has no English voice for reading aloud. You can add one in the phone's settings, under Text-to-speech.",
+  "readAloudUnavailable": "Reading aloud isn't available on this phone."
 }

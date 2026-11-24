@@ -51,6 +51,10 @@
             <action android:name="android.intent.action.VIEW" />
             <data android:scheme="market" />
         </intent>
+        <!-- Read aloud: find the phone's text-to-speech engine (Android 11+). -->
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
         <!-- "Report an error" email. -->
         <intent>
             <action android:name="android.intent.action.SENDTO" />

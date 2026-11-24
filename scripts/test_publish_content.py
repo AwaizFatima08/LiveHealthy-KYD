@@ -61,6 +61,39 @@ class ValidatorTest(unittest.TestCase):
         d['sections'][0], d['sections'][1] = d['sections'][1], d['sections'][0]
         self.assertTrue(any('expected' in e and 'sections' in e for e in self.check(d).errors))
 
+    def treatment_section(self):
+        return {'id': 'treatment', 'title': {'en': 'Treatment', 'ur': 'علاج'},
+                'blocks': [{'type': 'paragraph', 'text': {'en': 'Ask your doctor.', 'ur': 'اپنے ڈاکٹر سے پوچھیں۔'},
+                            'refs': [self.htn()['references'][0]]}]}
+
+    def test_treatment_section_allowed_on_new_topics_only(self):
+        d = self.htn()
+        d['sections'].insert(3, self.treatment_section())
+        self.assertTrue(any('would stop apps 1.0/1.1' in e for e in self.check(d).errors))
+        d['id'] = 'stroke'
+        self.assertFalse(any('sections' in e for e in self.check(d).errors), self.check(d).errors)
+
+    def test_treatment_section_must_follow_complications(self):
+        d = self.htn()
+        d['id'] = 'stroke'
+        d['sections'].insert(1, self.treatment_section())
+        self.assertTrue(any('optionally with treatment' in e for e in self.check(d).errors))
+
+    def test_topic_link_must_point_at_another_existing_topic(self):
+        d = self.htn()
+        link = {'type': 'topicLink', 'target': 'no_such_topic', 'text': {'en': 'Stroke', 'ur': 'فالج'}}
+        d['sections'][2]['blocks'].append(link)
+        pc.LINK_TARGETS.clear()
+        rep = self.check(d)
+        pc.check_links(self.diseases, rep)
+        self.assertTrue(any('no topic "no_such_topic"' in e for e in rep.errors), rep.errors)
+        for target, ok in (('obesity', True), ('hypertension', False)):
+            link['target'] = target
+            pc.LINK_TARGETS.clear()
+            rep = self.check(d)
+            pc.check_links(self.diseases, rep)
+            self.assertEqual(rep.errors == [], ok, (target, rep.errors))
+
     def test_rejects_bp_number_that_disagrees_with_vitals(self):
         d = self.htn()
         b = self.block(d, 'keyNumber', check={'metric': 'bp', 'band': 'stage1'})

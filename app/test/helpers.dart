@@ -8,6 +8,7 @@ import 'package:livehealthy_kyd/core/app_settings.dart';
 import 'package:livehealthy_kyd/core/content/models.dart';
 import 'package:livehealthy_kyd/main.dart';
 import 'package:livehealthy_kyd/services/content_repository.dart';
+import 'package:livehealthy_kyd/services/read_aloud.dart';
 import 'package:livehealthy_kyd/services/tool_launcher.dart';
 import 'package:livehealthy_kyd/services/update_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -77,6 +78,7 @@ Future<({AppSettings settings, ContentRepository repo, FakeToolLauncher tools})>
   Set<ToolApp> installed = const {},
   UpdateService? updates,
   ContentRepository? repo,
+  ReadAloud? readAloud,
 }) async {
   // Looping animations never "settle"; widget tests run with reduced motion,
   // where the app shows a still frame (that path is tested too).
@@ -86,7 +88,14 @@ Future<({AppSettings settings, ContentRepository repo, FakeToolLauncher tools})>
   final r = repo ?? await tester.runAsync(() => loadedRepository()) as ContentRepository;
   final tools = FakeToolLauncher(installed: installed);
   await tester.pumpWidget(
-    KnowYourDiseaseApp(settings: s, repository: r, updates: updates, toolLauncher: tools, appVersion: '1.0.0 (1)'),
+    KnowYourDiseaseApp(
+      settings: s,
+      repository: r,
+      updates: updates,
+      toolLauncher: tools,
+      readAloud: readAloud,
+      appVersion: '1.0.0 (1)',
+    ),
   );
   await tester.pumpAndSettle();
   return (settings: s, repo: r, tools: tools);

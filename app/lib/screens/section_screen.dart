@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../core/app_settings.dart';
+import '../core/content/models.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/content_repository.dart';
+import '../services/read_aloud.dart';
 import '../widgets/block_view.dart';
 import '../widgets/content_text.dart';
 import 'disease_screen.dart';
@@ -38,6 +41,7 @@ class SectionScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(section.title.tr(context), maxLines: 1, overflow: TextOverflow.ellipsis),
         actions: [
+          ReadAloudButton(key: const Key('read-aloud'), section: section),
           Padding(
             padding: const EdgeInsetsDirectional.only(end: 16),
             child: Center(
@@ -97,6 +101,61 @@ class SectionScreen extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+/// Speaker button in the section's app bar: reads the section with the
+/// phone's voice; pressing again, or leaving the section, stops it.
+class ReadAloudButton extends StatefulWidget {
+  final ContentSection section;
+  const ReadAloudButton({super.key, required this.section});
+
+  @override
+  State<ReadAloudButton> createState() => _ReadAloudButtonState();
+}
+
+class _ReadAloudButtonState extends State<ReadAloudButton> {
+  late ReadAloud _reader;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // Kept here: dispose() may not look up providers.
+    _reader = context.read<ReadAloud>();
+  }
+
+  @override
+  void dispose() {
+    if (_reader.isSpeaking(widget.section)) _reader.stop();
+    super.dispose();
+  }
+
+  Future<void> _toggle() async {
+    final l10n = AppLocalizations.of(context);
+    final messenger = ScaffoldMessenger.of(context);
+    if (_reader.isSpeaking(widget.section)) {
+      await _reader.stop();
+      return;
+    }
+    final lang = context.read<AppSettings>().languageCode;
+    final result = await _reader.start(widget.section, spokenChunks(widget.section, lang), lang);
+    final message = switch (result) {
+      ReadAloudStart.started => null,
+      ReadAloudStart.noVoice => lang == 'ur' ? l10n.noVoiceUrdu : l10n.noVoiceEnglish,
+      ReadAloudStart.unavailable => l10n.readAloudUnavailable,
+    };
+    if (message != null) messenger.showSnackBar(SnackBar(content: Text(message)));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    final speaking = context.watch<ReadAloud>().isSpeaking(widget.section);
+    return IconButton(
+      tooltip: speaking ? l10n.stopReading : l10n.readAloud,
+      icon: Icon(speaking ? Icons.stop_circle_outlined : Icons.volume_up_outlined),
+      onPressed: _toggle,
     );
   }
 }
