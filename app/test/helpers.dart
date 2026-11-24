@@ -26,6 +26,10 @@ const allTopicIds = [
   'high_cholesterol',
   'migraine',
   'breast_cancer',
+  'heart_disease',
+  'stroke',
+  'hepatitis_b',
+  'hepatitis_c',
 ];
 
 /// A fresh temp directory standing in for app-private storage.

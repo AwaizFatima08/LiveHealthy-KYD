@@ -1,6 +1,6 @@
 {
  "id": "obesity",
- "version": 1,
+ "version": 2,
  "order": 3,
  "group": null,
  "status": "published",
@@ -338,6 +338,14 @@
      "refs": [
       "cc-obesity"
      ]
+    },
+    {
+     "type": "topicLink",
+     "target": "heart_disease",
+     "text": {
+      "en": "Heart Disease & Heart Attack",
+      "ur": "دل کی بیماری اور ہارٹ اٹیک"
+     }
     }
    ]
   },

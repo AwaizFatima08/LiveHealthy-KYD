@@ -1,6 +1,6 @@
 {
   "id": "high_cholesterol",
-  "version": 1,
+  "version": 2,
   "order": 4,
   "group": null,
   "status": "published",
@@ -327,6 +327,22 @@
           "refs": [
             "cc-chol"
           ]
+        },
+        {
+          "type": "topicLink",
+          "target": "heart_disease",
+          "text": {
+            "en": "Heart Disease & Heart Attack",
+            "ur": "دل کی بیماری اور ہارٹ اٹیک"
+          }
+        },
+        {
+          "type": "topicLink",
+          "target": "stroke",
+          "text": {
+            "en": "Stroke",
+            "ur": "فالج"
+          }
         }
       ]
     },

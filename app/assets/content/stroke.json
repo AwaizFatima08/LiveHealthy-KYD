@@ -1,0 +1,669 @@
+{
+ "id": "stroke",
+ "version": 1,
+ "order": 8,
+ "group": null,
+ "status": "published",
+ "title": {
+  "en": "Stroke",
+  "ur": "فالج"
+ },
+ "summary": {
+  "en": "When blood stops reaching part of the brain. Spot it FAST and call for help.",
+  "ur": "جب دماغ کے کسی حصے تک خون نہ پہنچے۔ اسے FAST سے پہچانیں اور فوراً مدد بلائیں۔"
+ },
+ "headerAsset": "stroke_header.svg",
+ "reviewedBy": {
+  "en": "Dr. Humayun Shahzad, MBBS",
+  "ur": "ڈاکٹر ہمایوں شہزاد، ایم بی بی ایس"
+ },
+ "reviewedOn": "2026-11-24",
+ "nextReviewDue": "2027-11-24",
+ "relatedTools": [
+  {
+   "tool": "vitals",
+   "label": {
+    "en": "Log your blood pressure",
+    "ur": "اپنے بلڈ پریشر کا ریکارڈ رکھیں"
+   }
+  },
+  {
+   "tool": "medicineReminder",
+   "label": {
+    "en": "Take your stroke-prevention medicines",
+    "ur": "فالج سے بچاؤ کی دوائیں لیں"
+   }
+  }
+ ],
+ "references": [
+  {
+   "id": "nhs-stroke-sym",
+   "org": "NHS (UK)",
+   "title": "Symptoms of a stroke",
+   "year": 2024,
+   "url": "https://www.nhs.uk/conditions/stroke/symptoms/",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "nhs-stroke-causes",
+   "org": "NHS (UK)",
+   "title": "Causes of a stroke",
+   "year": 2024,
+   "url": "https://www.nhs.uk/conditions/stroke/causes/",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "nhs-stroke-tx",
+   "org": "NHS (UK)",
+   "title": "Treatment for a stroke",
+   "year": 2024,
+   "url": "https://www.nhs.uk/conditions/stroke/treatment/",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "nhs-stroke-rec",
+   "org": "NHS (UK)",
+   "title": "Recovering from a stroke",
+   "year": 2024,
+   "url": "https://www.nhs.uk/conditions/stroke/recovery/",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "nhs-tia",
+   "org": "NHS (UK)",
+   "title": "Transient ischaemic attack (TIA)",
+   "year": 2023,
+   "url": "https://www.nhs.uk/conditions/transient-ischaemic-attack-tia/",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "cdc-stroke-signs",
+   "org": "Centers for Disease Control and Prevention (CDC)",
+   "title": "Signs and Symptoms of Stroke",
+   "year": 2026,
+   "url": "https://www.cdc.gov/stroke/signs-symptoms/index.html",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "cdc-stroke-tx",
+   "org": "Centers for Disease Control and Prevention (CDC)",
+   "title": "Treatment and Intervention for Stroke",
+   "year": 2024,
+   "url": "https://www.cdc.gov/stroke/treatment/index.html",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "nhlbi-stroke-causes",
+   "org": "National Heart, Lung, and Blood Institute (NIH)",
+   "title": "Stroke: Causes and Risk Factors",
+   "year": 2023,
+   "url": "https://www.nhlbi.nih.gov/health/stroke/causes",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "nhlbi-stroke-rec",
+   "org": "National Heart, Lung, and Blood Institute (NIH)",
+   "title": "Stroke: Recovery",
+   "year": 2023,
+   "url": "https://www.nhlbi.nih.gov/health/stroke/recovery",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "medline-stroke",
+   "org": "MedlinePlus (US National Library of Medicine)",
+   "title": "Stroke",
+   "year": 2025,
+   "url": "https://medlineplus.gov/stroke.html",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "wso-impact",
+   "org": "World Stroke Organization",
+   "title": "Impact of Stroke",
+   "year": 2026,
+   "url": "https://www.world-stroke.org/world-stroke-day-campaign/about-stroke/impact-of-stroke",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "who-htn",
+   "org": "World Health Organization (WHO)",
+   "title": "Hypertension (fact sheet)",
+   "year": 2025,
+   "url": "https://www.who.int/news-room/fact-sheets/detail/hypertension",
+   "checkedOn": "2026-09-30"
+  },
+  {
+   "id": "aha-threats",
+   "org": "American Heart Association (AHA)",
+   "title": "Health Threats from High Blood Pressure",
+   "year": 2025,
+   "url": "https://www.heart.org/en/health-topics/high-blood-pressure/health-threats-from-high-blood-pressure",
+   "checkedOn": "2026-09-30"
+  },
+  {
+   "id": "who-tobacco",
+   "org": "World Health Organization (WHO)",
+   "title": "Tobacco and nicotine (fact sheet)",
+   "year": 2026,
+   "url": "https://www.who.int/news-room/fact-sheets/detail/tobacco",
+   "checkedOn": "2026-09-30"
+  },
+  {
+   "id": "who-salt",
+   "org": "World Health Organization (WHO)",
+   "title": "Sodium reduction (fact sheet)",
+   "year": 2026,
+   "url": "https://www.who.int/news-room/fact-sheets/detail/sodium-reduction",
+   "checkedOn": "2026-09-30"
+  },
+  {
+   "id": "who-activity",
+   "org": "World Health Organization (WHO)",
+   "title": "Physical activity (fact sheet)",
+   "year": 2024,
+   "url": "https://www.who.int/news-room/fact-sheets/detail/physical-activity",
+   "checkedOn": "2026-09-30"
+  }
+ ],
+ "sections": [
+  {
+   "id": "whatIs",
+   "title": {
+    "en": "What it is",
+    "ur": "یہ کیا ہے"
+   },
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "A stroke happens when blood stops flowing to part of the brain, and brain cells start to die. It is life-threatening and needs hospital care straight away. It can affect movement, speech and thinking.",
+      "ur": "فالج تب ہوتا ہے جب دماغ کے کسی حصے تک خون کا بہاؤ رک جائے اور دماغ کے خلیے مرنے لگیں۔ یہ جان لیوا ہے اور اسے فوراً ہسپتال میں علاج چاہیے۔ یہ حرکت، بولنے اور سوچنے کی صلاحیت کو متاثر کر سکتا ہے۔"
+     },
+     "refs": [
+      "nhs-stroke-sym",
+      "medline-stroke"
+     ]
+    },
+    {
+     "type": "image",
+     "assetKey": "stroke_types.svg",
+     "caption": {
+      "en": "1 A clot blocks a blood vessel in the brain (most strokes). 2 A weak blood vessel bursts and bleeds into the brain.",
+      "ur": "1 خون کا لوتھڑا دماغ کی کسی رگ کو بند کر دیتا ہے (زیادہ تر فالج)۔ 2 کوئی کمزور رگ پھٹ جاتی ہے اور دماغ میں خون بہنے لگتا ہے۔"
+     },
+     "refs": [
+      "medline-stroke",
+      "nhlbi-stroke-causes"
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "A \"mini-stroke\" (TIA) is a short break in the blood supply to the brain. The signs go away, usually within minutes or hours, but it is a warning that a full stroke may follow soon.",
+      "ur": "\"چھوٹا فالج\" (TIA) دماغ کو خون کی فراہمی میں مختصر رکاوٹ ہے۔ علامات عموماً چند منٹوں یا گھنٹوں میں ختم ہو جاتی ہیں، لیکن یہ خبردار کرتا ہے کہ جلد ہی پورا فالج ہو سکتا ہے۔"
+     },
+     "refs": [
+      "nhs-tia",
+      "medline-stroke"
+     ]
+    },
+    {
+     "type": "keyNumber",
+     "label": {
+      "en": "Adults over 25 who will have a stroke in their lifetime",
+      "ur": "25 سال سے زیادہ عمر کے بالغ جنہیں زندگی میں فالج ہوگا"
+     },
+     "value": {
+      "en": "1 in 4",
+      "ur": "4 میں سے 1"
+     },
+     "level": "alert",
+     "refs": [
+      "wso-impact"
+     ],
+     "note": {
+      "en": "More than 6 in 10 strokes happen to people under 70.",
+      "ur": "10 میں سے 6 سے زیادہ فالج 70 سال سے کم عمر لوگوں کو ہوتے ہیں۔"
+     }
+    }
+   ]
+  },
+  {
+   "id": "causes",
+   "title": {
+    "en": "Causes & risk factors",
+    "ur": "وجوہات اور خطرے کے عوامل"
+   },
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "High blood pressure is the main cause of stroke. It can block or burst the arteries that carry blood to the brain. Most strokes are linked to risks people can control.",
+      "ur": "ہائی بلڈ پریشر فالج کی سب سے بڑی وجہ ہے۔ یہ دماغ کو خون لے جانے والی شریانوں کو بند کر سکتا ہے یا پھاڑ سکتا ہے۔ زیادہ تر فالج ایسے خطرات سے جڑے ہیں جنہیں لوگ قابو کر سکتے ہیں۔"
+     },
+     "refs": [
+      "medline-stroke",
+      "who-htn",
+      "aha-threats",
+      "nhlbi-stroke-causes"
+     ]
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "High blood pressure",
+       "ur": "ہائی بلڈ پریشر"
+      },
+      {
+       "en": "Diabetes",
+       "ur": "ذیابیطس"
+      },
+      {
+       "en": "An irregular, fast heartbeat (atrial fibrillation), which can cause clots",
+       "ur": "بے ترتیب تیز دھڑکن (ایٹریل فبریلیشن)، جو لوتھڑے بنا سکتی ہے"
+      },
+      {
+       "en": "High cholesterol",
+       "ur": "ہائی کولیسٹرول"
+      },
+      {
+       "en": "Smoking and tobacco",
+       "ur": "سگریٹ نوشی اور تمباکو"
+      },
+      {
+       "en": "Being overweight, not being active, unhealthy food, heavy drinking",
+       "ur": "زیادہ وزن، متحرک نہ ہونا، غیر صحت مند غذا، زیادہ شراب"
+      },
+      {
+       "en": "A previous mini-stroke (TIA) or heart disease",
+       "ur": "پہلے چھوٹا فالج (TIA) یا دل کی بیماری"
+      }
+     ],
+     "refs": [
+      "nhs-stroke-causes",
+      "medline-stroke",
+      "nhlbi-stroke-causes",
+      "who-tobacco"
+     ],
+     "title": {
+      "en": "Risks you can change or treat",
+      "ur": "خطرات جنہیں آپ بدل سکتے ہیں یا جن کا علاج ہو سکتا ہے"
+     }
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "Getting older, especially over 50",
+       "ur": "بڑھتی عمر، خاص طور پر 50 سال کے بعد"
+      },
+      {
+       "en": "A family member who had a stroke, especially at a young age",
+       "ur": "خاندان میں کسی کو فالج ہونا، خاص طور پر کم عمری میں"
+      },
+      {
+       "en": "A South Asian background",
+       "ur": "جنوبی ایشیائی پس منظر"
+      },
+      {
+       "en": "For women: pre-eclampsia in pregnancy, and the weeks after giving birth",
+       "ur": "خواتین کے لیے: حمل میں پری ایکلیمپسیا، اور زچگی کے بعد کے ہفتے"
+      }
+     ],
+     "refs": [
+      "nhs-stroke-causes",
+      "nhlbi-stroke-causes"
+     ],
+     "title": {
+      "en": "Risks you can't change",
+      "ur": "خطرات جو آپ نہیں بدل سکتے"
+     }
+    },
+    {
+     "type": "topicLink",
+     "target": "hypertension",
+     "text": {
+      "en": "High Blood Pressure",
+      "ur": "ہائی بلڈ پریشر"
+     }
+    }
+   ]
+  },
+  {
+   "id": "complications",
+   "title": {
+    "en": "Effects of a stroke",
+    "ur": "فالج کے اثرات"
+   },
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "The effects depend on which part of the brain was hurt and how quickly treatment started. Recovery can take weeks to years, and some problems may be lasting.",
+      "ur": "اثرات اس پر منحصر ہیں کہ دماغ کا کون سا حصہ متاثر ہوا اور علاج کتنی جلدی شروع ہوا۔ صحت یابی میں ہفتوں سے برسوں لگ سکتے ہیں، اور کچھ مسائل مستقل رہ سکتے ہیں۔"
+     },
+     "refs": [
+      "nhlbi-stroke-rec",
+      "nhs-stroke-rec"
+     ]
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "Weakness or numbness down one side of the body",
+       "ur": "جسم کی ایک طرف کمزوری یا سن ہونا"
+      },
+      {
+       "en": "Problems speaking, understanding or swallowing",
+       "ur": "بولنے، سمجھنے یا نگلنے میں مشکل"
+      },
+      {
+       "en": "Problems with memory, thinking or eyesight",
+       "ur": "یادداشت، سوچ یا نظر کے مسائل"
+      },
+      {
+       "en": "Problems controlling the bladder or bowels",
+       "ur": "پیشاب یا پاخانے پر قابو کا مسئلہ"
+      },
+      {
+       "en": "Tiredness, anxiety and depression, which are very common",
+       "ur": "تھکاوٹ، بے چینی اور ڈپریشن، جو بہت عام ہیں"
+      }
+     ],
+     "refs": [
+      "nhs-stroke-rec",
+      "nhlbi-stroke-rec"
+     ],
+     "title": {
+      "en": "Common effects",
+      "ur": "عام اثرات"
+     }
+    },
+    {
+     "type": "keyNumber",
+     "label": {
+      "en": "Stroke survivors who have another stroke within 5 years",
+      "ur": "فالج سے بچ جانے والے جنہیں 5 سال میں دوبارہ فالج ہو"
+     },
+     "value": {
+      "en": "1 in 4",
+      "ur": "4 میں سے 1"
+     },
+     "level": "caution",
+     "refs": [
+      "cdc-stroke-tx"
+     ],
+     "note": {
+      "en": "Treatment and a healthy lifestyle lower this risk.",
+      "ur": "علاج اور صحت مند طرز زندگی یہ خطرہ کم کرتے ہیں۔"
+     }
+    }
+   ]
+  },
+  {
+   "id": "treatment",
+   "title": {
+    "en": "Treatment",
+    "ur": "علاج"
+   },
+   "blocks": [
+    {
+     "type": "alert",
+     "level": "urgent",
+     "title": {
+      "en": "Every minute counts",
+      "ur": "ہر منٹ اہم ہے"
+     },
+     "items": [],
+     "refs": [
+      "cdc-stroke-signs",
+      "cdc-stroke-tx",
+      "nhs-stroke-tx"
+     ],
+     "text": {
+      "en": "The best treatments for a stroke caused by a clot only work in the first few hours. Medicine can dissolve the clot, or a procedure can remove it. The sooner someone reaches hospital, the better the chance of recovery.",
+      "ur": "لوتھڑے سے ہونے والے فالج کے بہترین علاج صرف پہلے چند گھنٹوں میں کام کرتے ہیں۔ دوا لوتھڑے کو گھلا سکتی ہے، یا کسی طریقے سے اسے نکالا جا سکتا ہے۔ مریض جتنی جلدی ہسپتال پہنچے، صحت یابی کا امکان اتنا بہتر ہے۔"
+     }
+    },
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "For a stroke caused by bleeding, doctors work to stop the bleeding, often by lowering blood pressure. Some people need surgery to repair the blood vessel.",
+      "ur": "خون بہنے سے ہونے والے فالج میں ڈاکٹر خون روکنے کی کوشش کرتے ہیں، اکثر بلڈ پریشر کم کر کے۔ کچھ لوگوں کو رگ کی مرمت کے لیے آپریشن کی ضرورت ہوتی ہے۔"
+     },
+     "refs": [
+      "medline-stroke"
+     ]
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "Medicines that stop blood clots forming",
+       "ur": "خون کے لوتھڑے بننے سے روکنے والی دوائیں"
+      },
+      {
+       "en": "Medicines that lower blood pressure",
+       "ur": "بلڈ پریشر کم کرنے والی دوائیں"
+      },
+      {
+       "en": "Statins, which lower cholesterol",
+       "ur": "اسٹیٹنز، جو کولیسٹرول کم کرتی ہیں"
+      },
+      {
+       "en": "Treatment for diabetes and an irregular heartbeat",
+       "ur": "ذیابیطس اور بے ترتیب دھڑکن کا علاج"
+      }
+     ],
+     "refs": [
+      "nhs-stroke-tx",
+      "cdc-stroke-tx"
+     ],
+     "title": {
+      "en": "Medicines to prevent another stroke",
+      "ur": "دوبارہ فالج سے بچاؤ کی دوائیں"
+     }
+    },
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "Rehabilitation usually starts in hospital within a day or two: physiotherapy for movement, speech therapy for talking and swallowing, and help with daily tasks. It can continue for months.",
+      "ur": "بحالی کا عمل (ری ہیبلیٹیشن) عموماً ایک دو دن میں ہسپتال میں شروع ہو جاتا ہے: حرکت کے لیے فزیوتھراپی، بولنے اور نگلنے کے لیے اسپیچ تھراپی، اور روزمرہ کاموں میں مدد۔ یہ مہینوں جاری رہ سکتا ہے۔"
+     },
+     "refs": [
+      "cdc-stroke-tx",
+      "nhs-stroke-rec"
+     ]
+    },
+    {
+     "type": "alert",
+     "level": "soon",
+     "title": {
+      "en": "Keep taking your medicines",
+      "ur": "اپنی دوائیں لیتے رہیں"
+     },
+     "items": [],
+     "refs": [
+      "nhlbi-stroke-rec",
+      "nhs-stroke-causes"
+     ],
+     "text": {
+      "en": "Don't change the amount or skip a dose without talking to your doctor.",
+      "ur": "ڈاکٹر سے بات کیے بغیر مقدار نہ بدلیں اور نہ کوئی خوراک چھوڑیں۔"
+     }
+    }
+   ]
+  },
+  {
+   "id": "lifestyle",
+   "title": {
+    "en": "Lower your risk",
+    "ur": "اپنا خطرہ کم کریں"
+   },
+   "blocks": [
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "Get your blood pressure checked regularly, and keep it under control.",
+       "ur": "اپنا بلڈ پریشر باقاعدگی سے چیک کروائیں اور اسے قابو میں رکھیں۔"
+      },
+      {
+       "en": "Stop smoking and chewing tobacco.",
+       "ur": "سگریٹ اور تمباکو چبانا چھوڑ دیں۔"
+      },
+      {
+       "en": "Eat less salt: less than 5 grams (about 1 teaspoon) a day.",
+       "ur": "نمک کم کھائیں: روزانہ 5 گرام (تقریباً 1 چائے کا چمچ) سے کم۔"
+      },
+      {
+       "en": "Be active for at least 150 minutes a week.",
+       "ur": "ہفتے میں کم از کم 150 منٹ متحرک رہیں۔"
+      },
+      {
+       "en": "Eat plenty of fruit and vegetables, and keep a healthy weight.",
+       "ur": "خوب پھل اور سبزیاں کھائیں، اور صحت مند وزن رکھیں۔"
+      },
+      {
+       "en": "Keep diabetes and cholesterol under control.",
+       "ur": "ذیابیطس اور کولیسٹرول کو قابو میں رکھیں۔"
+      },
+      {
+       "en": "Avoid alcohol.",
+       "ur": "شراب سے پرہیز کریں۔"
+      },
+      {
+       "en": "Have a yearly check-up: many of these risks have no symptoms.",
+       "ur": "سالانہ معائنہ کروائیں: ان میں سے بہت سے خطرات کی کوئی علامت نہیں ہوتی۔"
+      }
+     ],
+     "refs": [
+      "nhs-stroke-causes",
+      "medline-stroke",
+      "who-htn",
+      "who-salt",
+      "who-activity",
+      "who-tobacco"
+     ]
+    },
+    {
+     "type": "topicLink",
+     "target": "heart_disease",
+     "text": {
+      "en": "Heart Disease & Heart Attack",
+      "ur": "دل کی بیماری اور ہارٹ اٹیک"
+     }
+    }
+   ]
+  },
+  {
+   "id": "whenToSeeDoctor",
+   "title": {
+    "en": "When to see a doctor",
+    "ur": "ڈاکٹر کو کب دکھائیں"
+   },
+   "blocks": [
+    {
+     "type": "image",
+     "assetKey": "stroke_fast.svg",
+     "caption": {
+      "en": "Think FAST. F Face: has one side dropped? Can they smile? A Arms: can they lift both arms and keep them up? S Speech: is it slurred or confused? T Time: call 1122 straight away.",
+      "ur": "FAST یاد رکھیں۔ F چہرہ: کیا ایک طرف لٹک گئی ہے؟ کیا وہ مسکرا سکتے ہیں؟ A بازو: کیا دونوں بازو اٹھا کر رکھ سکتے ہیں؟ S بولنا: کیا بات لڑکھڑا رہی ہے یا بے ربط ہے؟ T وقت: فوراً 1122 پر کال کریں۔"
+     },
+     "refs": [
+      "nhs-stroke-sym",
+      "cdc-stroke-signs"
+     ]
+    },
+    {
+     "type": "alert",
+     "level": "urgent",
+     "title": {
+      "en": "Possible stroke: any of these, suddenly:",
+      "ur": "ممکنہ فالج: ان میں سے کوئی بھی، اچانک:"
+     },
+     "items": [
+      {
+       "en": "Face drooping on one side",
+       "ur": "چہرے کی ایک طرف لٹک جانا"
+      },
+      {
+       "en": "Weakness or numbness in an arm or leg, or down one side",
+       "ur": "بازو یا ٹانگ میں، یا ایک طرف، کمزوری یا سن ہونا"
+      },
+      {
+       "en": "Slurred speech, or trouble finding words or understanding",
+       "ur": "لڑکھڑاتی زبان، یا الفاظ ڈھونڈنے یا سمجھنے میں مشکل"
+      },
+      {
+       "en": "Loss of balance or dizziness",
+       "ur": "توازن کھو دینا یا چکر آنا"
+      },
+      {
+       "en": "Blurred vision or loss of sight in one or both eyes",
+       "ur": "ایک یا دونوں آنکھوں میں دھندلا نظر آنا یا نظر چلی جانا"
+      },
+      {
+       "en": "A sudden, severe headache",
+       "ur": "اچانک شدید سر درد"
+      }
+     ],
+     "refs": [
+      "nhs-stroke-sym",
+      "cdc-stroke-signs"
+     ],
+     "text": {
+      "en": "Call an ambulance (Rescue 1122 in Pakistan) now. Note the time the signs started. Don't drive yourself, and don't wait to see if it gets better.",
+      "ur": "ابھی ایمبولینس بلائیں (پاکستان میں ریسکیو 1122)۔ نوٹ کریں کہ علامات کس وقت شروع ہوئیں۔ خود گاڑی نہ چلائیں، اور بہتری کا انتظار نہ کریں۔"
+     }
+    },
+    {
+     "type": "alert",
+     "level": "urgent",
+     "title": {
+      "en": "Signs that went away still need help",
+      "ur": "جو علامات ختم ہو گئیں، ان میں بھی مدد ضروری ہے"
+     },
+     "items": [],
+     "refs": [
+      "nhs-tia",
+      "nhs-stroke-sym",
+      "cdc-stroke-tx"
+     ],
+     "text": {
+      "en": "If you had stroke signs in the last 24 hours, even if they have stopped, get help straight away. It may have been a mini-stroke, and a full stroke can follow soon. You should be seen by a specialist within 24 hours.",
+      "ur": "اگر پچھلے 24 گھنٹوں میں فالج کی علامات ہوئیں، چاہے اب ختم ہو گئی ہوں، فوراً مدد لیں۔ یہ چھوٹا فالج ہو سکتا ہے، اور جلد ہی پورا فالج ہو سکتا ہے۔ 24 گھنٹوں کے اندر کسی ماہر ڈاکٹر کو دکھانا چاہیے۔"
+     }
+    },
+    {
+     "type": "alert",
+     "level": "soon",
+     "title": {
+      "en": "See a doctor soon if:",
+      "ur": "جلد ڈاکٹر کو دکھائیں اگر:"
+     },
+     "items": [
+      {
+       "en": "You think you had a mini-stroke in the past and never told a doctor",
+       "ur": "آپ کو لگے کہ ماضی میں چھوٹا فالج ہوا تھا اور ڈاکٹر کو نہیں بتایا"
+      },
+      {
+       "en": "Your heartbeat often feels irregular or very fast",
+       "ur": "آپ کی دھڑکن اکثر بے ترتیب یا بہت تیز محسوس ہو"
+      },
+      {
+       "en": "You have problems with your blood pressure or diabetes medicines",
+       "ur": "بلڈ پریشر یا ذیابیطس کی دواؤں میں کوئی مسئلہ ہو"
+      }
+     ],
+     "refs": [
+      "nhs-tia",
+      "nhs-stroke-causes"
+     ]
+    }
+   ]
+  }
+ ]
+}

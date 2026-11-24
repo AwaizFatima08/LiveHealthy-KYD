@@ -26,6 +26,26 @@
         "type2_diabetes",
         "gestational_diabetes"
       ]
+    },
+    "hepatitis": {
+      "order": 9,
+      "title": {
+        "en": "Hepatitis B and C",
+        "ur": "ہیپاٹائٹس بی اور سی"
+      },
+      "summary": {
+        "en": "Liver infections that spread through blood. Testing, treatment and the vaccine.",
+        "ur": "جگر کے انفیکشن جو خون سے پھیلتے ہیں۔ ٹیسٹ، علاج اور ویکسین۔"
+      },
+      "headerAsset": "hepatitis_group_header.svg",
+      "note": {
+        "en": "Hepatitis A and E spread through dirty food and water and are not covered here. Ask your doctor about them.",
+        "ur": "ہیپاٹائٹس اے اور ای گندے کھانے اور پانی سے پھیلتے ہیں اور یہاں شامل نہیں۔ ان کے بارے میں اپنے ڈاکٹر سے پوچھیں۔"
+      },
+      "members": [
+        "hepatitis_b",
+        "hepatitis_c"
+      ]
     }
   }
 }

@@ -1,6 +1,6 @@
 {
  "id": "type2_diabetes",
- "version": 1,
+ "version": 2,
  "order": 2,
  "group": "diabetes",
  "status": "published",
@@ -297,6 +297,22 @@
       "mayo-t2d",
       "who-diabetes"
      ]
+    },
+    {
+     "type": "topicLink",
+     "target": "heart_disease",
+     "text": {
+      "en": "Heart Disease & Heart Attack",
+      "ur": "دل کی بیماری اور ہارٹ اٹیک"
+     }
+    },
+    {
+     "type": "topicLink",
+     "target": "stroke",
+     "text": {
+      "en": "Stroke",
+      "ur": "فالج"
+     }
     }
    ]
   },

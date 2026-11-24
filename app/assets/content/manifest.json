@@ -1,15 +1,19 @@
 {
- "contentVersion": 2,
+ "contentVersion": 3,
  "minAppVersion": 1,
  "diseases": {
   "breast_cancer": 1,
   "gestational_diabetes": 1,
-  "high_cholesterol": 1,
-  "hypertension": 1,
+  "heart_disease": 1,
+  "hepatitis_b": 1,
+  "hepatitis_c": 1,
+  "high_cholesterol": 2,
+  "hypertension": 2,
   "migraine": 1,
-  "obesity": 1,
+  "obesity": 2,
   "prediabetes": 1,
-  "type2_diabetes": 1
+  "stroke": 1,
+  "type2_diabetes": 2
  },
  "groups": {
   "diabetes": {
@@ -32,11 +36,31 @@
     "type2_diabetes",
     "gestational_diabetes"
    ]
+  },
+  "hepatitis": {
+   "order": 9,
+   "title": {
+    "en": "Hepatitis B and C",
+    "ur": "ہیپاٹائٹس بی اور سی"
+   },
+   "summary": {
+    "en": "Liver infections that spread through blood. Testing, treatment and the vaccine.",
+    "ur": "جگر کے انفیکشن جو خون سے پھیلتے ہیں۔ ٹیسٹ، علاج اور ویکسین۔"
+   },
+   "headerAsset": "hepatitis_group_header.svg",
+   "note": {
+    "en": "Hepatitis A and E spread through dirty food and water and are not covered here. Ask your doctor about them.",
+    "ur": "ہیپاٹائٹس اے اور ای گندے کھانے اور پانی سے پھیلتے ہیں اور یہاں شامل نہیں۔ ان کے بارے میں اپنے ڈاکٹر سے پوچھیں۔"
+   },
+   "members": [
+    "hepatitis_b",
+    "hepatitis_c"
+   ]
   }
  },
  "toolLinks": {
   "vitals": "comingSoon",
   "medicineReminder": "comingSoon"
  },
- "updatedAt": "2026-10-10T07:09:14+00:00"
+ "updatedAt": "2026-11-24T17:10:34+00:00"
 }

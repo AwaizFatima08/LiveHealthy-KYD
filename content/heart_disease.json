@@ -1,0 +1,563 @@
+{
+  "id": "heart_disease",
+  "version": 1,
+  "order": 7,
+  "group": null,
+  "status": "published",
+  "title": {
+    "en": "Heart Disease & Heart Attack",
+    "ur": "دل کی بیماری اور ہارٹ اٹیک"
+  },
+  "summary": {
+    "en": "Narrowed heart arteries, the warning signs of a heart attack, and what to do.",
+    "ur": "دل کی تنگ شریانیں، ہارٹ اٹیک کی خطرے کی علامات، اور کیا کریں۔"
+  },
+  "headerAsset": "heart_disease_header.svg",
+  "reviewedBy": {
+    "en": "Dr. Humayun Shahzad, MBBS",
+    "ur": "ڈاکٹر ہمایوں شہزاد، ایم بی بی ایس"
+  },
+  "reviewedOn": "2026-11-24",
+  "nextReviewDue": "2027-11-24",
+  "relatedTools": [
+    {
+      "tool": "vitals",
+      "label": {
+        "en": "Log your blood pressure",
+        "ur": "اپنے بلڈ پریشر کا ریکارڈ رکھیں"
+      }
+    },
+    {
+      "tool": "medicineReminder",
+      "label": {
+        "en": "Take heart medicines every day",
+        "ur": "دل کی دوائیں روزانہ لیں"
+      }
+    }
+  ],
+  "references": [
+    "who-cvd",
+    "nhs-ha",
+    "nhs-chd",
+    "nhs-chd-sym",
+    "nhs-chd-tx",
+    "nhs-chd-prev",
+    "nhs-angina",
+    "aha-signs",
+    "nhlbi-chd",
+    "nhlbi-chd-risk",
+    "nhlbi-ha-sym",
+    "nhlbi-ha-tx",
+    "nhlbi-ha-rec",
+    "aha-threats",
+    "who-tobacco",
+    "who-activity",
+    "who-salt"
+  ],
+  "sections": [
+    {
+      "id": "whatIs",
+      "title": {
+        "en": "What it is",
+        "ur": "یہ کیا ہے"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Coronary heart disease is when fatty deposits (plaque) build up inside the arteries that feed the heart. The arteries become narrow, and less blood reaches the heart muscle.",
+            "ur": "کورونری دل کی بیماری یہ ہے کہ دل کو خون پہنچانے والی شریانوں کے اندر چربی کی تہیں (پلاک) جمع ہو جائیں۔ شریانیں تنگ ہو جاتی ہیں اور دل کے پٹھے تک کم خون پہنچتا ہے۔"
+          },
+          "refs": [
+            "nhs-chd",
+            "nhlbi-chd"
+          ]
+        },
+        {
+          "type": "image",
+          "assetKey": "artery_block.svg",
+          "caption": {
+            "en": "1 A healthy artery. 2 Plaque narrows it. 3 A blood clot on the plaque blocks it, and the heart muscle beyond starts to die: a heart attack.",
+            "ur": "1 صحت مند شریان۔ 2 پلاک اسے تنگ کر دیتا ہے۔ 3 پلاک پر خون کا لوتھڑا اسے بند کر دیتا ہے اور آگے دل کا پٹھا مرنے لگتا ہے: یہ ہارٹ اٹیک ہے۔"
+          },
+          "refs": [
+            "nhs-ha",
+            "nhlbi-chd"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "A heart attack happens when blood flow to part of the heart suddenly stops, usually because a clot blocks a narrowed artery. It is an emergency: the longer the blockage lasts, the more heart muscle dies.",
+            "ur": "ہارٹ اٹیک تب ہوتا ہے جب دل کے کسی حصے تک خون کا بہاؤ اچانک رک جائے، عموماً اس لیے کہ لوتھڑا کسی تنگ شریان کو بند کر دیتا ہے۔ یہ ایمرجنسی ہے: بندش جتنی دیر رہے، اتنا زیادہ دل کا پٹھا مرتا ہے۔"
+          },
+          "refs": [
+            "nhs-ha",
+            "nhlbi-ha-sym"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Angina is chest pain from narrowed arteries. It usually comes with effort or stress and settles within a few minutes of rest. Heart attack pain is usually worse, lasts longer and does not settle with rest.",
+            "ur": "انجائنا تنگ شریانوں کی وجہ سے سینے کا درد ہے۔ یہ عموماً محنت یا پریشانی سے ہوتا ہے اور آرام سے چند منٹ میں ٹھیک ہو جاتا ہے۔ ہارٹ اٹیک کا درد عموماً زیادہ شدید، زیادہ دیر کا ہوتا ہے اور آرام سے ٹھیک نہیں ہوتا۔"
+          },
+          "refs": [
+            "nhs-chd-sym",
+            "nhlbi-ha-sym"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Many people don't know they have heart disease until they have chest pain or a heart attack.",
+            "ur": "بہت سے لوگوں کو اپنی دل کی بیماری کا تب تک پتا نہیں چلتا جب تک سینے میں درد یا ہارٹ اٹیک نہ ہو۔"
+          },
+          "refs": [
+            "nhlbi-chd",
+            "who-cvd"
+          ]
+        },
+        {
+          "type": "keyNumber",
+          "label": {
+            "en": "Deaths from heart and blood vessel disease, worldwide, 2022",
+            "ur": "دنیا بھر میں دل اور خون کی نالیوں کی بیماری سے اموات، 2022"
+          },
+          "value": {
+            "en": "About 1 in 3 of all deaths",
+            "ur": "تمام اموات میں سے تقریباً 3 میں سے 1"
+          },
+          "level": "alert",
+          "check": {
+            "metric": "none"
+          },
+          "refs": [
+            "who-cvd"
+          ],
+          "note": {
+            "en": "Most of these are heart attacks and strokes, and most happen in low- and middle-income countries.",
+            "ur": "ان میں سے زیادہ تر ہارٹ اٹیک اور فالج ہیں، اور زیادہ تر کم اور درمیانی آمدنی والے ممالک میں ہوتی ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "causes",
+      "title": {
+        "en": "Causes & risk factors",
+        "ur": "وجوہات اور خطرے کے عوامل"
+      },
+      "blocks": [
+        {
+          "type": "bullets",
+          "items": [
+            {
+              "en": "High blood pressure",
+              "ur": "ہائی بلڈ پریشر"
+            },
+            {
+              "en": "High cholesterol",
+              "ur": "ہائی کولیسٹرول"
+            },
+            {
+              "en": "Smoking, chewing tobacco, and breathing other people's smoke",
+              "ur": "سگریٹ نوشی، تمباکو چبانا، اور دوسروں کا دھواں سانس میں لینا"
+            },
+            {
+              "en": "Diabetes or prediabetes",
+              "ur": "ذیابیطس یا پری ذیابیطس"
+            },
+            {
+              "en": "Being overweight, and not being active",
+              "ur": "زیادہ وزن، اور جسمانی طور پر متحرک نہ ہونا"
+            },
+            {
+              "en": "Food high in salt, saturated fat and sugar",
+              "ur": "زیادہ نمک، سیچوریٹڈ چکنائی اور چینی والی غذا"
+            },
+            {
+              "en": "Heavy drinking, long-term stress and poor sleep",
+              "ur": "زیادہ شراب، طویل ذہنی دباؤ اور نیند کی کمی"
+            }
+          ],
+          "refs": [
+            "nhlbi-chd-risk",
+            "who-cvd",
+            "who-tobacco",
+            "aha-threats"
+          ],
+          "title": {
+            "en": "Risks you can change",
+            "ur": "خطرات جو آپ بدل سکتے ہیں"
+          }
+        },
+        {
+          "type": "bullets",
+          "items": [
+            {
+              "en": "Age: risk rises in men from about 45 and in women after menopause",
+              "ur": "عمر: مردوں میں تقریباً 45 سال سے اور خواتین میں ماہواری بند ہونے کے بعد خطرہ بڑھتا ہے"
+            },
+            {
+              "en": "A close relative who had heart disease at a young age",
+              "ur": "کسی قریبی رشتہ دار کو کم عمری میں دل کی بیماری ہونا"
+            },
+            {
+              "en": "South Asian background: higher risk, and often at a younger age",
+              "ur": "جنوبی ایشیائی پس منظر: زیادہ خطرہ، اور اکثر کم عمری میں"
+            }
+          ],
+          "refs": [
+            "nhlbi-chd-risk",
+            "nhs-ha"
+          ],
+          "title": {
+            "en": "Risks you can't change",
+            "ur": "خطرات جو آپ نہیں بدل سکتے"
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "High blood pressure damages the walls of the arteries. Plaque builds up where they are damaged, which can lead to a heart attack.",
+            "ur": "ہائی بلڈ پریشر شریانوں کی دیواروں کو نقصان پہنچاتا ہے۔ جہاں نقصان ہو وہاں پلاک جمع ہوتا ہے، جو ہارٹ اٹیک کا سبب بن سکتا ہے۔"
+          },
+          "refs": [
+            "aha-threats"
+          ]
+        },
+        {
+          "type": "topicLink",
+          "target": "hypertension",
+          "text": {
+            "en": "High Blood Pressure",
+            "ur": "ہائی بلڈ پریشر"
+          }
+        },
+        {
+          "type": "topicLink",
+          "target": "high_cholesterol",
+          "text": {
+            "en": "High Cholesterol",
+            "ur": "ہائی کولیسٹرول"
+          }
+        }
+      ]
+    },
+    {
+      "id": "complications",
+      "title": {
+        "en": "Complications",
+        "ur": "پیچیدگیاں"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "A heart attack can permanently damage the heart muscle and can be fatal if it is not treated quickly. Complications are more likely when treatment is delayed.",
+            "ur": "ہارٹ اٹیک دل کے پٹھے کو مستقل نقصان پہنچا سکتا ہے اور جلد علاج نہ ہو تو جان لیوا ہو سکتا ہے۔ علاج میں دیر ہو تو پیچیدگیوں کا امکان بڑھ جاتا ہے۔"
+          },
+          "refs": [
+            "nhs-chd-sym",
+            "nhlbi-ha-rec"
+          ]
+        },
+        {
+          "type": "bullets",
+          "items": [
+            {
+              "en": "Heart failure: the heart becomes too weak to pump well, and fluid can build up in the lungs",
+              "ur": "ہارٹ فیلیئر: دل اتنا کمزور ہو جاتا ہے کہ ٹھیک سے پمپ نہ کر سکے، اور پھیپھڑوں میں پانی جمع ہو سکتا ہے"
+            },
+            {
+              "en": "Irregular heartbeat (arrhythmia)",
+              "ur": "دل کی بے ترتیب دھڑکن"
+            },
+            {
+              "en": "Cardiac arrest: the heart suddenly stops pumping",
+              "ur": "کارڈیک اریسٹ: دل اچانک پمپ کرنا بند کر دیتا ہے"
+            },
+            {
+              "en": "Another heart attack: the risk is higher after the first one",
+              "ur": "دوسرا ہارٹ اٹیک: پہلے کے بعد خطرہ زیادہ ہوتا ہے"
+            },
+            {
+              "en": "Anxiety and low mood, which are common afterwards",
+              "ur": "بے چینی اور اداسی، جو بعد میں عام ہیں"
+            }
+          ],
+          "refs": [
+            "nhlbi-ha-rec",
+            "nhs-chd-sym",
+            "nhs-ha"
+          ],
+          "title": {
+            "en": "Possible results",
+            "ur": "ممکنہ نتائج"
+          }
+        }
+      ]
+    },
+    {
+      "id": "treatment",
+      "title": {
+        "en": "Treatment",
+        "ur": "علاج"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "Heart disease can't be cured, but treatment controls the symptoms and lowers the chance of a heart attack. It usually combines lifestyle changes, medicines and sometimes a procedure. Your doctor decides what you need.",
+            "ur": "دل کی بیماری ختم نہیں ہوتی، لیکن علاج علامات کو قابو میں رکھتا ہے اور ہارٹ اٹیک کا امکان کم کرتا ہے۔ اس میں عموماً طرز زندگی کی تبدیلیاں، دوائیں اور بعض اوقات کوئی طریقۂ علاج شامل ہوتا ہے۔ آپ کو کیا چاہیے، یہ ڈاکٹر طے کرتا ہے۔"
+          },
+          "refs": [
+            "nhs-chd",
+            "nhlbi-chd"
+          ]
+        },
+        {
+          "type": "bullets",
+          "items": [
+            {
+              "en": "Medicines that make blood less likely to clot",
+              "ur": "خون کو جمنے سے روکنے والی دوائیں"
+            },
+            {
+              "en": "Statins, which lower \"bad\" cholesterol",
+              "ur": "اسٹیٹنز، جو \"برا\" کولیسٹرول کم کرتی ہیں"
+            },
+            {
+              "en": "Medicines that lower blood pressure and ease the heart's work",
+              "ur": "بلڈ پریشر کم کرنے اور دل کا بوجھ ہلکا کرنے والی دوائیں"
+            },
+            {
+              "en": "Medicines that relieve chest pain",
+              "ur": "سینے کا درد کم کرنے والی دوائیں"
+            }
+          ],
+          "refs": [
+            "nhs-chd-tx"
+          ],
+          "title": {
+            "en": "Kinds of medicine",
+            "ur": "دواؤں کی اقسام"
+          }
+        },
+        {
+          "type": "bullets",
+          "items": [
+            {
+              "en": "Angioplasty: a small balloon opens the narrowed artery, and a stent (a small mesh tube) keeps it open. It can be done during a heart attack.",
+              "ur": "انجیوپلاسٹی: ایک چھوٹا غبارہ تنگ شریان کو کھولتا ہے اور اسٹینٹ (جالی کی چھوٹی نالی) اسے کھلا رکھتا ہے۔ یہ ہارٹ اٹیک کے دوران بھی کیا جا سکتا ہے۔"
+            },
+            {
+              "en": "Bypass surgery: a blood vessel from another part of the body carries blood around the blockage.",
+              "ur": "بائی پاس آپریشن: جسم کے کسی دوسرے حصے کی رگ خون کو رکاوٹ کے گرد سے گزارتی ہے۔"
+            },
+            {
+              "en": "Cardiac rehabilitation after a heart attack: exercise, advice and support over several weeks. It lowers the chance of another heart attack.",
+              "ur": "ہارٹ اٹیک کے بعد کارڈیک ری ہیبلیٹیشن: کئی ہفتوں تک ورزش، رہنمائی اور مدد۔ یہ دوسرے ہارٹ اٹیک کا امکان کم کرتی ہے۔"
+            }
+          ],
+          "refs": [
+            "nhs-chd-tx",
+            "nhlbi-ha-tx",
+            "nhs-chd"
+          ],
+          "title": {
+            "en": "Procedures and recovery",
+            "ur": "طریقۂ علاج اور صحت یابی"
+          }
+        },
+        {
+          "type": "alert",
+          "level": "soon",
+          "title": {
+            "en": "Keep taking your heart medicines",
+            "ur": "دل کی دوائیں لیتے رہیں"
+          },
+          "items": [],
+          "refs": [
+            "nhs-chd-tx",
+            "nhlbi-ha-rec"
+          ],
+          "text": {
+            "en": "Don't stop or skip them suddenly without your doctor's advice: your symptoms can get worse.",
+            "ur": "ڈاکٹر کے مشورے کے بغیر انہیں اچانک بند نہ کریں اور نہ ناغہ کریں: علامات بگڑ سکتی ہیں۔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lifestyle",
+      "title": {
+        "en": "Lifestyle changes",
+        "ur": "طرز زندگی میں تبدیلیاں"
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": {
+            "en": "For most people, a heart-healthy lifestyle, with medicines when needed, can prevent heart disease or stop it getting worse. The same steps also lower the risk of stroke.",
+            "ur": "زیادہ تر لوگوں میں دل کے لیے صحت مند طرز زندگی، اور ضرورت ہو تو دوائیں، دل کی بیماری سے بچا سکتی ہیں یا اسے بگڑنے سے روک سکتی ہیں۔ یہی اقدامات فالج کا خطرہ بھی کم کرتے ہیں۔"
+          },
+          "refs": [
+            "nhlbi-chd",
+            "nhs-chd"
+          ]
+        },
+        {
+          "type": "bullets",
+          "items": [
+            {
+              "en": "Stop smoking and chewing tobacco. Ask your doctor for help to quit.",
+              "ur": "سگریٹ اور تمباکو چبانا چھوڑ دیں۔ چھوڑنے کے لیے ڈاکٹر سے مدد لیں۔"
+            },
+            {
+              "en": "Eat less salt: no more than 1 teaspoon a day in total.",
+              "ur": "نمک کم کریں: پورے دن میں کل 1 چائے کے چمچ سے زیادہ نہیں۔"
+            },
+            {
+              "en": "Eat at least 5 portions of fruit and vegetables a day, and whole grains.",
+              "ur": "روزانہ کم از کم 5 حصے پھل اور سبزیاں، اور سالم اناج کھائیں۔"
+            },
+            {
+              "en": "Use less ghee, butter and fatty meat; choose plant oils, nuts and fish.",
+              "ur": "گھی، مکھن اور چربی والا گوشت کم کریں؛ پودوں کا تیل، میوے اور مچھلی چنیں۔"
+            },
+            {
+              "en": "Be active: at least 150 minutes a week, such as brisk walking.",
+              "ur": "متحرک رہیں: ہفتے میں کم از کم 150 منٹ، جیسے تیز چہل قدمی۔"
+            },
+            {
+              "en": "Keep a healthy weight, and cut down on sugar.",
+              "ur": "صحت مند وزن رکھیں، اور چینی کم کریں۔"
+            },
+            {
+              "en": "Get your blood pressure, sugar and cholesterol checked regularly.",
+              "ur": "اپنا بلڈ پریشر، شوگر اور کولیسٹرول باقاعدگی سے چیک کروائیں۔"
+            }
+          ],
+          "refs": [
+            "nhs-chd-prev",
+            "who-cvd",
+            "who-salt",
+            "who-activity",
+            "who-tobacco"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "whenToSeeDoctor",
+      "title": {
+        "en": "When to see a doctor",
+        "ur": "ڈاکٹر کو کب دکھائیں"
+      },
+      "blocks": [
+        {
+          "type": "image",
+          "assetKey": "heart_attack_signs.svg",
+          "caption": {
+            "en": "Signs of a heart attack: 1 pain, pressure or squeezing in the chest, 2 pain spreading to the arm (often the left), 3 the jaw, neck or back, 4 the stomach, or a feeling like indigestion, 5 shortness of breath, 6 a cold sweat.",
+            "ur": "ہارٹ اٹیک کی علامات: 1 سینے میں درد، دباؤ یا جکڑن، 2 درد کا بازو (اکثر بایاں) تک پھیلنا، 3 جبڑے، گردن یا کمر تک، 4 پیٹ تک، یا بدہضمی جیسا احساس، 5 سانس پھولنا، 6 ٹھنڈا پسینہ۔"
+          },
+          "refs": [
+            "aha-signs",
+            "nhs-ha",
+            "who-cvd"
+          ]
+        },
+        {
+          "type": "alert",
+          "level": "urgent",
+          "title": {
+            "en": "Possible heart attack:",
+            "ur": "ممکنہ ہارٹ اٹیک:"
+          },
+          "items": [
+            {
+              "en": "Chest pain, pressure or squeezing that lasts more than a few minutes, or goes away and comes back",
+              "ur": "سینے میں درد، دباؤ یا جکڑن جو چند منٹ سے زیادہ رہے، یا جا کر دوبارہ آئے"
+            },
+            {
+              "en": "Pain in one or both arms, the back, neck, jaw or stomach",
+              "ur": "ایک یا دونوں بازوؤں، کمر، گردن، جبڑے یا پیٹ میں درد"
+            },
+            {
+              "en": "Shortness of breath, a cold sweat, feeling sick or light-headed",
+              "ur": "سانس پھولنا، ٹھنڈا پسینہ، متلی یا سر چکرانا"
+            }
+          ],
+          "refs": [
+            "aha-signs",
+            "nhs-ha"
+          ],
+          "text": {
+            "en": "Call an ambulance (Rescue 1122 in Pakistan) now, even if you are not sure. Don't drive yourself. Sit and rest while you wait. Don't delay the call to take aspirin or any other remedy: ask the call handler or doctor whether to take aspirin, and never take it if you are allergic to it.",
+            "ur": "ابھی ایمبولینس بلائیں (پاکستان میں ریسکیو 1122)، چاہے آپ کو یقین نہ ہو۔ خود گاڑی نہ چلائیں۔ انتظار کے دوران بیٹھ کر آرام کریں۔ اسپرین یا کسی اور چیز کے لیے کال میں دیر نہ کریں: کال سننے والے یا ڈاکٹر سے پوچھیں کہ اسپرین لیں یا نہیں، اور اگر اس سے الرجی ہو تو ہرگز نہ لیں۔"
+          }
+        },
+        {
+          "type": "bullets",
+          "items": [
+            {
+              "en": "Women more often also feel short of breath, sick, very tired, or have back or jaw pain.",
+              "ur": "خواتین کو اکثر سانس پھولنا، متلی، بہت تھکاوٹ، یا کمر یا جبڑے کا درد بھی ہوتا ہے۔"
+            },
+            {
+              "en": "Older people and people with diabetes can have a heart attack with few or no symptoms.",
+              "ur": "بزرگوں اور ذیابیطس والوں کو کم یا بغیر علامات کے بھی ہارٹ اٹیک ہو سکتا ہے۔"
+            },
+            {
+              "en": "If someone collapses and is not breathing, call for help and start CPR if you know how.",
+              "ur": "اگر کوئی گر جائے اور سانس نہ لے رہا ہو تو مدد بلائیں اور اگر آتا ہو تو سی پی آر شروع کریں۔"
+            }
+          ],
+          "refs": [
+            "aha-signs",
+            "nhlbi-ha-sym",
+            "nhs-ha"
+          ],
+          "title": {
+            "en": "Know this",
+            "ur": "یہ جان لیں"
+          }
+        },
+        {
+          "type": "alert",
+          "level": "soon",
+          "title": {
+            "en": "See a doctor soon if:",
+            "ur": "جلد ڈاکٹر کو دکھائیں اگر:"
+          },
+          "items": [
+            {
+              "en": "You get chest pain with effort or stress that settles with rest: it may be angina",
+              "ur": "محنت یا پریشانی پر سینے میں درد ہو جو آرام سے ٹھیک ہو جائے: یہ انجائنا ہو سکتا ہے"
+            },
+            {
+              "en": "Your angina comes more often, lasts longer, or starts at rest (see a doctor the same day)",
+              "ur": "انجائنا زیادہ بار ہو، زیادہ دیر رہے، یا آرام کی حالت میں شروع ہو (اسی دن ڈاکٹر کو دکھائیں)"
+            },
+            {
+              "en": "You feel your heart racing, skipping or fluttering",
+              "ur": "دل تیز، بے ترتیب یا پھڑپھڑاتا محسوس ہو"
+            },
+            {
+              "en": "You feel anxious or low after a heart attack",
+              "ur": "ہارٹ اٹیک کے بعد بے چینی یا اداسی محسوس ہو"
+            }
+          ],
+          "refs": [
+            "nhs-angina",
+            "nhs-ha",
+            "nhlbi-ha-rec"
+          ]
+        }
+      ]
+    }
+  ]
+}

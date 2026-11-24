@@ -53,7 +53,7 @@ void main() {
 
   group('topic links (1.2)', () {
     test('parse, cite nothing, and reject path-like targets', () {
-      final link = Disease.fromJson(withLink('obesity')).sections[2].blocks.whereType<TopicLinkBlock>().single;
+      final link = Disease.fromJson(withLink('obesity')).sections[2].blocks.whereType<TopicLinkBlock>().last;
       expect(link.target, 'obesity');
       expect(link.refs, isEmpty);
       expect(() => Disease.fromJson(withLink('../manifest')), throwsA(isA<ContentFormatException>()));

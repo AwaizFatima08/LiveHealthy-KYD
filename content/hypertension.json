@@ -1,6 +1,6 @@
 {
   "id": "hypertension",
-  "version": 1,
+  "version": 2,
   "order": 1,
   "group": null,
   "status": "published",
@@ -365,6 +365,22 @@
             "aha-manage",
             "who-htn"
           ]
+        },
+        {
+          "type": "topicLink",
+          "target": "heart_disease",
+          "text": {
+            "en": "Heart Disease & Heart Attack",
+            "ur": "دل کی بیماری اور ہارٹ اٹیک"
+          }
+        },
+        {
+          "type": "topicLink",
+          "target": "stroke",
+          "text": {
+            "en": "Stroke",
+            "ur": "فالج"
+          }
         }
       ]
     },

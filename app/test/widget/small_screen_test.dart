@@ -67,7 +67,8 @@ void main() {
         }
         await tester.drag(find.byType(Scrollable).first, const Offset(0, -20000));
         await expectClean(tester, '$id references');
-        expect(find.text('6/6'), findsOneWidget, reason: '$id reached References');
+        final total = d.sections.length + 1;
+        expect(find.text('$total/$total'), findsOneWidget, reason: '$id reached References');
       }
 
       await tester.pumpWidget(const SizedBox());

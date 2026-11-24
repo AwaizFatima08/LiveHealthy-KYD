@@ -1,0 +1,654 @@
+{
+ "id": "hepatitis_b",
+ "version": 1,
+ "order": 1,
+ "group": "hepatitis",
+ "status": "published",
+ "title": {
+  "en": "Hepatitis B",
+  "ur": "ہیپاٹائٹس بی"
+ },
+ "summary": {
+  "en": "A liver infection that spreads through blood. A vaccine protects for life.",
+  "ur": "جگر کا انفیکشن جو خون کے ذریعے پھیلتا ہے۔ ویکسین عمر بھر کے لیے بچاتی ہے۔"
+ },
+ "headerAsset": "hepatitis_b_header.svg",
+ "reviewedBy": {
+  "en": "Dr. Humayun Shahzad, MBBS",
+  "ur": "ڈاکٹر ہمایوں شہزاد، ایم بی بی ایس"
+ },
+ "reviewedOn": "2026-11-24",
+ "nextReviewDue": "2027-11-24",
+ "relatedTools": [
+  {
+   "tool": "medicineReminder",
+   "label": {
+    "en": "Take hepatitis B medicine on time",
+    "ur": "ہیپاٹائٹس بی کی دوا وقت پر لیں"
+   }
+  }
+ ],
+ "references": [
+  {
+   "id": "who-hepb",
+   "org": "World Health Organization (WHO)",
+   "title": "Hepatitis B (fact sheet)",
+   "year": 2026,
+   "url": "https://www.who.int/news-room/fact-sheets/detail/hepatitis-b",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "cdc-hepb",
+   "org": "Centers for Disease Control and Prevention (CDC)",
+   "title": "Hepatitis B Basics",
+   "year": 2026,
+   "url": "https://www.cdc.gov/hepatitis-b/about/index.html",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "cdc-hepb-vax",
+   "org": "Centers for Disease Control and Prevention (CDC)",
+   "title": "Hepatitis B Vaccine",
+   "year": 2026,
+   "url": "https://www.cdc.gov/hepatitis-b/vaccination/index.html",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "cdc-hepb-tx",
+   "org": "Centers for Disease Control and Prevention (CDC)",
+   "title": "Treatment of Hepatitis B",
+   "year": 2026,
+   "url": "https://www.cdc.gov/hepatitis-b/treatment/index.html",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "nhs-hepb",
+   "org": "NHS (UK)",
+   "title": "Hepatitis B",
+   "year": 2025,
+   "url": "https://www.nhs.uk/conditions/hepatitis-b/",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "nhs-hepb-vax",
+   "org": "NHS (UK)",
+   "title": "Hepatitis B vaccine",
+   "year": 2024,
+   "url": "https://www.nhs.uk/vaccinations/hepatitis-b-vaccine/",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "nhs-cirrhosis",
+   "org": "NHS (UK)",
+   "title": "Cirrhosis",
+   "year": 2025,
+   "url": "https://www.nhs.uk/conditions/cirrhosis/",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "epi-pk",
+   "org": "Federal Directorate of Immunization (EPI), Government of Pakistan",
+   "title": "Immunization Schedule",
+   "year": 2023,
+   "url": "https://www.epi.gov.pk/immunization-schedule/",
+   "checkedOn": "2026-11-24"
+  }
+ ],
+ "sections": [
+  {
+   "id": "whatIs",
+   "title": {
+    "en": "What it is",
+    "ur": "یہ کیا ہے"
+   },
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "Hepatitis B is an infection of the liver caused by the hepatitis B virus. For some people it is a short illness of a few weeks. For others it stays for life (chronic hepatitis B).",
+      "ur": "ہیپاٹائٹس بی جگر کا انفیکشن ہے جو ہیپاٹائٹس بی وائرس سے ہوتا ہے۔ کچھ لوگوں میں یہ چند ہفتوں کی بیماری ہوتی ہے۔ کچھ میں یہ عمر بھر رہتا ہے (دائمی ہیپاٹائٹس بی)۔"
+     },
+     "refs": [
+      "who-hepb",
+      "cdc-hepb"
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "If the virus is still there after 6 months, the infection is called chronic.",
+      "ur": "اگر 6 مہینے بعد بھی وائرس جسم میں موجود ہو تو اسے دائمی انفیکشن کہتے ہیں۔"
+     },
+     "refs": [
+      "cdc-hepb",
+      "nhs-hepb"
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "Most people have no symptoms at first, and many people with chronic hepatitis B feel well for years. Only a blood test can tell. Someone who feels well can still pass the virus on.",
+      "ur": "زیادہ تر لوگوں میں شروع میں کوئی علامت نہیں ہوتی، اور دائمی ہیپاٹائٹس بی والے بہت سے لوگ برسوں ٹھیک محسوس کرتے ہیں۔ صرف خون کا ٹیسٹ بتا سکتا ہے۔ جو شخص ٹھیک محسوس کرے وہ بھی وائرس آگے پھیلا سکتا ہے۔"
+     },
+     "refs": [
+      "who-hepb",
+      "cdc-hepb"
+     ]
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "Yellow skin or eyes (jaundice)",
+       "ur": "جلد یا آنکھوں کا پیلا ہونا (یرقان)"
+      },
+      {
+       "en": "Dark urine, or pale stools",
+       "ur": "گہرے رنگ کا پیشاب، یا ہلکے رنگ کا پاخانہ"
+      },
+      {
+       "en": "Tiredness, fever, feeling sick or vomiting",
+       "ur": "تھکاوٹ، بخار، متلی یا الٹی"
+      },
+      {
+       "en": "Pain in the stomach, loss of appetite, joint pain",
+       "ur": "پیٹ میں درد، بھوک نہ لگنا، جوڑوں کا درد"
+      }
+     ],
+     "refs": [
+      "who-hepb",
+      "cdc-hepb",
+      "nhs-hepb"
+     ],
+     "title": {
+      "en": "When there are symptoms, they can include:",
+      "ur": "جب علامات ہوں تو ان میں یہ شامل ہو سکتی ہیں:"
+     }
+    },
+    {
+     "type": "keyNumber",
+     "label": {
+      "en": "Babies and young children who catch it",
+      "ur": "جو بچے کم عمری میں اس کا شکار ہوں"
+     },
+     "value": {
+      "en": "About 95 in 100 keep it for life",
+      "ur": "100 میں سے تقریباً 95 میں یہ عمر بھر رہتا ہے"
+     },
+     "level": "caution",
+     "refs": [
+      "who-hepb"
+     ],
+     "note": {
+      "en": "In adults, fewer than 5 in 100 do. This is why the vaccine at birth matters so much.",
+      "ur": "بالغوں میں 100 میں سے 5 سے بھی کم میں۔ اسی لیے پیدائش پر ویکسین بہت اہم ہے۔"
+     }
+    },
+    {
+     "type": "keyNumber",
+     "label": {
+      "en": "People living with hepatitis B worldwide",
+      "ur": "دنیا بھر میں ہیپاٹائٹس بی کے ساتھ زندگی گزارنے والے لوگ"
+     },
+     "value": {
+      "en": "About 240 million",
+      "ur": "تقریباً 240 ملین"
+     },
+     "level": "neutral",
+     "refs": [
+      "who-hepb"
+     ],
+     "note": {
+      "en": "Only about 1 in 4 of them know they have it.",
+      "ur": "ان میں سے صرف تقریباً 4 میں سے 1 کو معلوم ہے کہ انہیں یہ ہے۔"
+     }
+    }
+   ]
+  },
+  {
+   "id": "causes",
+   "title": {
+    "en": "How it spreads",
+    "ur": "یہ کیسے پھیلتا ہے"
+   },
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "Hepatitis B spreads when blood or certain other body fluids of an infected person get into another person's body. Even a tiny amount of blood is enough.",
+      "ur": "ہیپاٹائٹس بی تب پھیلتا ہے جب کسی متاثرہ شخص کا خون یا جسم کی بعض دوسری رطوبتیں کسی دوسرے شخص کے جسم میں داخل ہوں۔ خون کی بہت تھوڑی مقدار بھی کافی ہے۔"
+     },
+     "refs": [
+      "cdc-hepb"
+     ]
+    },
+    {
+     "type": "image",
+     "assetKey": "hepatitis_spread.svg",
+     "caption": {
+      "en": "Spreads through: 1 used or shared needles and syringes, 2 shared razors (also at the barber), 3 blood that was not tested, 4 from mother to baby at birth. Does not spread through: 5 hugging, 6 sharing food, 7 shaking hands, 8 coughing or sneezing.",
+      "ur": "پھیلتا ہے: 1 استعمال شدہ یا مشترکہ سوئیاں اور سرنجیں، 2 مشترکہ ریزر (حجام کے پاس بھی)، 3 بغیر ٹیسٹ کیا ہوا خون، 4 پیدائش کے وقت ماں سے بچے کو۔ نہیں پھیلتا: 5 گلے ملنے، 6 کھانا بانٹنے، 7 ہاتھ ملانے، 8 کھانسی یا چھینک سے۔"
+     },
+     "refs": [
+      "who-hepb",
+      "cdc-hepb",
+      "nhs-hepb"
+     ]
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "Injections with a needle or syringe that was used before",
+       "ur": "ایسی سوئی یا سرنج سے انجکشن جو پہلے استعمال ہو چکی ہو"
+      },
+      {
+       "en": "Medical or dental treatment, tattoos or ear and nose piercing with tools that were not sterilised",
+       "ur": "ایسے اوزاروں سے علاج، دانتوں کا علاج، ٹیٹو یا کان ناک چھدوانا جو جراثیم سے پاک نہ کیے گئے ہوں"
+      },
+      {
+       "en": "Sharing razors or toothbrushes",
+       "ur": "ریزر یا ٹوتھ برش مشترکہ استعمال کرنا"
+      },
+      {
+       "en": "Blood transfusion where donated blood is not tested",
+       "ur": "ایسی جگہ خون لگوانا جہاں عطیہ کیا گیا خون ٹیسٹ نہ ہوتا ہو"
+      },
+      {
+       "en": "From a mother to her baby at birth",
+       "ur": "پیدائش کے وقت ماں سے بچے کو"
+      },
+      {
+       "en": "Sex without a condom with an infected partner",
+       "ur": "متاثرہ ساتھی کے ساتھ کنڈوم کے بغیر جنسی تعلق"
+      },
+      {
+       "en": "Between young children, through open cuts and sores",
+       "ur": "چھوٹے بچوں میں کھلے زخموں اور کٹوں کے ذریعے"
+      }
+     ],
+     "refs": [
+      "who-hepb",
+      "nhs-hepb"
+     ],
+     "title": {
+      "en": "Common ways it spreads",
+      "ur": "پھیلنے کے عام طریقے"
+     }
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "Hugging or kissing",
+       "ur": "گلے ملنا یا بوسہ"
+      },
+      {
+       "en": "Sharing plates, cups or spoons, food or water",
+       "ur": "برتن، کپ یا چمچ، کھانا یا پانی بانٹنا"
+      },
+      {
+       "en": "Coughing or sneezing",
+       "ur": "کھانسی یا چھینک"
+      },
+      {
+       "en": "Breastfeeding",
+       "ur": "ماں کا دودھ پلانا"
+      }
+     ],
+     "refs": [
+      "cdc-hepb"
+     ],
+     "title": {
+      "en": "It does NOT spread through",
+      "ur": "یہ ان چیزوں سے نہیں پھیلتا"
+     }
+    }
+   ]
+  },
+  {
+   "id": "complications",
+   "title": {
+    "en": "If it is not treated",
+    "ur": "اگر علاج نہ ہو"
+   },
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "Chronic hepatitis B can slowly damage the liver over many years, often without any symptoms.",
+      "ur": "دائمی ہیپاٹائٹس بی کئی برسوں میں آہستہ آہستہ جگر کو نقصان پہنچا سکتا ہے، اکثر بغیر کسی علامت کے۔"
+     },
+     "refs": [
+      "cdc-hepb"
+     ]
+    },
+    {
+     "type": "image",
+     "assetKey": "liver_damage.svg",
+     "caption": {
+      "en": "1 A healthy liver. 2 Scarring of the liver (cirrhosis). 3 Liver cancer.",
+      "ur": "1 صحت مند جگر۔ 2 جگر پر زخم کے نشان (سروسس)۔ 3 جگر کا کینسر۔"
+     },
+     "refs": [
+      "who-hepb",
+      "nhs-hepb"
+     ]
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "Scarring of the liver (cirrhosis)",
+       "ur": "جگر پر زخم کے نشان (سروسس)"
+      },
+      {
+       "en": "Liver cancer",
+       "ur": "جگر کا کینسر"
+      },
+      {
+       "en": "Liver failure",
+       "ur": "جگر کا کام چھوڑ دینا"
+      },
+      {
+       "en": "An old infection can become active again later in life",
+       "ur": "پرانا انفیکشن زندگی میں بعد میں دوبارہ متحرک ہو سکتا ہے"
+      }
+     ],
+     "refs": [
+      "who-hepb",
+      "cdc-hepb",
+      "nhs-hepb"
+     ],
+     "title": {
+      "en": "Possible results",
+      "ur": "ممکنہ نتائج"
+     }
+    },
+    {
+     "type": "keyNumber",
+     "label": {
+      "en": "Deaths from hepatitis B in 2024",
+      "ur": "2024 میں ہیپاٹائٹس بی سے اموات"
+     },
+     "value": {
+      "en": "About 1.1 million",
+      "ur": "تقریباً 1.1 ملین"
+     },
+     "level": "alert",
+     "refs": [
+      "who-hepb"
+     ],
+     "note": {
+      "en": "Mostly from cirrhosis and liver cancer.",
+      "ur": "زیادہ تر سروسس اور جگر کے کینسر سے۔"
+     }
+    }
+   ]
+  },
+  {
+   "id": "treatment",
+   "title": {
+    "en": "Treatment",
+    "ur": "علاج"
+   },
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "A short (acute) infection often clears up by itself. There is no special medicine for it: rest, good food and enough fluids help. A severe case may need hospital care.",
+      "ur": "مختصر (ایکیوٹ) انفیکشن اکثر خود ہی ٹھیک ہو جاتا ہے۔ اس کی کوئی خاص دوا نہیں: آرام، اچھی غذا اور کافی پانی مدد کرتے ہیں۔ شدید صورت میں ہسپتال میں علاج کی ضرورت ہو سکتی ہے۔"
+     },
+     "refs": [
+      "who-hepb",
+      "cdc-hepb-tx"
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "Chronic hepatitis B can be treated with antiviral tablets. They keep the virus under control, slow liver damage and lower the risk of liver cancer. They do not cure it, so most people take them for a long time, often for life.",
+      "ur": "دائمی ہیپاٹائٹس بی کا علاج اینٹی وائرل گولیوں سے ہو سکتا ہے۔ یہ وائرس کو قابو میں رکھتی ہیں، جگر کے نقصان کو سست کرتی ہیں اور جگر کے کینسر کا خطرہ کم کرتی ہیں۔ یہ بیماری ختم نہیں کرتیں، اس لیے زیادہ تر لوگ انہیں لمبے عرصے، اکثر عمر بھر، لیتے ہیں۔"
+     },
+     "refs": [
+      "who-hepb",
+      "cdc-hepb-tx",
+      "nhs-hepb"
+     ]
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "Not everyone with chronic hepatitis B needs medicine. Your doctor decides with tests.",
+       "ur": "دائمی ہیپاٹائٹس بی والے ہر شخص کو دوا کی ضرورت نہیں ہوتی۔ ڈاکٹر ٹیسٹوں کی مدد سے فیصلہ کرتا ہے۔"
+      },
+      {
+       "en": "You need regular liver check-ups, usually every 3 to 6 months, even if you feel well.",
+       "ur": "باقاعدگی سے جگر کا معائنہ ضروری ہے، عموماً ہر 3 سے 6 مہینے بعد، چاہے آپ ٹھیک محسوس کریں۔"
+      },
+      {
+       "en": "Talk to your doctor before you change or stop any treatment.",
+       "ur": "کوئی بھی علاج بدلنے یا روکنے سے پہلے اپنے ڈاکٹر سے بات کریں۔"
+      },
+      {
+       "en": "Ask your doctor before taking any new medicine, supplement or herbal remedy. Some can harm the liver.",
+       "ur": "کوئی نئی دوا، سپلیمنٹ یا جڑی بوٹی والی دوا لینے سے پہلے ڈاکٹر سے پوچھیں۔ کچھ جگر کو نقصان پہنچا سکتی ہیں۔"
+      }
+     ],
+     "refs": [
+      "cdc-hepb-tx",
+      "cdc-hepb",
+      "nhs-hepb"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lifestyle",
+   "title": {
+    "en": "Protect yourself and your family",
+    "ur": "اپنی اور اپنے گھر والوں کی حفاظت کریں"
+   },
+   "blocks": [
+    {
+     "type": "image",
+     "assetKey": "hepb_vaccine.svg",
+     "caption": {
+      "en": "The hepatitis B vaccine, given from birth, protects the liver for life.",
+      "ur": "ہیپاٹائٹس بی کی ویکسین، جو پیدائش سے لگتی ہے، جگر کو عمر بھر بچاتی ہے۔"
+     },
+     "refs": [
+      "who-hepb"
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "A safe vaccine gives almost complete protection. Every baby should get the first dose within 24 hours of birth, then the rest of the doses. Protection lasts at least 20 years, probably for life.",
+      "ur": "ایک محفوظ ویکسین تقریباً مکمل تحفظ دیتی ہے۔ ہر بچے کو پیدائش کے 24 گھنٹے کے اندر پہلی خوراک، پھر باقی خوراکیں لگنی چاہئیں۔ تحفظ کم از کم 20 سال، اور غالباً عمر بھر رہتا ہے۔"
+     },
+     "refs": [
+      "who-hepb"
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "In Pakistan, the free government vaccination programme (EPI) gives hepatitis B at birth and in the pentavalent vaccine at 6, 10 and 14 weeks. Every dose is needed for full protection.",
+      "ur": "پاکستان میں حکومت کا مفت حفاظتی ٹیکوں کا پروگرام (EPI) پیدائش پر ہیپاٹائٹس بی کا ٹیکہ، اور 6، 10 اور 14 ہفتوں پر پینٹاویلنٹ ٹیکے میں اس کا تحفظ دیتا ہے۔ مکمل تحفظ کے لیے ہر خوراک ضروری ہے۔"
+     },
+     "refs": [
+      "epi-pk",
+      "cdc-hepb-vax"
+     ]
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "Adults who were never vaccinated can be vaccinated too. Ask your doctor.",
+       "ur": "جن بالغوں کو کبھی ٹیکہ نہیں لگا، وہ بھی لگوا سکتے ہیں۔ اپنے ڈاکٹر سے پوچھیں۔"
+      },
+      {
+       "en": "Make sure every injection uses a new needle and syringe.",
+       "ur": "یقینی بنائیں کہ ہر انجکشن نئی سوئی اور سرنج سے لگے۔"
+      },
+      {
+       "en": "Don't share razors or toothbrushes. At the barber, ask for a new blade.",
+       "ur": "ریزر یا ٹوتھ برش مشترکہ استعمال نہ کریں۔ حجام سے نیا بلیڈ مانگیں۔"
+      },
+      {
+       "en": "Every pregnant woman should be tested. If the mother has hepatitis B, the baby can be protected with the vaccine right after birth, and sometimes medicine for the mother.",
+       "ur": "ہر حاملہ خاتون کا ٹیسٹ ہونا چاہیے۔ اگر ماں کو ہیپاٹائٹس بی ہو تو پیدائش کے فوراً بعد ویکسین سے، اور بعض اوقات ماں کی دوا سے، بچے کو بچایا جا سکتا ہے۔"
+      },
+      {
+       "en": "Use condoms with a partner who has hepatitis B or has not been tested.",
+       "ur": "ایسے ساتھی کے ساتھ کنڈوم استعمال کریں جسے ہیپاٹائٹس بی ہو یا جس کا ٹیسٹ نہ ہوا ہو۔"
+      }
+     ],
+     "refs": [
+      "who-hepb",
+      "nhs-hepb",
+      "cdc-hepb"
+     ],
+     "title": {
+      "en": "Other ways to stay safe",
+      "ur": "محفوظ رہنے کے دوسرے طریقے"
+     }
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "Don't drink alcohol. It adds to the liver damage.",
+       "ur": "شراب نہ پئیں۔ یہ جگر کے نقصان کو بڑھاتی ہے۔"
+      },
+      {
+       "en": "Eat healthy food and stay active.",
+       "ur": "صحت مند غذا کھائیں اور متحرک رہیں۔"
+      },
+      {
+       "en": "Ask your doctor about the hepatitis A vaccine and a hepatitis C test.",
+       "ur": "ہیپاٹائٹس اے کی ویکسین اور ہیپاٹائٹس سی کے ٹیسٹ کے بارے میں ڈاکٹر سے پوچھیں۔"
+      }
+     ],
+     "refs": [
+      "nhs-hepb",
+      "cdc-hepb"
+     ],
+     "title": {
+      "en": "If you have hepatitis B",
+      "ur": "اگر آپ کو ہیپاٹائٹس بی ہے"
+     }
+    },
+    {
+     "type": "topicLink",
+     "target": "hepatitis_c",
+     "text": {
+      "en": "Hepatitis C",
+      "ur": "ہیپاٹائٹس سی"
+     }
+    }
+   ]
+  },
+  {
+   "id": "whenToSeeDoctor",
+   "title": {
+    "en": "When to see a doctor",
+    "ur": "ڈاکٹر کو کب دکھائیں"
+   },
+   "blocks": [
+    {
+     "type": "alert",
+     "level": "urgent",
+     "title": {
+      "en": "Go to hospital now if you have liver disease and:",
+      "ur": "اگر آپ کو جگر کی بیماری ہے اور یہ ہو تو ابھی ہسپتال جائیں:"
+     },
+     "items": [
+      {
+       "en": "You vomit blood",
+       "ur": "خون کی الٹی"
+      },
+      {
+       "en": "Your stools are black or very dark",
+       "ur": "پاخانہ کالا یا بہت گہرا ہو"
+      },
+      {
+       "en": "You suddenly become confused, or your speech is slurred",
+       "ur": "اچانک الجھن ہو، یا بولنے میں لڑکھڑاہٹ"
+      }
+     ],
+     "refs": [
+      "nhs-cirrhosis"
+     ],
+     "text": {
+      "en": "This is an emergency. Call an ambulance (Rescue 1122 in Pakistan) or go to the nearest emergency department. Don't drive yourself.",
+      "ur": "یہ ایمرجنسی ہے۔ ایمبولینس بلائیں (پاکستان میں ریسکیو 1122) یا قریبی ایمرجنسی میں جائیں۔ خود گاڑی نہ چلائیں۔"
+     }
+    },
+    {
+     "type": "alert",
+     "level": "soon",
+     "title": {
+      "en": "See a doctor the same day if:",
+      "ur": "اسی دن ڈاکٹر کو دکھائیں اگر:"
+     },
+     "items": [
+      {
+       "en": "Your skin or the whites of your eyes turn yellow",
+       "ur": "جلد یا آنکھوں کی سفیدی پیلی ہو جائے"
+      },
+      {
+       "en": "Your stomach, legs, ankles or feet swell",
+       "ur": "پیٹ، ٹانگیں، ٹخنے یا پاؤں سوج جائیں"
+      },
+      {
+       "en": "You are more breathless than usual",
+       "ur": "معمول سے زیادہ سانس پھولے"
+      }
+     ],
+     "refs": [
+      "nhs-cirrhosis"
+     ]
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "You may have been exposed, for example a needle-stick injury or contact with someone's blood. Go quickly, ideally within 24 hours: the vaccine works best early.",
+       "ur": "آپ کو وائرس لگنے کا خدشہ ہو، مثلاً سوئی چبھ جائے یا کسی کے خون سے رابطہ ہو۔ جلدی جائیں، بہتر ہے 24 گھنٹے کے اندر: ویکسین جلد لگے تو بہتر کام کرتی ہے۔"
+      },
+      {
+       "en": "You are pregnant: ask for the test in every pregnancy.",
+       "ur": "آپ حاملہ ہیں: ہر حمل میں ٹیسٹ کروائیں۔"
+      },
+      {
+       "en": "Your baby's mother has hepatitis B: the baby needs extra vaccine doses and a test.",
+       "ur": "بچے کی ماں کو ہیپاٹائٹس بی ہے: بچے کو ویکسین کی اضافی خوراکوں اور ٹیسٹ کی ضرورت ہے۔"
+      },
+      {
+       "en": "You have had injections, drips, dental work, a tattoo or piercing where tools may not have been clean.",
+       "ur": "آپ کو ایسی جگہ انجکشن، ڈرپ، دانتوں کا علاج، ٹیٹو یا چھدوانا ہوا جہاں اوزار شاید صاف نہ تھے۔"
+      },
+      {
+       "en": "Every adult should be tested at least once in life.",
+       "ur": "ہر بالغ کا زندگی میں کم از کم ایک بار ٹیسٹ ہونا چاہیے۔"
+      }
+     ],
+     "refs": [
+      "cdc-hepb",
+      "nhs-hepb-vax",
+      "who-hepb",
+      "nhs-hepb"
+     ],
+     "title": {
+      "en": "Get tested or see a doctor soon if",
+      "ur": "ٹیسٹ کروائیں یا جلد ڈاکٹر کو دکھائیں اگر"
+     }
+    }
+   ]
+  }
+ ]
+}

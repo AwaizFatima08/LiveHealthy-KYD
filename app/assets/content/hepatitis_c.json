@@ -1,0 +1,636 @@
+{
+ "id": "hepatitis_c",
+ "version": 1,
+ "order": 2,
+ "group": "hepatitis",
+ "status": "published",
+ "title": {
+  "en": "Hepatitis C",
+  "ur": "ہیپاٹائٹس سی"
+ },
+ "summary": {
+  "en": "A liver infection that spreads through blood. Tablets cure almost everyone.",
+  "ur": "جگر کا انفیکشن جو خون سے پھیلتا ہے۔ گولیوں سے تقریباً ہر کوئی ٹھیک ہو جاتا ہے۔"
+ },
+ "headerAsset": "hepatitis_c_header.svg",
+ "reviewedBy": {
+  "en": "Dr. Humayun Shahzad, MBBS",
+  "ur": "ڈاکٹر ہمایوں شہزاد، ایم بی بی ایس"
+ },
+ "reviewedOn": "2026-11-24",
+ "nextReviewDue": "2027-11-24",
+ "relatedTools": [
+  {
+   "tool": "medicineReminder",
+   "label": {
+    "en": "Finish your hepatitis C tablets",
+    "ur": "ہیپاٹائٹس سی کی گولیوں کا کورس پورا کریں"
+   }
+  }
+ ],
+ "references": [
+  {
+   "id": "who-hepc",
+   "org": "World Health Organization (WHO)",
+   "title": "Hepatitis C (fact sheet)",
+   "year": 2026,
+   "url": "https://www.who.int/news-room/fact-sheets/detail/hepatitis-c",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "cdc-hepc",
+   "org": "Centers for Disease Control and Prevention (CDC)",
+   "title": "Hepatitis C Basics",
+   "year": 2025,
+   "url": "https://www.cdc.gov/hepatitis-c/about/index.html",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "nhs-hepc",
+   "org": "NHS (UK)",
+   "title": "Hepatitis C",
+   "year": 2026,
+   "url": "https://www.nhs.uk/conditions/hepatitis-c/",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "cdc-preg-hep",
+   "org": "Centers for Disease Control and Prevention (CDC)",
+   "title": "Effects of HIV, Viral Hepatitis and STIs on Pregnancy and Infants",
+   "year": 2024,
+   "url": "https://www.cdc.gov/pregnancy-hiv-std-tb-hepatitis/effects/index.html",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "who-pk-hep",
+   "org": "WHO Pakistan (EMRO)",
+   "title": "12.9 million people are living with hepatitis in Pakistan, WHO renews support to advance 2030 elimination targets",
+   "year": 2026,
+   "url": "https://www.emro.who.int/pak/pakistan-news/12-9-million-people-are-living-with-hepatitis-in-pakistan-who-renews-support-to-advance-2030-elimination-targets.html",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "who-pk-pmhcv",
+   "org": "WHO Pakistan (EMRO)",
+   "title": "Pakistan, WHO launch Prime Minister's Hepatitis C Programme to reach 1.6 million people in Islamabad Capital Territory",
+   "year": 2026,
+   "url": "https://www.emro.who.int/pak/pakistan-news/pakistan-who-launch-prime-ministers-hepatitis-c-programme-to-reach-1-6-million-people-in-islamabad-capital-territory.html",
+   "checkedOn": "2026-11-24"
+  },
+  {
+   "id": "nhs-cirrhosis",
+   "org": "NHS (UK)",
+   "title": "Cirrhosis",
+   "year": 2025,
+   "url": "https://www.nhs.uk/conditions/cirrhosis/",
+   "checkedOn": "2026-11-24"
+  }
+ ],
+ "sections": [
+  {
+   "id": "whatIs",
+   "title": {
+    "en": "What it is",
+    "ur": "یہ کیا ہے"
+   },
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "Hepatitis C is an infection of the liver caused by the hepatitis C virus, which is carried in blood.",
+      "ur": "ہیپاٹائٹس سی جگر کا انفیکشن ہے جو ہیپاٹائٹس سی وائرس سے ہوتا ہے۔ یہ وائرس خون میں ہوتا ہے۔"
+     },
+     "refs": [
+      "who-hepc",
+      "nhs-hepc"
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "About 3 in 10 people clear the virus by themselves. The other 7 keep it for years (chronic hepatitis C). Most people have no symptoms for many years, while the liver is slowly damaged. People with no symptoms can still pass it on.",
+      "ur": "تقریباً 10 میں سے 3 لوگوں کا جسم خود وائرس ختم کر دیتا ہے۔ باقی 7 میں یہ برسوں رہتا ہے (دائمی ہیپاٹائٹس سی)۔ زیادہ تر لوگوں میں کئی سال تک کوئی علامت نہیں ہوتی، جبکہ جگر آہستہ آہستہ خراب ہوتا رہتا ہے۔ بغیر علامات والے لوگ بھی اسے آگے پھیلا سکتے ہیں۔"
+     },
+     "refs": [
+      "who-hepc",
+      "cdc-hepc"
+     ]
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "Tiredness, fever, loss of appetite, feeling sick",
+       "ur": "تھکاوٹ، بخار، بھوک نہ لگنا، متلی"
+      },
+      {
+       "en": "Stomach pain, joint pain",
+       "ur": "پیٹ میں درد، جوڑوں کا درد"
+      },
+      {
+       "en": "Dark urine, pale stools, yellow skin or eyes",
+       "ur": "گہرے رنگ کا پیشاب، ہلکے رنگ کا پاخانہ، جلد یا آنکھوں کا پیلا ہونا"
+      }
+     ],
+     "refs": [
+      "who-hepc",
+      "cdc-hepc"
+     ],
+     "title": {
+      "en": "If symptoms come early, they can include:",
+      "ur": "اگر شروع میں علامات ہوں تو ان میں یہ شامل ہو سکتی ہیں:"
+     }
+    },
+    {
+     "type": "keyNumber",
+     "label": {
+      "en": "People with hepatitis C in Pakistan",
+      "ur": "پاکستان میں ہیپاٹائٹس سی کے مریض"
+     },
+     "value": {
+      "en": "More than 9 million",
+      "ur": "9 ملین سے زیادہ"
+     },
+     "level": "caution",
+     "refs": [
+      "who-pk-hep"
+     ],
+     "note": {
+      "en": "The highest number of any country. Only about 3 in 10 of them know they have it.",
+      "ur": "یہ دنیا کے کسی بھی ملک سے زیادہ ہے۔ ان میں سے صرف تقریباً 10 میں سے 3 کو معلوم ہے کہ انہیں یہ ہے۔"
+     }
+    },
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "A blood test is the only way to know. Testing is done in two steps: an antibody test, then if that is positive, a second test (PCR) to check whether the virus is still there.",
+      "ur": "جاننے کا واحد طریقہ خون کا ٹیسٹ ہے۔ ٹیسٹ دو مرحلوں میں ہوتا ہے: پہلے اینٹی باڈی ٹیسٹ، پھر اگر وہ مثبت ہو تو دوسرا ٹیسٹ (PCR) یہ دیکھنے کے لیے کہ وائرس ابھی موجود ہے یا نہیں۔"
+     },
+     "refs": [
+      "who-hepc",
+      "cdc-hepc"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "causes",
+   "title": {
+    "en": "How it spreads",
+    "ur": "یہ کیسے پھیلتا ہے"
+   },
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "Hepatitis C spreads when infected blood, even a tiny amount you can't see, gets into another person's body.",
+      "ur": "ہیپاٹائٹس سی تب پھیلتا ہے جب متاثرہ خون، چاہے اتنی تھوڑی مقدار جو نظر بھی نہ آئے، کسی دوسرے شخص کے جسم میں داخل ہو۔"
+     },
+     "refs": [
+      "cdc-hepc",
+      "nhs-hepc"
+     ]
+    },
+    {
+     "type": "image",
+     "assetKey": "hepatitis_spread.svg",
+     "caption": {
+      "en": "Spreads through: 1 used or shared needles and syringes, 2 shared razors (also at the barber), 3 blood that was not tested, 4 from mother to baby (less common). Does not spread through: 5 hugging, 6 sharing food, 7 shaking hands, 8 coughing or sneezing.",
+      "ur": "پھیلتا ہے: 1 استعمال شدہ یا مشترکہ سوئیاں اور سرنجیں، 2 مشترکہ ریزر (حجام کے پاس بھی)، 3 بغیر ٹیسٹ کیا ہوا خون، 4 ماں سے بچے کو (کم)۔ نہیں پھیلتا: 5 گلے ملنے، 6 کھانا بانٹنے، 7 ہاتھ ملانے، 8 کھانسی یا چھینک سے۔"
+     },
+     "refs": [
+      "who-hepc",
+      "cdc-hepc",
+      "who-pk-hep"
+     ]
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "Injections with needles and syringes that were used before",
+       "ur": "ایسی سوئیوں اور سرنجوں سے انجکشن جو پہلے استعمال ہو چکی ہوں"
+      },
+      {
+       "en": "Blood transfusions where the blood was not properly tested",
+       "ur": "ایسا خون لگوانا جس کا صحیح ٹیسٹ نہ ہوا ہو"
+      },
+      {
+       "en": "Surgery and dental treatment with equipment that was not sterilised",
+       "ur": "ایسے آلات سے آپریشن اور دانتوں کا علاج جو جراثیم سے پاک نہ ہوں"
+      },
+      {
+       "en": "Shaving at the barber with a used blade",
+       "ur": "حجام کے پاس استعمال شدہ بلیڈ سے شیو"
+      },
+      {
+       "en": "Piercing and tattoos with unclean tools",
+       "ur": "گندے اوزاروں سے چھدوانا اور ٹیٹو"
+      }
+     ],
+     "refs": [
+      "who-pk-hep"
+     ],
+     "title": {
+      "en": "The most common ways in Pakistan",
+      "ur": "پاکستان میں سب سے عام طریقے"
+     }
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "Sharing razors, toothbrushes or nail clippers",
+       "ur": "ریزر، ٹوتھ برش یا ناخن تراش مشترکہ استعمال کرنا"
+      },
+      {
+       "en": "From a mother to her baby: about 6 in 100 babies of mothers with hepatitis C get it",
+       "ur": "ماں سے بچے کو: ہیپاٹائٹس سی والی ماؤں کے تقریباً 100 میں سے 6 بچوں کو یہ ہو جاتا ہے"
+      },
+      {
+       "en": "Sex where blood may be present (less common)",
+       "ur": "ایسا جنسی تعلق جس میں خون شامل ہو سکتا ہو (کم عام)"
+      }
+     ],
+     "refs": [
+      "nhs-hepc",
+      "cdc-preg-hep",
+      "who-hepc"
+     ],
+     "title": {
+      "en": "Other ways",
+      "ur": "دوسرے طریقے"
+     }
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "Hugging, kissing or holding hands",
+       "ur": "گلے ملنا، بوسہ یا ہاتھ پکڑنا"
+      },
+      {
+       "en": "Sharing food, water, cups or plates",
+       "ur": "کھانا، پانی، کپ یا برتن بانٹنا"
+      },
+      {
+       "en": "Coughing or sneezing",
+       "ur": "کھانسی یا چھینک"
+      },
+      {
+       "en": "Breastfeeding",
+       "ur": "ماں کا دودھ پلانا"
+      }
+     ],
+     "refs": [
+      "who-hepc",
+      "cdc-hepc"
+     ],
+     "title": {
+      "en": "It does NOT spread through",
+      "ur": "یہ ان چیزوں سے نہیں پھیلتا"
+     }
+    }
+   ]
+  },
+  {
+   "id": "complications",
+   "title": {
+    "en": "If it is not treated",
+    "ur": "اگر علاج نہ ہو"
+   },
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "Over many years, chronic hepatitis C can scar the liver and lead to liver cancer or liver failure. Treating it early prevents this.",
+      "ur": "کئی برسوں میں دائمی ہیپاٹائٹس سی جگر پر زخم کے نشان ڈال سکتا ہے اور جگر کے کینسر یا جگر کے کام چھوڑ دینے کا سبب بن سکتا ہے۔ جلد علاج اس سے بچاتا ہے۔"
+     },
+     "refs": [
+      "who-hepc",
+      "cdc-hepc",
+      "nhs-hepc"
+     ]
+    },
+    {
+     "type": "image",
+     "assetKey": "liver_damage.svg",
+     "caption": {
+      "en": "1 A healthy liver. 2 Scarring of the liver (cirrhosis). 3 Liver cancer.",
+      "ur": "1 صحت مند جگر۔ 2 جگر پر زخم کے نشان (سروسس)۔ 3 جگر کا کینسر۔"
+     },
+     "refs": [
+      "who-hepc"
+     ]
+    },
+    {
+     "type": "keyNumber",
+     "label": {
+      "en": "Chronic hepatitis C that leads to cirrhosis",
+      "ur": "دائمی ہیپاٹائٹس سی جو سروسس تک لے جائے"
+     },
+     "value": {
+      "en": "15 to 30 in 100 people, within 20 years",
+      "ur": "100 میں سے 15 سے 30 لوگ، 20 سال کے اندر"
+     },
+     "level": "alert",
+     "refs": [
+      "who-hepc"
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "Damage can come faster in people who drink alcohol, or who also have hepatitis B or HIV.",
+      "ur": "جو لوگ شراب پیتے ہوں، یا جنہیں ہیپاٹائٹس بی یا ایچ آئی وی بھی ہو، ان میں نقصان جلدی ہو سکتا ہے۔"
+     },
+     "refs": [
+      "nhs-hepc"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "treatment",
+   "title": {
+    "en": "Treatment: it can be cured",
+    "ur": "علاج: یہ ٹھیک ہو سکتا ہے"
+   },
+   "blocks": [
+    {
+     "type": "image",
+     "assetKey": "hepc_cure.svg",
+     "caption": {
+      "en": "1 A blood test finds it. 2 A course of tablets. 3 Cured.",
+      "ur": "1 خون کا ٹیسٹ اسے پکڑتا ہے۔ 2 گولیوں کا کورس۔ 3 مکمل صحت یابی۔"
+     },
+     "refs": [
+      "who-hepc",
+      "cdc-hepc"
+     ]
+    },
+    {
+     "type": "keyNumber",
+     "label": {
+      "en": "People cured by modern antiviral tablets",
+      "ur": "جدید اینٹی وائرل گولیوں سے ٹھیک ہونے والے لوگ"
+     },
+     "value": {
+      "en": "More than 95 in 100",
+      "ur": "100 میں سے 95 سے زیادہ"
+     },
+     "level": "normal",
+     "refs": [
+      "who-hepc",
+      "cdc-hepc"
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "Treatment is a course of tablets, usually for 8 to 12 weeks. Your doctor decides which tablets and for how long. Most people have few or no side effects.",
+      "ur": "علاج گولیوں کا ایک کورس ہے، عموماً 8 سے 12 ہفتے۔ کون سی گولیاں اور کتنے عرصے کے لیے، یہ آپ کا ڈاکٹر طے کرتا ہے۔ زیادہ تر لوگوں کو بہت کم یا کوئی مضر اثر نہیں ہوتا۔"
+     },
+     "refs": [
+      "cdc-hepc",
+      "nhs-hepc",
+      "who-hepc"
+     ]
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "Take every tablet and finish the full course. Don't stop without your doctor.",
+       "ur": "ہر گولی لیں اور پورا کورس مکمل کریں۔ ڈاکٹر سے پوچھے بغیر نہ روکیں۔"
+      },
+      {
+       "en": "Blood tests during and after treatment show whether it worked. If not, other medicines can be tried.",
+       "ur": "علاج کے دوران اور بعد خون کے ٹیسٹ بتاتے ہیں کہ علاج کامیاب ہوا یا نہیں۔ اگر نہیں تو دوسری دوائیں آزمائی جا سکتی ہیں۔"
+      },
+      {
+       "en": "Being cured does not protect you. You can catch hepatitis C again, so keep avoiding the risks.",
+       "ur": "ٹھیک ہونے کے بعد بھی آپ محفوظ نہیں۔ ہیپاٹائٹس سی دوبارہ ہو سکتا ہے، اس لیے خطرات سے بچتے رہیں۔"
+      },
+      {
+       "en": "Tell your doctor if you feel unwell during treatment.",
+       "ur": "علاج کے دوران طبیعت خراب ہو تو ڈاکٹر کو بتائیں۔"
+      }
+     ],
+     "refs": [
+      "nhs-hepc",
+      "cdc-hepc"
+     ]
+    },
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "Pakistan's government runs a national hepatitis C programme with WHO to test and treat people, aiming to end hepatitis C as a public health threat by 2030. Ask at your nearest government hospital or health centre about testing and treatment.",
+      "ur": "پاکستان کی حکومت عالمی ادارۂ صحت کے ساتھ ہیپاٹائٹس سی کا قومی پروگرام چلا رہی ہے تاکہ لوگوں کا ٹیسٹ اور علاج ہو، اور 2030 تک ہیپاٹائٹس سی کو صحت عامہ کا خطرہ نہ رہنے دیا جائے۔ ٹیسٹ اور علاج کے بارے میں قریبی سرکاری ہسپتال یا مرکز صحت سے پوچھیں۔"
+     },
+     "refs": [
+      "who-pk-pmhcv",
+      "who-pk-hep"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lifestyle",
+   "title": {
+    "en": "Protect yourself and your family",
+    "ur": "اپنی اور اپنے گھر والوں کی حفاظت کریں"
+   },
+   "blocks": [
+    {
+     "type": "paragraph",
+     "text": {
+      "en": "There is no vaccine for hepatitis C, so avoiding contact with blood is the only protection.",
+      "ur": "ہیپاٹائٹس سی کی کوئی ویکسین نہیں، اس لیے خون سے بچاؤ ہی واحد تحفظ ہے۔"
+     },
+     "refs": [
+      "who-hepc",
+      "cdc-hepc"
+     ]
+    },
+    {
+     "type": "image",
+     "assetKey": "hepatitis_safe.svg",
+     "caption": {
+      "en": "1 A new, sealed syringe for every injection. 2 Your own razor, or a new blade at the barber. 3 Only blood that has been tested. 4 Get tested, and get treated.",
+      "ur": "1 ہر انجکشن کے لیے نئی، بند پیک سرنج۔ 2 اپنا ریزر، یا حجام کے پاس نیا بلیڈ۔ 3 صرف ٹیسٹ شدہ خون۔ 4 ٹیسٹ کروائیں، اور علاج کروائیں۔"
+     },
+     "refs": [
+      "who-hepc",
+      "who-pk-hep"
+     ]
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "Ask for a new syringe from a sealed pack for every injection. Avoid injections and drips you don't really need.",
+       "ur": "ہر انجکشن کے لیے بند پیک سے نئی سرنج مانگیں۔ غیر ضروری انجکشن اور ڈرپ سے بچیں۔"
+      },
+      {
+       "en": "Don't share razors, toothbrushes or nail clippers. At the barber, ask for a new blade.",
+       "ur": "ریزر، ٹوتھ برش یا ناخن تراش مشترکہ استعمال نہ کریں۔ حجام سے نیا بلیڈ مانگیں۔"
+      },
+      {
+       "en": "Accept only blood that has been screened.",
+       "ur": "صرف ٹیسٹ شدہ خون قبول کریں۔"
+      },
+      {
+       "en": "Have piercings and tattoos only with sterile tools.",
+       "ur": "چھدوانا اور ٹیٹو صرف جراثیم سے پاک اوزاروں سے کروائیں۔"
+      }
+     ],
+     "refs": [
+      "who-hepc",
+      "nhs-hepc",
+      "who-pk-hep"
+     ]
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "Don't drink alcohol. It speeds up liver damage.",
+       "ur": "شراب نہ پئیں۔ یہ جگر کے نقصان کو تیز کرتی ہے۔"
+      },
+      {
+       "en": "Keep a healthy weight.",
+       "ur": "صحت مند وزن رکھیں۔"
+      },
+      {
+       "en": "Cover cuts, and don't share anything that may have your blood on it.",
+       "ur": "زخم ڈھانپ کر رکھیں، اور کوئی ایسی چیز مشترکہ استعمال نہ کریں جس پر آپ کا خون لگا ہو سکتا ہو۔"
+      },
+      {
+       "en": "Encourage your family to get tested too.",
+       "ur": "اپنے گھر والوں کو بھی ٹیسٹ کروانے کا کہیں۔"
+      }
+     ],
+     "refs": [
+      "who-hepc",
+      "nhs-hepc",
+      "cdc-hepc"
+     ],
+     "title": {
+      "en": "If you have hepatitis C",
+      "ur": "اگر آپ کو ہیپاٹائٹس سی ہے"
+     }
+    },
+    {
+     "type": "topicLink",
+     "target": "hepatitis_b",
+     "text": {
+      "en": "Hepatitis B: there is a vaccine",
+      "ur": "ہیپاٹائٹس بی: اس کی ویکسین موجود ہے"
+     }
+    }
+   ]
+  },
+  {
+   "id": "whenToSeeDoctor",
+   "title": {
+    "en": "When to see a doctor",
+    "ur": "ڈاکٹر کو کب دکھائیں"
+   },
+   "blocks": [
+    {
+     "type": "alert",
+     "level": "urgent",
+     "title": {
+      "en": "Go to hospital now if you have liver disease and:",
+      "ur": "اگر آپ کو جگر کی بیماری ہے اور یہ ہو تو ابھی ہسپتال جائیں:"
+     },
+     "items": [
+      {
+       "en": "You vomit blood",
+       "ur": "خون کی الٹی"
+      },
+      {
+       "en": "Your stools are black or very dark",
+       "ur": "پاخانہ کالا یا بہت گہرا ہو"
+      },
+      {
+       "en": "You suddenly become confused, or your speech is slurred",
+       "ur": "اچانک الجھن ہو، یا بولنے میں لڑکھڑاہٹ"
+      }
+     ],
+     "refs": [
+      "nhs-cirrhosis"
+     ],
+     "text": {
+      "en": "This is an emergency. Call an ambulance (Rescue 1122 in Pakistan) or go to the nearest emergency department. Don't drive yourself.",
+      "ur": "یہ ایمرجنسی ہے۔ ایمبولینس بلائیں (پاکستان میں ریسکیو 1122) یا قریبی ایمرجنسی میں جائیں۔ خود گاڑی نہ چلائیں۔"
+     }
+    },
+    {
+     "type": "alert",
+     "level": "soon",
+     "title": {
+      "en": "See a doctor the same day if:",
+      "ur": "اسی دن ڈاکٹر کو دکھائیں اگر:"
+     },
+     "items": [
+      {
+       "en": "Your skin or the whites of your eyes turn yellow",
+       "ur": "جلد یا آنکھوں کی سفیدی پیلی ہو جائے"
+      },
+      {
+       "en": "Your stomach, legs, ankles or feet swell",
+       "ur": "پیٹ، ٹانگیں، ٹخنے یا پاؤں سوج جائیں"
+      },
+      {
+       "en": "You are more breathless than usual",
+       "ur": "معمول سے زیادہ سانس پھولے"
+      }
+     ],
+     "refs": [
+      "nhs-cirrhosis"
+     ]
+    },
+    {
+     "type": "bullets",
+     "items": [
+      {
+       "en": "You ever had injections, drips, surgery or dental work where the equipment may not have been clean",
+       "ur": "آپ کو کبھی ایسی جگہ انجکشن، ڈرپ، آپریشن یا دانتوں کا علاج ہوا جہاں آلات شاید صاف نہ تھے"
+      },
+      {
+       "en": "You ever had a blood transfusion, a tattoo or a piercing",
+       "ur": "آپ کو کبھی خون لگا، ٹیٹو بنا یا کچھ چھدوایا"
+      },
+      {
+       "en": "You shave at barber shops",
+       "ur": "آپ حجام کی دکان پر شیو کرواتے ہیں"
+      },
+      {
+       "en": "You are pregnant: ask for the test in every pregnancy",
+       "ur": "آپ حاملہ ہیں: ہر حمل میں ٹیسٹ کروائیں"
+      },
+      {
+       "en": "You feel tired all the time, or your urine is dark",
+       "ur": "ہر وقت تھکاوٹ رہے، یا پیشاب گہرے رنگ کا ہو"
+      },
+      {
+       "en": "Every adult should be tested at least once",
+       "ur": "ہر بالغ کا کم از کم ایک بار ٹیسٹ ہونا چاہیے"
+      }
+     ],
+     "refs": [
+      "cdc-hepc",
+      "nhs-hepc",
+      "who-pk-hep"
+     ],
+     "title": {
+      "en": "Get tested if",
+      "ur": "ٹیسٹ کروائیں اگر"
+     }
+    }
+   ]
+  }
+ ]
+}

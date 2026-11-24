@@ -27,16 +27,18 @@ void main() {
     expect(app.settings.disclaimerAccepted, isTrue);
   });
 
-  testWidgets('Home shows six cards: BP, Diabetes (3 topics), Obesity, Cholesterol, Migraine, Breast cancer',
+  testWidgets('Home shows nine cards, with the Diabetes (3 topics) and Hepatitis (2 topics) groups',
       (tester) async {
     await pumpApp(tester);
     expect(find.byKey(const Key('topic-hypertension')), findsOneWidget);
     expect(find.byKey(const Key('group-diabetes')), findsOneWidget);
     expect(find.text('3 topics'), findsOneWidget);
-    for (final id in ['obesity', 'high_cholesterol', 'migraine', 'breast_cancer']) {
+    for (final id in ['obesity', 'high_cholesterol', 'migraine', 'breast_cancer', 'heart_disease', 'stroke']) {
       await tester.scrollUntilVisible(find.byKey(Key('topic-$id')), 200);
       expect(find.byKey(Key('topic-$id')), findsOneWidget);
     }
+    await tester.scrollUntilVisible(find.byKey(const Key('group-hepatitis')), 200);
+    expect(find.text('2 topics'), findsOneWidget);
     await tester.scrollUntilVisible(find.text('More topics coming soon'), 200);
     expect(find.text('More topics coming soon'), findsOneWidget);
   });

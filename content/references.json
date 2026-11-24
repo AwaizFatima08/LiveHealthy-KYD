@@ -55,6 +55,13 @@
     "url": "https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings",
     "checkedOn": "2026-09-30"
   },
+  "aha-signs": {
+    "org": "American Heart Association (AHA)",
+    "title": "Warning Signs of a Heart Attack",
+    "year": 2024,
+    "url": "https://www.heart.org/en/health-topics/heart-attack/warning-signs-of-a-heart-attack",
+    "checkedOn": "2026-11-24"
+  },
   "aha-threats": {
     "org": "American Heart Association (AHA)",
     "title": "Health Threats from High Blood Pressure",
@@ -104,12 +111,68 @@
     "url": "https://www.cdc.gov/diabetes/about/gestational-diabetes.html",
     "checkedOn": "2026-09-30"
   },
+  "cdc-hepb": {
+    "org": "Centers for Disease Control and Prevention (CDC)",
+    "title": "Hepatitis B Basics",
+    "year": 2026,
+    "url": "https://www.cdc.gov/hepatitis-b/about/index.html",
+    "checkedOn": "2026-11-24"
+  },
+  "cdc-hepb-tx": {
+    "org": "Centers for Disease Control and Prevention (CDC)",
+    "title": "Treatment of Hepatitis B",
+    "year": 2026,
+    "url": "https://www.cdc.gov/hepatitis-b/treatment/index.html",
+    "checkedOn": "2026-11-24"
+  },
+  "cdc-hepb-vax": {
+    "org": "Centers for Disease Control and Prevention (CDC)",
+    "title": "Hepatitis B Vaccine",
+    "year": 2026,
+    "url": "https://www.cdc.gov/hepatitis-b/vaccination/index.html",
+    "checkedOn": "2026-11-24"
+  },
+  "cdc-hepc": {
+    "org": "Centers for Disease Control and Prevention (CDC)",
+    "title": "Hepatitis C Basics",
+    "year": 2025,
+    "url": "https://www.cdc.gov/hepatitis-c/about/index.html",
+    "checkedOn": "2026-11-24"
+  },
+  "cdc-preg-hep": {
+    "org": "Centers for Disease Control and Prevention (CDC)",
+    "title": "Effects of HIV, Viral Hepatitis and STIs on Pregnancy and Infants",
+    "year": 2024,
+    "url": "https://www.cdc.gov/pregnancy-hiv-std-tb-hepatitis/effects/index.html",
+    "checkedOn": "2026-11-24"
+  },
   "cdc-prevent": {
     "org": "Centers for Disease Control and Prevention (CDC)",
     "title": "Preventing Type 2 Diabetes",
     "year": 2024,
     "url": "https://www.cdc.gov/diabetes/prevention-type-2/index.html",
     "checkedOn": "2026-09-30"
+  },
+  "cdc-stroke-signs": {
+    "org": "Centers for Disease Control and Prevention (CDC)",
+    "title": "Signs and Symptoms of Stroke",
+    "year": 2026,
+    "url": "https://www.cdc.gov/stroke/signs-symptoms/index.html",
+    "checkedOn": "2026-11-24"
+  },
+  "cdc-stroke-tx": {
+    "org": "Centers for Disease Control and Prevention (CDC)",
+    "title": "Treatment and Intervention for Stroke",
+    "year": 2024,
+    "url": "https://www.cdc.gov/stroke/treatment/index.html",
+    "checkedOn": "2026-11-24"
+  },
+  "epi-pk": {
+    "org": "Federal Directorate of Immunization (EPI), Government of Pakistan",
+    "title": "Immunization Schedule",
+    "year": 2023,
+    "url": "https://www.epi.gov.pk/immunization-schedule/",
+    "checkedOn": "2026-11-24"
   },
   "mayo-bc": {
     "org": "Mayo Clinic",
@@ -167,12 +230,33 @@
     "url": "https://medlineplus.gov/cholesterollevelswhatyouneedtoknow.html",
     "checkedOn": "2026-10-10"
   },
+  "medline-stroke": {
+    "org": "MedlinePlus (US National Library of Medicine)",
+    "title": "Stroke",
+    "year": 2025,
+    "url": "https://medlineplus.gov/stroke.html",
+    "checkedOn": "2026-11-24"
+  },
   "nei-retinopathy": {
     "org": "National Eye Institute (NIH)",
     "title": "Diabetic Retinopathy",
     "year": 2025,
     "url": "https://www.nei.nih.gov/eye-health-information/eye-conditions-and-diseases/diabetic-retinopathy",
     "checkedOn": "2026-09-30"
+  },
+  "nhlbi-chd": {
+    "org": "National Heart, Lung, and Blood Institute (NIH)",
+    "title": "What Is Coronary Heart Disease?",
+    "year": 2024,
+    "url": "https://www.nhlbi.nih.gov/health/coronary-heart-disease",
+    "checkedOn": "2026-11-24"
+  },
+  "nhlbi-chd-risk": {
+    "org": "National Heart, Lung, and Blood Institute (NIH)",
+    "title": "Coronary Heart Disease: Risk Factors",
+    "year": 2024,
+    "url": "https://www.nhlbi.nih.gov/health/coronary-heart-disease/risk-factors",
+    "checkedOn": "2026-11-24"
   },
   "nhlbi-chol": {
     "org": "National Heart, Lung, and Blood Institute (NIH)",
@@ -181,6 +265,76 @@
     "url": "https://www.nhlbi.nih.gov/health/blood-cholesterol",
     "checkedOn": "2026-10-10"
   },
+  "nhlbi-ha-rec": {
+    "org": "National Heart, Lung, and Blood Institute (NIH)",
+    "title": "Heart Attack: Recovery",
+    "year": 2022,
+    "url": "https://www.nhlbi.nih.gov/health/heart-attack/recovery",
+    "checkedOn": "2026-11-24"
+  },
+  "nhlbi-ha-sym": {
+    "org": "National Heart, Lung, and Blood Institute (NIH)",
+    "title": "Heart Attack: Symptoms",
+    "year": 2022,
+    "url": "https://www.nhlbi.nih.gov/health/heart-attack/symptoms",
+    "checkedOn": "2026-11-24"
+  },
+  "nhlbi-ha-tx": {
+    "org": "National Heart, Lung, and Blood Institute (NIH)",
+    "title": "Heart Attack: Treatment",
+    "year": 2022,
+    "url": "https://www.nhlbi.nih.gov/health/heart-attack/treatment",
+    "checkedOn": "2026-11-24"
+  },
+  "nhlbi-stroke-causes": {
+    "org": "National Heart, Lung, and Blood Institute (NIH)",
+    "title": "Stroke: Causes and Risk Factors",
+    "year": 2023,
+    "url": "https://www.nhlbi.nih.gov/health/stroke/causes",
+    "checkedOn": "2026-11-24"
+  },
+  "nhlbi-stroke-rec": {
+    "org": "National Heart, Lung, and Blood Institute (NIH)",
+    "title": "Stroke: Recovery",
+    "year": 2023,
+    "url": "https://www.nhlbi.nih.gov/health/stroke/recovery",
+    "checkedOn": "2026-11-24"
+  },
+  "nhs-angina": {
+    "org": "NHS (UK)",
+    "title": "Angina",
+    "year": 2025,
+    "url": "https://www.nhs.uk/conditions/angina/",
+    "checkedOn": "2026-11-24"
+  },
+  "nhs-chd": {
+    "org": "NHS (UK)",
+    "title": "Coronary heart disease",
+    "year": 2024,
+    "url": "https://www.nhs.uk/conditions/coronary-heart-disease/",
+    "checkedOn": "2026-11-24"
+  },
+  "nhs-chd-prev": {
+    "org": "NHS (UK)",
+    "title": "Coronary heart disease: Prevention",
+    "year": 2024,
+    "url": "https://www.nhs.uk/conditions/coronary-heart-disease/prevention/",
+    "checkedOn": "2026-11-24"
+  },
+  "nhs-chd-sym": {
+    "org": "NHS (UK)",
+    "title": "Coronary heart disease: Symptoms",
+    "year": 2024,
+    "url": "https://www.nhs.uk/conditions/coronary-heart-disease/symptoms/",
+    "checkedOn": "2026-11-24"
+  },
+  "nhs-chd-tx": {
+    "org": "NHS (UK)",
+    "title": "Coronary heart disease: Treatment",
+    "year": 2024,
+    "url": "https://www.nhs.uk/conditions/coronary-heart-disease/treatment/",
+    "checkedOn": "2026-11-24"
+  },
   "nhs-check": {
     "org": "NHS (UK)",
     "title": "How to check your breasts or chest",
@@ -188,12 +342,82 @@
     "url": "https://www.nhs.uk/common-health-questions/womens-health/how-should-i-check-my-breasts/",
     "checkedOn": "2026-10-10"
   },
+  "nhs-cirrhosis": {
+    "org": "NHS (UK)",
+    "title": "Cirrhosis",
+    "year": 2025,
+    "url": "https://www.nhs.uk/conditions/cirrhosis/",
+    "checkedOn": "2026-11-24"
+  },
+  "nhs-ha": {
+    "org": "NHS (UK)",
+    "title": "Heart attack",
+    "year": 2026,
+    "url": "https://www.nhs.uk/conditions/heart-attack/",
+    "checkedOn": "2026-11-24"
+  },
+  "nhs-hepb": {
+    "org": "NHS (UK)",
+    "title": "Hepatitis B",
+    "year": 2025,
+    "url": "https://www.nhs.uk/conditions/hepatitis-b/",
+    "checkedOn": "2026-11-24"
+  },
+  "nhs-hepb-vax": {
+    "org": "NHS (UK)",
+    "title": "Hepatitis B vaccine",
+    "year": 2024,
+    "url": "https://www.nhs.uk/vaccinations/hepatitis-b-vaccine/",
+    "checkedOn": "2026-11-24"
+  },
+  "nhs-hepc": {
+    "org": "NHS (UK)",
+    "title": "Hepatitis C",
+    "year": 2026,
+    "url": "https://www.nhs.uk/conditions/hepatitis-c/",
+    "checkedOn": "2026-11-24"
+  },
   "nhs-mig": {
     "org": "NHS (UK)",
     "title": "Migraine",
     "year": 2026,
     "url": "https://www.nhs.uk/conditions/migraine/",
     "checkedOn": "2026-10-10"
+  },
+  "nhs-stroke-causes": {
+    "org": "NHS (UK)",
+    "title": "Causes of a stroke",
+    "year": 2024,
+    "url": "https://www.nhs.uk/conditions/stroke/causes/",
+    "checkedOn": "2026-11-24"
+  },
+  "nhs-stroke-rec": {
+    "org": "NHS (UK)",
+    "title": "Recovering from a stroke",
+    "year": 2024,
+    "url": "https://www.nhs.uk/conditions/stroke/recovery/",
+    "checkedOn": "2026-11-24"
+  },
+  "nhs-stroke-sym": {
+    "org": "NHS (UK)",
+    "title": "Symptoms of a stroke",
+    "year": 2024,
+    "url": "https://www.nhs.uk/conditions/stroke/symptoms/",
+    "checkedOn": "2026-11-24"
+  },
+  "nhs-stroke-tx": {
+    "org": "NHS (UK)",
+    "title": "Treatment for a stroke",
+    "year": 2024,
+    "url": "https://www.nhs.uk/conditions/stroke/treatment/",
+    "checkedOn": "2026-11-24"
+  },
+  "nhs-tia": {
+    "org": "NHS (UK)",
+    "title": "Transient ischaemic attack (TIA)",
+    "year": 2023,
+    "url": "https://www.nhs.uk/conditions/transient-ischaemic-attack-tia/",
+    "checkedOn": "2026-11-24"
   },
   "nice-cg150": {
     "org": "NICE (UK)",
@@ -258,6 +482,13 @@
     "url": "https://www.who.int/news-room/fact-sheets/detail/breast-cancer",
     "checkedOn": "2026-10-10"
   },
+  "who-cvd": {
+    "org": "World Health Organization (WHO)",
+    "title": "Cardiovascular diseases (CVDs) (fact sheet)",
+    "year": 2025,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)",
+    "checkedOn": "2026-11-24"
+  },
   "who-diabetes": {
     "org": "World Health Organization (WHO)",
     "title": "Diabetes (fact sheet)",
@@ -279,6 +510,20 @@
     "url": "https://www.who.int/news-room/fact-sheets/detail/headache-disorders",
     "checkedOn": "2026-10-10"
   },
+  "who-hepb": {
+    "org": "World Health Organization (WHO)",
+    "title": "Hepatitis B (fact sheet)",
+    "year": 2026,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/hepatitis-b",
+    "checkedOn": "2026-11-24"
+  },
+  "who-hepc": {
+    "org": "World Health Organization (WHO)",
+    "title": "Hepatitis C (fact sheet)",
+    "year": 2026,
+    "url": "https://www.who.int/news-room/fact-sheets/detail/hepatitis-c",
+    "checkedOn": "2026-11-24"
+  },
   "who-htn": {
     "org": "World Health Organization (WHO)",
     "title": "Hypertension (fact sheet)",
@@ -293,6 +538,20 @@
     "url": "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight",
     "checkedOn": "2026-09-30"
   },
+  "who-pk-hep": {
+    "org": "WHO Pakistan (EMRO)",
+    "title": "12.9 million people are living with hepatitis in Pakistan, WHO renews support to advance 2030 elimination targets",
+    "year": 2026,
+    "url": "https://www.emro.who.int/pak/pakistan-news/12-9-million-people-are-living-with-hepatitis-in-pakistan-who-renews-support-to-advance-2030-elimination-targets.html",
+    "checkedOn": "2026-11-24"
+  },
+  "who-pk-pmhcv": {
+    "org": "WHO Pakistan (EMRO)",
+    "title": "Pakistan, WHO launch Prime Minister's Hepatitis C Programme to reach 1.6 million people in Islamabad Capital Territory",
+    "year": 2026,
+    "url": "https://www.emro.who.int/pak/pakistan-news/pakistan-who-launch-prime-ministers-hepatitis-c-programme-to-reach-1-6-million-people-in-islamabad-capital-territory.html",
+    "checkedOn": "2026-11-24"
+  },
   "who-salt": {
     "org": "World Health Organization (WHO)",
     "title": "Sodium reduction (fact sheet)",
@@ -306,5 +565,12 @@
     "year": 2026,
     "url": "https://www.who.int/news-room/fact-sheets/detail/tobacco",
     "checkedOn": "2026-09-30"
+  },
+  "wso-impact": {
+    "org": "World Stroke Organization",
+    "title": "Impact of Stroke",
+    "year": 2026,
+    "url": "https://www.world-stroke.org/world-stroke-day-campaign/about-stroke/impact-of-stroke",
+    "checkedOn": "2026-11-24"
   }
 }

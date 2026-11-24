@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:livehealthy_kyd/core/app_settings.dart';
 import 'package:livehealthy_kyd/core/content/models.dart';
 import 'package:livehealthy_kyd/widgets/content_text.dart';
 
@@ -14,7 +15,9 @@ void main() {
       test('$id parses and follows the seven-part structure', () {
         final d = Disease.fromJson(bundledJson(id));
         expect(d.id, id);
-        expect(d.sections.map((s) => s.id), kSectionIds);
+        // Topics new in 1.2 add a treatment section (design-v1.2 §2).
+        final before12 = AppSettings.topicsBefore12.contains(id);
+        expect(d.sections.map((s) => s.id), before12 ? kSectionIds : kSectionIdsWithTreatment);
         for (final s in d.sections) {
           expect(s.citedRefs, isNotEmpty, reason: '${s.id} cites nothing');
           for (final r in s.citedRefs) {
@@ -26,11 +29,12 @@ void main() {
       });
     }
 
-    test('manifest lists every topic and the diabetes group', () {
+    test('manifest lists every topic and the diabetes and hepatitis groups', () {
       final m = ContentManifest.fromJson(bundledJson('manifest'));
       expect(m.diseases.keys.toSet(), allTopicIds.toSet());
       expect(m.groups['diabetes']!.members, ['prediabetes', 'type2_diabetes', 'gestational_diabetes']);
       expect(m.groups['diabetes']!.note!.of('en'), contains('Type 1'));
+      expect(m.groups['hepatitis']!.members, ['hepatitis_b', 'hepatitis_c']);
       expect(m.toolLinks.keys.toSet(), ToolApp.values.toSet());
     });
 

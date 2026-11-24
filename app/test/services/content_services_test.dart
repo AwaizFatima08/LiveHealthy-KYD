@@ -37,16 +37,22 @@ void main() {
       }
     });
 
-    test('Home: six cards in order, diabetes topics grouped (D13)', () async {
+    test('Home: nine cards in order, diabetes and hepatitis topics grouped (D13)', () async {
       final repo = await loadedRepository();
       final items = repo.homeItems;
-      expect(items.length, 6);
+      expect(items.length, 9);
       expect((items[0] as DiseaseItem).disease.id, 'hypertension');
       final g = items[1] as GroupItem;
       expect(g.group.id, 'diabetes');
       expect(g.members.map((d) => d.id), ['prediabetes', 'type2_diabetes', 'gestational_diabetes']);
       expect((items[2] as DiseaseItem).disease.id, 'obesity');
-      expect([for (final i in items.skip(3)) (i as DiseaseItem).disease.id], ['high_cholesterol', 'migraine', 'breast_cancer']);
+      expect(
+        [for (final i in items.skip(3).take(5)) (i as DiseaseItem).disease.id],
+        ['high_cholesterol', 'migraine', 'breast_cancer', 'heart_disease', 'stroke'],
+      );
+      final h = items[8] as GroupItem;
+      expect(h.group.id, 'hepatitis');
+      expect(h.members.map((d) => d.id), ['hepatitis_b', 'hepatitis_c']);
     });
 
     test('uses a newer downloaded copy, and survives a restart', () async {
@@ -79,7 +85,7 @@ void main() {
       File('${cache.path}/content/manifest.json').writeAsStringSync('not json');
       final repo = await loadedRepository(cache: cache);
       expect(repo.disease('hypertension')!.version, lessThan(99));
-      expect(repo.homeItems.length, 6);
+      expect(repo.homeItems.length, 9);
     });
 
     test('a downloaded file can never replace a different topic', () async {
