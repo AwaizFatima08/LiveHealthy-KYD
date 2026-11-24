@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
+import 'package:livehealthy_kyd/core/app_settings.dart';
 import 'package:livehealthy_kyd/core/content/models.dart';
 import 'package:livehealthy_kyd/main.dart' as app;
 import 'package:livehealthy_kyd/services/tool_launcher.dart';
@@ -120,6 +121,10 @@ void main() {
       'high_cholesterol': null,
       'migraine': null,
       'breast_cancer': null,
+      'heart_disease': null,
+      'stroke': null,
+      'hepatitis_b': 'hepatitis',
+      'hepatitis_c': 'hepatitis',
     };
     for (final e in topics.entries) {
       final id = e.key, group = e.value;
@@ -143,9 +148,12 @@ void main() {
         await settle(tester);
       }
       await tapScrolled(tester, find.byKey(const Key('section-whatIs')));
-      for (var s = 1; s <= 5; s++) {
+      // 1.2 topics add a treatment section: 6 written sections + References.
+      final written = AppSettings.topicsBefore12.contains(id) ? 5 : 6;
+      final total = written + 1;
+      for (var s = 1; s <= written; s++) {
         debugPrint('E2E reading $id section $s');
-        expect(find.text('$s/6'), findsOneWidget);
+        expect(find.text('$s/$total'), findsOneWidget);
         await readToEnd(tester);
         if (id == 'hypertension' && s == 5) {
           await tester.drag(find.byType(Scrollable).first, const Offset(0, 20000));
@@ -155,7 +163,7 @@ void main() {
         await tester.tap(find.byKey(const Key('next')));
         await settle(tester);
       }
-      expect(find.text('6/6'), findsOneWidget);
+      expect(find.text('$total/$total'), findsOneWidget);
       await readToEnd(tester);
       await tester.tap(find.byKey(const Key('back-to-topic')));
       await settle(tester);
