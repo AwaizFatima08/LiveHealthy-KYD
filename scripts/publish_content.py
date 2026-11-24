@@ -44,7 +44,14 @@ PROJECT_ID = 'livehealthy-kyd'
 
 LANGS = ('en', 'ur')
 SECTION_IDS = ['whatIs', 'causes', 'complications', 'lifestyle', 'whenToSeeDoctor']
-BLOCK_TYPES = {'paragraph', 'bullets', 'image', 'animation', 'keyNumber', 'alert', 'refMarker'}
+# Since 1.2 (design-v1.2 §2): optional general treatment section after complications.
+SECTION_IDS_WITH_TREATMENT = ['whatIs', 'causes', 'complications', 'treatment', 'lifestyle', 'whenToSeeDoctor']
+# Topics that shipped before 1.2 keep five sections, or apps 1.0/1.1 would reject their updates.
+PRE_1_2_TOPICS = {'hypertension', 'prediabetes', 'type2_diabetes', 'gestational_diabetes', 'obesity',
+                  'high_cholesterol', 'migraine', 'breast_cancer'}
+BLOCK_TYPES = {'paragraph', 'bullets', 'image', 'animation', 'keyNumber', 'alert', 'refMarker', 'topicLink'}
+# (where, target) of every topicLink block, checked once all topics are loaded.
+LINK_TARGETS: list[tuple[str, str]] = []
 TOOLS = {'vitals', 'medicineReminder'}
 TOOL_STATUS = {'live', 'comingSoon', 'hidden'}
 NON_DISEASE_FILES = {'references.json', 'manifest_source.json'}
@@ -181,8 +188,11 @@ def validate_disease(d: dict, library: dict, groups: dict, bands: dict | None, r
 
     sections = d.get('sections') or []
     ids = [s.get('id') for s in sections]
-    if ids != SECTION_IDS:
-        rep.error(f'{w}.sections: expected {SECTION_IDS}, got {ids}')
+    if ids == SECTION_IDS_WITH_TREATMENT:
+        if d.get('id') in PRE_1_2_TOPICS:
+            rep.error(f'{w}.sections: a treatment section would stop apps 1.0/1.1 updating this topic')
+    elif ids != SECTION_IDS:
+        rep.error(f'{w}.sections: expected {SECTION_IDS} (optionally with treatment after complications), got {ids}')
     cited_all = set()
     skip_vitals = bool(d.get('skipVitalsCheck'))
     for s in sections:
@@ -239,6 +249,14 @@ def validate_block(b: dict, where: str, rep: Report, bands, skip_vitals: bool):
         if 'loop' in b and not isinstance(b['loop'], bool):
             rep.error(f'{where}.loop: must be true or false')
         check_localized(b.get('caption'), f'{where}.caption', rep)
+    elif t == 'topicLink':
+        # A tappable "Read more" card that opens another topic (since 1.2; older apps skip it).
+        target = b.get('target')
+        if not isinstance(target, str) or not ID_RE.match(target):
+            rep.error(f'{where}.target: must be a topic id')
+        else:
+            LINK_TARGETS.append((where, target))
+        check_localized(b.get('text'), f'{where}.text', rep)
     elif t == 'image':
         asset(b.get('assetKey'), f'{where}.assetKey', rep)
         check_localized(b.get('caption'), f'{where}.caption', rep)
@@ -362,10 +380,16 @@ def run(argv=None, today: dt.date | None = None, vitals_path: Path = VITALS_RANG
     validate_library(library, rep)
     validate_manifest_source(manifest_src, rep)
     groups = manifest_src.get('groups') or {}
+    LINK_TARGETS.clear()
     for did, (path, d) in diseases.items():
         if path.stem != did:
             rep.error(f'{path.name}: file name must match id "{did}"')
         validate_disease(d, library, groups, bands, rep, today, args.strict)
+    for where, target in LINK_TARGETS:
+        if target not in diseases:
+            rep.error(f'{where}.target: no topic "{target}"')
+        elif where.startswith(f'[{target}]'):
+            rep.error(f'{where}.target: a topic cannot link to itself')
     for gid, g in groups.items():
         for m in g.get('members') or []:
             if m not in diseases:

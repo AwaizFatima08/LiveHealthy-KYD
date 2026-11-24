@@ -16,6 +16,17 @@ const List<String> kContentLanguages = ['en', 'ur'];
 /// and related tools.
 const List<String> kSectionIds = ['whatIs', 'causes', 'complications', 'lifestyle', 'whenToSeeDoctor'];
 
+/// Since 1.2 a topic may add a general "treatment" section after
+/// complications (design-v1.2 §2). Apps before 1.2 reject such a topic.
+const List<String> kSectionIdsWithTreatment = [
+  'whatIs',
+  'causes',
+  'complications',
+  'treatment',
+  'lifestyle',
+  'whenToSeeDoctor',
+];
+
 class ContentFormatException extends FormatException {
   ContentFormatException(super.message);
 }
@@ -154,6 +165,11 @@ sealed class ContentBlock {
           items: [for (final (i, it) in items.indexed) LocalizedText.fromJson(it, '$where.items[$i]')],
           refs: _refIds(m['refs'], '$where.refs'),
         );
+      case 'topicLink':
+        return TopicLinkBlock(
+          target: _id(m['target'], '$where.target'),
+          text: LocalizedText.fromJson(m['text'], '$where.text'),
+        );
       case 'refMarker':
         final refs = _refIds(m['refs'], '$where.refs');
         if (refs.isEmpty) _fail('$where.refs: empty');
@@ -162,6 +178,16 @@ sealed class ContentBlock {
         return null;
     }
   }
+}
+
+/// A "Read more" card that opens another topic (since 1.2). Shown only when
+/// that topic is on this phone.
+class TopicLinkBlock extends ContentBlock {
+  final String target;
+  final LocalizedText text;
+  const TopicLinkBlock({required this.target, required this.text});
+  @override
+  List<String> get refs => const [];
 }
 
 class ParagraphBlock extends ContentBlock {
@@ -392,10 +418,10 @@ class Disease {
         ContentSection(id: sid, title: LocalizedText.fromJson(sm['title'], '$w.$sid.title'), blocks: blocks),
       );
     }
-    // Same seven-part structure for every disease (§3).
-    final ids = sections.map((s) => s.id).toList();
-    if (ids.join(',') != kSectionIds.join(',')) {
-      _fail('$w.sections: expected ${kSectionIds.join(', ')} in that order, got ${ids.join(', ')}');
+    // Same structure for every disease (§3), optionally with treatment.
+    final ids = sections.map((s) => s.id).join(',');
+    if (ids != kSectionIds.join(',') && ids != kSectionIdsWithTreatment.join(',')) {
+      _fail('$w.sections: expected ${kSectionIdsWithTreatment.join(', ')} in that order (treatment optional), got $ids');
     }
     for (final s in sections) {
       if (s.blocks.isEmpty) _fail('$w.${s.id}: no blocks');

@@ -243,4 +243,7 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get contentUnavailable =>
       'This topic couldn\'t be loaded. Please reinstall or update the app.';
+
+  @override
+  String get readMore => 'Read more';
 }

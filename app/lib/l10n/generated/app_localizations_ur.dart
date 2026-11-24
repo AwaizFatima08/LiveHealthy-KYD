@@ -244,4 +244,7 @@ class AppLocalizationsUr extends AppLocalizations {
   @override
   String get contentUnavailable =>
       'یہ موضوع لوڈ نہیں ہو سکا۔ براہِ کرم ایپ دوبارہ انسٹال یا اپڈیٹ کریں۔';
+
+  @override
+  String get readMore => 'مزید پڑھیں';
 }

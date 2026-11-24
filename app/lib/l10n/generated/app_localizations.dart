@@ -487,6 +487,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'This topic couldn\'t be loaded. Please reinstall or update the app.'**
   String get contentUnavailable;
+
+  /// No description provided for @readMore.
+  ///
+  /// In en, this message translates to:
+  /// **'Read more'**
+  String get readMore;
 }
 
 class _AppLocalizationsDelegate

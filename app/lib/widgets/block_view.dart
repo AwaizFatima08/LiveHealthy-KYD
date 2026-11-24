@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
+import 'package:provider/provider.dart';
 
 import '../core/content/models.dart';
 import '../core/theme/app_theme.dart';
 import '../l10n/generated/app_localizations.dart';
+import '../screens/disease_screen.dart';
+import '../services/content_repository.dart';
 import 'content_text.dart';
 
 /// Renders one content block. The reader walks blocks in order, which is
@@ -26,6 +29,7 @@ class BlockView extends StatelessWidget {
       KeyNumberBlock() => _KeyNumber(disease: disease, block: b),
       AlertBlock() => _Alert(disease: disease, block: b),
       RefMarkerBlock() => RefMarkers(disease: disease, refs: b.refs),
+      TopicLinkBlock() => _TopicLink(block: b),
     };
   }
 }
@@ -206,6 +210,62 @@ class _Animation extends StatelessWidget {
 }
 
 /// SVG from assets/graphics/, with a quiet placeholder if it's missing.
+/// "Read more" card into another topic. Hidden if that topic isn't on this
+/// phone (e.g. older bundled content).
+class _TopicLink extends StatelessWidget {
+  final TopicLinkBlock block;
+  const _TopicLink({required this.block});
+
+  @override
+  Widget build(BuildContext context) {
+    final target = context.watch<ContentRepository>().disease(block.target);
+    if (target == null) return const SizedBox.shrink();
+    final theme = Theme.of(context);
+    return Card(
+      key: Key('topic-link-${block.target}'),
+      margin: EdgeInsets.zero,
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => DiseaseScreen(diseaseId: target.id))),
+        child: Padding(
+          padding: const EdgeInsets.all(12),
+          child: Row(
+            children: [
+              Container(
+                width: 48,
+                height: 48,
+                decoration: BoxDecoration(
+                  color: AppTheme.primary.withValues(alpha: 0.07),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                padding: const EdgeInsets.all(4),
+                child: ContentGraphic(assetKey: target.headerAsset),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      AppLocalizations.of(context).readMore,
+                      style: theme.textTheme.labelLarge?.copyWith(color: theme.colorScheme.primary),
+                    ),
+                    Text(
+                      block.text.tr(context),
+                      style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w700),
+                    ),
+                  ],
+                ),
+              ),
+              Icon(Icons.chevron_right, color: theme.colorScheme.primary),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class ContentGraphic extends StatelessWidget {
   final String assetKey;
   final String? semanticLabel;
