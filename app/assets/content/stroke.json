@@ -1,6 +1,6 @@
 {
  "id": "stroke",
- "version": 1,
+ "version": 2,
  "order": 8,
  "group": null,
  "status": "published",
@@ -566,8 +566,9 @@
    },
    "blocks": [
     {
-     "type": "image",
-     "assetKey": "stroke_fast.svg",
+     "type": "animation",
+     "assetKey": "20261124-2222-livehealthy-kyd-lottie-01_lottie.json",
+     "loop": true,
      "caption": {
       "en": "Think FAST. F Face: has one side dropped? Can they smile? A Arms: can they lift both arms and keep them up? S Speech: is it slurred or confused? T Time: call 1122 straight away.",
       "ur": "FAST یاد رکھیں۔ F چہرہ: کیا ایک طرف لٹک گئی ہے؟ کیا وہ مسکرا سکتے ہیں؟ A بازو: کیا دونوں بازو اٹھا کر رکھ سکتے ہیں؟ S بولنا: کیا بات لڑکھڑا رہی ہے یا بے ربط ہے؟ T وقت: فوراً 1122 پر کال کریں۔"

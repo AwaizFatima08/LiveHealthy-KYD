@@ -978,48 +978,6 @@ def artery_block():
     return svg(w, h, '\n'.join(p))
 
 
-def face(cx, cy, droop=False):
-    """A face; with droop, one side of the mouth and one eyelid sag (stroke)."""
-    if droop:
-        mouth = f'M{cx - 14} {cy + 10} Q{cx - 2} {cy + 18} {cx + 6} {cy + 18} L{cx + 14} {cy + 24}'
-        eye_r = (f'<circle cx="{cx + 10}" cy="{cy - 4}" r="3.5" fill="{INK}"/>'
-                 f'<path d="M{cx + 4} {cy - 9} L{cx + 16} {cy - 5}" stroke="{SKIN_DARK}" stroke-width="3" stroke-linecap="round"/>')
-    else:
-        mouth = f'M{cx - 14} {cy + 12} Q{cx} {cy + 22} {cx + 14} {cy + 12}'
-        eye_r = f'<circle cx="{cx + 10}" cy="{cy - 6}" r="3.5" fill="{INK}"/>'
-    return (f'<circle cx="{cx}" cy="{cy}" r="30" fill="{SKIN}" stroke="{SKIN_DARK}" stroke-width="3"/>'
-            f'<circle cx="{cx - 10}" cy="{cy - 6}" r="3.5" fill="{INK}"/>' + eye_r +
-            f'<path d="{mouth}" fill="none" stroke="{INK}" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>')
-
-
-def stroke_fast():
-    """F face drooping, A arm drifting down, S speech slurred, T time to call 1122."""
-    w, h = 340, 150
-    p = []
-    xs = [44, 128, 212, 296]
-    for x in xs:
-        p.append(f'<rect x="{x - 40}" y="12" width="80" height="100" rx="14" fill="{WHITE}" stroke="{RED}" stroke-width="3"/>')
-    p.append(face(44, 60, droop=True))
-    # arms: person with one arm up and one dropping
-    p.append(f'<circle cx="128" cy="38" r="10" fill="{GREEN_MID}"/>')
-    p.append(f'<rect x="118" y="50" width="20" height="44" rx="8" fill="{GREEN_MID}"/>')
-    p.append(f'<path d="M118 56 L94 54" stroke="{GREEN_MID}" stroke-width="8" stroke-linecap="round"/>')
-    p.append(f'<path d="M138 56 L152 76" stroke="{GREEN_MID}" stroke-width="8" stroke-linecap="round"/>')
-    p.append(f'<path d="M158 60 L158 84 M152 78 L158 85 L164 78" fill="none" stroke="{RED}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>')
-    # speech bubble with a scribble
-    p.append(f'<path d="M184 34 L240 34 C246 34 248 38 248 42 L248 70 C248 74 246 78 240 78 L206 78 L194 92 L196 78 L184 78 C180 78 176 74 176 70 L176 42 C176 38 180 34 184 34 Z" '
-             f'fill="{BLUE_LIGHT}" stroke="{BLUE}" stroke-width="3"/>')
-    p.append(f'<path d="M186 56 C192 44 196 68 202 56 C208 44 212 68 218 56 C224 44 228 68 236 56" fill="none" stroke="{BLUE}" stroke-width="3" stroke-linecap="round"/>')
-    # clock and phone
-    p.append(f'<circle cx="280" cy="46" r="18" fill="{WHITE}" stroke="{RED}" stroke-width="4"/>')
-    p.append(f'<path d="M280 46 L280 34 M280 46 L289 51" stroke="{INK}" stroke-width="3" stroke-linecap="round"/>')
-    p.append(f'<rect x="296" y="52" width="26" height="44" rx="5" fill="{INK}"/><rect x="300" y="58" width="18" height="28" rx="2" fill="{GREEN_LIGHT}"/>')
-    p.append(text(282, 100, '1122', 14, RED))
-    for i, x in enumerate(xs):
-        p.append(text(x, 136, 'FAST'[i], 18, RED))
-    return svg(w, h, '\n'.join(p))
-
-
 def stroke_types():
     """1 a clot blocks a blood vessel in the brain; 2 a blood vessel bursts and bleeds."""
     w, h = 340, 150
@@ -1193,7 +1151,6 @@ GRAPHICS = {
     'hepatitis_c_header.svg': hepatitis_c_header,
     'heart_attack_signs.svg': heart_attack_signs,
     'artery_block.svg': artery_block,
-    'stroke_fast.svg': stroke_fast,
     'stroke_types.svg': stroke_types,
     'hepatitis_spread.svg': hepatitis_spread,
     'liver_damage.svg': liver_damage,

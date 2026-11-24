@@ -1,5 +1,5 @@
 {
- "contentVersion": 3,
+ "contentVersion": 4,
  "minAppVersion": 1,
  "diseases": {
   "breast_cancer": 1,
@@ -12,7 +12,7 @@
   "migraine": 1,
   "obesity": 2,
   "prediabetes": 1,
-  "stroke": 1,
+  "stroke": 2,
   "type2_diabetes": 2
  },
  "groups": {
@@ -62,5 +62,5 @@
   "vitals": "comingSoon",
   "medicineReminder": "comingSoon"
  },
- "updatedAt": "2026-11-24T17:10:34+00:00"
+ "updatedAt": "2026-11-24T17:27:13+00:00"
 }
