@@ -74,7 +74,8 @@
   "@reportErrorBody": {"placeholders": {"version": {"type": "String"}, "content": {"type": "int"}}},
   "appVersion": "App version {version}",
   "@appVersion": {"placeholders": {"version": {"type": "String"}}},
-  "privacyNote": "No account, no ads, no tracking of what you read. Only anonymous crash reports are sent, to help fix bugs.",
+  "privacyNote": "No account, and no record of what you read. A small ad appears on the home and settings screens only, never next to health information. Google, which serves the ads, uses your device's advertising ID; see the privacy policy. Anonymous crash reports help us fix bugs.",
+  "adChoices": "Ad privacy choices",
   "close": "Close",
   "contentUnavailable": "This topic couldn't be loaded. Please reinstall or update the app."
 }

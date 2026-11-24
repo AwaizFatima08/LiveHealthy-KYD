@@ -232,7 +232,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get privacyNote =>
-      'No account, no ads, no tracking of what you read. Only anonymous crash reports are sent, to help fix bugs.';
+      'No account, and no record of what you read. A small ad appears on the home and settings screens only, never next to health information. Google, which serves the ads, uses your device\'s advertising ID; see the privacy policy. Anonymous crash reports help us fix bugs.';
+
+  @override
+  String get adChoices => 'Ad privacy choices';
 
   @override
   String get close => 'Close';

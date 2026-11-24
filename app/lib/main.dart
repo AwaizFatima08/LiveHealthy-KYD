@@ -17,6 +17,7 @@ import 'core/theme/app_theme.dart';
 import 'l10n/generated/app_localizations.dart';
 import 'screens/home_screen.dart';
 import 'screens/onboarding_screen.dart';
+import 'services/ads.dart';
 import 'services/content_repository.dart';
 import 'services/tool_launcher.dart';
 import 'services/update_service.dart';
@@ -46,16 +47,21 @@ Future<void> main() async {
     appBuild: int.tryParse(info.buildNumber) ?? 1,
   );
 
+  final ads = AdsController();
+
   runApp(
     KnowYourDiseaseApp(
       settings: AppSettings(prefs),
       repository: repository,
       updates: updates,
+      ads: ads,
       appVersion: '${info.version} (${info.buildNumber})',
     ),
   );
   // Online-only, at most once a day, never blocks reading (§7).
   unawaited(updates.checkForUpdates());
+  // Consent message (where required), then banners on Home and Settings.
+  unawaited(ads.init());
 }
 
 /// Firebase is only used for content updates and crash reports. If it fails
@@ -104,6 +110,7 @@ class KnowYourDiseaseApp extends StatelessWidget {
   final ContentRepository repository;
   final UpdateService? updates;
   final ToolLauncher toolLauncher;
+  final AdsController? ads;
   final String appVersion;
 
   const KnowYourDiseaseApp({
@@ -112,6 +119,7 @@ class KnowYourDiseaseApp extends StatelessWidget {
     required this.repository,
     this.updates,
     this.toolLauncher = const ToolLauncher(),
+    this.ads,
     this.appVersion = '',
   });
 
@@ -123,6 +131,8 @@ class KnowYourDiseaseApp extends StatelessWidget {
         ChangeNotifierProvider<ContentRepository>.value(value: repository),
         Provider<UpdateService?>.value(value: updates),
         Provider<ToolLauncher>.value(value: toolLauncher),
+        // Tests build the app without the ad SDK.
+        ChangeNotifierProvider<AdsController>.value(value: ads ?? AdsController.off()),
         Provider<AppVersion>.value(value: AppVersion(appVersion)),
       ],
       child: Consumer<AppSettings>(

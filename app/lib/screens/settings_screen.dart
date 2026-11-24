@@ -6,6 +6,7 @@ import '../core/app_settings.dart';
 import '../core/constants/links.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../main.dart';
+import '../services/ads.dart';
 import '../services/content_repository.dart';
 import '../services/update_service.dart';
 import '../widgets/common.dart';
@@ -89,7 +90,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
       minTileHeight: 56,
     );
 
+    final ads = context.watch<AdsController>();
+
     return Scaffold(
+      bottomNavigationBar: const BannerSlot(),
       appBar: AppBar(title: Text(l10n.settings, maxLines: 1, overflow: TextOverflow.ellipsis)),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 32),
@@ -191,6 +195,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 linkTile(Icons.privacy_tip_outlined, l10n.privacyPolicy, () => openLink(context, Links.privacyPolicy)),
                 const Divider(height: 1),
                 linkTile(Icons.description_outlined, l10n.terms, () => openLink(context, Links.terms)),
+                if (ads.privacyOptionsRequired) ...[
+                  const Divider(height: 1),
+                  linkTile(Icons.ads_click_outlined, l10n.adChoices, ads.showPrivacyOptions, key: const Key('ad-choices')),
+                ],
               ],
             ),
           ),

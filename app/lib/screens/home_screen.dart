@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../l10n/generated/app_localizations.dart';
+import '../services/ads.dart';
 import '../services/content_repository.dart';
 import '../widgets/common.dart';
 import '../widgets/content_text.dart';
@@ -19,6 +20,7 @@ class HomeScreen extends StatelessWidget {
     final theme = Theme.of(context);
     final items = context.watch<ContentRepository>().homeItems;
     return Scaffold(
+      bottomNavigationBar: const BannerSlot(),
       appBar: AppBar(
         title: Text(l10n.appTitle, maxLines: 1, overflow: TextOverflow.ellipsis),
         actions: [

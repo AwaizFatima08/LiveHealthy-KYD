@@ -1,5 +1,37 @@
 # Prelaunch Review — LiveHealthy: Know Your Disease
 
+# Next upgrade (1.2.0, build 3): AdMob ads — on branch `feature/admob`, NOT released
+
+Owner decision (24 Nov 2026): ads arrive with the next upgrade, together with the new topics.
+
+**AdMob (account homilabs.smc@gmail.com), created 24 Nov 2026:**
+- App "LiveHealthy: Know Your Disease", linked to the Play listing:
+  `ca-app-pub-2087846699268567~1254923561` (in Google's review, "Getting ready").
+- Banner unit "Home banner": `ca-app-pub-2087846699268567/9432796487`.
+
+**In the code:** `app/lib/services/ads.dart`. Google's consent message (UMP) runs first and the SDK
+starts only if ads may be requested. An anchored adaptive banner shows on **Home and Settings only**
+(a test enforces this), never on a topic, section, reference, "When to see a doctor" or onboarding
+screen. Settings shows "Ad privacy choices" where the law requires it. Debug builds use Google's test
+banner. If consent or the SDK fails, there's simply no banner. The Settings privacy note no longer
+says "no ads".
+
+**Before releasing 1.2.0 (all must be done together, or the listing and policy are false):**
+1. Play Console → App content → **Ads: "Yes, my app contains ads"**.
+2. Data safety: add what the AdMob SDK collects (device or other IDs incl. advertising ID,
+   approximate location, app interactions, diagnostics; purpose Advertising; shared with Google).
+3. Privacy policy (live_healthy/website/privacy-policy.html, KYD section): replace "no ads" with an
+   AdMob paragraph and upload it to Hostinger.
+4. Store listing: remove "No account, no ads" wording from the full description
+   (store/listing/store_listing.md and Play), and the "Ads: No ads" line in the listing doc.
+5. AdMob → Privacy & messaging: confirm a GDPR consent message exists for this app (AdMob says one
+   is auto-created when "Maximize message coverage" is on).
+6. Optional: add the app's Play store link in AdMob if it isn't linked, and an app-ads.txt on
+   homilabs.org if the other apps use one.
+7. Test on a real phone: test banner on Home and Settings only; none on reading screens.
+
+---
+
 # Update 1.1.0 (build 2) — 2026-10-10
 
 **New topics:** high cholesterol, migraine and breast cancer (EN + UR, seven-part structure, 12 new
