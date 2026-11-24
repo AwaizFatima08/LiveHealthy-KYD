@@ -247,4 +247,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get readMore => 'مزید پڑھیں';
+
+  @override
+  String get newBadge => 'نیا';
 }

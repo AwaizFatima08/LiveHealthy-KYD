@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../core/content/models.dart';
 import '../core/theme/app_theme.dart';
+import '../core/app_settings.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/content_repository.dart';
 import '../services/tool_launcher.dart';
@@ -27,6 +28,11 @@ class DiseaseScreen extends StatelessWidget {
     final disease = repo.disease(diseaseId);
     if (disease == null) {
       return Scaffold(appBar: AppBar(), body: Center(child: Text(l10n.contentUnavailable)));
+    }
+    final settings = context.read<AppSettings>();
+    if (settings.isNew(disease.id)) {
+      // Opening a topic clears its "New" label.
+      WidgetsBinding.instance.addPostFrameCallback((_) => settings.markSeen(disease.id));
     }
     final total = totalSections(disease);
     final tools = disease.relatedTools.where((t) => repo.toolStatus(t.app) != ToolLinkStatus.hidden).toList();

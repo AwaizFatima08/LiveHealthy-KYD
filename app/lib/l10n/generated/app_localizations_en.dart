@@ -246,4 +246,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get readMore => 'Read more';
+
+  @override
+  String get newBadge => 'New';
 }

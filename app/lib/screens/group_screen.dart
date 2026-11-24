@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../core/app_settings.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/content_repository.dart';
 import '../widgets/common.dart';
@@ -38,6 +39,7 @@ class GroupScreen extends StatelessWidget {
               graphic: d.headerAsset,
               title: d.title.tr(context),
               summary: d.summary.tr(context),
+              isNew: context.watch<AppSettings>().isNew(d.id),
               onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => DiseaseScreen(diseaseId: d.id))),
             ),
             const SizedBox(height: 12),

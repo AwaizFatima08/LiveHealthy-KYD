@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../core/app_settings.dart';
 import '../core/theme/app_theme.dart';
+import '../l10n/generated/app_localizations.dart';
 import 'block_view.dart';
 
 /// The app icon, drawn from the bundled asset.
@@ -63,11 +64,30 @@ class LanguageToggle extends StatelessWidget {
 }
 
 /// A white Home / topic card: graphic, title, summary, chevron.
+/// Small "New" label on a topic card (design-v1.2 §4).
+class NewBadge extends StatelessWidget {
+  const NewBadge({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+      decoration: BoxDecoration(color: AppTheme.primary, borderRadius: BorderRadius.circular(8)),
+      child: Text(
+        AppLocalizations.of(context).newBadge,
+        style: theme.textTheme.labelMedium?.copyWith(color: Colors.white, fontWeight: FontWeight.w700),
+      ),
+    );
+  }
+}
+
 class TopicCard extends StatelessWidget {
   final String graphic;
   final String title;
   final String summary;
   final String? badge;
+  final bool isNew;
   final VoidCallback onTap;
 
   const TopicCard({
@@ -76,6 +96,7 @@ class TopicCard extends StatelessWidget {
     required this.title,
     required this.summary,
     this.badge,
+    this.isNew = false,
     required this.onTap,
   });
 
@@ -99,6 +120,10 @@ class TopicCard extends StatelessWidget {
     final text = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        if (isNew) ...[
+          const NewBadge(),
+          const SizedBox(height: 4),
+        ],
         Text(title, style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700)),
         const SizedBox(height: 2),
         Text(summary, style: theme.textTheme.bodyMedium?.copyWith(color: theme.colorScheme.onSurfaceVariant)),

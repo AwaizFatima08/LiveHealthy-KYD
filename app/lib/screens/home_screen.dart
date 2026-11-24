@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../core/app_settings.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/ads.dart';
 import '../services/content_repository.dart';
@@ -19,6 +20,18 @@ class HomeScreen extends StatelessWidget {
     final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     final items = context.watch<ContentRepository>().homeItems;
+    final settings = context.watch<AppSettings>();
+    if (settings.seenTopics == null) {
+      // Fresh install: nothing is "new" on the first Home.
+      final ids = [
+        for (final item in items)
+          ...switch (item) {
+            DiseaseItem(:final disease) => [disease.id],
+            GroupItem(:final members) => [for (final d in members) d.id],
+          },
+      ];
+      WidgetsBinding.instance.addPostFrameCallback((_) => settings.markAllSeen(ids));
+    }
     return Scaffold(
       bottomNavigationBar: const BannerSlot(),
       appBar: AppBar(
@@ -44,6 +57,7 @@ class HomeScreen extends StatelessWidget {
                 graphic: disease.headerAsset,
                 title: disease.title.tr(context),
                 summary: disease.summary.tr(context),
+                isNew: settings.isNew(disease.id),
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(builder: (_) => DiseaseScreen(diseaseId: disease.id)),
                 ),
@@ -54,6 +68,7 @@ class HomeScreen extends StatelessWidget {
                 title: group.title.tr(context),
                 summary: group.summary.tr(context),
                 badge: l10n.topicsCount(members.length),
+                isNew: members.any((d) => settings.isNew(d.id)),
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(builder: (_) => GroupScreen(groupId: group.id)),
                 ),

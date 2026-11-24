@@ -42,11 +42,12 @@ Future<ContentRepository> loadedRepository({Directory? cache}) async {
   return repo;
 }
 
-Future<AppSettings> settings({String? language, bool accepted = true, TextSize? size}) async {
+Future<AppSettings> settings({String? language, bool accepted = true, TextSize? size, List<String>? seen}) async {
   SharedPreferences.setMockInitialValues({
     'language': ?language,
     'disclaimerAccepted': accepted,
     'textSize': ?size?.name,
+    'seenTopics': ?seen,
   });
   return AppSettings(await SharedPreferences.getInstance());
 }
@@ -72,6 +73,7 @@ Future<({AppSettings settings, ContentRepository repo, FakeToolLauncher tools})>
   String? language = 'en',
   bool accepted = true,
   TextSize? size,
+  List<String>? seen,
   Set<ToolApp> installed = const {},
   UpdateService? updates,
   ContentRepository? repo,
@@ -80,7 +82,7 @@ Future<({AppSettings settings, ContentRepository repo, FakeToolLauncher tools})>
   // where the app shows a still frame (that path is tested too).
   tester.platformDispatcher.accessibilityFeaturesTestValue = const FakeAccessibilityFeatures(disableAnimations: true);
   addTearDown(tester.platformDispatcher.clearAccessibilityFeaturesTestValue);
-  final s = await settings(language: language, accepted: accepted, size: size);
+  final s = await settings(language: language, accepted: accepted, size: size, seen: seen);
   final r = repo ?? await tester.runAsync(() => loadedRepository()) as ContentRepository;
   final tools = FakeToolLauncher(installed: installed);
   await tester.pumpWidget(
