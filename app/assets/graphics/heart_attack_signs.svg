@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 290" width="340" height="290">
+<path d="M170 18 m-18 22 a18 20 0 1 0 36 0 a18 20 0 1 0 -36 0 M156.0 62.0 L184.0 62.0 C216.0 66.0 222.0 78.0 224.0 108.0 L228.0 168.0 L214.0 170.0 L208.0 114.0 L206.0 178.0 L202.0 268.0 L178.0 268.0 L172.0 186.0 L168.0 186.0 L162.0 268.0 L138.0 268.0 L134.0 178.0 L132.0 114.0 L126.0 170.0 L112.0 168.0 L116.0 108.0 C118.0 78.0 124.0 66.0 156.0 62.0 Z" fill="#E3F1EB" stroke="#0B6E4F" stroke-width="3" stroke-linejoin="round"/>
+<line x1="160" y1="96" x2="60" y2="100" stroke="#8A9A93" stroke-width="2"/>
+<circle cx="160" cy="96" r="7" fill="#C62828"/>
+<circle cx="60" cy="100" r="26" fill="#FFFFFF" stroke="#C62828" stroke-width="3"/>
+<path d="M60 113.6 C42.5 101.7 46.0 87.7 60 96.1 C74.0 87.7 77.5 101.7 60 113.6 Z" fill="#C62828"/>
+<line x1="126" y1="140" x2="60" y2="180" stroke="#8A9A93" stroke-width="2"/>
+<circle cx="126" cy="140" r="7" fill="#C62828"/>
+<circle cx="60" cy="180" r="26" fill="#FFFFFF" stroke="#C62828" stroke-width="3"/>
+<path d="M48 166 L56 166 L72 192 L64 196 Z" fill="#F7DADA" stroke="#C62828" stroke-width="2.5" stroke-linejoin="round"/>
+<line x1="170" y1="54" x2="60" y2="30" stroke="#8A9A93" stroke-width="2"/>
+<circle cx="170" cy="54" r="7" fill="#C62828"/>
+<circle cx="60" cy="30" r="26" fill="#FFFFFF" stroke="#C62828" stroke-width="3"/>
+<path d="M46 20 C46 38 54 44 60 44 C66 44 74 38 74 20" fill="none" stroke="#C62828" stroke-width="4" stroke-linecap="round"/>
+<line x1="176" y1="138" x2="280" y2="160" stroke="#8A9A93" stroke-width="2"/>
+<circle cx="176" cy="138" r="7" fill="#C62828"/>
+<circle cx="280" cy="160" r="26" fill="#FFFFFF" stroke="#C62828" stroke-width="3"/>
+<path d="M276 146 C276 156 264 158 266 168 C268 176 290 176 294 164 C296 156 286 154 284 146 Z" fill="#F7DADA" stroke="#C62828" stroke-width="2.5"/>
+<line x1="184" y1="100" x2="280" y2="90" stroke="#8A9A93" stroke-width="2"/>
+<circle cx="184" cy="100" r="7" fill="#C62828"/>
+<circle cx="280" cy="90" r="26" fill="#FFFFFF" stroke="#C62828" stroke-width="3"/>
+<path d="M277 78 C264 78 262 96 266 102 C272 104 276 100 277 94 Z" fill="#F7DADA" stroke="#C62828" stroke-width="2.5"/><path d="M283 78 C296 78 298 96 294 102 C288 104 284 100 283 94 Z" fill="#F7DADA" stroke="#C62828" stroke-width="2.5"/>
+<line x1="186" y1="28" x2="280" y2="26" stroke="#8A9A93" stroke-width="2"/>
+<circle cx="186" cy="28" r="7" fill="#C62828"/>
+<circle cx="280" cy="26" r="26" fill="#FFFFFF" stroke="#C62828" stroke-width="3"/>
+<path d="M273 19.4 C275.1 23.9 279 27.5 279 32 A6 6 0 0 1 267 32 C267 27.5 270.9 23.9 273 19.4 Z" fill="#2F6DB5"/><path d="M288 25.5 C289.75 29.25 293 32.25 293 36 A5 5 0 0 1 283 36 C283 32.25 286.25 29.25 288 25.5 Z" fill="#2F6DB5"/>
+<text x="60" y="136" font-family="Roboto, sans-serif" font-size="13" font-weight="600" fill="#8A9A93" text-anchor="middle">1</text>
+<text x="60" y="216" font-family="Roboto, sans-serif" font-size="13" font-weight="600" fill="#8A9A93" text-anchor="middle">2</text>
+<text x="60" y="66" font-family="Roboto, sans-serif" font-size="13" font-weight="600" fill="#8A9A93" text-anchor="middle">3</text>
+<text x="280" y="196" font-family="Roboto, sans-serif" font-size="13" font-weight="600" fill="#8A9A93" text-anchor="middle">4</text>
+<text x="280" y="126" font-family="Roboto, sans-serif" font-size="13" font-weight="600" fill="#8A9A93" text-anchor="middle">5</text>
+<text x="280" y="62" font-family="Roboto, sans-serif" font-size="13" font-weight="600" fill="#8A9A93" text-anchor="middle">6</text>
+</svg>

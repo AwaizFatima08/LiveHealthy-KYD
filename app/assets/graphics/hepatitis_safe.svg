@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 150" width="340" height="150">
+<rect x="6" y="12" width="76" height="92" rx="14" fill="#E3F1EB" stroke="#1B7F3B" stroke-width="3"/>
+<rect x="90" y="12" width="76" height="92" rx="14" fill="#E3F1EB" stroke="#1B7F3B" stroke-width="3"/>
+<rect x="174" y="12" width="76" height="92" rx="14" fill="#E3F1EB" stroke="#1B7F3B" stroke-width="3"/>
+<rect x="258" y="12" width="76" height="92" rx="14" fill="#E3F1EB" stroke="#1B7F3B" stroke-width="3"/>
+<rect x="18" y="32" width="52" height="40" rx="6" fill="#FFFFFF" stroke="#8A9A93" stroke-width="2.5" stroke-dasharray="5 4"/>
+<g transform="rotate(-30 44 52)"><rect x="28.6" y="47.1" width="25.2" height="9.799999999999999" rx="3" fill="#FFFFFF" stroke="#1D2B26" stroke-width="2.5"/><rect x="31.4" y="49.2" width="12.6" height="5.6" fill="#C62828"/><path d="M53.8 52 L66.4 52" stroke="#1D2B26" stroke-width="2.5"/><path d="M28.6 52 L21.6 52 M21.6 46.4 L21.6 57.6" stroke="#1D2B26" stroke-width="3"/></g>
+<rect x="124" y="46" width="8" height="30" rx="3" fill="#8A9A93"/><rect x="110" y="34" width="36" height="14" rx="3" fill="#E2E8E5" stroke="#1D2B26" stroke-width="2.5"/><path d="M112 34 L144 34" stroke="#C62828" stroke-width="2"/>
+<circle cx="146" cy="78" r="9" fill="#3E9C7C"/>
+<rect x="196" y="30" width="32" height="36" rx="8" fill="#C62828"/><path d="M212 66 L212 76" stroke="#C62828" stroke-width="3"/><rect x="202" y="36" width="20" height="8" rx="2" fill="#FFFFFF"/>
+<path d="M215.0 84 L219.9 89.6 L229.7 77.7" fill="none" stroke="#1B7F3B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="274" y="26" width="16" height="46" rx="7" fill="#FFFFFF" stroke="#1D2B26" stroke-width="2.5"/>
+<rect x="276" y="50" width="12" height="20" rx="5" fill="#C62828"/>
+<circle cx="310" cy="56" r="8" fill="#2F6DB5"/><circle cx="302" cy="80" r="8" fill="#2F6DB5"/><circle cx="318" cy="80" r="8" fill="#2F6DB5"/>
+<text x="44" y="128" font-family="Roboto, sans-serif" font-size="14" font-weight="600" fill="#1B7F3B" text-anchor="middle">1</text>
+<text x="128" y="128" font-family="Roboto, sans-serif" font-size="14" font-weight="600" fill="#1B7F3B" text-anchor="middle">2</text>
+<text x="212" y="128" font-family="Roboto, sans-serif" font-size="14" font-weight="600" fill="#1B7F3B" text-anchor="middle">3</text>
+<text x="296" y="128" font-family="Roboto, sans-serif" font-size="14" font-weight="600" fill="#1B7F3B" text-anchor="middle">4</text>
+</svg>

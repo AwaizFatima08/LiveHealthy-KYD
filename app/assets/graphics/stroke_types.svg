@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 150" width="340" height="150">
+<path d="M26 74 C20 40 60 16 90 26 C120 14 160 40 154 74 C154 104 120 120 90 112 C60 120 26 104 26 74 Z" fill="#F8D7E5" stroke="#E8A1BE" stroke-width="3"/>
+<path d="M40 96 C66 86 80 70 96 50 M96 50 L120 40 M96 50 L110 74" fill="none" stroke="#C62828" stroke-width="6" stroke-linecap="round"/>
+<text x="90" y="140" font-family="Roboto, sans-serif" font-size="14" font-weight="600" fill="#8A9A93" text-anchor="middle">1</text>
+<path d="M186 74 C180 40 220 16 250 26 C280 14 320 40 314 74 C314 104 280 120 250 112 C220 120 186 104 186 74 Z" fill="#F8D7E5" stroke="#E8A1BE" stroke-width="3"/>
+<path d="M200 96 C226 86 240 70 256 50 M256 50 L280 40 M256 50 L270 74" fill="none" stroke="#C62828" stroke-width="6" stroke-linecap="round"/>
+<text x="250" y="140" font-family="Roboto, sans-serif" font-size="14" font-weight="600" fill="#8A9A93" text-anchor="middle">2</text>
+<ellipse cx="90" cy="56" rx="9" ry="6" fill="#8E1B1B"/>
+<path d="M96 50 L120 40 M96 50 L110 74" fill="none" stroke="#8A9A93" stroke-width="6" stroke-linecap="round"/>
+<path d="M252 48 C268 34 290 46 280 62 C292 74 268 86 258 72 C242 80 236 58 252 48 Z" fill="#C62828"/>
+</svg>

@@ -813,7 +813,393 @@ def painkiller_limit():
     return svg(w, h, '\n'.join(p))
 
 
+# ------------------------------------------------------------------ 1.2: heart, stroke, hepatitis
+
+LIVER = '#B5523B'
+LIVER_LIGHT = '#F1D5CC'
+SCAR = '#D9B8A6'
+VIRUS = '#B26A00'
+
+
+def liver_path(cx, cy, s=1.0):
+    """Liver seen from the front: a domed top, the big right lobe on the viewer's left,
+    tapering to the left lobe; the underside slopes up to the tip."""
+    return (f'M{cx - 70 * s} {cy - 14 * s} C{cx - 62 * s} {cy - 42 * s} {cx + 30 * s} {cy - 46 * s} {cx + 74 * s} {cy - 30 * s} '
+            f'C{cx + 84 * s} {cy - 26 * s} {cx + 78 * s} {cy - 16 * s} {cx + 64 * s} {cy - 12 * s} '
+            f'C{cx + 36 * s} {cy - 6 * s} {cx + 14 * s} {cy + 4 * s} {cx - 6 * s} {cy + 18 * s} '
+            f'C{cx - 26 * s} {cy + 32 * s} {cx - 52 * s} {cy + 36 * s} {cx - 64 * s} {cy + 22 * s} '
+            f'C{cx - 72 * s} {cy + 12 * s} {cx - 74 * s} {cy} {cx - 70 * s} {cy - 14 * s} Z')
+
+
+def virus(cx, cy, r, fill=VIRUS):
+    spikes = ''.join(
+        f'<line x1="{cx + r * math.cos(a):.1f}" y1="{cy + r * math.sin(a):.1f}" '
+        f'x2="{cx + (r + r * 0.45) * math.cos(a):.1f}" y2="{cy + (r + r * 0.45) * math.sin(a):.1f}" '
+        f'stroke="{fill}" stroke-width="{max(2.0, r * 0.18):.1f}" stroke-linecap="round"/>'
+        f'<circle cx="{cx + (r + r * 0.5) * math.cos(a):.1f}" cy="{cy + (r + r * 0.5) * math.sin(a):.1f}" r="{max(2.0, r * 0.14):.1f}" fill="{fill}"/>'
+        for a in [i * math.pi / 4 for i in range(8)])
+    return spikes + f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="{fill}"/><circle cx="{cx - r * 0.3}" cy="{cy - r * 0.3}" r="{r * 0.25}" fill="{AMBER_LIGHT}"/>'
+
+
+def shield(cx, cy, s=1.0, fill=GREEN):
+    return (f'<path d="M{cx} {cy - 34 * s} L{cx + 28 * s} {cy - 24 * s} C{cx + 28 * s} {cy + 6 * s} {cx + 18 * s} {cy + 24 * s} {cx} {cy + 34 * s} '
+            f'C{cx - 18 * s} {cy + 24 * s} {cx - 28 * s} {cy + 6 * s} {cx - 28 * s} {cy - 24 * s} Z" fill="{fill}"/>'
+            + tick(cx, cy, 1.3 * s, WHITE))
+
+
+def tablet(cx, cy, s=1.0, a=BLUE, b=WHITE):
+    """Two-colour capsule, tilted."""
+    return (f'<g transform="rotate(-35 {cx} {cy})">'
+            f'<rect x="{cx - 26 * s}" y="{cy - 11 * s}" width="52" height="22" rx="11" fill="{b}" stroke="{a}" stroke-width="3" transform="scale(1)"/>'
+            f'<path d="M{cx} {cy - 11 * s} L{cx - 15 * s} {cy - 11 * s} A11 11 0 0 0 {cx - 15 * s} {cy + 11 * s} L{cx} {cy + 11 * s} Z" fill="{a}"/>'
+            f'</g>')
+
+
+def head_profile(dx=0, dy=0, fill=GREEN_MID):
+    """The migraine header's head, shifted."""
+    return (f'<path transform="translate({dx} {dy})" d="M70 168 L72 132 C46 118 40 84 52 60 C66 32 100 20 128 30 C154 40 166 62 166 84 '
+            f'L180 106 L166 110 L168 128 C168 140 158 144 146 142 L134 140 L134 168 Z" fill="{fill}"/>')
+
+
+def heart_disease_header():
+    """Heart with a coronary artery; plaque narrows it, and a pulse line."""
+    body = [
+        f'<path d="{heart_path(110, 96, 70)}" fill="{RED}"/>',
+        f'<path d="M86 52 C96 80 92 112 112 148" fill="none" stroke="#8E1B1B" stroke-width="10" stroke-linecap="round"/>',
+        f'<path d="M92 92 C102 104 116 104 132 118" fill="none" stroke="#8E1B1B" stroke-width="7" stroke-linecap="round"/>',
+        f'<ellipse cx="94" cy="100" rx="9" ry="7" fill="{FAT}" stroke="{FAT_DARK}" stroke-width="2"/>',
+        f'<path d="M150 150 L176 150 L184 132 L194 168 L204 120 L212 150 L234 150" fill="none" stroke="{GREEN}" '
+        f'stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>',
+    ]
+    return svg(240, 180, '\n'.join(body))
+
+
+def stroke_header():
+    """Head with the brain; a red patch where blood flow stopped; a clock (time matters)."""
+    body = [
+        head_profile(-20, 0),
+        f'<path d="M50 70 C46 46 72 30 96 36 C114 26 140 38 140 60 C150 72 140 92 124 92 C110 102 84 100 76 92 C58 94 46 84 50 70 Z" '
+        f'fill="{PINK_LIGHT}"/>',
+        f'<path d="M78 46 C88 56 80 66 92 74 M110 44 C104 56 116 64 108 80" fill="none" stroke="#E8A1BE" stroke-width="4" stroke-linecap="round"/>',
+        f'<circle cx="118" cy="66" r="13" fill="{RED}"/>',
+        f'<circle cx="196" cy="56" r="30" fill="{WHITE}" stroke="{RED}" stroke-width="6"/>',
+        f'<path d="M196 56 L196 38 M196 56 L210 64" stroke="{INK}" stroke-width="5" stroke-linecap="round"/>',
+    ]
+    return svg(240, 180, '\n'.join(body))
+
+
+def hepatitis_group_header():
+    body = [
+        f'<path d="{liver_path(110, 100, 1.25)}" fill="{LIVER}"/>',
+        f'<path d="M70 70 C90 62 116 64 132 72" fill="none" stroke="{LIVER_LIGHT}" stroke-width="5" stroke-linecap="round"/>',
+        virus(190, 50, 18),
+    ]
+    return svg(240, 180, '\n'.join(body))
+
+
+def hepatitis_b_header():
+    """Liver protected by a shield (the vaccine)."""
+    body = [
+        f'<path d="{liver_path(96, 104, 1.1)}" fill="{LIVER}"/>',
+        virus(60, 40, 11),
+        shield(186, 92, 1.4),
+    ]
+    return svg(240, 180, '\n'.join(body))
+
+
+def hepatitis_c_header():
+    """Liver, a tablet and a tick: hepatitis C can be cured."""
+    body = [
+        f'<path d="{liver_path(96, 104, 1.1)}" fill="{LIVER}"/>',
+        tablet(178, 62),
+        f'<circle cx="190" cy="134" r="26" fill="{OK}"/>',
+        tick(190, 134, 1.3, WHITE),
+    ]
+    return svg(240, 180, '\n'.join(body))
+
+
+def icon_jaw(x, y):
+    return (f'<path d="M{x - 14} {y - 10} C{x - 14} {y + 8} {x - 6} {y + 14} {x} {y + 14} C{x + 6} {y + 14} {x + 14} {y + 8} {x + 14} {y - 10}" '
+            f'fill="none" stroke="{RED}" stroke-width="4" stroke-linecap="round"/>')
+
+
+def icon_arm(x, y):
+    return (f'<path d="M{x - 12} {y - 14} L{x - 4} {y - 14} L{x + 12} {y + 12} L{x + 4} {y + 16} Z" fill="{RED_LIGHT}" stroke="{RED}" stroke-width="2.5" stroke-linejoin="round"/>')
+
+
+def icon_stomach(x, y):
+    return (f'<path d="M{x - 4} {y - 14} C{x - 4} {y - 4} {x - 16} {y - 2} {x - 14} {y + 8} C{x - 12} {y + 16} {x + 10} {y + 16} {x + 14} {y + 4} '
+            f'C{x + 16} {y - 4} {x + 6} {y - 6} {x + 4} {y - 14} Z" fill="{RED_LIGHT}" stroke="{RED}" stroke-width="2.5"/>')
+
+
+def icon_sweat(x, y):
+    return (f'<path d="{drop_path(x - 7, y + 6, 6)}" fill="{BLUE}"/><path d="{drop_path(x + 8, y + 10, 5)}" fill="{BLUE}"/>')
+
+
+def heart_attack_signs():
+    """1 chest pain, 2 arm, 3 jaw/neck, 4 stomach, 5 breathless, 6 cold sweat."""
+    w, h = 340, 290
+    parts = [body_outline(170, 18)]
+    parts += organ_marks([
+        (160, 96, 60, 100, 1, icon_heart),
+        (126, 140, 60, 180, 2, icon_arm),
+        (170, 54, 60, 30, 3, icon_jaw),
+        (176, 138, 280, 160, 4, icon_stomach),
+        (184, 100, 280, 90, 5, icon_lungs),
+        (186, 28, 280, 26, 6, icon_sweat),
+    ])
+    for n, (x, y) in enumerate([(60, 136), (60, 216), (60, 66), (280, 196), (280, 126), (280, 62)], 1):
+        parts.append(text(x, y, str(n), 13, GREY, '600'))
+    return svg(w, h, '\n'.join(parts))
+
+
+def artery_block():
+    """1 healthy artery, 2 plaque narrows it, 3 a clot blocks it and the heart muscle beyond is starved."""
+    w, h = 340, 170
+    p = []
+    for i, y in enumerate([34, 84, 134]):
+        p.append(f'<rect x="20" y="{y - 18}" width="210" height="36" rx="6" fill="{RED_LIGHT}"/>')
+        p.append(f'<rect x="20" y="{y - 22}" width="210" height="6" fill="{RED}"/><rect x="20" y="{y + 16}" width="210" height="6" fill="{RED}"/>')
+        p.append(text(8, y + 5, str(i + 1), 14, GREY, '600'))
+        if i >= 1:
+            p.append(f'<path d="M80 {y - 16} C100 {y - 2} 140 {y - 2} 160 {y - 16} Z" fill="{FAT}" stroke="{FAT_DARK}" stroke-width="2"/>')
+            p.append(f'<path d="M80 {y + 16} C100 {y + 2} 140 {y + 2} 160 {y + 16} Z" fill="{FAT}" stroke="{FAT_DARK}" stroke-width="2"/>')
+        if i == 2:
+            p.append(f'<ellipse cx="120" cy="{y}" rx="16" ry="9" fill="#8E1B1B"/>')
+        dots = [40, 64, 186, 210] if i < 2 else [40, 64]
+        for x in dots:
+            p.append(f'<circle cx="{x}" cy="{y}" r="5" fill="{RED}"/>')
+    # heart muscle after the artery: healthy (rows 1-2) vs starved (row 3)
+    p.append(f'<path d="{heart_path(290, 66, 34)}" fill="{RED}"/>')
+    p.append(f'<path d="{heart_path(290, 138, 26)}" fill="{RED}"/>')
+    p.append(f'<path d="M290 130 C302 130 308 142 300 152 L290 160 Z" fill="{GREY}"/>')
+    p.append(f'<path d="M236 134 L258 134" stroke="{GREY}" stroke-width="4" stroke-linecap="round"/>')
+    p.append(f'<path d="M236 59 L254 59" stroke="{GREY}" stroke-width="4" stroke-linecap="round"/>')
+    return svg(w, h, '\n'.join(p))
+
+
+def face(cx, cy, droop=False):
+    """A face; with droop, one side of the mouth and one eyelid sag (stroke)."""
+    if droop:
+        mouth = f'M{cx - 14} {cy + 10} Q{cx - 2} {cy + 18} {cx + 6} {cy + 18} L{cx + 14} {cy + 24}'
+        eye_r = (f'<circle cx="{cx + 10}" cy="{cy - 4}" r="3.5" fill="{INK}"/>'
+                 f'<path d="M{cx + 4} {cy - 9} L{cx + 16} {cy - 5}" stroke="{SKIN_DARK}" stroke-width="3" stroke-linecap="round"/>')
+    else:
+        mouth = f'M{cx - 14} {cy + 12} Q{cx} {cy + 22} {cx + 14} {cy + 12}'
+        eye_r = f'<circle cx="{cx + 10}" cy="{cy - 6}" r="3.5" fill="{INK}"/>'
+    return (f'<circle cx="{cx}" cy="{cy}" r="30" fill="{SKIN}" stroke="{SKIN_DARK}" stroke-width="3"/>'
+            f'<circle cx="{cx - 10}" cy="{cy - 6}" r="3.5" fill="{INK}"/>' + eye_r +
+            f'<path d="{mouth}" fill="none" stroke="{INK}" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>')
+
+
+def stroke_fast():
+    """F face drooping, A arm drifting down, S speech slurred, T time to call 1122."""
+    w, h = 340, 150
+    p = []
+    xs = [44, 128, 212, 296]
+    for x in xs:
+        p.append(f'<rect x="{x - 40}" y="12" width="80" height="100" rx="14" fill="{WHITE}" stroke="{RED}" stroke-width="3"/>')
+    p.append(face(44, 60, droop=True))
+    # arms: person with one arm up and one dropping
+    p.append(f'<circle cx="128" cy="38" r="10" fill="{GREEN_MID}"/>')
+    p.append(f'<rect x="118" y="50" width="20" height="44" rx="8" fill="{GREEN_MID}"/>')
+    p.append(f'<path d="M118 56 L94 54" stroke="{GREEN_MID}" stroke-width="8" stroke-linecap="round"/>')
+    p.append(f'<path d="M138 56 L152 76" stroke="{GREEN_MID}" stroke-width="8" stroke-linecap="round"/>')
+    p.append(f'<path d="M158 60 L158 84 M152 78 L158 85 L164 78" fill="none" stroke="{RED}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>')
+    # speech bubble with a scribble
+    p.append(f'<path d="M184 34 L240 34 C246 34 248 38 248 42 L248 70 C248 74 246 78 240 78 L206 78 L194 92 L196 78 L184 78 C180 78 176 74 176 70 L176 42 C176 38 180 34 184 34 Z" '
+             f'fill="{BLUE_LIGHT}" stroke="{BLUE}" stroke-width="3"/>')
+    p.append(f'<path d="M186 56 C192 44 196 68 202 56 C208 44 212 68 218 56 C224 44 228 68 236 56" fill="none" stroke="{BLUE}" stroke-width="3" stroke-linecap="round"/>')
+    # clock and phone
+    p.append(f'<circle cx="280" cy="46" r="18" fill="{WHITE}" stroke="{RED}" stroke-width="4"/>')
+    p.append(f'<path d="M280 46 L280 34 M280 46 L289 51" stroke="{INK}" stroke-width="3" stroke-linecap="round"/>')
+    p.append(f'<rect x="296" y="52" width="26" height="44" rx="5" fill="{INK}"/><rect x="300" y="58" width="18" height="28" rx="2" fill="{GREEN_LIGHT}"/>')
+    p.append(text(282, 100, '1122', 14, RED))
+    for i, x in enumerate(xs):
+        p.append(text(x, 136, 'FAST'[i], 18, RED))
+    return svg(w, h, '\n'.join(p))
+
+
+def stroke_types():
+    """1 a clot blocks a blood vessel in the brain; 2 a blood vessel bursts and bleeds."""
+    w, h = 340, 150
+    p = []
+    for i, cx in enumerate([90, 250]):
+        p.append(f'<path d="M{cx - 64} {74} C{cx - 70} {40} {cx - 30} {16} {cx} {26} C{cx + 30} {14} {cx + 70} {40} {cx + 64} {74} '
+                 f'C{cx + 64} {104} {cx + 30} {120} {cx} {112} C{cx - 30} {120} {cx - 64} {104} {cx - 64} {74} Z" fill="{PINK_LIGHT}" stroke="#E8A1BE" stroke-width="3"/>')
+        p.append(f'<path d="M{cx - 50} 96 C{cx - 24} 86 {cx - 10} 70 {cx + 6} 50 M{cx + 6} 50 L{cx + 30} 40 M{cx + 6} 50 L{cx + 20} 74" fill="none" stroke="{RED}" stroke-width="6" stroke-linecap="round"/>')
+        p.append(text(cx, 140, str(i + 1), 14, GREY, '600'))
+    p.append(f'<ellipse cx="90" cy="56" rx="9" ry="6" fill="#8E1B1B"/>')
+    p.append(f'<path d="M96 50 L120 40 M96 50 L110 74" fill="none" stroke="{GREY}" stroke-width="6" stroke-linecap="round"/>')
+    p.append(f'<path d="M252 48 C268 34 290 46 280 62 C292 74 268 86 258 72 C242 80 236 58 252 48 Z" fill="{RED}"/>')
+    return svg(w, h, '\n'.join(p))
+
+
+def syringe(cx, cy, s=1.0):
+    return (f'<g transform="rotate(-30 {cx} {cy})">'
+            f'<rect x="{cx - 22 * s}" y="{cy - 7 * s}" width="{36 * s}" height="{14 * s}" rx="3" fill="{WHITE}" stroke="{INK}" stroke-width="2.5"/>'
+            f'<rect x="{cx - 18 * s}" y="{cy - 4 * s}" width="{18 * s}" height="{8 * s}" fill="{RED}"/>'
+            f'<path d="M{cx + 14 * s} {cy} L{cx + 32 * s} {cy}" stroke="{INK}" stroke-width="2.5"/>'
+            f'<path d="M{cx - 22 * s} {cy} L{cx - 32 * s} {cy} M{cx - 32 * s} {cy - 8 * s} L{cx - 32 * s} {cy + 8 * s}" stroke="{INK}" stroke-width="3"/>'
+            f'</g>')
+
+
+def razor(cx, cy):
+    return (f'<rect x="{cx - 4}" y="{cy - 4}" width="8" height="30" rx="3" fill="{GREY}"/>'
+            f'<rect x="{cx - 18}" y="{cy - 16}" width="36" height="14" rx="3" fill="{GREY_LIGHT}" stroke="{INK}" stroke-width="2.5"/>'
+            f'<path d="M{cx - 16} {cy - 16} L{cx + 16} {cy - 16}" stroke="{RED}" stroke-width="2"/>')
+
+
+def blood_bag(cx, cy):
+    return (f'<rect x="{cx - 16}" y="{cy - 20}" width="32" height="36" rx="8" fill="{RED}"/>'
+            f'<path d="M{cx} {cy + 16} L{cx} {cy + 26}" stroke="{RED}" stroke-width="3"/>'
+            f'<rect x="{cx - 10}" y="{cy - 14}" width="20" height="8" rx="2" fill="{WHITE}"/>')
+
+
+def mother_baby(cx, cy):
+    return (f'<circle cx="{cx - 8}" cy="{cy - 18}" r="9" fill="{GREEN_MID}"/>'
+            f'<path d="M{cx - 22} {cy + 22} C{cx - 22} {cy - 4} {cx - 16} {cy - 8} {cx - 8} {cy - 8} C{cx + 2} {cy - 8} {cx + 6} {cy} {cx + 6} {cy + 22} Z" fill="{GREEN_MID}"/>'
+            f'<ellipse cx="{cx + 10}" cy="{cy + 4}" rx="10" ry="7" fill="{SKIN}" stroke="{SKIN_DARK}" stroke-width="2"/>')
+
+
+def hug(cx, cy):
+    return (f'<circle cx="{cx - 10}" cy="{cy - 16}" r="8" fill="{GREEN_MID}"/><circle cx="{cx + 10}" cy="{cy - 16}" r="8" fill="{BLUE}"/>'
+            f'<rect x="{cx - 20}" y="{cy - 6}" width="18" height="30" rx="7" fill="{GREEN_MID}"/>'
+            f'<rect x="{cx + 2}" y="{cy - 6}" width="18" height="30" rx="7" fill="{BLUE}"/>'
+            f'<path d="M{cx - 14} {cy + 2} C{cx - 4} {cy + 8} {cx + 4} {cy + 8} {cx + 14} {cy + 2}" fill="none" stroke="{GREEN_MID}" stroke-width="6" stroke-linecap="round"/>')
+
+
+def plate(cx, cy):
+    return (f'<ellipse cx="{cx}" cy="{cy + 4}" rx="24" ry="12" fill="{WHITE}" stroke="{GREY}" stroke-width="3"/>'
+            f'<ellipse cx="{cx}" cy="{cy}" rx="12" ry="5" fill="{FAT}"/>'
+            f'<path d="M{cx + 18} {cy - 14} L{cx + 12} {cy + 2}" stroke="{GREY}" stroke-width="3" stroke-linecap="round"/>')
+
+
+def handshake(cx, cy):
+    return (f'<path d="M{cx - 30} {cy + 4} L{cx - 8} {cy - 6} L{cx + 6} {cy + 4} L{cx - 6} {cy + 12} Z" fill="{SKIN}" stroke="{SKIN_DARK}" stroke-width="2.5" stroke-linejoin="round"/>'
+            f'<path d="M{cx + 30} {cy + 4} L{cx + 8} {cy - 6} L{cx - 6} {cy + 4} L{cx + 6} {cy + 12} Z" fill="#D8A97E" stroke="{SKIN_DARK}" stroke-width="2.5" stroke-linejoin="round"/>')
+
+
+def cough(cx, cy):
+    return (f'<circle cx="{cx - 8}" cy="{cy}" r="16" fill="{SKIN}" stroke="{SKIN_DARK}" stroke-width="2.5"/>'
+            f'<ellipse cx="{cx + 6}" cy="{cy + 4}" rx="4" ry="5" fill="{INK}"/>'
+            + ''.join(f'<path d="M{cx + 14 + i * 6} {cy - 6 + i * 2} C{cx + 18 + i * 6} {cy - 2 + i * 2} {cx + 18 + i * 6} {cy + 6 + i * 2} {cx + 14 + i * 6} {cy + 10 + i * 2}" fill="none" stroke="{GREY}" stroke-width="2.5" stroke-linecap="round"/>'
+                      for i in range(3)))
+
+
+def hepatitis_spread():
+    """Top: 1 shared or reused needles, 2 shared razors, 3 unscreened blood, 4 mother to baby at birth.
+    Bottom (does not spread): 5 hugging, 6 sharing food, 7 shaking hands, 8 coughing."""
+    w, h = 340, 250
+    p = []
+    xs = [44, 128, 212, 296]
+    for row, (y, colour, light) in enumerate([(62, RED, RED_LIGHT), (180, OK, GREEN_LIGHT)]):
+        for x in xs:
+            p.append(f'<rect x="{x - 38}" y="{y - 44}" width="76" height="88" rx="14" fill="{light}" stroke="{colour}" stroke-width="3"/>')
+    p += [syringe(44, 54), razor(128, 54), blood_bag(212, 52), mother_baby(296, 54)]
+    p += [hug(44, 174), plate(128, 172), handshake(212, 172), cough(296, 172)]
+    for i, x in enumerate(xs):
+        p.append(text(x, 100, str(i + 1), 13, RED, '600'))
+        p.append(text(x, 218, str(i + 5), 13, OK, '600'))
+        p.append(cross(x + 26, 28, 0.6))
+        p.append(tick(x + 26, 146, 0.6))
+    return svg(w, h, '\n'.join(p))
+
+
+def liver_damage():
+    """1 healthy liver, 2 scarred (cirrhosis), 3 liver cancer."""
+    w, h = 340, 140
+    p = []
+    for i, cx in enumerate([56, 170, 284]):
+        fill = LIVER if i == 0 else SCAR
+        p.append(f'<path d="{liver_path(cx, 64, 0.6)}" fill="{fill}"/>')
+        p.append(text(cx, 128, str(i + 1), 14, GREY, '600'))
+    for dx, dy in [(-20, -8), (0, 4), (14, -12), (-6, 18), (24, -2)]:
+        for cx in (170, 284):
+            p.append(f'<circle cx="{cx + dx}" cy="{64 + dy}" r="5" fill="#B88A74"/>')
+    p.append(f'<circle cx="276" cy="58" r="13" fill="#5D2A1E"/>')
+    for x in (110, 224):
+        p.append(f'<path d="M{x - 10} 66 L{x + 8} 66" stroke="{GREY}" stroke-width="4" stroke-linecap="round"/>')
+        p.append(f'<path d="M{x + 4} 59 L{x + 12} 66 L{x + 4} 73 Z" fill="{GREY}"/>')
+    return svg(w, h, '\n'.join(p))
+
+
+def hepb_vaccine():
+    """A newborn, the shield of the vaccine, and a liver kept healthy."""
+    w, h = 340, 150
+    p = [
+        f'<ellipse cx="66" cy="84" rx="44" ry="26" fill="{BLUE_LIGHT}" stroke="{BLUE}" stroke-width="3"/>',
+        f'<circle cx="36" cy="78" r="18" fill="{SKIN}" stroke="{SKIN_DARK}" stroke-width="2.5"/>',
+        f'<path d="M30 80 Q36 86 42 80" fill="none" stroke="{INK}" stroke-width="2.5" stroke-linecap="round"/>',
+        syringe(128, 60, 0.9),
+        shield(190, 76, 1.3),
+        f'<path d="M226 76 L246 76" stroke="{GREY}" stroke-width="4" stroke-linecap="round"/>',
+        f'<path d="M242 69 L250 76 L242 83 Z" fill="{GREY}"/>',
+        f'<path d="{liver_path(296, 80, 0.6)}" fill="{LIVER}"/>',
+    ]
+    return svg(w, h, '\n'.join(p))
+
+
+def hepc_cure():
+    """1 a blood test, 2 a course of tablets, 3 cured."""
+    w, h = 340, 150
+    p = [
+        f'<rect x="40" y="26" width="24" height="74" rx="10" fill="{WHITE}" stroke="{INK}" stroke-width="3"/>',
+        f'<rect x="43" y="62" width="18" height="35" rx="8" fill="{RED}"/>',
+        f'<rect x="36" y="20" width="32" height="10" rx="3" fill="{BLUE}"/>',
+        f'<rect x="128" y="30" width="80" height="66" rx="8" fill="{WHITE}" stroke="{GREY}" stroke-width="3"/>',
+    ]
+    for r in range(3):
+        for c in range(4):
+            p.append(f'<circle cx="{146 + c * 15}" cy="{48 + r * 17}" r="5.5" fill="{BLUE}"/>')
+    p += [
+        f'<path d="{liver_path(284, 64, 0.6)}" fill="{LIVER}"/>',
+        f'<circle cx="300" cy="94" r="18" fill="{OK}"/>', tick(300, 94, 0.9, WHITE),
+    ]
+    for x in (94, 236):
+        p.append(f'<path d="M{x - 12} 64 L{x + 8} 64" stroke="{GREY}" stroke-width="4" stroke-linecap="round"/>')
+        p.append(f'<path d="M{x + 4} 57 L{x + 12} 64 L{x + 4} 71 Z" fill="{GREY}"/>')
+    for i, x in enumerate([52, 168, 290]):
+        p.append(text(x, 132, str(i + 1), 14, GREY, '600'))
+    return svg(w, h, '\n'.join(p))
+
+
+def hepatitis_safe():
+    """1 a new, sealed syringe every time, 2 your own razor, 3 screened blood, 4 test and treat."""
+    w, h = 340, 150
+    p = []
+    xs = [44, 128, 212, 296]
+    for x in xs:
+        p.append(f'<rect x="{x - 38}" y="12" width="76" height="92" rx="14" fill="{GREEN_LIGHT}" stroke="{OK}" stroke-width="3"/>')
+    p.append(f'<rect x="18" y="32" width="52" height="40" rx="6" fill="{WHITE}" stroke="{GREY}" stroke-width="2.5" stroke-dasharray="5 4"/>')
+    p.append(syringe(44, 52, 0.7))
+    p.append(razor(128, 50))
+    p.append(f'<circle cx="146" cy="78" r="9" fill="{GREEN_MID}"/>')
+    p.append(blood_bag(212, 50))
+    p.append(tick(222, 84, 0.7))
+    p.append(f'<rect x="274" y="26" width="16" height="46" rx="7" fill="{WHITE}" stroke="{INK}" stroke-width="2.5"/>')
+    p.append(f'<rect x="276" y="50" width="12" height="20" rx="5" fill="{RED}"/>')
+    p.append(f'<circle cx="310" cy="56" r="8" fill="{BLUE}"/><circle cx="302" cy="80" r="8" fill="{BLUE}"/><circle cx="318" cy="80" r="8" fill="{BLUE}"/>')
+    for i, x in enumerate(xs):
+        p.append(text(x, 128, str(i + 1), 14, OK, '600'))
+    return svg(w, h, '\n'.join(p))
+
+
 GRAPHICS = {
+    'heart_disease_header.svg': heart_disease_header,
+    'stroke_header.svg': stroke_header,
+    'hepatitis_group_header.svg': hepatitis_group_header,
+    'hepatitis_b_header.svg': hepatitis_b_header,
+    'hepatitis_c_header.svg': hepatitis_c_header,
+    'heart_attack_signs.svg': heart_attack_signs,
+    'artery_block.svg': artery_block,
+    'stroke_fast.svg': stroke_fast,
+    'stroke_types.svg': stroke_types,
+    'hepatitis_spread.svg': hepatitis_spread,
+    'liver_damage.svg': liver_damage,
+    'hepb_vaccine.svg': hepb_vaccine,
+    'hepc_cure.svg': hepc_cure,
+    'hepatitis_safe.svg': hepatitis_safe,
     'breast_cancer_header.svg': breast_cancer_header,
     'high_cholesterol_header.svg': high_cholesterol_header,
     'migraine_header.svg': migraine_header,
